@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from www.starlinglib.com/wiki/StarlingMobile:iOS游戏开发中的材质适配方案 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jun 2014 07:16:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>StarlingMobile:iOS游戏开发中的材质适配方案 - Starling中文站</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.0" />
+<link rel="shortcut icon" href="http://www.starlinglib.com/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.starlinglib.com/opensearch_desc.php" title="Starling中文站 (zh-cn)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://www.starlinglib.com/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="Starling中文站的Atom" href="http://www.starlinglib.com/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&amp;feed=atom" />
+<link rel="stylesheet" href="../skins/style.css" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: app_starlinglib-wiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"StarlingMobile:iOS游戏开发中的材质适配方案","wgTitle":"StarlingMobile:iOS游戏开发中的材质适配方案","wgCurRevisionId":148,"wgArticleId":92,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"zh-cn","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgRelevantPageName":"StarlingMobile:iOS游戏开发中的材质适配方案","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false}});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"zh-cn","language":"zh-cn","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;},{},{});mw.loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: app_starlinglib-wiki:resourceloader:filter:minify-js:7:64bb9911c781603a64782510a7dfd931 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-actionscript {line-height: normal;}
+.source-actionscript li, .source-actionscript pre {
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for actionscript
+ * CSS class: source-actionscript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.actionscript.source-actionscript .de1, .actionscript.source-actionscript .de2 {font: normal normal 1em/1.2em monospace; margin:10px 0; padding:10px; background:none; vertical-align:top;}
+.actionscript.source-actionscript  {font-family:monospace;}
+.actionscript.source-actionscript .imp {font-weight: bold; color: red;}
+.actionscript.source-actionscript li, .actionscript.source-actionscript .li1 {font-weight: normal; vertical-align:top;}
+.actionscript.source-actionscript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.actionscript.source-actionscript .li2 {font-weight: bold; vertical-align:top;}
+.actionscript.source-actionscript .kw1 {color: #b1b100;}
+.actionscript.source-actionscript .kw2 {color: #000000; font-weight: bold;}
+.actionscript.source-actionscript .kw3 {color: #0066CC;}
+.actionscript.source-actionscript .co1 {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .co2 {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .coMULTI {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .es0 {color: #000099; font-weight: bold;}
+.actionscript.source-actionscript .br0 {color: #66cc66;}
+.actionscript.source-actionscript .sy0 {color: #66cc66;}
+.actionscript.source-actionscript .st0 {color: #ff0000;}
+.actionscript.source-actionscript .nu0 {color: #cc66cc;}
+.actionscript.source-actionscript .me1 {color: #006600;}
+.actionscript.source-actionscript .ln-xtra, .actionscript.source-actionscript li.ln-xtra, .actionscript.source-actionscript div.ln-xtra {background-color: #ffc;}
+.actionscript.source-actionscript span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "http://www.starlinglib.com/index.php?title=MediaWiki:Geshi.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+/*]]>*/
+</style><!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-StarlingMobile_iOS游戏开发中的材质适配方案 skin-vector action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">StarlingMobile:iOS游戏开发中的材质适配方案</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">来自Starling中文站</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					跳转到： <a href="#mw-head">导航</a>,
+					<a href="#p-search">搜索</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="zh-CN" dir="ltr" class="mw-content-ltr"><p>作者:<a rel="nofollow" class="external text" href="http://weibo.com/u/1818866555">京辉(icekiller)</a>
+</p><p>一个游戏适配ipad和iphone的话一般会出两套素材，如果整个游戏的素材在一张材质集上的话还好办。如果素材分布在多张材质集上呢（starling单张素材限制是2048*2048）？比如说ipad的素材需要2张材质集(下图中的ipad_asset1,ipad_asset2)，iphone的素材需要1张材质集(下图中的iphone_asset1)。我们假设这样一个情景，材质A(画红色圆圈的)在ipad素材库中是在asset2材质集上，而在iphone素材库中则是在asset1材质集上(这个很容易理解，因为iphone的素材大小要比ipad的小很多，pad两张材质集的phone一般一张就能搞定)。我们为了获取材质A写两套代码就有点太苦逼了。
+</p><p><a href="%e6%96%87%e4%bb%b6_Ios_ipad_apder.html" class="image"><img alt="Ios ipad apder.png" src="../images/2/24/Ios_ipad_apder.png" width="864" height="345" /></a>
+</p><p>下面我们给出一个简单的思路。
+</p><p>ps&#160;: 用到的工具是TexturePacker.
+</p><p>starling中的每个材质集都会对应一个xml文件，如果开始我们把所有用到的材质集xml放到一个字典里，需要获取每个材质的时候，通过材质名称从字典里找到材质所在的材质集，然后返回材质对象，这样用自动查找代替人工赋值。我们就不用关心所需的材质到底在哪个材质集里了。iphone和ipad的材质只要名称一样就OK 了。
+</p><p>下面直接上代码
+</p><p>我们先定义一个接口IAssetFactory
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">package com.<span class="me1">pamakids</span>.<span class="me1">assetmanager</span> 
+<span class="br0">&#123;</span>
+    <span class="kw3">import</span> starling.<span class="me1">extensions</span>.<span class="me1">ATextureAtlas</span>;
+    <span class="kw3">import</span> starling.<span class="me1">textures</span>.<span class="me1">Texture</span>;
+&#160;
+    <span class="kw3">public</span> <span class="kw3">interface</span> IAssetFactory
+    <span class="br0">&#123;</span>
+        <span class="kw2">function</span> init<span class="br0">&#40;</span><span class="br0">&#41;</span>:<span class="kw3">void</span>;
+        <span class="kw2">function</span> addTextureAtlas<span class="br0">&#40;</span><span class="kw3">name</span>&#160;: <span class="kw3">String</span>, texture&#160;: Texture, atlasXml&#160;: <span class="kw3">XML</span>,textureName&#160;: <span class="kw3">String</span><span class="br0">&#41;</span>:<span class="kw3">void</span>;
+        <span class="kw2">function</span> getTexture<span class="br0">&#40;</span><span class="kw3">name</span>&#160;: <span class="kw3">String</span><span class="br0">&#41;</span>:Texture;
+        <span class="kw2">function</span> getTextures<span class="br0">&#40;</span><span class="kw3">name</span>&#160;: <span class="kw3">String</span><span class="br0">&#41;</span>:Vector.<span class="sy0">&lt;</span>Texture<span class="sy0">&gt;</span>;
+        <span class="kw2">function</span> getTextureAtls<span class="br0">&#40;</span><span class="kw3">name</span>&#160;: <span class="kw3">String</span><span class="br0">&#41;</span>&#160;: ATextureAtlas;
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div>
+<p>然后修改了下starling中的TextureAtlas.as文件，作为一个扩展命名为ATextureAtlas.as.主要是加入了一个存储材质集上材质名称的字典.
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="co1">// ================================================================================================= </span>
+<span class="co1">//</span>
+<span class="co1">//    Starling Framework</span>
+<span class="co1">//    Copyright 2011 Gamua OG. All Rights Reserved.</span>
+<span class="co1">//</span>
+<span class="co1">//    This program is free software. You can redistribute and/or modify it</span>
+<span class="co1">//    in accordance with the terms of the accompanying license agreement.</span>
+<span class="co1">//</span>
+<span class="co1">// =================================================================================================</span>
+&#160;
+package starling.<span class="me1">extensions</span>
+<span class="br0">&#123;</span>
+    <span class="kw3">import</span> flash.<span class="me1">geom</span>.<span class="me1">Rectangle</span>;
+    <span class="kw3">import</span> flash.<span class="me1">utils</span>.<span class="me1">Dictionary</span>;
+&#160;
+    <span class="kw3">import</span> starling.<span class="me1">textures</span>.<span class="me1">Texture</span>;
+    <span class="kw3">public</span> <span class="kw2">class</span> ATextureAtlas
+    <span class="br0">&#123;</span>
+        <span class="kw3">public</span> <span class="kw2">var</span> mTextureNames&#160;: Dictionary = <span class="kw2">new</span> Dictionary<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+        <span class="kw3">public</span> <span class="kw2">var</span> mAtlasTexture&#160;: Texture;
+        <span class="kw3">public</span> <span class="kw2">var</span> mTextureRegions:Dictionary;
+        <span class="kw3">private</span> <span class="kw2">var</span> mTextureFrames:Dictionary;
+&#160;
+        <span class="coMULTI">/** Create a texture atlas from a texture by parsing the regions from an XML file. */</span>
+        <span class="kw3">public</span> <span class="kw2">function</span> ATextureAtlas<span class="br0">&#40;</span>texture:Texture, atlasXml:<span class="kw3">XML</span>=<span class="kw2">null</span><span class="br0">&#41;</span>
+        <span class="br0">&#123;</span>
+            mTextureRegions = <span class="kw2">new</span> Dictionary<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+            mTextureFrames = <span class="kw2">new</span> Dictionary<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+            mAtlasTexture = texture;
+&#160;
+            <span class="kw1">if</span> <span class="br0">&#40;</span>atlasXml<span class="br0">&#41;</span>
+                parseAtlasXml<span class="br0">&#40;</span>atlasXml<span class="br0">&#41;</span>;
+        <span class="br0">&#125;</span>
+&#160;
+        <span class="coMULTI">/** Disposes the atlas texture. */</span>
+        <span class="kw3">public</span> <span class="kw2">function</span> dispose<span class="br0">&#40;</span><span class="br0">&#41;</span>:<span class="kw3">void</span>
+        <span class="br0">&#123;</span>
+            mAtlasTexture.<span class="me1">dispose</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+        <span class="br0">&#125;</span>
+&#160;
+        <span class="kw3">private</span> <span class="kw2">function</span> parseAtlasXml<span class="br0">&#40;</span>atlasXml:<span class="kw3">XML</span><span class="br0">&#41;</span>:<span class="kw3">void</span>
+        <span class="br0">&#123;</span>
+            <span class="kw2">var</span> scale:<span class="kw3">Number</span>;
+            <span class="kw1">if</span><span class="br0">&#40;</span>mAtlasTexture<span class="br0">&#41;</span><span class="br0">&#123;</span>
+                scale = mAtlasTexture.<span class="me1">scale</span>;
+            <span class="br0">&#125;</span><span class="kw1">else</span> <span class="br0">&#123;</span>
+                scale = <span class="nu0">1</span>;
+            <span class="br0">&#125;</span>
+&#160;
+            <span class="kw1">for</span> <span class="kw1">each</span> <span class="br0">&#40;</span><span class="kw2">var</span> subTexture:<span class="kw3">XML</span> <span class="kw1">in</span> atlasXml.<span class="me1">SubTexture</span><span class="br0">&#41;</span>
+            <span class="br0">&#123;</span>
+                <span class="kw2">var</span> <span class="kw3">name</span>:<span class="kw3">String</span> = subTexture.<span class="me1">attribute</span><span class="br0">&#40;</span><span class="st0">&quot;name&quot;</span><span class="br0">&#41;</span>;
+                <span class="kw2">var</span> x:<span class="kw3">Number</span> = <span class="kw3">parseFloat</span><span class="br0">&#40;</span>subTexture.<span class="me1">attribute</span><span class="br0">&#40;</span><span class="st0">&quot;x&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">/</span> scale;
+                <span class="kw2">var</span> y:<span class="kw3">Number</span> = <span class="kw3">parseFloat</span><span class="br0">&#40;</span>subTexture.<span class="me1">attribute</span><span class="br0">&#40;</span><span class="st0">&quot;y&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">/</span> scale;
+                <span class="kw2">var</span> <span class="kw3">width</span>:<span class="kw3">Number</span> = <span class="kw3">parseFloat</span><span class="br0">&#40;</span>subTexture.<span class="me1">attribute</span><span class="br0">&#40;</span><span class="st0">&quot;width&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">/</span> scale;
+                <span class="kw2">var</span> <span class="kw3">height</span>:<span class="kw3">Number</span> = <span class="kw3">parseFloat</span><span class="br0">&#40;</span>subTexture.<span class="me1">attribute</span><span class="br0">&#40;</span><span class="st0">&quot;height&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">/</span> scale;
+                <span class="kw2">var</span> frameX:<span class="kw3">Number</span> = <span class="kw3">parseFloat</span><span class="br0">&#40;</span>subTexture.<span class="me1">attribute</span><span class="br0">&#40;</span><span class="st0">&quot;frameX&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">/</span> scale;
+                <span class="kw2">var</span> frameY:<span class="kw3">Number</span> = <span class="kw3">parseFloat</span><span class="br0">&#40;</span>subTexture.<span class="me1">attribute</span><span class="br0">&#40;</span><span class="st0">&quot;frameY&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">/</span> scale;
+                <span class="kw2">var</span> frameWidth:<span class="kw3">Number</span> = <span class="kw3">parseFloat</span><span class="br0">&#40;</span>subTexture.<span class="me1">attribute</span><span class="br0">&#40;</span><span class="st0">&quot;frameWidth&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">/</span> scale;
+                <span class="kw2">var</span> frameHeight:<span class="kw3">Number</span> = <span class="kw3">parseFloat</span><span class="br0">&#40;</span>subTexture.<span class="me1">attribute</span><span class="br0">&#40;</span><span class="st0">&quot;frameHeight&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">/</span> scale;
+&#160;
+                <span class="kw2">var</span> region:Rectangle = <span class="kw2">new</span> Rectangle<span class="br0">&#40;</span>x, y, <span class="kw3">width</span>, <span class="kw3">height</span><span class="br0">&#41;</span>;
+                <span class="kw2">var</span> frame:Rectangle = frameWidth <span class="sy0">&gt;</span> <span class="nu0">0</span> <span class="sy0">&amp;&amp;</span> frameHeight <span class="sy0">&gt;</span> <span class="nu0">0</span>&#160;?
+                        <span class="kw2">new</span> Rectangle<span class="br0">&#40;</span>frameX, frameY, frameWidth, frameHeight<span class="br0">&#41;</span>&#160;: <span class="kw2">null</span>;
+&#160;
+                addRegion<span class="br0">&#40;</span><span class="kw3">name</span>, region, frame<span class="br0">&#41;</span>;
+            <span class="br0">&#125;</span>
+        <span class="br0">&#125;</span>
+&#160;
+        <span class="coMULTI">/** Retrieves a subtexture by name. Returns &lt;code&gt;null&lt;/code&gt; if it is not found. */</span>
+        <span class="kw3">public</span> <span class="kw2">function</span> getTexture<span class="br0">&#40;</span><span class="kw3">name</span>:<span class="kw3">String</span><span class="br0">&#41;</span>:Texture
+        <span class="br0">&#123;</span>
+            <span class="kw2">var</span> region:Rectangle = mTextureRegions<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span>;
+&#160;
+            <span class="kw1">if</span> <span class="br0">&#40;</span>region == <span class="kw2">null</span><span class="br0">&#41;</span> <span class="kw1">return</span> <span class="kw2">null</span>;
+            <span class="kw1">else</span> <span class="kw1">return</span> Texture.<span class="me1">fromTexture</span><span class="br0">&#40;</span>mAtlasTexture, region, mTextureFrames<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span><span class="br0">&#41;</span>;
+        <span class="br0">&#125;</span>
+&#160;
+        <span class="coMULTI">/** Returns all textures that start with a certain string, sorted alphabetically
+         * (especially useful for &quot;MovieClip&quot;). */</span>
+        <span class="kw3">public</span> <span class="kw2">function</span> getTextures<span class="br0">&#40;</span>prefix:<span class="kw3">String</span>=<span class="st0">&quot;&quot;</span><span class="br0">&#41;</span>:Vector.<span class="sy0">&lt;</span>Texture<span class="sy0">&gt;</span>
+        <span class="br0">&#123;</span>
+            <span class="kw2">var</span> textures:Vector.<span class="sy0">&lt;</span>Texture<span class="sy0">&gt;</span> = <span class="kw2">new</span> <span class="sy0">&lt;</span>Texture<span class="sy0">&gt;</span><span class="br0">&#91;</span><span class="br0">&#93;</span>;
+            <span class="kw2">var</span> <span class="kw3">names</span>:Vector.<span class="sy0">&lt;</span>String<span class="sy0">&gt;</span> = <span class="kw2">new</span> <span class="sy0">&lt;</span>String<span class="sy0">&gt;</span><span class="br0">&#91;</span><span class="br0">&#93;</span>;
+            <span class="kw2">var</span> <span class="kw3">name</span>:<span class="kw3">String</span>;
+&#160;
+            <span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw3">name</span> <span class="kw1">in</span> mTextureRegions<span class="br0">&#41;</span>
+                <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw3">name</span>.<span class="kw3">indexOf</span><span class="br0">&#40;</span>prefix<span class="br0">&#41;</span> == <span class="nu0">0</span><span class="br0">&#41;</span>                
+                    <span class="kw3">names</span>.<span class="kw3">push</span><span class="br0">&#40;</span><span class="kw3">name</span><span class="br0">&#41;</span>;                
+&#160;
+            <span class="kw3">names</span>.<span class="kw3">sort</span><span class="br0">&#40;</span><span class="kw3">Array</span>.<span class="me1">CASEINSENSITIVE</span><span class="br0">&#41;</span>;
+&#160;
+            <span class="kw1">for</span> <span class="kw1">each</span> <span class="br0">&#40;</span><span class="kw3">name</span> <span class="kw1">in</span> <span class="kw3">names</span><span class="br0">&#41;</span> 
+                textures.<span class="kw3">push</span><span class="br0">&#40;</span>getTexture<span class="br0">&#40;</span><span class="kw3">name</span><span class="br0">&#41;</span><span class="br0">&#41;</span>; 
+&#160;
+            <span class="kw1">return</span> textures;
+        <span class="br0">&#125;</span>
+&#160;
+        <span class="coMULTI">/** Creates a region for a subtexture and gives it a name. */</span>
+        <span class="kw3">public</span> <span class="kw2">function</span> addRegion<span class="br0">&#40;</span><span class="kw3">name</span>:<span class="kw3">String</span>, region:Rectangle, frame:Rectangle=<span class="kw2">null</span><span class="br0">&#41;</span>:<span class="kw3">void</span>
+        <span class="br0">&#123;</span>
+            mTextureNames<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span> = <span class="kw3">name</span>;
+            mTextureRegions<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span> = region;
+            <span class="kw1">if</span> <span class="br0">&#40;</span>frame<span class="br0">&#41;</span> mTextureFrames<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span> = frame;
+        <span class="br0">&#125;</span>
+&#160;
+        <span class="coMULTI">/** Removes a region with a certain name. */</span>
+        <span class="kw3">public</span> <span class="kw2">function</span> removeRegion<span class="br0">&#40;</span><span class="kw3">name</span>:<span class="kw3">String</span><span class="br0">&#41;</span>:<span class="kw3">void</span>
+        <span class="br0">&#123;</span>
+            <span class="kw3">delete</span> mTextureRegions<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span>;
+        <span class="br0">&#125;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div>
+<p>接着就是AssetFactory.as,负责材质的初始化，获取材质，以及材质序列等。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">package com.<span class="me1">pamakids</span>.<span class="me1">assetmanager</span> 
+<span class="br0">&#123;</span>
+    <span class="kw3">import</span> com.<span class="me1">adobe</span>.<span class="me1">utils</span>.<span class="me1">DictionaryUtil</span>;
+&#160;
+    <span class="kw3">import</span> flash.<span class="me1">display</span>.<span class="me1">Bitmap</span>;
+    <span class="kw3">import</span> flash.<span class="me1">utils</span>.<span class="me1">ByteArray</span>;
+    <span class="kw3">import</span> flash.<span class="me1">utils</span>.<span class="me1">Dictionary</span>;
+    <span class="kw3">import</span> flash.<span class="me1">utils</span>.<span class="me1">getDefinitionByName</span>;
+    <span class="kw3">import</span> flash.<span class="me1">utils</span>.<span class="kw3">getTimer</span>;
+&#160;
+    <span class="kw3">import</span> starling.<span class="me1">extensions</span>.<span class="me1">ATextureAtlas</span>;
+    <span class="kw3">import</span> starling.<span class="me1">textures</span>.<span class="me1">Texture</span>;
+    <span class="kw3">import</span> starling.<span class="me1">textures</span>.<span class="me1">TextureAtlas</span>;
+&#160;
+    <span class="coMULTI">/**
+     * @example
+     *         var assetFactory&#160;: AssetFactory = new AssetFactory();
+     *         assetFactory.registerAssets(&quot;Assets&quot;);
+     *         assetFactory.addTextureAtlas(&quot;asset1&quot;,assetFactory.getMTexture(&quot;Asset1GFX&quot;),assetFactory.getMXml(&quot;Asset1XML&quot;),&quot;Asset1GFX&quot;);
+     *         assetFactory.addTextureAtlas(&quot;asset2&quot;,assetFactory.getMTexture(&quot;Asset2GFX&quot;),assetFactory.getMXml(&quot;Asset2XML&quot;),&quot;Asset2GFX&quot;);
+     *        //如果只想初始化话数据，不像初始化材质的话，直接把材质为null就好，用到时实时渲染材质
+     *         assetFactory.addTextureAtlas(&quot;asset2&quot;,null,assetFactory.getMXml(&quot;Asset2XML&quot;),&quot;Asset2GFX&quot;);
+     * @example
+     */</span>
+    <span class="kw3">public</span> <span class="kw2">class</span> AssetFactory <span class="kw3">implements</span> IAssetFactory
+    <span class="br0">&#123;</span>        
+        <span class="kw3">private</span> <span class="kw2">var</span> mTextureAtlasDic&#160;: Dictionary;
+        <span class="kw3">private</span> <span class="kw2">var</span> mTextureDic&#160;: Dictionary;
+        <span class="kw3">private</span> <span class="kw2">var</span> mTexturesDic&#160;: Dictionary;
+        <span class="kw3">private</span> <span class="kw2">var</span> sTextures&#160;: Dictionary;
+        <span class="kw3">private</span> <span class="kw2">var</span> mtextureXmlDic&#160;: Dictionary;
+        <span class="kw3">private</span> <span class="kw2">var</span> mTextureNameDic&#160;: Dictionary;
+        <span class="kw3">private</span> <span class="kw2">var</span> assetClassName&#160;: <span class="kw3">String</span>;
+        <span class="kw3">private</span> <span class="kw2">var</span> assetClassReference&#160;: <span class="kw2">Class</span>;
+&#160;
+        <span class="kw3">public</span> <span class="kw2">function</span> AssetFactory<span class="br0">&#40;</span><span class="br0">&#41;</span>
+        <span class="br0">&#123;</span>
+            mTextureAtlasDic = <span class="kw2">new</span> Dictionary<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+            mTextureDic = <span class="kw2">new</span> Dictionary<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+            mTexturesDic = <span class="kw2">new</span> Dictionary<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+            sTextures = <span class="kw2">new</span> Dictionary<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+            mTextureNameDic = <span class="kw2">new</span> Dictionary<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+            mtextureXmlDic = <span class="kw2">new</span> Dictionary<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+        <span class="br0">&#125;</span>
+&#160;
+        <span class="coMULTI">/**
+         * you can override init() 
+         */</span>
+        <span class="kw3">public</span> <span class="kw2">function</span> init<span class="br0">&#40;</span><span class="br0">&#41;</span>:<span class="kw3">void</span> <span class="br0">&#123;</span>
+&#160;
+        <span class="br0">&#125;</span>
+&#160;
+        <span class="coMULTI">/**
+         * 
+         * @param    name
+         * @return
+         */</span>
+        <span class="kw3">public</span> <span class="kw2">function</span> getTextureAtls<span class="br0">&#40;</span><span class="kw3">name</span>&#160;: <span class="kw3">String</span><span class="br0">&#41;</span>&#160;: ATextureAtlas <span class="br0">&#123;</span>
+            <span class="kw1">if</span> <span class="br0">&#40;</span>mTextureAtlasDic<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                <span class="kw1">return</span> mTextureAtlasDic<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span>;
+            <span class="br0">&#125;</span>
+            <span class="kw1">return</span> <span class="kw2">null</span>;
+        <span class="br0">&#125;</span>
+&#160;
+        <span class="coMULTI">/**
+         * 注册材质源
+         * @param    name
+         */</span>
+        <span class="kw3">public</span> <span class="kw2">function</span> registerAssets<span class="br0">&#40;</span>classname&#160;: <span class="kw2">Class</span><span class="br0">&#41;</span>:<span class="kw3">void</span> <span class="br0">&#123;</span>
+            assetClassReference = classname;
+        <span class="br0">&#125;</span>
+&#160;
+        <span class="coMULTI">/**
+         * 根据名称获得相应的材质
+         * @param    name
+         * @return
+         */</span>
+        <span class="kw3">public</span> <span class="kw2">function</span> getMTexture<span class="br0">&#40;</span><span class="kw3">name</span>:<span class="kw3">String</span><span class="br0">&#41;</span>&#160;: Texture
+        <span class="br0">&#123;</span>
+            <span class="kw1">if</span> <span class="br0">&#40;</span>mtextureXmlDic<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span> == <span class="kw3">undefined</span><span class="br0">&#41;</span>
+            <span class="br0">&#123;</span>
+                <span class="kw2">var</span> <span class="kw3">data</span>:<span class="kw3">Object</span> = <span class="kw2">new</span> assetClassReference<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+                <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw3">data</span> is Bitmap<span class="br0">&#41;</span>
+                    sTextures<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span> = Texture.<span class="me1">fromBitmapData</span><span class="br0">&#40;</span><span class="br0">&#40;</span><span class="kw3">data</span> as Bitmap<span class="br0">&#41;</span>.<span class="me1">bitmapData</span>,<span class="kw2">false</span><span class="br0">&#41;</span>;
+                <span class="kw1">else</span> <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw3">data</span> is ByteArray<span class="br0">&#41;</span>
+                    sTextures<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span> = Texture.<span class="me1">fromAtfData</span><span class="br0">&#40;</span><span class="kw3">data</span> as ByteArray<span class="br0">&#41;</span>;
+            <span class="br0">&#125;</span>
+            <span class="kw1">return</span> sTextures<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span>;
+        <span class="br0">&#125;</span>
+&#160;
+        <span class="coMULTI">/**
+         * 根据名称获得xml
+         * @param    xname
+         * @return
+         */</span>
+        <span class="kw3">public</span> <span class="kw2">function</span> getMXml<span class="br0">&#40;</span>xname&#160;: <span class="kw3">String</span><span class="br0">&#41;</span>:<span class="kw3">XML</span> <span class="br0">&#123;</span>
+            <span class="kw1">if</span> <span class="br0">&#40;</span>mtextureXmlDic<span class="br0">&#91;</span>xname<span class="br0">&#93;</span> == <span class="kw3">undefined</span><span class="br0">&#41;</span>
+            <span class="br0">&#123;</span>
+                <span class="kw2">var</span> <span class="kw3">data</span>:<span class="kw3">Object</span> = <span class="kw2">new</span> assetClassReference<span class="br0">&#91;</span>xname<span class="br0">&#93;</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+                mtextureXmlDic<span class="br0">&#91;</span>xname<span class="br0">&#93;</span> = <span class="kw3">XML</span><span class="br0">&#40;</span><span class="kw3">data</span><span class="br0">&#41;</span>;
+            <span class="br0">&#125;</span>
+            <span class="kw1">return</span> mtextureXmlDic<span class="br0">&#91;</span>xname<span class="br0">&#93;</span>;
+        <span class="br0">&#125;</span>
+&#160;
+&#160;
+        <span class="coMULTI">/**
+         * 添加材质集数据
+         * @param    name 名称
+         * @param    texture 对应的材质
+         * @param    atlasXml xml文件
+         */</span>
+        <span class="kw3">public</span> <span class="kw2">function</span> addTextureAtlas<span class="br0">&#40;</span><span class="kw3">name</span>:<span class="kw3">String</span>, texture:Texture, atlasXml:<span class="kw3">XML</span>,textureName&#160;: <span class="kw3">String</span><span class="br0">&#41;</span>:<span class="kw3">void</span>
+        <span class="br0">&#123;</span>    
+            mTextureAtlasDic<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span> = <span class="kw2">new</span> ATextureAtlas<span class="br0">&#40;</span>texture, atlasXml<span class="br0">&#41;</span>;
+            mTextureNameDic<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span> = textureName;
+        <span class="br0">&#125;</span>
+&#160;
+        <span class="coMULTI">/**
+         * 根据名称获得库中的材质
+         * @param    name
+         * @return
+         */</span>
+        <span class="kw3">public</span> <span class="kw2">function</span> getTexture<span class="br0">&#40;</span><span class="kw3">name</span>:<span class="kw3">String</span><span class="br0">&#41;</span>:Texture
+        <span class="br0">&#123;</span>
+            <span class="kw1">if</span> <span class="br0">&#40;</span>mTextureDic<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+&#160;
+            <span class="br0">&#125;</span><span class="kw1">else</span> <span class="br0">&#123;</span>
+                <span class="kw2">var</span> taltsName&#160;: <span class="kw3">String</span> = getTexturesAtlasName<span class="br0">&#40;</span><span class="kw3">name</span><span class="br0">&#41;</span>;
+                <span class="kw1">if</span> <span class="br0">&#40;</span><span class="br0">&#40;</span>mTextureAtlasDic<span class="br0">&#91;</span>taltsName<span class="br0">&#93;</span> as ATextureAtlas<span class="br0">&#41;</span>.<span class="me1">mAtlasTexture</span> == <span class="kw2">null</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                    <span class="br0">&#40;</span>mTextureAtlasDic<span class="br0">&#91;</span>taltsName<span class="br0">&#93;</span> as ATextureAtlas<span class="br0">&#41;</span>.<span class="me1">mAtlasTexture</span> = getMTexture<span class="br0">&#40;</span>mTextureNameDic<span class="br0">&#91;</span>taltsName<span class="br0">&#93;</span><span class="br0">&#41;</span>;
+                <span class="br0">&#125;</span>
+                mTextureDic<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span> = <span class="br0">&#40;</span>mTextureAtlasDic<span class="br0">&#91;</span>taltsName<span class="br0">&#93;</span> as ATextureAtlas<span class="br0">&#41;</span>.<span class="me1">getTexture</span><span class="br0">&#40;</span><span class="kw3">name</span><span class="br0">&#41;</span>;
+            <span class="br0">&#125;</span>
+            <span class="kw1">return</span> mTextureDic<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span>;
+        <span class="br0">&#125;</span>
+&#160;
+        <span class="coMULTI">/**
+         * 根据名称获得材质序列
+         * @param    name
+         * @return
+         */</span>
+        <span class="kw3">public</span> <span class="kw2">function</span> getTextures<span class="br0">&#40;</span><span class="kw3">name</span>:<span class="kw3">String</span><span class="br0">&#41;</span>:Vector.<span class="sy0">&lt;</span>Texture<span class="sy0">&gt;</span>
+        <span class="br0">&#123;</span>
+            <span class="kw1">if</span> <span class="br0">&#40;</span>mTexturesDic<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+&#160;
+            <span class="br0">&#125;</span><span class="kw1">else</span> <span class="br0">&#123;</span>
+                mTexturesDic<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span> = <span class="kw2">new</span> Vector.<span class="sy0">&lt;</span>Texture<span class="sy0">&gt;</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+                <span class="kw2">var</span> taltsNames&#160;: Vector.<span class="sy0">&lt;</span>String<span class="sy0">&gt;</span> = getTexturesName<span class="br0">&#40;</span><span class="kw3">name</span><span class="br0">&#41;</span>;
+                <span class="kw3">trace</span><span class="br0">&#40;</span><span class="st0">&quot;taltsNames&#160;: &quot;</span> + taltsNames<span class="br0">&#41;</span>;
+                <span class="kw1">if</span> <span class="br0">&#40;</span>taltsNames<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                    <span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw2">var</span> i&#160;: <span class="kw3">int</span> = <span class="nu0">0</span>; i <span class="sy0">&lt;</span> taltsNames.<span class="kw3">length</span>; i ++ <span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                        <span class="kw3">trace</span><span class="br0">&#40;</span><span class="st0">&quot;i&#160;: &quot;</span> + taltsNames<span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="br0">&#41;</span>;
+                        <span class="kw1">if</span> <span class="br0">&#40;</span><span class="br0">&#40;</span>mTextureAtlasDic<span class="br0">&#91;</span>taltsNames<span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="br0">&#93;</span> as ATextureAtlas<span class="br0">&#41;</span>.<span class="me1">mAtlasTexture</span> == <span class="kw2">null</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                            <span class="br0">&#40;</span>mTextureAtlasDic<span class="br0">&#91;</span>taltsNames<span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="br0">&#93;</span> as ATextureAtlas<span class="br0">&#41;</span>.<span class="me1">mAtlasTexture</span> = getMTexture<span class="br0">&#40;</span>mTextureNameDic<span class="br0">&#91;</span>taltsNames<span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="br0">&#93;</span><span class="br0">&#41;</span>;
+                        <span class="br0">&#125;</span>
+                        mTexturesDic<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span> = mTexturesDic<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span>.<span class="kw3">concat</span><span class="br0">&#40;</span><span class="br0">&#40;</span>mTextureAtlasDic<span class="br0">&#91;</span>taltsNames<span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="br0">&#93;</span> as ATextureAtlas<span class="br0">&#41;</span>.<span class="me1">getTextures</span><span class="br0">&#40;</span><span class="kw3">name</span><span class="br0">&#41;</span><span class="br0">&#41;</span>;
+                    <span class="br0">&#125;</span>
+                <span class="br0">&#125;</span>
+            <span class="br0">&#125;</span>
+            <span class="kw1">return</span> mTexturesDic<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span>;
+        <span class="br0">&#125;</span>
+&#160;
+        <span class="coMULTI">/**
+         * 根据材质名称获得所属材质集的名称
+         * @param    name
+         * @return
+         */</span>
+        <span class="kw3">private</span> <span class="kw2">function</span> getTexturesAtlasName<span class="br0">&#40;</span><span class="kw3">name</span>&#160;: <span class="kw3">String</span><span class="br0">&#41;</span>:<span class="kw3">String</span> <span class="br0">&#123;</span>
+            <span class="kw2">var</span> dic&#160;: Dictionary;
+            <span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw2">var</span> k&#160;: <span class="kw3">String</span> <span class="kw1">in</span> mTextureAtlasDic<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                dic = <span class="br0">&#40;</span>mTextureAtlasDic<span class="br0">&#91;</span>k<span class="br0">&#93;</span> as ATextureAtlas<span class="br0">&#41;</span>.<span class="me1">mTextureNames</span>;    
+                <span class="kw1">if</span> <span class="br0">&#40;</span>dic<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                    <span class="kw1">return</span> k;
+                    <span class="kw1">break</span>;
+                <span class="br0">&#125;</span>
+            <span class="br0">&#125;</span>
+            <span class="kw1">return</span> <span class="st0">&quot;undefined&quot;</span>;
+        <span class="br0">&#125;</span>
+&#160;
+        <span class="coMULTI">/**
+         * 根据材质序列名称获得所属材质集的名称
+         * @param    name
+         * @return
+         */</span>
+        <span class="kw3">private</span> <span class="kw2">function</span> getTexturesName<span class="br0">&#40;</span><span class="kw3">name</span>&#160;: <span class="kw3">String</span><span class="br0">&#41;</span>&#160;: Vector.<span class="sy0">&lt;</span>String<span class="sy0">&gt;</span> <span class="br0">&#123;</span>
+            <span class="kw2">var</span> tlist&#160;: Vector.<span class="sy0">&lt;</span>String<span class="sy0">&gt;</span> = <span class="kw2">new</span> Vector.<span class="sy0">&lt;</span>String<span class="sy0">&gt;</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+            <span class="kw2">var</span> dic&#160;: Dictionary;
+            <span class="kw2">var</span> len&#160;: <span class="kw3">int</span> = <span class="nu0">0</span>;
+            <span class="kw2">var</span> oldTime&#160;: uint = <span class="kw3">getTimer</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+            len = <span class="kw3">name</span>.<span class="kw3">length</span>;
+            <span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw2">var</span> k&#160;: <span class="kw3">String</span> <span class="kw1">in</span> mTextureAtlasDic<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                dic = <span class="br0">&#40;</span>mTextureAtlasDic<span class="br0">&#91;</span>k<span class="br0">&#93;</span> as ATextureAtlas<span class="br0">&#41;</span>.<span class="me1">mTextureNames</span>;    
+                <span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw2">var</span> m&#160;: <span class="kw3">String</span> <span class="kw1">in</span> dic<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                    <span class="kw1">if</span> <span class="br0">&#40;</span>m.<span class="kw3">substr</span><span class="br0">&#40;</span><span class="nu0">0</span>, len<span class="br0">&#41;</span> == <span class="kw3">name</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                        tlist.<span class="kw3">push</span><span class="br0">&#40;</span>k<span class="br0">&#41;</span>;
+                        <span class="kw1">break</span>;
+                    <span class="br0">&#125;</span>
+                <span class="br0">&#125;</span>
+            <span class="br0">&#125;</span>
+            <span class="kw1">if</span> <span class="br0">&#40;</span>tlist.<span class="kw3">length</span> <span class="sy0">&gt;</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                <span class="kw1">return</span> tlist;
+            <span class="br0">&#125;</span><span class="kw1">else</span><span class="br0">&#123;</span>
+                <span class="kw1">return</span> <span class="kw2">null</span>;
+            <span class="br0">&#125;</span>
+        <span class="br0">&#125;</span>
+&#160;
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div>
+<p>最后呢，就是AssetManager.as,负责管理各材质工厂了。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">package com.<span class="me1">pamakids</span>.<span class="me1">assetmanager</span> 
+<span class="br0">&#123;</span>
+    <span class="kw3">import</span> flash.<span class="me1">utils</span>.<span class="me1">Dictionary</span>;
+    <span class="kw3">import</span> starling.<span class="me1">extensions</span>.<span class="me1">ATextureAtlas</span>;
+    <span class="kw3">import</span> starling.<span class="me1">textures</span>.<span class="me1">Texture</span>;
+    <span class="kw3">import</span> starling.<span class="me1">textures</span>.<span class="me1">TextureAtlas</span>;
+&#160;
+    <span class="coMULTI">/**
+     * @example
+     * AssetManager.getInstance().reregisterAssetFactory(&quot;ipad&quot;,ipadAssetFactory);
+     * AssetManager.getInstance().reregisterAssetFactory(&quot;iphone&quot;,iphoneAssetFactory);
+     * AssetManager.getInstance().setDefaultAssetFactory(&quot;ipad&quot;);
+     * AssetManager.getInstance().init();
+     * @example
+     */</span>
+    <span class="kw3">public</span> <span class="kw2">class</span> AssetManager
+    <span class="br0">&#123;</span>
+        <span class="kw3">private</span> <span class="kw3">static</span> <span class="kw2">var</span> instance&#160;: AssetManager;
+        <span class="kw3">private</span> <span class="kw2">var</span> curAssetFactory&#160;: IAssetFactory;
+        <span class="kw3">private</span> <span class="kw2">var</span> assetFactoryDic&#160;: Dictionary = <span class="kw2">new</span> Dictionary<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+        <span class="kw3">public</span> <span class="kw2">function</span> AssetManager<span class="br0">&#40;</span><span class="br0">&#41;</span>
+        <span class="br0">&#123;</span>
+&#160;
+        <span class="br0">&#125;</span>
+&#160;
+        <span class="kw3">public</span> <span class="kw3">static</span> <span class="kw2">function</span> getInstance<span class="br0">&#40;</span><span class="br0">&#41;</span>:AssetManager <span class="br0">&#123;</span>
+            <span class="kw1">if</span> <span class="br0">&#40;</span>instance == <span class="kw2">null</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                instance = <span class="kw2">new</span> AssetManager<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+            <span class="br0">&#125;</span>
+            <span class="kw1">return</span> instance;
+        <span class="br0">&#125;</span>
+&#160;
+        <span class="coMULTI">/**
+         * 注册
+         * @param    name
+         * @param    factory
+         */</span>
+        <span class="kw3">public</span> <span class="kw2">function</span> reregisterAssetFactory<span class="br0">&#40;</span><span class="kw3">name</span>&#160;: <span class="kw3">String</span>,factory&#160;: IAssetFactory<span class="br0">&#41;</span>:<span class="kw3">void</span><span class="br0">&#123;</span>
+            assetFactoryDic<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span> = factory;
+        <span class="br0">&#125;</span>
+&#160;
+        <span class="coMULTI">/**
+         * 设置默认仓库
+         * @param    name
+         */</span>
+        <span class="kw3">public</span> <span class="kw2">function</span> setDefaultAssetFactory<span class="br0">&#40;</span><span class="kw3">name</span>&#160;: <span class="kw3">String</span><span class="br0">&#41;</span>:<span class="kw3">void</span><span class="br0">&#123;</span>
+            <span class="kw1">if</span><span class="br0">&#40;</span>assetFactoryDic<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+                curAssetFactory = assetFactoryDic<span class="br0">&#91;</span><span class="kw3">name</span><span class="br0">&#93;</span> as IAssetFactory;
+            <span class="br0">&#125;</span>
+        <span class="br0">&#125;</span>
+&#160;
+        <span class="coMULTI">/**
+         * 初始化
+         */</span>
+        <span class="kw3">public</span> <span class="kw2">function</span> init<span class="br0">&#40;</span><span class="br0">&#41;</span>:<span class="kw3">void</span> <span class="br0">&#123;</span>
+            <span class="kw1">if</span><span class="br0">&#40;</span>curAssetFactory<span class="br0">&#41;</span><span class="br0">&#123;</span>
+                curAssetFactory.<span class="me1">init</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+            <span class="br0">&#125;</span>
+        <span class="br0">&#125;</span>
+&#160;
+        <span class="kw3">public</span> <span class="kw2">function</span> getTextureAtls<span class="br0">&#40;</span><span class="kw3">name</span>&#160;: <span class="kw3">String</span><span class="br0">&#41;</span>&#160;: ATextureAtlas <span class="br0">&#123;</span>
+            <span class="kw1">if</span> <span class="br0">&#40;</span>curAssetFactory<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                <span class="kw1">return</span> curAssetFactory.<span class="me1">getTextureAtls</span><span class="br0">&#40;</span><span class="kw3">name</span><span class="br0">&#41;</span>;
+            <span class="br0">&#125;</span>
+            <span class="kw1">return</span> <span class="kw2">null</span>;
+        <span class="br0">&#125;</span>
+&#160;
+        <span class="kw3">public</span> <span class="kw2">function</span> getTexture<span class="br0">&#40;</span><span class="kw3">name</span>&#160;: <span class="kw3">String</span><span class="br0">&#41;</span>:Texture <span class="br0">&#123;</span>
+            <span class="kw1">if</span> <span class="br0">&#40;</span>curAssetFactory<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                <span class="kw1">return</span> curAssetFactory.<span class="me1">getTexture</span><span class="br0">&#40;</span><span class="kw3">name</span><span class="br0">&#41;</span>;
+            <span class="br0">&#125;</span>
+            <span class="kw1">return</span> <span class="kw2">null</span>;
+        <span class="br0">&#125;</span>
+&#160;
+        <span class="kw3">public</span> <span class="kw2">function</span> getTextures<span class="br0">&#40;</span><span class="kw3">name</span>:<span class="kw3">String</span><span class="br0">&#41;</span>:Vector.<span class="sy0">&lt;</span>Texture<span class="sy0">&gt;</span>
+        <span class="br0">&#123;</span>
+            <span class="kw1">if</span> <span class="br0">&#40;</span>curAssetFactory<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                <span class="kw1">return</span> curAssetFactory.<span class="me1">getTextures</span><span class="br0">&#40;</span><span class="kw3">name</span><span class="br0">&#41;</span>;
+            <span class="br0">&#125;</span>
+            <span class="kw1">return</span> <span class="kw2">null</span>;
+        <span class="br0">&#125;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div>
+<hr />
+<p>下面写个简单的用例。
+</p><p>IpadAssetFactory.as
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">package  
+<span class="br0">&#123;</span>
+    <span class="kw3">import</span> com.<span class="me1">pamakids</span>.<span class="me1">assetmanager</span>.<span class="me1">AssetFactory</span>;
+&#160;
+    <span class="kw3">public</span> <span class="kw2">class</span> IpadAssetFactory <span class="kw3">extends</span> AssetFactory
+    <span class="br0">&#123;</span>
+        <span class="kw3">public</span> <span class="kw2">function</span> IpadAssetFactory<span class="br0">&#40;</span><span class="br0">&#41;</span>
+        <span class="br0">&#123;</span>
+            <span class="kw3">super</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+        <span class="br0">&#125;</span>
+&#160;
+        override <span class="kw3">public</span> <span class="kw2">function</span> init<span class="br0">&#40;</span><span class="br0">&#41;</span>:<span class="kw3">void</span> <span class="br0">&#123;</span>
+            <span class="kw3">this</span>.<span class="me1">registerAssets</span><span class="br0">&#40;</span>Assets<span class="br0">&#41;</span>;
+            <span class="kw3">this</span>.<span class="me1">addTextureAtlas</span><span class="br0">&#40;</span><span class="st0">&quot;asset2&quot;</span>, <span class="kw2">null</span>, <span class="kw3">this</span>.<span class="me1">getMXml</span><span class="br0">&#40;</span><span class="st0">&quot;AtlasXml2Game&quot;</span><span class="br0">&#41;</span>, <span class="st0">&quot;AtlasTexture2Game&quot;</span><span class="br0">&#41;</span>;
+            <span class="kw3">this</span>.<span class="me1">addTextureAtlas</span><span class="br0">&#40;</span><span class="st0">&quot;asset1&quot;</span>,<span class="kw2">null</span>,<span class="kw3">this</span>.<span class="me1">getMXml</span><span class="br0">&#40;</span><span class="st0">&quot;AtlasXmlGame&quot;</span><span class="br0">&#41;</span>,<span class="st0">&quot;AtlasTextureGame&quot;</span><span class="br0">&#41;</span>;
+&#160;
+        <span class="br0">&#125;</span>
+&#160;
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div>
+<p>IphoneAssetFactory.as
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">package  
+<span class="br0">&#123;</span>
+    <span class="kw3">import</span> com.<span class="me1">pamakids</span>.<span class="me1">assetmanager</span>.<span class="me1">AssetFactory</span>;
+&#160;
+    <span class="coMULTI">/**
+     * ...
+     * @author icekiller
+     */</span>
+    <span class="kw3">public</span> <span class="kw2">class</span> IphoneAssetFactory <span class="kw3">extends</span> AssetFactory 
+    <span class="br0">&#123;</span>
+&#160;
+        <span class="kw3">public</span> <span class="kw2">function</span> IphoneAssetFactory<span class="br0">&#40;</span><span class="br0">&#41;</span> 
+        <span class="br0">&#123;</span>
+            <span class="kw3">this</span>.<span class="me1">registerAssets</span><span class="br0">&#40;</span>Assets<span class="br0">&#41;</span>;
+            <span class="kw3">this</span>.<span class="me1">addTextureAtlas</span><span class="br0">&#40;</span><span class="st0">&quot;iphoneAsset1&quot;</span>,<span class="kw2">null</span>,<span class="kw3">this</span>.<span class="me1">getMXml</span><span class="br0">&#40;</span><span class="st0">&quot;AssetXmlIphone1&quot;</span><span class="br0">&#41;</span>,<span class="st0">&quot;AssetIphone1&quot;</span><span class="br0">&#41;</span>;
+        <span class="br0">&#125;</span>
+&#160;
+    <span class="br0">&#125;</span>
+&#160;
+<span class="br0">&#125;</span></pre></div></div>
+<p>Assets.as
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">package  
+<span class="br0">&#123;</span>
+    <span class="kw3">import</span> flash.<span class="me1">display</span>.<span class="me1">Bitmap</span>;
+    <span class="kw3">import</span> flash.<span class="me1">utils</span>.<span class="me1">Dictionary</span>;
+&#160;
+    <span class="kw3">import</span> starling.<span class="me1">textures</span>.<span class="me1">Texture</span>;
+    <span class="kw3">import</span> starling.<span class="me1">textures</span>.<span class="me1">TextureAtlas</span>;
+&#160;
+    <span class="kw3">public</span> <span class="kw2">class</span> Assets <span class="kw3">extends</span> <span class="kw3">Object</span>
+    <span class="br0">&#123;</span>
+        <span class="br0">&#91;</span>Embed<span class="br0">&#40;</span> source = <span class="st0">&quot;../sprrow/asset1.png&quot;</span> <span class="br0">&#41;</span><span class="br0">&#93;</span>
+        <span class="kw3">public</span> <span class="kw3">static</span> const AtlasTextureGame:<span class="kw2">Class</span>;
+        <span class="br0">&#91;</span>Embed<span class="br0">&#40;</span>source = <span class="st0">&quot;../sprrow/asset1.xml&quot;</span>, mimeType = <span class="st0">&quot;application/octet-stream&quot;</span><span class="br0">&#41;</span><span class="br0">&#93;</span>
+        <span class="kw3">public</span> <span class="kw3">static</span> const AtlasXmlGame:<span class="kw2">Class</span>;
+&#160;
+        <span class="br0">&#91;</span>Embed<span class="br0">&#40;</span> source = <span class="st0">&quot;../sprrow/asset2.png&quot;</span> <span class="br0">&#41;</span><span class="br0">&#93;</span>
+        <span class="kw3">public</span> <span class="kw3">static</span> const AtlasTexture2Game:<span class="kw2">Class</span>;
+        <span class="br0">&#91;</span>Embed<span class="br0">&#40;</span>source = <span class="st0">&quot;../sprrow/asset2.xml&quot;</span>, mimeType = <span class="st0">&quot;application/octet-stream&quot;</span><span class="br0">&#41;</span><span class="br0">&#93;</span>
+        <span class="kw3">public</span> <span class="kw3">static</span> const AtlasXml2Game:<span class="kw2">Class</span>;
+&#160;
+        <span class="br0">&#91;</span>Embed<span class="br0">&#40;</span> source = <span class="st0">&quot;../sprrow/iphone_asset.png&quot;</span> <span class="br0">&#41;</span><span class="br0">&#93;</span>
+        <span class="kw3">public</span> <span class="kw3">static</span> const AssetIphone1:<span class="kw2">Class</span>;
+        <span class="br0">&#91;</span>Embed<span class="br0">&#40;</span>source = <span class="st0">&quot;../sprrow/iphone_asset.xml&quot;</span>, mimeType = <span class="st0">&quot;application/octet-stream&quot;</span><span class="br0">&#41;</span><span class="br0">&#93;</span>
+        <span class="kw3">public</span> <span class="kw3">static</span> const AssetXmlIphone1:<span class="kw2">Class</span>;
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div>
+<p>最后就是在主类里应用了
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw2">var</span> ipadAssetFactory&#160;: IpadAssetFactory = <span class="kw2">new</span> IpadAssetFactory<span class="br0">&#40;</span><span class="br0">&#41;</span>; 
+<span class="kw2">var</span> iphoneAssetFactory&#160;: IphoneAssetFactory = <span class="kw2">new</span> IphoneAssetFactory<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+AssetManager.<span class="me1">getInstance</span><span class="br0">&#40;</span><span class="br0">&#41;</span>.<span class="me1">reregisterAssetFactory</span><span class="br0">&#40;</span><span class="st0">&quot;ipad&quot;</span>, ipadAssetFactory<span class="br0">&#41;</span>;
+AssetManager.<span class="me1">getInstance</span><span class="br0">&#40;</span><span class="br0">&#41;</span>.<span class="me1">reregisterAssetFactory</span><span class="br0">&#40;</span><span class="st0">&quot;iphone&quot;</span>,iphoneAssetFactory<span class="br0">&#41;</span>;
+<span class="co1">//根据设备类型设置默认的素材库</span>
+AssetManager.<span class="me1">getInstance</span><span class="br0">&#40;</span><span class="br0">&#41;</span>.<span class="me1">setDefaultAssetFactory</span><span class="br0">&#40;</span><span class="st0">&quot;iphone&quot;</span><span class="br0">&#41;</span>;
+AssetManager.<span class="me1">getInstance</span><span class="br0">&#40;</span><span class="br0">&#41;</span>.<span class="me1">init</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+<span class="kw2">var</span> texture&#160;:  = AssetManager.<span class="me1">getInstance</span><span class="br0">&#40;</span><span class="br0">&#41;</span>.<span class="me1">getTexture</span><span class="br0">&#40;</span><span class="st0">&quot;huabing005&quot;</span><span class="br0">&#41;</span>;
+<span class="kw2">var</span> pig&#160;: Image= <span class="kw2">new</span> Image<span class="br0">&#40;</span>texture<span class="br0">&#41;</span>;
+addChild<span class="br0">&#40;</span>pig<span class="br0">&#41;</span>;</pre></div></div>
+<p>ps:
+</p><p>暂时没解决的问题是如果一个动画序列分布在不同材质集上的话，获取这个序列的时候，顺序会不正确，这个会有解决方案的。所以暂时使用的时候尽量确保一个动画序列在同一个材质集上。
+</p><p>this.addTextureAtlas("asset2", null, this.getMXml("AtlasXml2Game"), "AtlasTexture2Game");
+</p><p>这块尽量确保进入游戏的第一个画面的所有素材在一个材质集上。如果只想初始化化数据，不想初始化材质的话，直接把材质为null就好，用到时实时渲染材质.
+</p><p>对OOP理解的很浅显，如果哪位对类的结构有更好的组织或写更改的话，欢迎分享。
+</p><p>如果有关于Starling或者移动开发方面的交流的话可以到新浪微博@icekiller_cn,一起交流分享。
+</p>
+<hr />
+<p>本文涉及的素材和源码下载：
+</p><p><a rel="nofollow" class="external free" href="http://vdisk.weibo.com/s/5nNAw">http://vdisk.weibo.com/s/5nNAw</a>
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 25/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key app_starlinglib-wiki:pcache:idhash:92-0!*!*!*!*!2!* and timestamp 20140628103317 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				来自“<a href="http://www.starlinglib.com/index.php?title=StarlingMobile:iOS%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E6%9D%90%E8%B4%A8%E9%80%82%E9%85%8D%E6%96%B9%E6%A1%88&amp;oldid=148">http://www.starlinglib.com/index.php?title=StarlingMobile:iOS%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E6%9D%90%E8%B4%A8%E9%80%82%E9%85%8D%E6%96%B9%E6%A1%88&amp;oldid=148</a>”				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>个人工具</h5>
+	<ul>
+		<li id="pt-login"><a href="http://www.starlinglib.com/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&amp;returnto=StarlingMobile%3AiOS%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E6%9D%90%E8%B4%A8%E9%80%82%E9%85%8D%E6%96%B9%E6%A1%88" title="我们希望您可以登入，但不强求 [o]" accesskey="o">登录</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>名字空间</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="StarlingMobile_iOS_Texture.html"  title="查看内容页面 [c]" accesskey="c">页面</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://www.starlinglib.com/index.php?title=%E8%AE%A8%E8%AE%BA:StarlingMobile:iOS%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E6%9D%90%E8%B4%A8%E9%80%82%E9%85%8D%E6%96%B9%E6%A1%88&amp;action=edit&amp;redlink=1"  title="关于内容页面的讨论 [t]" accesskey="t">讨论</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>变换</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>查看</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="StarlingMobile_iOS_Texture.html" >阅读</a></span></li>
+					<li id="ca-viewsource"><span><a href="http://www.starlinglib.com/index.php?title=StarlingMobile:iOS%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E6%9D%90%E8%B4%A8%E9%80%82%E9%85%8D%E6%96%B9%E6%A1%88&amp;action=edit"  title="本页面已被保护。你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://www.starlinglib.com/index.php?title=StarlingMobile:iOS%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E6%9D%90%E8%B4%A8%E9%80%82%E9%85%8D%E6%96%B9%E6%A1%88&amp;action=history"  title="本页面的早前修订版本 [h]" accesskey="h">查看历史</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>操作</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">搜索</label></h5>
+	<form action="http://www.starlinglib.com/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="在Starling中文站中搜索 [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="提交" title="如果相同的标题存在的话便直接前往该页面" id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="搜索" title="搜索含这些文字的页面" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="特殊:搜索"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../skins/common/images/wiki.png);" href="index.html"  title="访问首页"></a></div>
+				<!-- /logo -->
+				
+<!-- navigation -->
+<div class="portal" id='p-navigation'>
+	<h5>导航</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="index.html" title="访问首页 [z]" accesskey="z">首页</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /navigation -->
+
+<!-- Starling中文资料 -->
+<div class="portal" id='p-Starling.E4.B8.AD.E6.96.87.E8.B5.84.E6.96.99'>
+	<h5>Starling中文资料</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E6.9C.80.E6.96.B0.E5.8A.A8.E6.80.81"><a href="News.html">Starling最新动态</a></li>
+			<li id="n-.E4.B8.8B.E8.BD.BD"><a href="download.html">下载</a></li>
+			<li id="n-.E5.85.A5.E9.97.A8.E7.AC.AC.E4.B8.80.E6.AD.A5"><a href="FristStep.html">入门第一步</a></li>
+			<li id="n-API.E6.8E.A5.E5.8F.A3.E6.96.87.E6.A1.A3"><a href="APIReference.html">API接口文档</a></li>
+			<li id="n-Starling.E8.AF.B4.E6.98.8E.E4.B9.A6"><a href="StarlingManual.html">Starling说明书</a></li>
+			<li id="n-FeathersUI.E6.96.87.E6.A1.A3"><a href="FeathersUI.html">FeathersUI文档</a></li>
+			<li id="n-.E6.95.99.E7.A8.8B.E5.92.8C.E4.BB.A3.E7.A0.81"><a href="Tutorials.html">教程和代码</a></li>
+			<li id="n-Starling.E6.89.A9.E5.B1.95"><a href="Extensions.html">Starling扩展</a></li>
+			<li id="n-.E6.88.90.E5.8A.9F.E6.A1.88.E4.BE.8B"><a href="GamesPowered.html">成功案例</a></li>
+			<li id="n-.E7.AB.99.E5.A4.96.E8.B5.84.E6.96.99"><a href="OutsideDocs.html">站外资料</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Starling中文资料 -->
+
+<!-- Starling原创教程 -->
+<div class="portal" id='p-Starling.E5.8E.9F.E5.88.9B.E6.95.99.E7.A8.8B'>
+	<h5>Starling原创教程</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E7.A7.BB.E5.8A.A8.E5.BC.80.E5.8F.91.E6.95.99.E7.A8.8B"><a href="StarlingMobile.html">Starling移动开发教程</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Starling原创教程 -->
+
+<!-- 微信-Flash微报 -->
+
+
+<!-- /微信-Flash微报 -->
+
+<!-- 论坛 -->
+<div class="portal" id='p-.E8.AE.BA.E5.9D.9B'>
+	<h5>论坛</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E4.B8.AD.E6.96.87.E8.AE.BA.E5.9D.9B"><a href="http://bbs.egret-labs.org/?fromuid=62" rel="nofollow">Egret开发者论坛</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /论坛 -->
+
+<!-- 友链 -->
+<div class="portal" id='p-.E5.8F.8B.E9.93.BE'>
+	<h5>友链</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Sirius2d.E5.BC.95.E6.93.8E"><a href="http://www.sirius2d.com/" rel="nofollow">Sirius2d引擎</a></li>
+			<li id="n-A.E9.97.AA.E7.BD.91"><a href="http://www.ashan.org/" rel="nofollow">A闪网</a></li>
+			<li id="n-Y.Boy"><a href="http://www.riaoo.com/" rel="nofollow">Y.Boy</a></li>
+			<li id="n-Cenfee"><a href="http://cenfee.com/" rel="nofollow">Cenfee</a></li>
+			<li id="n-.E5.B0.8F.E5.A4.9C-Clifford"><a href="http://www.cnblogs.com/flash3d/" rel="nofollow">小夜 Clifford</a></li>
+			<li id="n-.E6.9D.9C.E5.A2.9E.E5.BC.BA.28DzQ.29"><a href="http://www.duzengqiang.com/" rel="nofollow">杜增强(DzQ)</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /友链 -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>工具箱</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="%e7%89%b9%e6%ae%8a_%e9%93%be%e5%85%a5%e9%a1%b5%e9%9d%a2/StarlingMobile_iOS_Texture.html" title="所有链入本页的wiki页面列表 [j]" accesskey="j">链入页面</a></li>
+			<li id="t-recentchangeslinked"><a href="%e7%89%b9%e6%ae%8a_%e9%93%be%e5%87%ba%e6%9b%b4%e6%94%b9/StarlingMobile_iOS_Texture.html" title="本页链入的页面的最近更改 [k]" accesskey="k">链出更改</a></li>
+			<li id="t-specialpages"><a href="%e7%89%b9%e6%ae%8a_%e7%89%b9%e6%ae%8a%e9%a1%b5%e9%9d%a2.html" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+			<li><a href="http://www.starlinglib.com/index.php?title=StarlingMobile:iOS%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E6%9D%90%E8%B4%A8%E9%80%82%E9%85%8D%E6%96%B9%E6%A1%88&amp;printable=yes" rel="alternate">可打印版</a></li>
+			<li id="t-permalink"><a href="http://www.starlinglib.com/index.php?title=StarlingMobile:iOS%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E6%9D%90%E8%B4%A8%E9%80%82%E9%85%8D%E6%96%B9%E6%A1%88&amp;oldid=148" title="本页面该修订版本的永久链接">永久链接</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> 本页面最后修订于2012年5月14日 (星期一) 06:35。</li>
+											<li id="footer-info-viewcount">此页面已被浏览过5,393次。</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="Starling_yinsi.html" title="Starling中文站:隐私权政策">隐私权政策</a></li>
+											<li id="footer-places-about"><a href="StarlingCnAbout.html" title="Starling中文站:关于">关于Starling中文站</a></li>
+											<li id="footer-places-disclaimer"><a href="StarlingCNCopyRight.html" title="Starling中文站:免责声明">免责声明</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31520647-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+		<!-- /footer -->
+		
+<!-- Served in 0.716 secs. -->
+	</body>
+
+<!-- Mirrored from www.starlinglib.com/wiki/StarlingMobile:iOS游戏开发中的材质适配方案 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jun 2014 07:16:46 GMT -->
+</html>

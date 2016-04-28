@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from www.starlinglib.com/wiki/News:Stage3D_compressed_textures by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jun 2014 07:14:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>News:Stage3D compressed textures - Starling中文站</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.0" />
+<link rel="shortcut icon" href="http://www.starlinglib.com/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.starlinglib.com/opensearch_desc.php" title="Starling中文站 (zh-cn)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://www.starlinglib.com/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="Starling中文站的Atom" href="http://www.starlinglib.com/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&amp;feed=atom" />
+<link rel="stylesheet" href="../skins/style.css" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: app_starlinglib-wiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"News:Stage3D_compressed_textures","wgTitle":"News:Stage3D compressed textures","wgCurRevisionId":1338,"wgArticleId":136,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"zh-cn","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgRelevantPageName":"News:Stage3D_compressed_textures","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false}});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"zh-cn","language":"zh-cn","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;},{},{});mw.loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: app_starlinglib-wiki:resourceloader:filter:minify-js:7:64bb9911c781603a64782510a7dfd931 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-java {line-height: normal;}
+.source-java li, .source-java pre {
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for java
+ * CSS class: source-java, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.java.source-java .de1, .java.source-java .de2 {font: normal normal 1em/1.2em monospace; margin:10px 0; padding:10px; background:none; vertical-align:top;}
+.java.source-java  {font-family:monospace;}
+.java.source-java .imp {font-weight: bold; color: red;}
+.java.source-java li, .java.source-java .li1 {font-weight: normal; vertical-align:top;}
+.java.source-java .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.java.source-java .li2 {font-weight: bold; vertical-align:top;}
+.java.source-java .kw1 {color: #000000; font-weight: bold;}
+.java.source-java .kw2 {color: #000066; font-weight: bold;}
+.java.source-java .kw3 {color: #003399;}
+.java.source-java .kw4 {color: #000066; font-weight: bold;}
+.java.source-java .co1 {color: #666666; font-style: italic;}
+.java.source-java .co2 {color: #006699;}
+.java.source-java .co3 {color: #008000; font-style: italic; font-weight: bold;}
+.java.source-java .coMULTI {color: #666666; font-style: italic;}
+.java.source-java .es0 {color: #000099; font-weight: bold;}
+.java.source-java .br0 {color: #009900;}
+.java.source-java .sy0 {color: #339933;}
+.java.source-java .st0 {color: #0000ff;}
+.java.source-java .nu0 {color: #cc66cc;}
+.java.source-java .me1 {color: #006633;}
+.java.source-java .me2 {color: #006633;}
+.java.source-java .ln-xtra, .java.source-java li.ln-xtra, .java.source-java div.ln-xtra {background-color: #ffc;}
+.java.source-java span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "http://www.starlinglib.com/index.php?title=MediaWiki:Geshi.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+/*]]>*/
+</style><!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-News_Stage3D_compressed_textures skin-vector action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">News:Stage3D compressed textures</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">来自Starling中文站</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					跳转到： <a href="#mw-head">导航</a>,
+					<a href="#p-search">搜索</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="zh-CN" dir="ltr" class="mw-content-ltr"><p>原文：<a rel="nofollow" class="external free" href="http://www.bytearray.org/?p=4472">http://www.bytearray.org/?p=4472</a>
+</p><p>Starling中文站 翻译整理 
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>目录</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Stage3D.E4.B8.AD.E7.9A.84.E5.8E.8B.E7.BC.A9.E7.BA.B9.E7.90.86_-_.E4.BB.8B.E7.BB.8DATF_SDK"><span class="tocnumber">1</span> <span class="toctext">Stage3D中的压缩纹理 - 介绍ATF SDK</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#.E4.B8.BA.E4.BB.80.E4.B9.88.E8.A6.81.E4.BD.BF.E7.94.A8ATF.E6.A0.BC.E5.BC.8F.3F"><span class="tocnumber">1.1</span> <span class="toctext">为什么要使用ATF格式?</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#ATF.E6.A0.BC.E5.BC.8F.E8.A7.A3.E6.9E.90"><span class="tocnumber">1.2</span> <span class="toctext">ATF格式解析</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#.E9.82.A3.E4.B9.88.E8.BF.99.E4.BA.9B.E7.89.B9.E6.80.A7.E4.B8.BA.E6.88.91.E4.BB.AC.E5.B8.A6.E6.9D.A5.E4.BA.86.E4.BB.80.E4.B9.88.3F"><span class="tocnumber">1.3</span> <span class="toctext">那么这些特性为我们带来了什么?</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#.E5.A6.82.E4.BD.95.E4.BD.BF.E7.94.A8.E8.BF.99.E4.BA.9B.E5.B7.A5.E5.85.B7"><span class="tocnumber">1.4</span> <span class="toctext">如何使用这些工具</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#.E5.9C.A8Stage3D.E4.B8.AD.E4.BD.BF.E7.94.A8.E5.8E.8B.E7.BC.A9.E7.BA.B9.E7.90.86"><span class="tocnumber">1.5</span> <span class="toctext">在Stage3D中使用压缩纹理</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#.E5.92.8CStarling.E7.9A.84.E6.95.B4.E5.90.88"><span class="tocnumber">1.6</span> <span class="toctext">和Starling的整合</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#.E9.99.90.E5.88.B6"><span class="tocnumber">1.7</span> <span class="toctext">限制</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#.E5.BF.85.E5.A4.87.E6.9D.A1.E4.BB.B6"><span class="tocnumber">1.8</span> <span class="toctext">必备条件</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#.E4.B8.8B.E8.BD.BD"><span class="tocnumber">1.9</span> <span class="toctext">下载</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id="Stage3D.E4.B8.AD.E7.9A.84.E5.8E.8B.E7.BC.A9.E7.BA.B9.E7.90.86_-_.E4.BB.8B.E7.BB.8DATF_SDK">Stage3D中的压缩纹理 - 介绍ATF SDK</span></h2>
+<p>我们从去年开始就一直在介绍Stage3D,它从来没有停止过增长的势头，但是有一个领域，我们一直没有透露所有的细节。这就是ATF格式。它在很多地方被人问起，那么它现在有更新了吗？你们中的一些人，可能已经看到了在Stage3D的文档中关于压缩纹理的描述，但我们一直没有分享任何工具，来创建早已名声在外的ATF格式。
+</p><p>在ATF工具正式被整合到AIR SDK之前，我很高兴在这里预先分享一下ATF工具，这样您可以现在就开始使用ATF格式!
+</p><p><b>那么ATF到底是何方神圣呢?</b>
+</p><p>首先，让我们开始讨论一下压缩纹理的由来和原理。
+</p><p>无论使用哪种语言去做GPU编程，您在纹理处理上都有两个选择：您可以使用压缩的纹理，或未被压缩的纹理，很简单。那么，它们之间的区别是什么呢？
+</p>
+<ul><li>当使用未压缩的纹理，比如使用古老的未压缩文件格式PNG，将这种格式上传给GPU
+</li><li>由于GPU本身不支持这种格式，您的纹理实际上是被存储在RAM中，而不是GPU中
+</li><li>同样这种情况也适用于JPEG图片，是的，图形芯片组不知道任何关于JPEG的信息。
+</li><li>当然，每个平台支持不同的压缩纹理格式，取决于它的芯片组
+</li></ul>
+<p>这是很有趣的，下面的表格说明了这种情况：
+</p><p><a href="%e6%96%87%e4%bb%b6_Aft-format.html" class="image"><img alt="Aft-format.png" src="../images/0/05/Aft-format.png" width="949" height="273" /></a>
+</p>
+<h3> <span class="mw-headline" id=".E4.B8.BA.E4.BB.80.E4.B9.88.E8.A6.81.E4.BD.BF.E7.94.A8ATF.E6.A0.BC.E5.BC.8F.3F">为什么要使用ATF格式?</span></h3>
+<p>您可以想象一下，如果您要开发一个可以运行在iOS, Android和桌面的游戏，您就需要为每一个平台压缩对应的纹理格式。就像下面这样：
+</p>
+<ul><li> leaf.png 编码为 DXT格式，用于 Windows 和 MacOS
+</li><li> leaf.png 编码为 ETC1 或 DXT 格式，用于 Android (Nvidia)
+</li><li> leaf.png 编码为 PVRTC格式，用于 iOS (ImgTech)
+</li></ul>
+<p>当然，这个过程是非常痛苦的：要为所有的平台提供不同版本的纹理，并且在运行时检测平台，然后上传对应的纹理。如果有这么一个东西就太酷了：它可以作为一个单一的容器，来包装所有的纹理，然后每一个平台的Flash Player或AIR会自动从其中提取所需的纹理。很酷吧？所以ATF格式诞生了。
+</p>
+<h3> <span class="mw-headline" id="ATF.E6.A0.BC.E5.BC.8F.E8.A7.A3.E6.9E.90">ATF格式解析</span></h3>
+<p>事实上，ATF格式是存储有损压缩图像的容器。下面的图片，展示了一个默认的压缩过的ATF格式的简单结构：
+</p><p><a href="%e6%96%87%e4%bb%b6_Atf-full1.html" class="image"><img alt="Atf-full1.png" src="../images/8/8a/Atf-full1.png" width="420" height="337" /></a>
+</p><p>默认情况下，需要把所有的纹理格式（PVRTC(4bpp),ETC1和DXT1/5）嵌入到ATF文件中，以便在任何平台上，AIR或Flash Player都可以自动提取到对应的纹理。但是在某些情况下，如果您的目标是移动设备，那么为什么还要为桌面嵌入纹理呢？或者如果您的目标是iOS，那么为什么还要为Android嵌入纹理呢？为了弥补这一点，您可以只在ATF文件中嵌入PVRTC格式的纹理，以减小文件尺寸。
+</p><p>下图说明了这样的想法：
+</p><p><a href="%e6%96%87%e4%bb%b6_Atf-ios.html" class="image"><img alt="Atf-ios.png" src="../images/0/03/Atf-ios.png" width="420" height="337" /></a>
+</p><p>以此类推，如果您的目标是Android设备，可以只应用ETC1格式：
+</p><p><a href="%e6%96%87%e4%bb%b6_Atf-android.html" class="image"><img alt="Atf-android.png" src="../images/0/06/Atf-android.png" width="420" height="337" /></a>
+</p><p>如果您了解ETC1，可能会问，我们该如何处理透明度呢？我们使用的是双ETC1方式，有两个纹理，一个是透明度通道，一个是颜色。
+</p><p>最后如果只支持桌面，可以只提供DXT格式：
+</p><p><a href="%e6%96%87%e4%bb%b6_Atf-desktop.html" class="image"><img alt="Atf-desktop.png" src="../images/f/f1/Atf-desktop.png" width="420" height="337" /></a>
+</p><p>要知道DXT1和DXT5对于透明度的支持是不同的。DXT1不支持透明度，而DXT5支持。自动化的ATF工具，将检测您的图像是否具备透明度，然后为您选择合适的DXT版本。另外请注意，ATF格式不是透明度预先相乘的。
+</p><p>现在，如果您想在ATF中存储未压缩的纹理，您也可以做到这一点：
+</p><p><a href="%e6%96%87%e4%bb%b6_Atf-uncompressed1.html" class="image"><img alt="Atf-uncompressed1.png" src="../images/6/69/Atf-uncompressed1.png" width="420" height="337" /></a>
+</p><p>您可能会问，为什么我们要这样做呢？答案是，您在一些情况下（比如充分利用cubemap，自动化mipmap支持，或纹理流的支持），可能会想使用未压缩的纹理。
+</p><p>好了，除了上面硬件的需求，如果这些纹理被压缩，还可以为我们带来什么价值？
+</p>
+<h3> <span class="mw-headline" id=".E9.82.A3.E4.B9.88.E8.BF.99.E4.BA.9B.E7.89.B9.E6.80.A7.E4.B8.BA.E6.88.91.E4.BB.AC.E5.B8.A6.E6.9D.A5.E4.BA.86.E4.BB.80.E4.B9.88.3F">那么这些特性为我们带来了什么?</span></h3>
+<ul><li>更快的渲染
+</li><li>更少的存储空间占用 (在譬如iPad1这样的设备上，这个特性是非常重要的)
+</li><li>更快的纹理上传速度
+</li><li>自动产生所有的mip-map映射 (注意如果需要的话，你可以关掉它).
+</li><li>此外，使用压缩纹理，可以让您在同等内存占用的情况下，使用更高分辨率的纹理
+</li></ul>
+<p>好了现在的问题是，您该如何创建ATF格式呢？这并不难，我们提供了一些命令行工具来帮助您。来看看他们是如何工作的吧。
+</p>
+<h3> <span class="mw-headline" id=".E5.A6.82.E4.BD.95.E4.BD.BF.E7.94.A8.E8.BF.99.E4.BA.9B.E5.B7.A5.E5.85.B7">如何使用这些工具</span></h3>
+<p>您主要需要了解的是png2atf工具，正如您猜到的，它可以将一个PNG文件转换为ATF文件：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="java source-java"><pre class="de1"><span class="co1">//package leaf.png with all 3 formats (DXT5, PVRTC and ETC1x2)</span>
+C<span class="sy0">:</span>\png2atf.<span class="me1">exe</span>  <span class="sy0">-</span>c  <span class="sy0">-</span>i  leaf.<span class="me1">png</span>  <span class="sy0">-</span>o  leaf.<span class="me1">atf</span>
+<span class="br0">&#91;</span>In 213KB<span class="br0">&#93;</span><span class="br0">&#91;</span>Out 213KB<span class="br0">&#93;</span><span class="br0">&#91;</span>Ratio <span class="nu0">99.9703</span><span class="sy0">%</span><span class="br0">&#93;</span><span class="br0">&#91;</span>LZMA<span class="sy0">:</span>0KB JPEG<span class="sy0">-</span>XR<span class="sy0">:</span>213KB<span class="br0">&#93;</span>
+&#160;
+<span class="co1">//package specific range of mipmaps</span>
+C<span class="sy0">:</span>\png2atf.<span class="me1">exe</span>  <span class="sy0">-</span>c  <span class="sy0">-</span>n  <span class="nu0">0</span>,<span class="nu0">5</span>  <span class="sy0">-</span>i  leaf.<span class="me1">png</span>  <span class="sy0">-</span>o  leaf0,<span class="nu0">5</span>.<span class="me1">atf</span>
+<span class="br0">&#91;</span>In 213KB<span class="br0">&#93;</span><span class="br0">&#91;</span>Out 213KB<span class="br0">&#93;</span><span class="br0">&#91;</span>Ratio <span class="nu0">99.8825</span><span class="sy0">%</span><span class="br0">&#93;</span><span class="br0">&#91;</span>LZMA<span class="sy0">:</span>0KB JPEG<span class="sy0">-</span>XR<span class="sy0">:</span>213KB<span class="br0">&#93;</span>
+&#160;
+<span class="co1">//package only DXT format</span>
+C<span class="sy0">:</span>\png2atf.<span class="me1">exe</span>  <span class="sy0">-</span>c d  <span class="sy0">-</span>i  leaf.<span class="me1">png</span>  <span class="sy0">-</span>o  leaf_dxt5.<span class="me1">atf</span>
+<span class="br0">&#91;</span>In 85KB<span class="br0">&#93;</span><span class="br0">&#91;</span>Out 85KB<span class="br0">&#93;</span><span class="br0">&#91;</span>Ratio <span class="nu0">100.045</span><span class="sy0">%</span><span class="br0">&#93;</span><span class="br0">&#91;</span>LZMA<span class="sy0">:</span>0KB JPEG<span class="sy0">-</span>XR<span class="sy0">:</span>85KB<span class="br0">&#93;</span>
+&#160;
+<span class="co1">//package only ETC1 format</span>
+C<span class="sy0">:</span>\png2atf.<span class="me1">exe</span>  <span class="sy0">-</span>c e  <span class="sy0">-</span>i  leaf.<span class="me1">png</span>  <span class="sy0">-</span>o  leaf_etc1.<span class="me1">atf</span>
+<span class="br0">&#91;</span>In 85KB<span class="br0">&#93;</span><span class="br0">&#91;</span>Out 85KB<span class="br0">&#93;</span><span class="br0">&#91;</span>Ratio <span class="nu0">100.045</span><span class="sy0">%</span><span class="br0">&#93;</span><span class="br0">&#91;</span>LZMA<span class="sy0">:</span>0KB JPEG<span class="sy0">-</span>XR<span class="sy0">:</span>85KB<span class="br0">&#93;</span>
+&#160;
+<span class="co1">//package only PVRTC format</span>
+C<span class="sy0">:</span>\png2atf.<span class="me1">exe</span>  <span class="sy0">-</span>c p  <span class="sy0">-</span>i  leaf.<span class="me1">png</span>  <span class="sy0">-</span>o  leaf_pvrtc.<span class="me1">atf</span>
+<span class="br0">&#91;</span>In 42KB<span class="br0">&#93;</span><span class="br0">&#91;</span>Out 42KB<span class="br0">&#93;</span><span class="br0">&#91;</span>Ratio <span class="nu0">100.089</span><span class="sy0">%</span><span class="br0">&#93;</span><span class="br0">&#91;</span>LZMA<span class="sy0">:</span>0KB JPEG<span class="sy0">-</span>XR<span class="sy0">:</span>42KB<span class="br0">&#93;</span></pre></div></div>
+<p>如果我要在ATF中使用未压缩的纹理该怎么办呢? 别急, 只需去除 -c 参数即可:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="java source-java"><pre class="de1"><span class="co1">//package as uncompressed (RGBA) format</span>
+C<span class="sy0">:</span>\png2atf.<span class="me1">exe</span>  <span class="sy0">-</span>i  leaf.<span class="me1">png</span>  <span class="sy0">-</span>o  leaf_rgba.<span class="me1">atf</span>
+<span class="br0">&#91;</span>In 341KB<span class="br0">&#93;</span><span class="br0">&#91;</span>Out 43KB<span class="br0">&#93;</span><span class="br0">&#91;</span>Ratio <span class="nu0">12.8596</span><span class="sy0">%</span><span class="br0">&#93;</span><span class="br0">&#91;</span>LZMA<span class="sy0">:</span>0KB JPEG<span class="sy0">-</span>XR<span class="sy0">:</span>43KB<span class="br0">&#93;</span></pre></div></div>
+<p>另一个很酷的特性是，ATF可以处理纹理流，您可以这样操作来生成3个子文件：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="java source-java"><pre class="de1">png2atf <span class="sy0">-</span>m <span class="sy0">-</span>n <span class="nu0">0</span>,<span class="nu0">0</span> <span class="sy0">-</span>c <span class="sy0">-</span>i cubecat0.<span class="me1">png</span> <span class="sy0">-</span>o cubecat_c_high.<span class="me1">atf</span>
+png2atf <span class="sy0">-</span>m <span class="sy0">-</span>n <span class="nu0">1</span>,<span class="nu0">2</span> <span class="sy0">-</span>c <span class="sy0">-</span>i cubecat0.<span class="me1">png</span> <span class="sy0">-</span>o cubecat_c_med.<span class="me1">atf</span>
+png2atf <span class="sy0">-</span>m <span class="sy0">-</span>n <span class="nu0">3</span>,<span class="nu0">20</span> <span class="sy0">-</span>c <span class="sy0">-</span>i cubecat0.<span class="me1">png</span> <span class="sy0">-</span>o cubecat_c_low.<span class="me1">atf</span></pre></div></div>
+<p>注意，从Flash Player 11.3和AIR 3.3的版本开始才支持纹理流。当您想使用纹理流的时候，别忘了使用Texture.createTexture()接口的streamingLevel参数。
+</p><p>如果您已经使用苹果的工具生成了PVR纹理，那么用法是相同的。还有一个叫做pvr2atf的工具，它也是一个命令行工具，来把PVR纹理转换为ATF文件。这个工具的用法和png2atf是类似的，您需要提供一个PVR的纹理作为输入。
+</p><p>要转换PVR 文件为 RGB 或 RGBA格式的 ATF 文件，只需要运行下面的命令：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="java source-java"><pre class="de1">C<span class="sy0">:</span>\<span class="sy0">&gt;</span> pvr2atf <span class="sy0">-</span>i test.<span class="me1">pvr</span> <span class="sy0">-</span>o test.<span class="me1">atf</span>
+<span class="br0">&#91;</span>In 4096KB<span class="br0">&#93;</span><span class="br0">&#91;</span>Out 410KB<span class="br0">&#93;</span><span class="br0">&#91;</span>Ratio <span class="nu0">10.0241</span><span class="sy0">%</span><span class="br0">&#93;</span><span class="br0">&#91;</span>LZMA<span class="sy0">:</span>0KB JPEG<span class="sy0">-</span>XR<span class="sy0">:</span>410KB<span class="br0">&#93;</span></pre></div></div>
+<p>同样，您可以使用ATF来处理 cubemap texture:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="java source-java"><pre class="de1"><span class="co1">//to create a ATF for cubemap texture,</span>
+<span class="co1">//prepare png file for each side of the cube as:</span>
+<span class="co1">// -X: cube0.png</span>
+<span class="co1">//+X: cube1.png</span>
+<span class="co1">// -Y: cube2.png</span>
+<span class="co1">//+Y: cube3.png</span>
+<span class="co1">// -Z: cube4.png</span>
+<span class="co1">//+Z: cube5.png</span>
+C<span class="sy0">:</span>\png2atf.<span class="me1">exe</span>  <span class="sy0">-</span>c   <span class="sy0">-</span>m  <span class="sy0">-</span>i  cube0.<span class="me1">png</span>  <span class="sy0">-</span>o  cube.<span class="me1">atf</span></pre></div></div>
+<p><b>ATFViewer</b>是一个用于预览和检查ATF文件的图形化的工具。它的主要作用是检查DXT1,ETC1和PVRTC的压缩情况。您可以通过“Open...”菜单，打开和查看一个ATF文件，或者把一个文件拖拽进来。片段预览区域，向您展示了一个如何在ActionScript 3的Stage3D代码中加载ATF文件的例子。
+</p><p>下面是一个例子，使用了Starling框架中的一个测试文件，您可以预览这个纹理的所有格式，并且在底部有一段示例代码，告诉您如何在ActionScript 3和Stage3D中使用它。
+</p><p><a href="%e6%96%87%e4%bb%b6_Atf-viewer1.html" class="image"><img alt="Atf-viewer1.png" src="../images/1/1a/Atf-viewer1.png" width="733" height="584" /></a>
+</p><p>注意当您打开了一个只包含特定格式的ATF纹理，比如在下图中我们打开的ATF文件只包含DXT纹理，您可以看见ETC1和PVRTC的部分全部是灰色显示。
+</p><p><a href="%e6%96%87%e4%bb%b6_Atfviewer-dxt.html" class="image"><img alt="Atfviewer-dxt.png" src="../images/b/b6/Atfviewer-dxt.png" width="733" height="584" /></a>
+</p><p>让我们来看看如何使用Stage3D 的接口来解析ATF纹理.
+</p>
+<h3> <span class="mw-headline" id=".E5.9C.A8Stage3D.E4.B8.AD.E4.BD.BF.E7.94.A8.E5.8E.8B.E7.BC.A9.E7.BA.B9.E7.90.86">在Stage3D中使用压缩纹理</span></h3>
+<p>要在Stage3D中使用压缩纹理，您需要使用这个接口：Texture.uploadCompressedTextureFromByteArray，并确定使用由Context3DTextureFormat定义的两种格式中的某一个：(Context3DTextureFormat.COMPRESSED_ALPHA 和 Context3DTextureFormat.COMPRESSED):
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="java source-java"><pre class="de1"><span class="kw1">class</span> Example <span class="br0">&#123;</span>
+<span class="br0">&#91;</span>Embed<span class="br0">&#40;</span> source <span class="sy0">=</span> <span class="st0">&quot;mytexture.atf&quot;</span>, mimeType<span class="sy0">=</span><span class="st0">&quot;application/octet-stream&quot;</span><span class="br0">&#41;</span><span class="br0">&#93;</span>
+<span class="kw1">public</span> <span class="kw1">static</span> <span class="kw1">const</span> TextureAsset<span class="sy0">:</span><span class="kw1">Class</span><span class="sy0">;</span>
+<span class="kw1">public</span> var context3D<span class="sy0">:</span>Context3D<span class="sy0">;</span>
+&#160;
+<span class="kw1">public</span> function init<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">:</span><span class="kw4">void</span><span class="br0">&#123;</span>
+var texture<span class="sy0">:</span>Texture <span class="sy0">=</span> context3D.<span class="me1">createTexture</span><span class="br0">&#40;</span><span class="nu0">256</span>, <span class="nu0">256</span>, Context3DTextureFormat.<span class="me1">COMPRESSED_ALPHA</span>, <span class="kw2">false</span><span class="br0">&#41;</span><span class="sy0">;</span>
+var textureAsset<span class="sy0">:</span>ByteArray <span class="sy0">=</span> <span class="kw1">new</span> TextureAsset<span class="br0">&#40;</span><span class="br0">&#41;</span> as ByteArray<span class="sy0">;</span>
+texture.<span class="me1">uploadCompressedTextureFromByteArray</span><span class="br0">&#40;</span>textureAsset, <span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="br0">&#125;</span><span class="sy0">;</span></pre></div></div>
+<p>如果是cubemap texture, 您可以这样写:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="java source-java"><pre class="de1">var texCubemap<span class="sy0">:</span>CubeTexture <span class="sy0">=</span> context3D.<span class="me1">createCubeTexture</span><span class="br0">&#40;</span><span class="nu0">256</span>, Context3DTextureFormat.<span class="me1">COMPRESSED_ALPHA</span>, <span class="kw2">false</span><span class="br0">&#41;</span><span class="sy0">;</span>
+var textureAsset<span class="sy0">:</span>ByteArray <span class="sy0">=</span> <span class="kw1">new</span> TextureAsset<span class="br0">&#40;</span><span class="br0">&#41;</span> as ByteArray<span class="sy0">;</span>
+texCubemap.<span class="me1">uploadCompressedTextureFromByteArray</span><span class="br0">&#40;</span>textureAsset, <span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div>
+<p>同样, 根据纹理的格式, “dxt1” 或 “dxt5” 需要您在片段着色器中作出相应的设置:
+</p>
+<ul><li>如果是Context3DTextureFormat.BGRA, 什么都不需要
+</li><li>“dxt1” 格式需要 Context3DTextureFormat.COMPRESSED (包括 DXT, PVRTC, 或 ETC1)
+</li><li>“dxt5” 格式需要 Context3DTextureFormat.COMPRESSED_ALPHA (包括 DXT, PVRTC, 或 ETC1)
+</li></ul>
+<p>您可以参考这个《 <a rel="nofollow" class="external text" href="https://github.com/PrimaryFeather/Starling-Framework/commit/7739a9e002e04659f7a5517f6093e0e77ccf430c">Starling对于ATF格式的支持</a>》 看看它的生成过程。
+</p>
+<h3> <span class="mw-headline" id=".E5.92.8CStarling.E7.9A.84.E6.95.B4.E5.90.88">和Starling的整合</span></h3>
+<p>好消息是，Starling中以及增加了对ATF格式的支持，接口是Texture.uploadAtfData。下面是一个简短的例子：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="java source-java"><pre class="de1"><span class="br0">&#91;</span>Embed<span class="br0">&#40;</span>source<span class="sy0">=</span><span class="st0">&quot;starling.atf&quot;</span>, mimeType<span class="sy0">=</span><span class="st0">&quot;application/octet-stream&quot;</span><span class="br0">&#41;</span><span class="br0">&#93;</span>
+<span class="kw1">public</span> <span class="kw1">static</span> <span class="kw1">const</span> CompressedData<span class="sy0">:</span><span class="kw1">Class</span><span class="sy0">;</span>
+&#160;
+var data<span class="sy0">:</span>ByteArray <span class="sy0">=</span> <span class="kw1">new</span> CompressedData<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+var texture<span class="sy0">:</span>Texture <span class="sy0">=</span> Texture.<span class="me1">fromAtfData</span><span class="br0">&#40;</span>data<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+var image<span class="sy0">:</span><span class="kw3">Image</span> <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw3">Image</span><span class="br0">&#40;</span>texture<span class="br0">&#41;</span><span class="sy0">;</span>
+addChild<span class="br0">&#40;</span>image<span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div>
+<p>是的，就是这么简单:)
+</p>
+<h3> <span class="mw-headline" id=".E9.99.90.E5.88.B6">限制</span></h3>
+<p>尽管ATF对于2D内容（比如Starling）是非常有用的，而且它也被广泛应用于3D纹理支持，但我还要强调它的一些限制。为什么呢？
+</p><p>因为对于纹理的有损压缩，是会损失素材的质量的。还有像RGBA8888和RGBA4444的PVR目前是不支持的，这是一个问题。
+</p><p>但是我们非常需要您的反馈和测试，来帮助我们优化和完善ATF，并且未来让它支持更多的格式。有什么建议就告诉我们吧！
+</p>
+<h3> <span class="mw-headline" id=".E5.BF.85.E5.A4.87.E6.9D.A1.E4.BB.B6">必备条件</span></h3>
+<p>请注意要使用ATF纹理的话，您需要满足一些必备条件：
+</p>
+<ul><li>  如果您使用Starling, 请确保使用了Starling 1.2或更高的版本. 从这里 <a rel="nofollow" class="external text" href="http://github.com/PrimaryFeather/Starling-Framework">获取最新版本</a>.
+</li><li>  如果您直接使用Stage3D, 您需要使用最终的 <a rel="nofollow" class="external text" href="https://github.com/PrimaryFeather/Starling-Framework/blob/master/starling/src/com/adobe/utils/AGALMiniAssembler.as">AGALMiniAssembler</a>
+</li><li>  您需要最新的AIR SDK 3.4. <a rel="nofollow" class="external text" href="http://labs.adobe.com/technologies/flashbuilder4-7/">下载 Flash Builder 4.7</a> 这个已经内置了 AIR 3.4 SDK.
+</li><li>  您需要最新的 Flash Player 11.4/AIR 3.4
+</li><li>  您需要在编译参数中添加: ”-swf-version=17”
+</li></ul>
+<h3> <span class="mw-headline" id=".E4.B8.8B.E8.BD.BD">下载</span></h3>
+<p>从这里下载ATF工具: <a rel="nofollow" class="external text" href="https://dl.dropbox.com/u/7009356/atftools.zip">点击我下载</a>. 它包含了:
+</p>
+<ul><li>  ATF工具包 (适用Linux, Mac, Windows).
+</li><li>  ATF 规范说明
+</li><li>  ATF的用户指南.
+</li></ul>
+<p>祝好运!
+</p>
+<hr />
+<p>译者:<a rel="nofollow" class="external text" href="http://weibo.com/guoshaorui">郭少瑞</a>
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 111/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key app_starlinglib-wiki:pcache:idhash:136-0!*!*!!zh-cn!2!* and timestamp 20140629023331 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				来自“<a href="http://www.starlinglib.com/index.php?title=News:Stage3D_compressed_textures&amp;oldid=1338">http://www.starlinglib.com/index.php?title=News:Stage3D_compressed_textures&amp;oldid=1338</a>”				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>个人工具</h5>
+	<ul>
+		<li id="pt-login"><a href="http://www.starlinglib.com/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&amp;returnto=News%3AStage3D+compressed+textures" title="我们希望您可以登入，但不强求 [o]" accesskey="o">登录</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>名字空间</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="News_Stage3D_compressed_textures.html"  title="查看内容页面 [c]" accesskey="c">页面</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://www.starlinglib.com/index.php?title=%E8%AE%A8%E8%AE%BA:News:Stage3D_compressed_textures&amp;action=edit&amp;redlink=1"  title="关于内容页面的讨论 [t]" accesskey="t">讨论</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>变换</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>查看</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="News_Stage3D_compressed_textures.html" >阅读</a></span></li>
+					<li id="ca-viewsource"><span><a href="http://www.starlinglib.com/index.php?title=News:Stage3D_compressed_textures&amp;action=edit"  title="本页面已被保护。你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://www.starlinglib.com/index.php?title=News:Stage3D_compressed_textures&amp;action=history"  title="本页面的早前修订版本 [h]" accesskey="h">查看历史</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>操作</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">搜索</label></h5>
+	<form action="http://www.starlinglib.com/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="在Starling中文站中搜索 [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="提交" title="如果相同的标题存在的话便直接前往该页面" id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="搜索" title="搜索含这些文字的页面" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="特殊:搜索"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../skins/common/images/wiki.png);" href="index.html"  title="访问首页"></a></div>
+				<!-- /logo -->
+				
+<!-- navigation -->
+<div class="portal" id='p-navigation'>
+	<h5>导航</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="index.html" title="访问首页 [z]" accesskey="z">首页</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /navigation -->
+
+<!-- Starling中文资料 -->
+<div class="portal" id='p-Starling.E4.B8.AD.E6.96.87.E8.B5.84.E6.96.99'>
+	<h5>Starling中文资料</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E6.9C.80.E6.96.B0.E5.8A.A8.E6.80.81"><a href="News.html">Starling最新动态</a></li>
+			<li id="n-.E4.B8.8B.E8.BD.BD"><a href="download.html">下载</a></li>
+			<li id="n-.E5.85.A5.E9.97.A8.E7.AC.AC.E4.B8.80.E6.AD.A5"><a href="FristStep.html">入门第一步</a></li>
+			<li id="n-API.E6.8E.A5.E5.8F.A3.E6.96.87.E6.A1.A3"><a href="APIReference.html">API接口文档</a></li>
+			<li id="n-Starling.E8.AF.B4.E6.98.8E.E4.B9.A6"><a href="StarlingManual.html">Starling说明书</a></li>
+			<li id="n-FeathersUI.E6.96.87.E6.A1.A3"><a href="FeathersUI.html">FeathersUI文档</a></li>
+			<li id="n-.E6.95.99.E7.A8.8B.E5.92.8C.E4.BB.A3.E7.A0.81"><a href="Tutorials.html">教程和代码</a></li>
+			<li id="n-Starling.E6.89.A9.E5.B1.95"><a href="Extensions.html">Starling扩展</a></li>
+			<li id="n-.E6.88.90.E5.8A.9F.E6.A1.88.E4.BE.8B"><a href="GamesPowered.html">成功案例</a></li>
+			<li id="n-.E7.AB.99.E5.A4.96.E8.B5.84.E6.96.99"><a href="OutsideDocs.html">站外资料</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Starling中文资料 -->
+
+<!-- Starling原创教程 -->
+<div class="portal" id='p-Starling.E5.8E.9F.E5.88.9B.E6.95.99.E7.A8.8B'>
+	<h5>Starling原创教程</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E7.A7.BB.E5.8A.A8.E5.BC.80.E5.8F.91.E6.95.99.E7.A8.8B"><a href="StarlingMobile.html">Starling移动开发教程</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Starling原创教程 -->
+
+<!-- 微信-Flash微报 -->
+
+
+<!-- /微信-Flash微报 -->
+
+<!-- 论坛 -->
+<div class="portal" id='p-.E8.AE.BA.E5.9D.9B'>
+	<h5>论坛</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E4.B8.AD.E6.96.87.E8.AE.BA.E5.9D.9B"><a href="http://bbs.egret-labs.org/?fromuid=62" rel="nofollow">Egret开发者论坛</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /论坛 -->
+
+<!-- 友链 -->
+<div class="portal" id='p-.E5.8F.8B.E9.93.BE'>
+	<h5>友链</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Sirius2d.E5.BC.95.E6.93.8E"><a href="http://www.sirius2d.com/" rel="nofollow">Sirius2d引擎</a></li>
+			<li id="n-A.E9.97.AA.E7.BD.91"><a href="http://www.ashan.org/" rel="nofollow">A闪网</a></li>
+			<li id="n-Y.Boy"><a href="http://www.riaoo.com/" rel="nofollow">Y.Boy</a></li>
+			<li id="n-Cenfee"><a href="http://cenfee.com/" rel="nofollow">Cenfee</a></li>
+			<li id="n-.E5.B0.8F.E5.A4.9C-Clifford"><a href="http://www.cnblogs.com/flash3d/" rel="nofollow">小夜 Clifford</a></li>
+			<li id="n-.E6.9D.9C.E5.A2.9E.E5.BC.BA.28DzQ.29"><a href="http://www.duzengqiang.com/" rel="nofollow">杜增强(DzQ)</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /友链 -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>工具箱</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="%e7%89%b9%e6%ae%8a_%e9%93%be%e5%85%a5%e9%a1%b5%e9%9d%a2/News_Stage3D_compressed_textures.html" title="所有链入本页的wiki页面列表 [j]" accesskey="j">链入页面</a></li>
+			<li id="t-recentchangeslinked"><a href="%e7%89%b9%e6%ae%8a_%e9%93%be%e5%87%ba%e6%9b%b4%e6%94%b9/News_Stage3D_compressed_textures.html" title="本页链入的页面的最近更改 [k]" accesskey="k">链出更改</a></li>
+			<li id="t-specialpages"><a href="%e7%89%b9%e6%ae%8a_%e7%89%b9%e6%ae%8a%e9%a1%b5%e9%9d%a2.html" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+			<li><a href="http://www.starlinglib.com/index.php?title=News:Stage3D_compressed_textures&amp;printable=yes" rel="alternate">可打印版</a></li>
+			<li id="t-permalink"><a href="http://www.starlinglib.com/index.php?title=News:Stage3D_compressed_textures&amp;oldid=1338" title="本页面该修订版本的永久链接">永久链接</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> 本页面最后修订于2013年4月13日 (星期六) 20:02。</li>
+											<li id="footer-info-viewcount">此页面已被浏览过14,822次。</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="Starling_yinsi.html" title="Starling中文站:隐私权政策">隐私权政策</a></li>
+											<li id="footer-places-about"><a href="StarlingCnAbout.html" title="Starling中文站:关于">关于Starling中文站</a></li>
+											<li id="footer-places-disclaimer"><a href="StarlingCNCopyRight.html" title="Starling中文站:免责声明">免责声明</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31520647-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+		<!-- /footer -->
+		
+<!-- Served in 0.361 secs. -->
+	</body>
+
+<!-- Mirrored from www.starlinglib.com/wiki/News:Stage3D_compressed_textures by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jun 2014 07:14:29 GMT -->
+</html>

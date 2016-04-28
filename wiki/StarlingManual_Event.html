@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from www.starlinglib.com/wiki/StarlingManual:事件捕获 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jun 2014 07:19:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>StarlingManual:事件捕获 - Starling中文站</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.0" />
+<link rel="shortcut icon" href="http://www.starlinglib.com/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.starlinglib.com/opensearch_desc.php" title="Starling中文站 (zh-cn)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://www.starlinglib.com/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="Starling中文站的Atom" href="http://www.starlinglib.com/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&amp;feed=atom" />
+<link rel="stylesheet" href="../skins/style.css" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: app_starlinglib-wiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"StarlingManual:事件捕获","wgTitle":"StarlingManual:事件捕获","wgCurRevisionId":116,"wgArticleId":33,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"zh-cn","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgRelevantPageName":"StarlingManual:事件捕获","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false}});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"zh-cn","language":"zh-cn","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;},{},{});mw.loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: app_starlinglib-wiki:resourceloader:filter:minify-js:7:64bb9911c781603a64782510a7dfd931 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-actionscript {line-height: normal;}
+.source-actionscript li, .source-actionscript pre {
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for actionscript
+ * CSS class: source-actionscript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.actionscript.source-actionscript .de1, .actionscript.source-actionscript .de2 {font: normal normal 1em/1.2em monospace; margin:10px 0; padding:10px; background:none; vertical-align:top;}
+.actionscript.source-actionscript  {font-family:monospace;}
+.actionscript.source-actionscript .imp {font-weight: bold; color: red;}
+.actionscript.source-actionscript li, .actionscript.source-actionscript .li1 {font-weight: normal; vertical-align:top;}
+.actionscript.source-actionscript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.actionscript.source-actionscript .li2 {font-weight: bold; vertical-align:top;}
+.actionscript.source-actionscript .kw1 {color: #b1b100;}
+.actionscript.source-actionscript .kw2 {color: #000000; font-weight: bold;}
+.actionscript.source-actionscript .kw3 {color: #0066CC;}
+.actionscript.source-actionscript .co1 {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .co2 {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .coMULTI {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .es0 {color: #000099; font-weight: bold;}
+.actionscript.source-actionscript .br0 {color: #66cc66;}
+.actionscript.source-actionscript .sy0 {color: #66cc66;}
+.actionscript.source-actionscript .st0 {color: #ff0000;}
+.actionscript.source-actionscript .nu0 {color: #cc66cc;}
+.actionscript.source-actionscript .me1 {color: #006600;}
+.actionscript.source-actionscript .ln-xtra, .actionscript.source-actionscript li.ln-xtra, .actionscript.source-actionscript div.ln-xtra {background-color: #ffc;}
+.actionscript.source-actionscript span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "http://www.starlinglib.com/index.php?title=MediaWiki:Geshi.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+/*]]>*/
+</style><!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-StarlingManual_事件捕获 skin-vector action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">StarlingManual:事件捕获</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">来自Starling中文站</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					跳转到： <a href="#mw-head">导航</a>,
+					<a href="#p-search">搜索</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="zh-CN" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>目录</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.E4.BA.8B.E4.BB.B6.E5.A4.84.E7.90.86"><span class="tocnumber">1</span> <span class="toctext">事件处理</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#.E5.88.9B.E5.BB.BA.E8.87.AA.E5.AE.9A.E4.B9.89.E4.BA.8B.E4.BB.B6"><span class="tocnumber">2</span> <span class="toctext">创建自定义事件</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#.E5.86.92.E6.B3.A1.E4.BA.8B.E4.BB.B6"><span class="tocnumber">3</span> <span class="toctext">冒泡事件</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#.E8.A7.A6.E6.91.B8.E4.BA.8B.E4.BB.B6"><span class="tocnumber">4</span> <span class="toctext">触摸事件</span></a></li>
+</ul>
+</td></tr></table>
+<h3> <span class="mw-headline" id=".E4.BA.8B.E4.BB.B6.E5.A4.84.E7.90.86">事件处理</span></h3>
+<p>上一章节介绍了如何创建一个用2个按钮来显示消息盒的类。然而，消息盒缺少一个关键性的特性：就是当用户点击其中一个按钮的时候，无法获得通知，也不知道按的是哪个按钮。
+</p><p>在Starling中，这就可以通过灵活的事件系统来处理。如果你跳到显示对象类层次的图形结构中，你就可以注意到显示对象其实是继承自EventDispatcher。因此，每一个显示对象都可以用来处理事件。在Starling中，事件系统与显示对象树紧紧的结合在一起。以后我们其实就会发现有很大的优势在里面。
+</p><p>我们可以通过看一个例子，来最简便的方法理解事件系统。接下来的代码就是创建一个按钮，以及当它被按下时输出信息。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw2">var</span> <span class="kw3">button</span>:<span class="kw3">Button</span> = <span class="kw2">new</span> <span class="kw3">Button</span><span class="br0">&#40;</span>buttonTexture<span class="br0">&#41;</span>;
+&#160;
+<span class="kw3">button</span>.<span class="me1">addEventListener</span><span class="br0">&#40;</span>Event.<span class="me1">TRIGGERED</span>, onButtonTriggered<span class="br0">&#41;</span>;
+&#160;
+<span class="kw2">function</span> onButtonTriggered<span class="br0">&#40;</span>event:Event<span class="br0">&#41;</span>:<span class="kw3">void</span>
+<span class="br0">&#123;</span>
+    <span class="kw3">trace</span><span class="br0">&#40;</span><span class="st0">&quot;The button was triggered!&quot;</span><span class="br0">&#41;</span>;
+<span class="br0">&#125;</span></pre></div></div>
+<p>创建按钮后，你可以使用'addEventListener'来注册按钮事件监听器。按钮继承了EventDispatcher的这个方法。
+</p><p>参数意思如下：
+</p><p>事件类型：事件类型得定义为字符串。既然是这样，你就可以监听所有“triggered”事件。
+</p><p>事件监听器：当事件被触发时回调此方法。这个方法有一个Event类型（或子类型）的参数。
+</p><p>当不再使用此事件监听应及时移除监听，是一个好的习惯。
+</p><p>用以下方法类移除：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">image.<span class="me1">removeEventListener</span><span class="br0">&#40;</span>Event.<span class="me1">TRIGGERED</span>, onButtonTriggered<span class="br0">&#41;</span>; <span class="co1">// 移除指定的监听器</span>
+image.<span class="me1">removeEventListeners</span><span class="br0">&#40;</span>Event.<span class="me1">TRIGGERED</span><span class="br0">&#41;</span>; <span class="co1">// 移除Event.TRIGGERED的所有监听器</span></pre></div></div>
+<p>在Starling中还有几个有用的预定义事件
+</p>
+<ul><li>    Event.TRIGGERED: 按钮被触发时调用
+</li><li>    Event.ADDED: 一个显示对象被添加到一个容器时调用
+</li><li>    Event.ADDED_TO_STAGE: 一个显示对象被添加到处于stage中的显示对象容器中时调用
+</li><li>    Event.REMOVED: 一个显示对象被从一个容器中移除时调用
+</li><li>    Event.REMOVED_FROM_STAGE: 一个显示对象不在stage下时调用
+</li><li>    Event.ENTER_FRAME: 当渲染下一帧时调用（在动画区块中显示）时调用
+</li><li>    Event.TOUCH: 触发触摸事件时调用
+</li><li>    Event.COMPLETED: 实例（像影片剪辑实例）被创建完成时调用 
+</li></ul>
+<p>但是并没有局限于这些事件。这很容易创建你自己的事件。
+</p>
+<h3> <span class="mw-headline" id=".E5.88.9B.E5.BB.BA.E8.87.AA.E5.AE.9A.E4.B9.89.E4.BA.8B.E4.BB.B6">创建自定义事件</span></h3>
+<p>消息盒当用户按下其中一个按钮时，我们创建的消息盒会发送一个用户自定义事件。有两种方法，一个是为每个按钮触发不同的事件。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="co1">//yes按钮的侦听器</span>
+<span class="kw3">private</span> <span class="kw2">function</span> onYesButtonTriggered<span class="br0">&#40;</span>event:Event<span class="br0">&#41;</span>:<span class="kw3">void</span>
+<span class="br0">&#123;</span>
+    dispatchEvent<span class="br0">&#40;</span><span class="kw2">new</span> Event<span class="br0">&#40;</span><span class="st0">&quot;msgboxYes&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>;
+<span class="br0">&#125;</span>
+&#160;
+<span class="co1">// no按钮的侦听器:</span>
+<span class="kw3">private</span> <span class="kw2">function</span> onNoButtonTriggered<span class="br0">&#40;</span>event:Event<span class="br0">&#41;</span>:<span class="kw3">void</span>
+<span class="br0">&#123;</span>
+    dispatchEvent<span class="br0">&#40;</span><span class="kw2">new</span> Event<span class="br0">&#40;</span><span class="st0">&quot;msgboxNo&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>;
+<span class="br0">&#125;</span></pre></div></div>
+<p>任何使用消息盒的实例现在都可以监听这些事件：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw2">var</span> msgBox:MsgBox = <span class="kw2">new</span> MsgBox<span class="br0">&#40;</span><span class="st0">&quot;Really exit?&quot;</span><span class="br0">&#41;</span>;
+&#160;
+msgBox.<span class="me1">addEventListener</span><span class="br0">&#40;</span><span class="st0">&quot;msgboxYes&quot;</span>, onMsgBoxYesTriggered<span class="br0">&#41;</span>;
+&#160;
+msgBox.<span class="me1">addEventListener</span><span class="br0">&#40;</span><span class="st0">&quot;msgboxNo&quot;</span>,  onMsgBoxNoTriggered<span class="br0">&#41;</span>;
+&#160;
+addChild<span class="br0">&#40;</span>msgBox<span class="br0">&#41;</span>;</pre></div></div>
+<p>另一种方法是都发送同一个事件，但包含被按下的按钮的相关信息。这个比较普遍的做法；你需要频繁的用一个事件传送一些信息。
+</p><p>这是创建一个Event的子类：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw3">public</span> <span class="kw2">class</span> MsgBoxEvent <span class="kw3">extends</span> Event
+<span class="br0">&#123;</span>
+    <span class="kw3">public</span> <span class="kw3">static</span> const CLOSED:<span class="kw3">String</span> = <span class="st0">&quot;closed&quot;</span>;
+&#160;
+    <span class="kw3">private</span> <span class="kw2">var</span> mResult:<span class="kw3">Boolean</span>;
+&#160;
+    <span class="kw3">public</span> <span class="kw2">function</span> MsgBoxEvent<span class="br0">&#40;</span><span class="kw3">type</span>:<span class="kw3">String</span>, result:<span class="kw3">Boolean</span>, bubbles:<span class="kw3">Boolean</span>=<span class="kw2">false</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="kw3">super</span><span class="br0">&#40;</span><span class="kw3">type</span>, bubbles<span class="br0">&#41;</span>;
+        mResult = result;
+    <span class="br0">&#125;</span>
+&#160;
+    <span class="kw3">public</span> <span class="kw2">function</span> <span class="kw3">get</span> result<span class="br0">&#40;</span><span class="br0">&#41;</span>:<span class="kw3">int</span> <span class="br0">&#123;</span> <span class="kw1">return</span> mResult; <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div>
+<p>注意，我们在类顶部添加一个静态常量的事件类型(CLOSED)。在MsgBox类的事件监听器现在派发自定义事件：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="co1">// yes按钮的侦听器</span>
+<span class="kw3">private</span> <span class="kw2">function</span> onYesButtonTriggered<span class="br0">&#40;</span>event:Event<span class="br0">&#41;</span>:<span class="kw3">void</span>
+<span class="br0">&#123;</span>
+    dispatchEvent<span class="br0">&#40;</span><span class="kw2">new</span> MsgBoxEvent<span class="br0">&#40;</span>MsgBoxEvent.<span class="me1">CLOSED</span>, <span class="kw2">true</span><span class="br0">&#41;</span><span class="br0">&#41;</span>;
+<span class="br0">&#125;</span>
+&#160;
+<span class="co1">// no按钮的侦听器:</span>
+<span class="kw3">private</span> <span class="kw2">function</span> onNoButtonTriggered<span class="br0">&#40;</span>event:Event<span class="br0">&#41;</span>:<span class="kw3">void</span>
+<span class="br0">&#123;</span>
+    dispatchEvent<span class="br0">&#40;</span><span class="kw2">new</span> MsgBoxEvent<span class="br0">&#40;</span>MsgBoxEvent.<span class="me1">CLOSED</span>, <span class="kw2">false</span><span class="br0">&#41;</span><span class="br0">&#41;</span>;
+<span class="br0">&#125;</span></pre></div></div>
+<p>无论谁创建MsgBox，都得侦听事件类型：MsgBoxEvent.CLOSED。这样就会通过自定义事件类型传递按的是哪个按钮。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw2">function</span> onMsgBoxClosed<span class="br0">&#40;</span>event:MsgBoxEvent<span class="br0">&#41;</span>:<span class="kw3">void</span>
+<span class="br0">&#123;</span>
+    <span class="kw3">trace</span><span class="br0">&#40;</span><span class="st0">&quot;MsgBox was closed. Result: &quot;</span> + event.<span class="me1">result</span><span class="br0">&#41;</span>;
+<span class="br0">&#125;</span></pre></div></div>
+<h3> <span class="mw-headline" id=".E5.86.92.E6.B3.A1.E4.BA.8B.E4.BB.B6">冒泡事件</span></h3>
+<p>上个例子中，事件派发器和事件监听器是通过“addEventListener”方法直接连接的。但有时候，这并不是你想要的。
+</p><p>我们来聊聊用一个深度显示树来创建一个复杂的游戏。在树的一些分支处，一个企鹅sprite刚好与一个上升的容器碰撞。现在，这个消息需要处在显示树的root，也就是在游戏root类中。真正繁琐的是，从大量显示对象上的这只企鹅开始传递，直到事件到达stage。
+</p><p>这就是为什么事件支持冒泡的原因。讲一个树（就是显示树）图像旋转180度，这样其树根朝上。树根就是stage，树叶就是显示对象。现在，如果树叶创建了一个冒泡事件，那么它就会向一杯汽水里面的气泡一样往上升，从分支到达另一个分支（从父节点到父节点的父节点），直到到达树根任何处在这条路径的显示对象都可以监听这个事件。它甚至可以截取冒泡并阻止它往上冒。
+</p><p>要做的其实就是把一个事件的“bubbles”属性设置为true。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw2">var</span> bubblingEvent:Event = <span class="kw2">new</span> Event<span class="br0">&#40;</span><span class="st0">&quot;eventType&quot;</span>, <span class="kw2">true</span><span class="br0">&#41;</span>;
+dispatchEvent<span class="br0">&#40;</span>bubblingEvent<span class="br0">&#41;</span>;</pre></div></div>
+<p>处在这条路径上的任何地方，都可以侦听这个事件：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw3">this</span>.<span class="me1">addEventListener</span><span class="br0">&#40;</span><span class="st0">&quot;eventType&quot;</span>, onBubblingEvent<span class="br0">&#41;</span>;</pre></div></div>
+<p>注意我们用this来监听事件-甚至通过被其他对象派发的事件。我们可以对处在这条冒泡事件经过的路径上的任何对象添加监听器。
+</p><p>这个特性在多种情况下就派上用场了。特别是大家比较关心的触摸事件。
+</p>
+<h3> <span class="mw-headline" id=".E8.A7.A6.E6.91.B8.E4.BA.8B.E4.BB.B6">触摸事件</span></h3>
+<p>一般比较典型的台式机是用鼠标来控制的，而大部分移动设备，像智能手机或者平板电脑，就由手指来控制的。
+</p><p>Starling统一了这些输入方法，并用TouchEvent处理所有的“定点设备”。这样的话，你就必不关注于你的游戏控制真正的输入方法。不管这个输入设备是鼠标，尖笔，Wii遥控器，或者触摸屏：Starling都会处理触摸事件。
+</p><p>首先：如果你想支持多点触摸，要确保在创建Starling前激活它：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">Starling.<span class="me1">multitouchEnabled</span> = <span class="kw2">true</span>;
+&#160;
+mStarling = <span class="kw2">new</span> Starling<span class="br0">&#40;</span>Game, <span class="kw3">stage</span><span class="br0">&#41;</span>;
+&#160;
+mStarling.<span class="me1">simulateMultitouch</span> = <span class="kw2">true</span>;</pre></div></div>
+<p>注意“simulateMultitouch”这个属性。如果你激活了它，你就可以用开发电脑鼠标来模拟多点触摸。当你移动鼠标光标同时按Ctrl或Cmd键（Windows 或 Mac），就可以尝试这个功能。按Shift键来改变正在移动的光标之一的路线。
+</p><p>现在，创建触摸事件，同时添加下面的监听器到你的类：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw3">this</span>.<span class="me1">addEventListener</span><span class="br0">&#40;</span>TouchEvent.<span class="me1">TOUCH</span>, onTouch<span class="br0">&#41;</span>;</pre></div></div>
+<p>然后，我们已经添加了监听器到“this”，它还没有派发一个触摸事件。这有一个非常明显的迹象，就是这个事件是冒泡事件-的确，情况确实如此。如果你考虑了这点，确实非常明智：
+</p><p>回想下我们之前提的消息盒。当用户点击文本域的时候，很明显在文本域上的任何监听触摸者都必须被通知。然而有人在消息盒上监听的触摸事件也同样如此-文本域是消息盒的一部分，所以后者同样被触摸。所以如果有人在舞台上监听了触摸事件，他也同样被通知。毕竟，消息盒也是舞台的一部分。
+</p><p>现在，如何处理触摸事件？让我们看看代码样例：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw3">private</span> <span class="kw2">function</span> onTouch<span class="br0">&#40;</span>event:TouchEvent<span class="br0">&#41;</span>:<span class="kw3">void</span>
+<span class="br0">&#123;</span>
+    <span class="kw2">var</span> touch:Touch = event.<span class="me1">getTouch</span><span class="br0">&#40;</span><span class="kw3">this</span>, TouchPhase.<span class="me1">BEGAN</span><span class="br0">&#41;</span>;
+    <span class="kw1">if</span> <span class="br0">&#40;</span>touch<span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="kw2">var</span> localPos:Point = touch.<span class="me1">getLocation</span><span class="br0">&#40;</span><span class="kw3">this</span><span class="br0">&#41;</span>;
+        <span class="kw3">trace</span><span class="br0">&#40;</span><span class="st0">&quot;Touched object at position: &quot;</span> + localPos<span class="br0">&#41;</span>;
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div>
+<p>那是最基本的状况：如果有人触摸了屏幕，那么找出他，并记录坐标（相对于当前显示对象）。“getTouch”方法由TouchEvent提供，并帮助你找到你感兴趣的触点。
+</p><p>在“event.getTouch”中参数“this”代表：找出发生在当前(this)或孩子的任何触点回到我们的消息盒：“this”目标包括消息盒和文本域。
+触摸阶段是“TouchPhase.BEGAN”，所以此刻要记录手指触摸屏幕的位置，但并非手指移动或离开的时候。这是触摸可用阶段：
+</p>
+<ul><li>    TouchPhase.HOVER: 只针对鼠标输入；当用鼠标按下的光标移动到物体之上时派发
+</li><li>    TouchPhase.BEGAN: 手指刚好触屏或鼠标按下时触发
+</li><li>    TouchPhase.MOVED: 手指在屏幕上移动，或鼠标按下移动时触发
+</li><li>    TouchPhase.STATIONARY: 手指或鼠标（按下）从上帧起就不移动时触发
+</li><li>    TouchPhase.ENDED: 手指从屏幕上抬起或松开鼠标按键时触发
+</li></ul>
+<p>“touchEvent.getTouch”方法返回一个“Touch”类型对象。Touch对象的“getLocation” 方法返回你所需要的坐标系中的触点坐标。
+</p><p>关于单点触摸就讲这么多。多点触摸处理方法也是一样的。仅有的区别就是，你调用“touchEvent.getTouches”而不是（后者返回的触点向量）。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw2">var</span> touches:Vector.<span class="sy0">&lt;</span>Touch<span class="sy0">&gt;</span> = event.<span class="me1">getTouches</span><span class="br0">&#40;</span><span class="kw3">this</span>, TouchPhase.<span class="me1">MOVED</span><span class="br0">&#41;</span>;
+&#160;
+<span class="kw1">if</span> <span class="br0">&#40;</span>touches.<span class="kw3">length</span> == <span class="nu0">1</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+    <span class="co1">// 手指触摸/鼠标光标移动</span>
+    <span class="kw2">var</span> touch:Touch = touches<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>;
+    <span class="kw2">var</span> currentPos:Point  = touch.<span class="me1">getLocation</span><span class="br0">&#40;</span><span class="kw3">this</span><span class="br0">&#41;</span>;
+    <span class="kw2">var</span> previousPos:Point = touch.<span class="me1">getPreviousLocation</span><span class="br0">&#40;</span><span class="kw3">this</span><span class="br0">&#41;</span>;
+<span class="br0">&#125;</span>
+<span class="kw1">else</span> <span class="kw1">if</span> <span class="br0">&#40;</span>touches.<span class="kw3">length</span> <span class="sy0">&gt;</span>= <span class="nu0">2</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+    <span class="co1">// 多指触摸</span>
+    <span class="kw2">var</span> touch1:Touch = touches<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>;
+    <span class="kw2">var</span> touch2:Touch = touches<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span>;
+    <span class="co1">// ...</span>
+<span class="br0">&#125;</span></pre></div></div>
+<p>注意Touch对象的“getPreviousLocation”方法。有些情况是，我们在“TouchPhase.MOVED”阶段获取触点。
+</p><p>“getPreviousLocation” 方法返回上一帧的触点。当你想拖动一个对象的时候它就派上用场了：沿着当前位置到最后一个触点的向量上移动对象。
+</p><p>这个演示应用包含“TouchSheet”类，这个类用在“Multitouch”演示场景中。它展示给你的是如何让用户拖动对象，或者选择、缩放他们。
+</p>
+<hr />
+<p>翻译:  <a rel="nofollow" class="external text" href="http://t.qq.com/longSeeing">郭必江(begun kwok)</a>
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 107/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key app_starlinglib-wiki:pcache:idhash:33-0!*!*!!zh-cn!*!* and timestamp 20140628111312 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				来自“<a href="http://www.starlinglib.com/index.php?title=StarlingManual:%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7&amp;oldid=116">http://www.starlinglib.com/index.php?title=StarlingManual:%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7&amp;oldid=116</a>”				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>个人工具</h5>
+	<ul>
+		<li id="pt-login"><a href="http://www.starlinglib.com/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&amp;returnto=StarlingManual%3A%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7" title="我们希望您可以登入，但不强求 [o]" accesskey="o">登录</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>名字空间</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="StarlingManual_Event.html"  title="查看内容页面 [c]" accesskey="c">页面</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://www.starlinglib.com/index.php?title=%E8%AE%A8%E8%AE%BA:StarlingManual:%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7&amp;action=edit&amp;redlink=1"  title="关于内容页面的讨论 [t]" accesskey="t">讨论</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>变换</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>查看</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="StarlingManual_Event.html" >阅读</a></span></li>
+					<li id="ca-viewsource"><span><a href="http://www.starlinglib.com/index.php?title=StarlingManual:%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7&amp;action=edit"  title="本页面已被保护。你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://www.starlinglib.com/index.php?title=StarlingManual:%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7&amp;action=history"  title="本页面的早前修订版本 [h]" accesskey="h">查看历史</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>操作</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">搜索</label></h5>
+	<form action="http://www.starlinglib.com/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="在Starling中文站中搜索 [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="提交" title="如果相同的标题存在的话便直接前往该页面" id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="搜索" title="搜索含这些文字的页面" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="特殊:搜索"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../skins/common/images/wiki.png);" href="index.html"  title="访问首页"></a></div>
+				<!-- /logo -->
+				
+<!-- navigation -->
+<div class="portal" id='p-navigation'>
+	<h5>导航</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="index.html" title="访问首页 [z]" accesskey="z">首页</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /navigation -->
+
+<!-- Starling中文资料 -->
+<div class="portal" id='p-Starling.E4.B8.AD.E6.96.87.E8.B5.84.E6.96.99'>
+	<h5>Starling中文资料</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E6.9C.80.E6.96.B0.E5.8A.A8.E6.80.81"><a href="News.html">Starling最新动态</a></li>
+			<li id="n-.E4.B8.8B.E8.BD.BD"><a href="download.html">下载</a></li>
+			<li id="n-.E5.85.A5.E9.97.A8.E7.AC.AC.E4.B8.80.E6.AD.A5"><a href="FristStep.html">入门第一步</a></li>
+			<li id="n-API.E6.8E.A5.E5.8F.A3.E6.96.87.E6.A1.A3"><a href="APIReference.html">API接口文档</a></li>
+			<li id="n-Starling.E8.AF.B4.E6.98.8E.E4.B9.A6"><a href="StarlingManual.html">Starling说明书</a></li>
+			<li id="n-FeathersUI.E6.96.87.E6.A1.A3"><a href="FeathersUI.html">FeathersUI文档</a></li>
+			<li id="n-.E6.95.99.E7.A8.8B.E5.92.8C.E4.BB.A3.E7.A0.81"><a href="Tutorials.html">教程和代码</a></li>
+			<li id="n-Starling.E6.89.A9.E5.B1.95"><a href="Extensions.html">Starling扩展</a></li>
+			<li id="n-.E6.88.90.E5.8A.9F.E6.A1.88.E4.BE.8B"><a href="GamesPowered.html">成功案例</a></li>
+			<li id="n-.E7.AB.99.E5.A4.96.E8.B5.84.E6.96.99"><a href="OutsideDocs.html">站外资料</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Starling中文资料 -->
+
+<!-- Starling原创教程 -->
+<div class="portal" id='p-Starling.E5.8E.9F.E5.88.9B.E6.95.99.E7.A8.8B'>
+	<h5>Starling原创教程</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E7.A7.BB.E5.8A.A8.E5.BC.80.E5.8F.91.E6.95.99.E7.A8.8B"><a href="StarlingMobile.html">Starling移动开发教程</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Starling原创教程 -->
+
+<!-- 微信-Flash微报 -->
+
+
+<!-- /微信-Flash微报 -->
+
+<!-- 论坛 -->
+<div class="portal" id='p-.E8.AE.BA.E5.9D.9B'>
+	<h5>论坛</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E4.B8.AD.E6.96.87.E8.AE.BA.E5.9D.9B"><a href="http://bbs.egret-labs.org/?fromuid=62" rel="nofollow">Egret开发者论坛</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /论坛 -->
+
+<!-- 友链 -->
+<div class="portal" id='p-.E5.8F.8B.E9.93.BE'>
+	<h5>友链</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Sirius2d.E5.BC.95.E6.93.8E"><a href="http://www.sirius2d.com/" rel="nofollow">Sirius2d引擎</a></li>
+			<li id="n-A.E9.97.AA.E7.BD.91"><a href="http://www.ashan.org/" rel="nofollow">A闪网</a></li>
+			<li id="n-Y.Boy"><a href="http://www.riaoo.com/" rel="nofollow">Y.Boy</a></li>
+			<li id="n-Cenfee"><a href="http://cenfee.com/" rel="nofollow">Cenfee</a></li>
+			<li id="n-.E5.B0.8F.E5.A4.9C-Clifford"><a href="http://www.cnblogs.com/flash3d/" rel="nofollow">小夜 Clifford</a></li>
+			<li id="n-.E6.9D.9C.E5.A2.9E.E5.BC.BA.28DzQ.29"><a href="http://www.duzengqiang.com/" rel="nofollow">杜增强(DzQ)</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /友链 -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>工具箱</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="%e7%89%b9%e6%ae%8a_%e9%93%be%e5%85%a5%e9%a1%b5%e9%9d%a2/StarlingManual_Event.html" title="所有链入本页的wiki页面列表 [j]" accesskey="j">链入页面</a></li>
+			<li id="t-recentchangeslinked"><a href="%e7%89%b9%e6%ae%8a_%e9%93%be%e5%87%ba%e6%9b%b4%e6%94%b9/StarlingManual_Event.html" title="本页链入的页面的最近更改 [k]" accesskey="k">链出更改</a></li>
+			<li id="t-specialpages"><a href="%e7%89%b9%e6%ae%8a_%e7%89%b9%e6%ae%8a%e9%a1%b5%e9%9d%a2.html" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+			<li><a href="http://www.starlinglib.com/index.php?title=StarlingManual:%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7&amp;printable=yes" rel="alternate">可打印版</a></li>
+			<li id="t-permalink"><a href="http://www.starlinglib.com/index.php?title=StarlingManual:%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7&amp;oldid=116" title="本页面该修订版本的永久链接">永久链接</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> 本页面最后修订于2012年5月9日 (星期三) 11:09。</li>
+											<li id="footer-info-viewcount">此页面已被浏览过8,278次。</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="Starling_yinsi.html" title="Starling中文站:隐私权政策">隐私权政策</a></li>
+											<li id="footer-places-about"><a href="StarlingCnAbout.html" title="Starling中文站:关于">关于Starling中文站</a></li>
+											<li id="footer-places-disclaimer"><a href="StarlingCNCopyRight.html" title="Starling中文站:免责声明">免责声明</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31520647-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+		<!-- /footer -->
+		
+<!-- Served in 0.861 secs. -->
+	</body>
+
+<!-- Mirrored from www.starlinglib.com/wiki/StarlingManual:事件捕获 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jun 2014 07:19:24 GMT -->
+</html>

@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from www.starlinglib.com/wiki/Feathers:item-renderers by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jun 2014 07:23:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Feathers:item-renderers - Starling中文站</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.0" />
+<link rel="shortcut icon" href="http://www.starlinglib.com/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.starlinglib.com/opensearch_desc.php" title="Starling中文站 (zh-cn)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://www.starlinglib.com/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="Starling中文站的Atom" href="http://www.starlinglib.com/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&amp;feed=atom" />
+<link rel="stylesheet" href="../skins/style.css" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: app_starlinglib-wiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Feathers:item-renderers","wgTitle":"Feathers:item-renderers","wgCurRevisionId":1241,"wgArticleId":180,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"zh-cn","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Feathers:item-renderers","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false}});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"zh-cn","language":"zh-cn","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;},{},{});mw.loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: app_starlinglib-wiki:resourceloader:filter:minify-js:7:64bb9911c781603a64782510a7dfd931 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-actionscript {line-height: normal;}
+.source-actionscript li, .source-actionscript pre {
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for actionscript
+ * CSS class: source-actionscript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.actionscript.source-actionscript .de1, .actionscript.source-actionscript .de2 {font: normal normal 1em/1.2em monospace; margin:10px 0; padding:10px; background:none; vertical-align:top;}
+.actionscript.source-actionscript  {font-family:monospace;}
+.actionscript.source-actionscript .imp {font-weight: bold; color: red;}
+.actionscript.source-actionscript li, .actionscript.source-actionscript .li1 {font-weight: normal; vertical-align:top;}
+.actionscript.source-actionscript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.actionscript.source-actionscript .li2 {font-weight: bold; vertical-align:top;}
+.actionscript.source-actionscript .kw1 {color: #b1b100;}
+.actionscript.source-actionscript .kw2 {color: #000000; font-weight: bold;}
+.actionscript.source-actionscript .kw3 {color: #0066CC;}
+.actionscript.source-actionscript .co1 {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .co2 {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .coMULTI {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .es0 {color: #000099; font-weight: bold;}
+.actionscript.source-actionscript .br0 {color: #66cc66;}
+.actionscript.source-actionscript .sy0 {color: #66cc66;}
+.actionscript.source-actionscript .st0 {color: #ff0000;}
+.actionscript.source-actionscript .nu0 {color: #cc66cc;}
+.actionscript.source-actionscript .me1 {color: #006600;}
+.actionscript.source-actionscript .ln-xtra, .actionscript.source-actionscript li.ln-xtra, .actionscript.source-actionscript div.ln-xtra {background-color: #ffc;}
+.actionscript.source-actionscript span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "http://www.starlinglib.com/index.php?title=MediaWiki:Geshi.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+/*]]>*/
+</style><!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Feathers_item-renderers skin-vector action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Feathers:item-renderers</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">来自Starling中文站</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					跳转到： <a href="#mw-head">导航</a>,
+					<a href="#p-search">搜索</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="zh-CN" dir="ltr" class="mw-content-ltr"><p>原文地址：<a rel="nofollow" class="external free" href="http://wiki.starling-framework.org/feathers/item-renderers">http://wiki.starling-framework.org/feathers/item-renderers</a>
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>目录</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.E4.B8.BAFeathers.E5.88.9B.E5.BB.BA.E5.88.97.E8.A1.A8.E6.8E.A7.E5.88.B6.E7.9A.84.E9.A1.B9.E7.9B.AE.E6.B8.B2.E6.9F.93.E5.99.A8"><span class="tocnumber">1</span> <span class="toctext">为Feathers创建列表控制的项目渲染器</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#.E5.B8.83.E5.B1.80.E8.99.9A.E6.8B.9F.E5.8C.96"><span class="tocnumber">2</span> <span class="toctext">布局虚拟化</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#.E4.B8.80.E4.B8.AA.E5.BE.AE.E5.9E.8B.E9.A1.B9.E7.9B.AE.E6.B8.B2.E6.9F.93.E5.99.A8"><span class="tocnumber">3</span> <span class="toctext">一个微型项目渲染器</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#.E7.94.A8.E8.A7.A6.E6.91.B8.E8.BF.9B.E8.A1.8C.E9.80.89.E6.8B.A9"><span class="tocnumber">4</span> <span class="toctext">用触摸进行选择</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#.E5.8F.96.E6.B6.88.E6.BB.9A.E5.8A.A8.E6.97.B6.E7.9A.84.E7.9B.B8.E4.BA.92.E4.BD.9C.E7.94.A8"><span class="tocnumber">5</span> <span class="toctext">取消滚动时的相互作用</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#.E6.96.B9.E6.B3.951:.E6.B8.85.E9.99.A4.E8.A7.A6.E6.91.B8ID"><span class="tocnumber">6</span> <span class="toctext">方法1:清除触摸ID</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#.E6.96.B9.E6.B3.952:.E4.BF.9D.E6.8C.81.E4.B8.80.E4.B8.AA.E5.B8.83.E5.B0.94.E7.B1.BB.E5.9E.8B.E6.A0.87.E5.BF.97"><span class="tocnumber">7</span> <span class="toctext">方法2:保持一个布尔类型标志</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#.E5.AD.90.E7.BB.84.E4.BB.B6.E7.9A.84.E4.BA.A4.E4.BA.92"><span class="tocnumber">8</span> <span class="toctext">子组件的交互</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#.E7.9B.B8.E5.85.B3.E9.93.BE.E6.8E.A5"><span class="tocnumber">8.1</span> <span class="toctext">相关链接</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h6> <span class="mw-headline" id=".E4.B8.BAFeathers.E5.88.9B.E5.BB.BA.E5.88.97.E8.A1.A8.E6.8E.A7.E5.88.B6.E7.9A.84.E9.A1.B9.E7.9B.AE.E6.B8.B2.E6.9F.93.E5.99.A8"> 为Feathers创建列表控制的项目渲染器 </span></h6>
+<p><a rel="nofollow" class="external text" href="http://feathersui.com/documentation/feathers/controls/renderers/DefaultListItemRenderer.html">DefaultListItemRenderer</a>类提供了丰富的自定义选项来支持列表项目的布局和外观的渲染器。然而，有时它不能提供自定义列表的能力或者布局选项，并且你需要创建自定义的项目渲染器类。
+</p>
+<h5> <span class="mw-headline" id=".E5.B8.83.E5.B1.80.E8.99.9A.E6.8B.9F.E5.8C.96"> 布局虚拟化 </span></h5>
+<p>默认情况下,所有的内置布局类在Feathers中的布局虚拟化默认打开。该特性被列表组件用来限制项目渲染器实例在任何给定的时间内被创建时的数量。这意味着有一千项的列表几乎可以和一个项的列表一样快,因为只有可见的项目渲染器才会被创建。列表还会用新数据做为列表滚轴重用项目渲染器。
+对你来说意味着什么？作为一名开发人员要创建这样一个自定义项渲染器，你的渲染器做到在项目渲染器接收到完全不同的项目时能够显示出来。在以下一个示例中，我们可以看到它是如何做到的。
+</p>
+<h5> <span class="mw-headline" id=".E4.B8.80.E4.B8.AA.E5.BE.AE.E5.9E.8B.E9.A1.B9.E7.9B.AE.E6.B8.B2.E6.9F.93.E5.99.A8"> 一个微型项目渲染器 </span></h5>
+<p>为了方便起见,让一个基本的项目渲染器类写在下面。它只是简单地在'Label'类组件中显示一些文本。它可以是一个很好的起点让您自己定制项目渲染器。
+在后面的部分，更多的一些功能将被添加到这个项目渲染器。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">package
+<span class="br0">&#123;</span>
+	<span class="kw3">import</span> feathers.<span class="me1">controls</span>.<span class="me1">Label</span>;
+	<span class="kw3">import</span> feathers.<span class="me1">controls</span>.<span class="kw3">List</span>;
+	<span class="kw3">import</span> feathers.<span class="me1">controls</span>.<span class="me1">renderers</span>.<span class="me1">IListItemRenderer</span>;
+	<span class="kw3">import</span> feathers.<span class="me1">core</span>.<span class="me1">FeathersControl</span>;
+&#160;
+	<span class="kw3">import</span> starling.<span class="me1">events</span>.<span class="me1">Event</span>;
+&#160;
+	<span class="kw3">public</span> <span class="kw2">class</span> BasicItemRenderer <span class="kw3">extends</span> FeathersControl <span class="kw3">implements</span> IListItemRenderer
+	<span class="br0">&#123;</span>
+		<span class="kw3">public</span> <span class="kw2">function</span> BasicItemRenderer<span class="br0">&#40;</span><span class="br0">&#41;</span>
+		<span class="br0">&#123;</span>
+		<span class="br0">&#125;</span>
+&#160;
+		protected <span class="kw2">var</span> itemLabel:Label;
+&#160;
+		protected <span class="kw2">var</span> _index:<span class="kw3">int</span> = -<span class="nu0">1</span>;
+&#160;
+		<span class="kw3">public</span> <span class="kw2">function</span> <span class="kw3">get</span> <span class="kw3">index</span><span class="br0">&#40;</span><span class="br0">&#41;</span>:<span class="kw3">int</span>
+		<span class="br0">&#123;</span>
+			<span class="kw1">return</span> <span class="kw3">this</span>._index;
+		<span class="br0">&#125;</span>
+&#160;
+		<span class="kw3">public</span> <span class="kw2">function</span> <span class="kw3">set</span> <span class="kw3">index</span><span class="br0">&#40;</span>value:<span class="kw3">int</span><span class="br0">&#41;</span>:<span class="kw3">void</span>
+		<span class="br0">&#123;</span>
+			<span class="kw1">if</span><span class="br0">&#40;</span><span class="kw3">this</span>._index == value<span class="br0">&#41;</span>
+			<span class="br0">&#123;</span>
+				<span class="kw1">return</span>;
+			<span class="br0">&#125;</span>
+			<span class="kw3">this</span>._index = value;
+			<span class="kw3">this</span>.<span class="me1">invalidate</span><span class="br0">&#40;</span>INVALIDATION_FLAG_DATA<span class="br0">&#41;</span>;
+		<span class="br0">&#125;</span>
+&#160;
+		protected <span class="kw2">var</span> _owner:<span class="kw3">List</span>;
+&#160;
+		<span class="kw3">public</span> <span class="kw2">function</span> <span class="kw3">get</span> owner<span class="br0">&#40;</span><span class="br0">&#41;</span>:<span class="kw3">List</span>
+		<span class="br0">&#123;</span>
+			<span class="kw1">return</span> <span class="kw3">List</span><span class="br0">&#40;</span><span class="kw3">this</span>._owner<span class="br0">&#41;</span>;
+		<span class="br0">&#125;</span>
+&#160;
+		<span class="kw3">public</span> <span class="kw2">function</span> <span class="kw3">set</span> owner<span class="br0">&#40;</span>value:<span class="kw3">List</span><span class="br0">&#41;</span>:<span class="kw3">void</span>
+		<span class="br0">&#123;</span>
+			<span class="kw1">if</span><span class="br0">&#40;</span><span class="kw3">this</span>._owner == value<span class="br0">&#41;</span>
+			<span class="br0">&#123;</span>
+				<span class="kw1">return</span>;
+			<span class="br0">&#125;</span>
+			<span class="kw3">this</span>._owner = value;
+			<span class="kw3">this</span>.<span class="me1">invalidate</span><span class="br0">&#40;</span>INVALIDATION_FLAG_DATA<span class="br0">&#41;</span>;
+		<span class="br0">&#125;</span>
+&#160;
+		protected <span class="kw2">var</span> _data:<span class="kw3">Object</span>;
+&#160;
+		<span class="kw3">public</span> <span class="kw2">function</span> <span class="kw3">get</span> <span class="kw3">data</span><span class="br0">&#40;</span><span class="br0">&#41;</span>:<span class="kw3">Object</span>
+		<span class="br0">&#123;</span>
+			<span class="kw1">return</span> <span class="kw3">this</span>._data;
+		<span class="br0">&#125;</span>
+&#160;
+		<span class="kw3">public</span> <span class="kw2">function</span> <span class="kw3">set</span> <span class="kw3">data</span><span class="br0">&#40;</span>value:<span class="kw3">Object</span><span class="br0">&#41;</span>:<span class="kw3">void</span>
+		<span class="br0">&#123;</span>
+			<span class="kw1">if</span><span class="br0">&#40;</span><span class="kw3">this</span>._data == value<span class="br0">&#41;</span>
+			<span class="br0">&#123;</span>
+				<span class="kw1">return</span>;
+			<span class="br0">&#125;</span>
+			<span class="kw3">this</span>._data = value;
+			<span class="kw3">this</span>.<span class="me1">invalidate</span><span class="br0">&#40;</span>INVALIDATION_FLAG_DATA<span class="br0">&#41;</span>;
+		<span class="br0">&#125;</span>
+&#160;
+		protected <span class="kw2">var</span> _isSelected:<span class="kw3">Boolean</span>;
+&#160;
+		<span class="kw3">public</span> <span class="kw2">function</span> <span class="kw3">get</span> isSelected<span class="br0">&#40;</span><span class="br0">&#41;</span>:<span class="kw3">Boolean</span>
+		<span class="br0">&#123;</span>
+			<span class="kw1">return</span> <span class="kw3">this</span>._isSelected;
+		<span class="br0">&#125;</span>
+&#160;
+		<span class="kw3">public</span> <span class="kw2">function</span> <span class="kw3">set</span> isSelected<span class="br0">&#40;</span>value:<span class="kw3">Boolean</span><span class="br0">&#41;</span>:<span class="kw3">void</span>
+		<span class="br0">&#123;</span>
+			<span class="kw1">if</span><span class="br0">&#40;</span><span class="kw3">this</span>._isSelected == value<span class="br0">&#41;</span>
+			<span class="br0">&#123;</span>
+				<span class="kw1">return</span>;
+			<span class="br0">&#125;</span>
+			<span class="kw3">this</span>._isSelected = value;
+			<span class="kw3">this</span>.<span class="me1">invalidate</span><span class="br0">&#40;</span>INVALIDATION_FLAG_SELECTED<span class="br0">&#41;</span>;
+			<span class="kw3">this</span>.<span class="me1">dispatchEventWith</span><span class="br0">&#40;</span>Event.<span class="me1">CHANGE</span><span class="br0">&#41;</span>;
+		<span class="br0">&#125;</span>
+&#160;
+		override protected <span class="kw2">function</span> initialize<span class="br0">&#40;</span><span class="br0">&#41;</span>:<span class="kw3">void</span>
+		<span class="br0">&#123;</span>
+			<span class="kw1">if</span><span class="br0">&#40;</span><span class="sy0">!</span><span class="kw3">this</span>.<span class="me1">itemLabel</span><span class="br0">&#41;</span>
+			<span class="br0">&#123;</span>
+				<span class="kw3">this</span>.<span class="me1">itemLabel</span> = <span class="kw2">new</span> Label<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+				<span class="kw3">this</span>.<span class="me1">addChild</span><span class="br0">&#40;</span><span class="kw3">this</span>.<span class="me1">itemLabel</span><span class="br0">&#41;</span>;
+			<span class="br0">&#125;</span>
+		<span class="br0">&#125;</span>
+&#160;
+		override protected <span class="kw2">function</span> draw<span class="br0">&#40;</span><span class="br0">&#41;</span>:<span class="kw3">void</span>
+		<span class="br0">&#123;</span>
+			const dataInvalid:<span class="kw3">Boolean</span> = <span class="kw3">this</span>.<span class="me1">isInvalid</span><span class="br0">&#40;</span>INVALIDATION_FLAG_DATA<span class="br0">&#41;</span>;
+			const selectionInvalid:<span class="kw3">Boolean</span> = <span class="kw3">this</span>.<span class="me1">isInvalid</span><span class="br0">&#40;</span>INVALIDATION_FLAG_SELECTED<span class="br0">&#41;</span>;
+			<span class="kw2">var</span> sizeInvalid:<span class="kw3">Boolean</span> = <span class="kw3">this</span>.<span class="me1">isInvalid</span><span class="br0">&#40;</span>INVALIDATION_FLAG_SIZE<span class="br0">&#41;</span>;
+&#160;
+			<span class="kw1">if</span><span class="br0">&#40;</span>dataInvalid<span class="br0">&#41;</span>
+			<span class="br0">&#123;</span>
+				<span class="kw3">this</span>.<span class="me1">commitData</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+			<span class="br0">&#125;</span>
+&#160;
+			sizeInvalid = <span class="kw3">this</span>.<span class="me1">autoSizeIfNeeded</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">||</span> sizeInvalid;
+&#160;
+			<span class="kw1">if</span><span class="br0">&#40;</span>dataInvalid <span class="sy0">||</span> sizeInvalid<span class="br0">&#41;</span>
+			<span class="br0">&#123;</span>
+				<span class="kw3">this</span>.<span class="me1">layout</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+			<span class="br0">&#125;</span>
+		<span class="br0">&#125;</span>
+&#160;
+		protected <span class="kw2">function</span> autoSizeIfNeeded<span class="br0">&#40;</span><span class="br0">&#41;</span>:<span class="kw3">Boolean</span>
+		<span class="br0">&#123;</span>
+			const needsWidth:<span class="kw3">Boolean</span> = <span class="kw3">isNaN</span><span class="br0">&#40;</span><span class="kw3">this</span>.<span class="me1">explicitWidth</span><span class="br0">&#41;</span>;
+			const needsHeight:<span class="kw3">Boolean</span> = <span class="kw3">isNaN</span><span class="br0">&#40;</span><span class="kw3">this</span>.<span class="me1">explicitHeight</span><span class="br0">&#41;</span>;
+			<span class="kw1">if</span><span class="br0">&#40;</span><span class="sy0">!</span>needsWidth <span class="sy0">&amp;&amp;</span> <span class="sy0">!</span>needsHeight<span class="br0">&#41;</span>
+			<span class="br0">&#123;</span>
+				<span class="kw1">return</span> <span class="kw2">false</span>;
+			<span class="br0">&#125;</span>
+			<span class="kw3">this</span>.<span class="me1">itemLabel</span>.<span class="kw3">width</span> = <span class="kw3">NaN</span>;
+			<span class="kw3">this</span>.<span class="me1">itemLabel</span>.<span class="kw3">height</span> = <span class="kw3">NaN</span>;
+			<span class="kw3">this</span>.<span class="me1">itemLabel</span>.<span class="me1">validate</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+			<span class="kw2">var</span> newWidth:<span class="kw3">Number</span> = <span class="kw3">this</span>.<span class="me1">explicitWidth</span>;
+			<span class="kw1">if</span><span class="br0">&#40;</span>needsWidth<span class="br0">&#41;</span>
+			<span class="br0">&#123;</span>
+				newWidth = <span class="kw3">this</span>.<span class="me1">itemLabel</span>.<span class="kw3">width</span>;
+			<span class="br0">&#125;</span>
+			<span class="kw2">var</span> newHeight:<span class="kw3">Number</span> = <span class="kw3">this</span>.<span class="me1">explicitHeight</span>;
+			<span class="kw1">if</span><span class="br0">&#40;</span>needsHeight<span class="br0">&#41;</span>
+			<span class="br0">&#123;</span>
+				newHeight = <span class="kw3">this</span>.<span class="me1">itemLabel</span>.<span class="kw3">height</span>;
+			<span class="br0">&#125;</span>
+			<span class="kw1">return</span> <span class="kw3">this</span>.<span class="me1">setSizeInternal</span><span class="br0">&#40;</span>newWidth, newHeight, <span class="kw2">false</span><span class="br0">&#41;</span>;
+		<span class="br0">&#125;</span>
+&#160;
+		protected <span class="kw2">function</span> commitData<span class="br0">&#40;</span><span class="br0">&#41;</span>:<span class="kw3">void</span>
+		<span class="br0">&#123;</span>
+			<span class="kw1">if</span><span class="br0">&#40;</span><span class="kw3">this</span>._data<span class="br0">&#41;</span>
+			<span class="br0">&#123;</span>
+				<span class="kw3">this</span>.<span class="me1">itemLabel</span>.<span class="kw3">text</span> = <span class="kw3">this</span>._data.<span class="kw3">toString</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+			<span class="br0">&#125;</span>
+			<span class="kw1">else</span>
+			<span class="br0">&#123;</span>
+				<span class="kw3">this</span>.<span class="me1">itemLabel</span>.<span class="kw3">text</span> = <span class="st0">&quot;&quot;</span>;
+			<span class="br0">&#125;</span>
+		<span class="br0">&#125;</span>
+&#160;
+		protected <span class="kw2">function</span> layout<span class="br0">&#40;</span><span class="br0">&#41;</span>:<span class="kw3">void</span>
+		<span class="br0">&#123;</span>
+			<span class="kw3">this</span>.<span class="me1">itemLabel</span>.<span class="kw3">width</span> = <span class="kw3">this</span>.<span class="me1">actualWidth</span>;
+			<span class="kw3">this</span>.<span class="me1">itemLabel</span>.<span class="kw3">height</span> = <span class="kw3">this</span>.<span class="me1">actualHeight</span>;
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div>
+<p><br />
+几点注意：
+</p>
+<ul><li> 当数据属性变化,项目渲染器是无效的。这使得在Starling下次渲染之前，项目渲染器就进行重绘。当用isInvalid()函数检测到'INVALIDATION_FLAG_DATA'时,commitData()函数被调用来更新内部'Label'组件上的文本。
+</li><li> 为方便起见，我们在这里使用'Label'。如果您正在使用一个主题,它将自动使用默认的<a href="Feathers_text-renderers.html" title="Feathers:text-renderers">文本渲染器</a>更换皮肤。你也可以用FeathersControl.defaultTextRendererFactory()直接创建一个文本渲染器。这也和默认渲染器一样。您也可以通过文本渲染器添加一个某种文本格式的属性到你的项目渲染器类,。
+</li><li> 当'isSelected'发生变化时，别忘了发出'Event.CHANGE'事件。列表需要侦听该事件以便正确地改变被选择的项目。当你不希望这样变化时，你可以不这样做,然而在被你选择的列表中，你可能会得到多个项目渲染器。
+</li></ul>
+<h5> <span class="mw-headline" id=".E7.94.A8.E8.A7.A6.E6.91.B8.E8.BF.9B.E8.A1.8C.E9.80.89.E6.8B.A9"> 用触摸进行选择 </span></h5>
+<p>除非你在列表上设定selectedIndex或设置selectedItem，不然在上述类中没有提供任何可以改变的选择列表项目。如果我们希望用户能够触摸一个项目就选择它,我们需要自己添加。也许有其他的方式来选择在一个列表上的项目,比如触发一个按钮子组件或选择一个复选框,从而Feathers List组件在这里没有任何问题。这全取决于项目渲染器是否正确地执行工作。
+</p><p>首先,让我们在构造函数中添加一个侦听器TouchEvent:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw3">public</span> <span class="kw2">function</span> BasicItemRenderer<span class="br0">&#40;</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+	<span class="kw3">this</span>.<span class="me1">addEventListener</span><span class="br0">&#40;</span>TouchEvent.<span class="me1">TOUCH</span>, touchHandler<span class="br0">&#41;</span>;
+<span class="br0">&#125;</span></pre></div></div>
+<p>现在,触摸事件有了侦听器:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">protected <span class="kw2">function</span> touchHandler<span class="br0">&#40;</span>event:TouchEvent<span class="br0">&#41;</span>:<span class="kw3">void</span>
+<span class="br0">&#123;</span>
+	const touches:Vector.<span class="sy0">&lt;</span>Touch<span class="sy0">&gt;</span> = event.<span class="me1">getTouches</span><span class="br0">&#40;</span><span class="kw3">this</span><span class="br0">&#41;</span>;
+	<span class="kw1">if</span><span class="br0">&#40;</span>touches.<span class="kw3">length</span> == <span class="nu0">0</span><span class="br0">&#41;</span>
+	<span class="br0">&#123;</span>
+		<span class="co1">//hover has ended</span>
+		<span class="kw1">return</span>;
+	<span class="br0">&#125;</span>
+	<span class="kw1">if</span><span class="br0">&#40;</span><span class="kw3">this</span>.<span class="me1">touchPointID</span> <span class="sy0">&gt;</span>= <span class="nu0">0</span><span class="br0">&#41;</span>
+	<span class="br0">&#123;</span>
+		<span class="kw2">var</span> touch:Touch;
+		<span class="kw1">for</span> <span class="kw1">each</span><span class="br0">&#40;</span><span class="kw2">var</span> currentTouch:Touch <span class="kw1">in</span> touches<span class="br0">&#41;</span>
+		<span class="br0">&#123;</span>
+			<span class="kw1">if</span><span class="br0">&#40;</span>currentTouch.<span class="me1">id</span> == <span class="kw3">this</span>.<span class="me1">touchPointID</span><span class="br0">&#41;</span>
+			<span class="br0">&#123;</span>
+				touch = currentTouch;
+				<span class="kw1">break</span>;
+			<span class="br0">&#125;</span>
+		<span class="br0">&#125;</span>
+		<span class="kw1">if</span><span class="br0">&#40;</span><span class="sy0">!</span>touch<span class="br0">&#41;</span>
+		<span class="br0">&#123;</span>
+			<span class="kw1">return</span>;
+		<span class="br0">&#125;</span>
+		<span class="kw1">if</span><span class="br0">&#40;</span>touch.<span class="me1">phase</span> == TouchPhase.<span class="me1">ENDED</span><span class="br0">&#41;</span>
+		<span class="br0">&#123;</span>
+			<span class="kw3">this</span>.<span class="me1">touchPointID</span> = -<span class="nu0">1</span>;
+&#160;
+			touch.<span class="me1">getLocation</span><span class="br0">&#40;</span><span class="kw3">this</span>, HELPER_POINT<span class="br0">&#41;</span>;
+			<span class="co1">//check if the touch is still over the target</span>
+			<span class="co1">//also, only change it if we're not selected. we're not a toggle.</span>
+			<span class="kw1">if</span><span class="br0">&#40;</span><span class="kw3">this</span>.<span class="kw3">hitTest</span><span class="br0">&#40;</span>HELPER_POINT, <span class="kw2">true</span><span class="br0">&#41;</span> <span class="sy0">!</span>= <span class="kw2">null</span> <span class="sy0">&amp;&amp;</span> <span class="sy0">!</span><span class="kw3">this</span>._isSelected<span class="br0">&#41;</span>
+			<span class="br0">&#123;</span>
+				<span class="kw3">this</span>.<span class="me1">isSelected</span> = <span class="kw2">true</span>;
+			<span class="br0">&#125;</span>
+			<span class="kw1">return</span>;
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">else</span>
+	<span class="br0">&#123;</span>
+		<span class="kw1">for</span> <span class="kw1">each</span><span class="br0">&#40;</span>touch <span class="kw1">in</span> touches<span class="br0">&#41;</span>
+		<span class="br0">&#123;</span>
+			<span class="kw1">if</span><span class="br0">&#40;</span>touch.<span class="me1">phase</span> == TouchPhase.<span class="me1">BEGAN</span><span class="br0">&#41;</span>
+			<span class="br0">&#123;</span>
+				<span class="kw3">this</span>.<span class="me1">touchPointID</span> = touch.<span class="me1">id</span>;
+				<span class="kw1">return</span>;
+			<span class="br0">&#125;</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div>
+<p>这有点复杂,因为在多点触控的环境下，我们需要确保我们始终跟踪同一触摸它的ID。
+</p><p>上面的侦听器引用了一个名为“touchPointID”的变量。它应该被定义为一个成员变量:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">protected <span class="kw2">var</span> touchPointID:<span class="kw3">int</span> = -<span class="nu0">1</span>;</pre></div></div>
+<p>这就是跟踪我们的触摸的ID。它是用TouchPhase.BEGAN设置启用，用TouchPhase.ENDED清除。
+</p><p>还有引用一个命名为'HELPER_POINT'的静态常数:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw3">private</span> <span class="kw3">static</span> const HELPER_POINT:Point = <span class="kw2">new</span> Point<span class="br0">&#40;</span><span class="br0">&#41;</span>;</pre></div></div>
+<p>由于性能的原因,我们使用这个以避免每次我们用'touch.getLocation()'获取一个触摸事件的位置时创建一个新的'Point'对象。这有助于避免在运行时中有太多的垃圾回收。
+</p><p>最后,在构造函数中添加一个'Event.REMOVED_FROM_STAGE'的事件侦听器:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw3">this</span>.<span class="me1">addEventListener</span><span class="br0">&#40;</span>Event.<span class="me1">REMOVED_FROM_STAGE</span>, removedFromStageHandler<span class="br0">&#41;</span>;</pre></div></div>
+<p>在'TouchPhase.ENDED'时，侦听器函数将设置'touchPointID'为1:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">protected <span class="kw2">function</span> removedFromStageHandler<span class="br0">&#40;</span>event:Event<span class="br0">&#41;</span>:<span class="kw3">void</span>
+<span class="br0">&#123;</span>
+	<span class="kw3">this</span>.<span class="me1">touchPointID</span> = -<span class="nu0">1</span>;
+<span class="br0">&#125;</span></pre></div></div>
+<p>这是一个各种触摸事件在Starling中很好的实践。如果一个显示对象从舞台中移除,同时用户正在触摸它,它可能永远不会侦听到TouchPhase.ENDED事件。然后,当它再一次被添加到舞台,它的'touchPointID'可能对应一个不复存在的旧触摸事件。这就是为什么我们在移除时要清除它的标记。
+</p>
+<h5> <span class="mw-headline" id=".E5.8F.96.E6.B6.88.E6.BB.9A.E5.8A.A8.E6.97.B6.E7.9A.84.E7.9B.B8.E4.BA.92.E4.BD.9C.E7.94.A8"> 取消滚动时的相互作用 </span></h5>
+<p>当列表被滚动时，如果你想停止被选择项'TouchPhase.ENDED'时获得的渲染器,有几种方法能实现。两种情况下,您都需要在'List'类型的owner赋值器上侦听'Event.SCROLL'事件。让我们略微改变owner赋值器:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw3">public</span> <span class="kw2">function</span> <span class="kw3">set</span> owner<span class="br0">&#40;</span>value:<span class="kw3">List</span><span class="br0">&#41;</span>:<span class="kw3">void</span>
+<span class="br0">&#123;</span>
+	<span class="kw1">if</span><span class="br0">&#40;</span><span class="kw3">this</span>._owner == value<span class="br0">&#41;</span>
+	<span class="br0">&#123;</span>
+		<span class="kw1">return</span>;
+	<span class="br0">&#125;</span>
+	<span class="kw1">if</span><span class="br0">&#40;</span><span class="kw3">this</span>._owner<span class="br0">&#41;</span>
+	<span class="br0">&#123;</span>
+		<span class="kw3">this</span>._owner.<span class="me1">removeEventListener</span><span class="br0">&#40;</span>Event.<span class="kw3">SCROLL</span>, owner_scrollHandler<span class="br0">&#41;</span>;
+	<span class="br0">&#125;</span>
+	<span class="kw3">this</span>._owner = value;
+	<span class="kw1">if</span><span class="br0">&#40;</span><span class="kw3">this</span>._owner<span class="br0">&#41;</span>
+	<span class="br0">&#123;</span>
+		<span class="kw3">this</span>._owner.<span class="me1">addEventListener</span><span class="br0">&#40;</span>Event.<span class="kw3">SCROLL</span>, owner_scrollHandler<span class="br0">&#41;</span>;
+	<span class="br0">&#125;</span>
+	<span class="kw3">this</span>.<span class="me1">invalidate</span><span class="br0">&#40;</span>INVALIDATION_FLAG_DATA<span class="br0">&#41;</span>;
+<span class="br0">&#125;</span></pre></div></div>
+<p>我们花点时间看看'owner_scrollHandler()'的实现。这有点不同的是取决于我们想如何去实现这个方法。
+</p>
+<h4> <span class="mw-headline" id=".E6.96.B9.E6.B3.951:.E6.B8.85.E9.99.A4.E8.A7.A6.E6.91.B8ID"> 方法1:清除触摸ID </span></h4>
+<p>方法1:清除触摸ID
+最容易的方法就是当列表滚动简单地设置'touchPointID'为-1。当这样设置后,我们'TouchEvent.TOUCH'事件的侦听器将忽略任何其他触摸事件，直到下一次'TouchPhase.BEGAN'重新出现时。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">protected <span class="kw2">function</span> owner_scrollHandler<span class="br0">&#40;</span>event:Event<span class="br0">&#41;</span>:<span class="kw3">void</span>
+<span class="br0">&#123;</span>
+	<span class="kw3">this</span>.<span class="me1">touchPointID</span> = -<span class="nu0">1</span>;
+<span class="br0">&#125;</span></pre></div></div>
+<p>如果在不同接触状态下你的背景皮肤有变化,当列表滚动时你也应该让它回到向上的状态。因为我们已经清理了保存的触摸ID,我们不能在'TouchPhase.ENDED'或当悬停结束时对它进行比较。
+</p>
+<h4> <span class="mw-headline" id=".E6.96.B9.E6.B3.952:.E4.BF.9D.E6.8C.81.E4.B8.80.E4.B8.AA.E5.B8.83.E5.B0.94.E7.B1.BB.E5.9E.8B.E6.A0.87.E5.BF.97"> 方法2:保持一个布尔类型标志 </span></h4>
+<p>如果我们需要知道什么时候有TouchPhase.ENDED,但是我们仍然想要追踪是否滚动了列表,我们可以使用一个布尔类型标志来跟踪状态的滚动。首先,让我们添加一个标志作为我们的类中的一个成员变量:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">protected <span class="kw2">var</span> hasScrolled:<span class="kw3">Boolean</span> = <span class="kw2">false</span>;</pre></div></div>
+<p>当TouchPhase.BEGAN出现时,我们要设置标志为false。它可能已经被设置为false,但也没关系。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw1">if</span><span class="br0">&#40;</span>touch.<span class="me1">phase</span> == TouchPhase.<span class="me1">BEGAN</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+	<span class="kw3">this</span>.<span class="me1">touchPointID</span> = touch.<span class="me1">id</span>;
+	<span class="kw3">this</span>.<span class="me1">hasScrolled</span> = <span class="kw2">false</span>;
+	<span class="kw1">return</span>;
+<span class="br0">&#125;</span></pre></div></div>
+<p>在我们的Event.SCROLL侦听器中,我们设置了标志为true。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">protected <span class="kw2">function</span> owner_scrollHandler<span class="br0">&#40;</span>event:Event<span class="br0">&#41;</span>:<span class="kw3">void</span>
+<span class="br0">&#123;</span>
+	<span class="kw3">this</span>.<span class="me1">hasScrolled</span> = <span class="kw2">true</span>;
+<span class="br0">&#125;</span></pre></div></div>
+<p>最后,在TouchPhase.ENDED出现时,我们检查我们的标志的值:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw1">if</span><span class="br0">&#40;</span>touch.<span class="me1">phase</span> == TouchPhase.<span class="me1">ENDED</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+	<span class="kw3">this</span>.<span class="me1">touchPointID</span> = -<span class="nu0">1</span>;
+&#160;
+	<span class="kw1">if</span><span class="br0">&#40;</span><span class="sy0">!</span><span class="kw3">this</span>.<span class="me1">hasScrolled</span><span class="br0">&#41;</span>
+	<span class="br0">&#123;</span>
+		touch.<span class="me1">getLocation</span><span class="br0">&#40;</span><span class="kw3">this</span>, HELPER_POINT<span class="br0">&#41;</span>;
+		<span class="co1">//check if the touch is still over the target</span>
+		<span class="co1">//also, only change it if we're not selected. we're not a toggle.</span>
+		<span class="kw1">if</span><span class="br0">&#40;</span><span class="kw3">this</span>.<span class="kw3">hitTest</span><span class="br0">&#40;</span>HELPER_POINT, <span class="kw2">true</span><span class="br0">&#41;</span> <span class="sy0">!</span>= <span class="kw2">null</span> <span class="sy0">&amp;&amp;</span> <span class="sy0">!</span><span class="kw3">this</span>._isSelected<span class="br0">&#41;</span>
+		<span class="br0">&#123;</span>
+			<span class="kw3">this</span>.<span class="me1">isSelected</span> = <span class="kw2">true</span>;
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">return</span>;
+<span class="br0">&#125;</span></pre></div></div>
+<p>如果标志的值仍然是false,我们可以改变选项。如果是true,则因为列表滚动，我们跳过这部分。
+</p>
+<h4> <span class="mw-headline" id=".E5.AD.90.E7.BB.84.E4.BB.B6.E7.9A.84.E4.BA.A4.E4.BA.92"> 子组件的交互 </span></h4>
+<p>如果在你的项目渲染器中有子组件,如复选框,切换开关、滑动条,和其他的,这技术可以扩展到防止这些组件相互影响。换个说法,如果你与其子组件交互时防止滚动。例如,如果你开始拖动一个滑块,您可能不希望在同一时间内列表进行滚动。
+</p><p>如何实现这个功能取决于子组件的类型。最简单的方法是侦听子组件的TouchEvent.TOUCH事件,然后停止此事件的传播，这样列表就没有收到这个触摸事件的通知。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">subComponent.<span class="me1">addEventListener</span><span class="br0">&#40;</span> TouchEvent.<span class="me1">TOUCH</span>, subComponent_touchHandler <span class="br0">&#41;</span>;</pre></div></div>
+<p>下面是这个事件的侦听器:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">protected <span class="kw2">function</span> subComponent_touchHandler<span class="br0">&#40;</span> event:TouchEvent <span class="br0">&#41;</span>:<span class="kw3">void</span>
+<span class="br0">&#123;</span>
+	event.<span class="me1">stopPropagation</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+<span class="br0">&#125;</span></pre></div></div>
+<p>根据您的需要和子组件的类型,您可能宁愿使用类似Event.CHANGE、FeathersEventType.BEGIN_INTERACTION和“FeathersEventType.END_INTERACTION的事件。
+</p>
+<h5> <span class="mw-headline" id=".E7.9B.B8.E5.85.B3.E9.93.BE.E6.8E.A5"> 相关链接 </span></h5>
+<ul><li> <a href="Feathers_list.html" title="Feathers:list">如何使用Feathers的List组件</a>
+</li><li> <a rel="nofollow" class="external text" href="http://feathersui.com/documentation/feathers/controls/renderers/IListItemRenderer.html">IListItemRenderer的API文档</a>
+</li></ul>
+<p>更多教程,返回到<a href="http://www.starlinglib.com/index.php?title=Start&amp;action=edit&amp;redlink=1" class="new" title="Start（尚未撰写）">Feathers文档</a>.
+</p>
+<hr />
+<p>翻译者：<a rel="nofollow" class="external text" href="http://weibo.com/jh44">吴金鸿</a>
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 170/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key app_starlinglib-wiki:pcache:idhash:180-0!*!0!!zh-cn!*!* and timestamp 20140628174109 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				来自“<a href="http://www.starlinglib.com/index.php?title=Feathers:item-renderers&amp;oldid=1241">http://www.starlinglib.com/index.php?title=Feathers:item-renderers&amp;oldid=1241</a>”				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>个人工具</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="%e7%94%a8%e6%88%b7_101.23.136.html" class="new" title="您编辑本站所用IP的对应用户页 [.]" accesskey=".">101.23.136.29</a></li>
+		<li id="pt-anontalk"><a href="%e7%94%a8%e6%88%b7%e8%ae%a8%e8%ae%ba_101.23.136.html" class="new" title="对于来自此IP地址的编辑的对话 [n]" accesskey="n">该IP地址的讨论</a></li>
+		<li id="pt-anonlogin"><a href="http://www.starlinglib.com/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&amp;returnto=Feathers%3Aitem-renderers" title="我们鼓励您登录，但这并不是必须的 [o]" accesskey="o">登录</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>名字空间</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Feathers_item-renderers.html"  title="查看内容页面 [c]" accesskey="c">页面</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://www.starlinglib.com/index.php?title=%E8%AE%A8%E8%AE%BA:Feathers:item-renderers&amp;action=edit&amp;redlink=1"  title="关于内容页面的讨论 [t]" accesskey="t">讨论</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>变换</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>查看</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Feathers_item-renderers.html" >阅读</a></span></li>
+					<li id="ca-viewsource"><span><a href="http://www.starlinglib.com/index.php?title=Feathers:item-renderers&amp;action=edit"  title="本页面已被保护。你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://www.starlinglib.com/index.php?title=Feathers:item-renderers&amp;action=history"  title="本页面的早前修订版本 [h]" accesskey="h">查看历史</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>操作</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">搜索</label></h5>
+	<form action="http://www.starlinglib.com/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="在Starling中文站中搜索 [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="提交" title="如果相同的标题存在的话便直接前往该页面" id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="搜索" title="搜索含这些文字的页面" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="特殊:搜索"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../skins/common/images/wiki.png);" href="index.html"  title="访问首页"></a></div>
+				<!-- /logo -->
+				
+<!-- navigation -->
+<div class="portal" id='p-navigation'>
+	<h5>导航</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="index.html" title="访问首页 [z]" accesskey="z">首页</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /navigation -->
+
+<!-- Starling中文资料 -->
+<div class="portal" id='p-Starling.E4.B8.AD.E6.96.87.E8.B5.84.E6.96.99'>
+	<h5>Starling中文资料</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E6.9C.80.E6.96.B0.E5.8A.A8.E6.80.81"><a href="News.html">Starling最新动态</a></li>
+			<li id="n-.E4.B8.8B.E8.BD.BD"><a href="download.html">下载</a></li>
+			<li id="n-.E5.85.A5.E9.97.A8.E7.AC.AC.E4.B8.80.E6.AD.A5"><a href="FristStep.html">入门第一步</a></li>
+			<li id="n-API.E6.8E.A5.E5.8F.A3.E6.96.87.E6.A1.A3"><a href="APIReference.html">API接口文档</a></li>
+			<li id="n-Starling.E8.AF.B4.E6.98.8E.E4.B9.A6"><a href="StarlingManual.html">Starling说明书</a></li>
+			<li id="n-FeathersUI.E6.96.87.E6.A1.A3"><a href="FeathersUI.html">FeathersUI文档</a></li>
+			<li id="n-.E6.95.99.E7.A8.8B.E5.92.8C.E4.BB.A3.E7.A0.81"><a href="Tutorials.html">教程和代码</a></li>
+			<li id="n-Starling.E6.89.A9.E5.B1.95"><a href="Extensions.html">Starling扩展</a></li>
+			<li id="n-.E6.88.90.E5.8A.9F.E6.A1.88.E4.BE.8B"><a href="GamesPowered.html">成功案例</a></li>
+			<li id="n-.E7.AB.99.E5.A4.96.E8.B5.84.E6.96.99"><a href="OutsideDocs.html">站外资料</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Starling中文资料 -->
+
+<!-- Starling原创教程 -->
+<div class="portal" id='p-Starling.E5.8E.9F.E5.88.9B.E6.95.99.E7.A8.8B'>
+	<h5>Starling原创教程</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E7.A7.BB.E5.8A.A8.E5.BC.80.E5.8F.91.E6.95.99.E7.A8.8B"><a href="StarlingMobile.html">Starling移动开发教程</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Starling原创教程 -->
+
+<!-- 微信-Flash微报 -->
+
+
+<!-- /微信-Flash微报 -->
+
+<!-- 论坛 -->
+<div class="portal" id='p-.E8.AE.BA.E5.9D.9B'>
+	<h5>论坛</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E4.B8.AD.E6.96.87.E8.AE.BA.E5.9D.9B"><a href="http://bbs.egret-labs.org/?fromuid=62" rel="nofollow">Egret开发者论坛</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /论坛 -->
+
+<!-- 友链 -->
+<div class="portal" id='p-.E5.8F.8B.E9.93.BE'>
+	<h5>友链</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Sirius2d.E5.BC.95.E6.93.8E"><a href="http://www.sirius2d.com/" rel="nofollow">Sirius2d引擎</a></li>
+			<li id="n-A.E9.97.AA.E7.BD.91"><a href="http://www.ashan.org/" rel="nofollow">A闪网</a></li>
+			<li id="n-Y.Boy"><a href="http://www.riaoo.com/" rel="nofollow">Y.Boy</a></li>
+			<li id="n-Cenfee"><a href="http://cenfee.com/" rel="nofollow">Cenfee</a></li>
+			<li id="n-.E5.B0.8F.E5.A4.9C-Clifford"><a href="http://www.cnblogs.com/flash3d/" rel="nofollow">小夜 Clifford</a></li>
+			<li id="n-.E6.9D.9C.E5.A2.9E.E5.BC.BA.28DzQ.29"><a href="http://www.duzengqiang.com/" rel="nofollow">杜增强(DzQ)</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /友链 -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>工具箱</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="%e7%89%b9%e6%ae%8a_%e9%93%be%e5%85%a5%e9%a1%b5%e9%9d%a2/Feathers_item-renderers.html" title="所有链入本页的wiki页面列表 [j]" accesskey="j">链入页面</a></li>
+			<li id="t-recentchangeslinked"><a href="%e7%89%b9%e6%ae%8a_%e9%93%be%e5%87%ba%e6%9b%b4%e6%94%b9/Feathers_item-renderers.html" title="本页链入的页面的最近更改 [k]" accesskey="k">链出更改</a></li>
+			<li id="t-specialpages"><a href="%e7%89%b9%e6%ae%8a_%e7%89%b9%e6%ae%8a%e9%a1%b5%e9%9d%a2.html" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+			<li><a href="http://www.starlinglib.com/index.php?title=Feathers:item-renderers&amp;printable=yes" rel="alternate">可打印版</a></li>
+			<li id="t-permalink"><a href="http://www.starlinglib.com/index.php?title=Feathers:item-renderers&amp;oldid=1241" title="本页面该修订版本的永久链接">永久链接</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> 本页面最后修订于2013年1月23日 (星期三) 17:00。</li>
+											<li id="footer-info-viewcount">此页面已被浏览过8,972次。</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="Starling_yinsi.html" title="Starling中文站:隐私权政策">隐私权政策</a></li>
+											<li id="footer-places-about"><a href="StarlingCnAbout.html" title="Starling中文站:关于">关于Starling中文站</a></li>
+											<li id="footer-places-disclaimer"><a href="StarlingCNCopyRight.html" title="Starling中文站:免责声明">免责声明</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31520647-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+		<!-- /footer -->
+		
+<!-- Served in 1.058 secs. -->
+	</body>
+
+<!-- Mirrored from www.starlinglib.com/wiki/Feathers:item-renderers by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jun 2014 07:23:03 GMT -->
+</html>

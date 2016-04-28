@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from www.starlinglib.com/wiki/StarlingManual:自定义显示对象 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jun 2014 07:22:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>StarlingManual:自定义显示对象 - Starling中文站</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.0" />
+<link rel="shortcut icon" href="http://www.starlinglib.com/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.starlinglib.com/opensearch_desc.php" title="Starling中文站 (zh-cn)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://www.starlinglib.com/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="Starling中文站的Atom" href="http://www.starlinglib.com/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&amp;feed=atom" />
+<link rel="stylesheet" href="../skins/style.css" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: app_starlinglib-wiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"StarlingManual:自定义显示对象","wgTitle":"StarlingManual:自定义显示对象","wgCurRevisionId":45,"wgArticleId":44,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"zh-cn","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgRelevantPageName":"StarlingManual:自定义显示对象","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false}});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"zh-cn","language":"zh-cn","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;},{},{});mw.loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: app_starlinglib-wiki:resourceloader:filter:minify-js:7:64bb9911c781603a64782510a7dfd931 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-actionscript {line-height: normal;}
+.source-actionscript li, .source-actionscript pre {
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for actionscript
+ * CSS class: source-actionscript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.actionscript.source-actionscript .de1, .actionscript.source-actionscript .de2 {font: normal normal 1em/1.2em monospace; margin:10px 0; padding:10px; background:none; vertical-align:top;}
+.actionscript.source-actionscript  {font-family:monospace;}
+.actionscript.source-actionscript .imp {font-weight: bold; color: red;}
+.actionscript.source-actionscript li, .actionscript.source-actionscript .li1 {font-weight: normal; vertical-align:top;}
+.actionscript.source-actionscript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.actionscript.source-actionscript .li2 {font-weight: bold; vertical-align:top;}
+.actionscript.source-actionscript .kw1 {color: #b1b100;}
+.actionscript.source-actionscript .kw2 {color: #000000; font-weight: bold;}
+.actionscript.source-actionscript .kw3 {color: #0066CC;}
+.actionscript.source-actionscript .co1 {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .co2 {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .coMULTI {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .es0 {color: #000099; font-weight: bold;}
+.actionscript.source-actionscript .br0 {color: #66cc66;}
+.actionscript.source-actionscript .sy0 {color: #66cc66;}
+.actionscript.source-actionscript .st0 {color: #ff0000;}
+.actionscript.source-actionscript .nu0 {color: #cc66cc;}
+.actionscript.source-actionscript .me1 {color: #006600;}
+.actionscript.source-actionscript .ln-xtra, .actionscript.source-actionscript li.ln-xtra, .actionscript.source-actionscript div.ln-xtra {background-color: #ffc;}
+.actionscript.source-actionscript span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "http://www.starlinglib.com/index.php?title=MediaWiki:Geshi.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+/*]]>*/
+</style><!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-StarlingManual_自定义显示对象 skin-vector action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">StarlingManual:自定义显示对象</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">来自Starling中文站</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					跳转到： <a href="#mw-head">导航</a>,
+					<a href="#p-search">搜索</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="zh-CN" dir="ltr" class="mw-content-ltr"><p>Starling的优势在于，其代码完全基于ActionScript3！而且，它用到的仅仅是公开的APIs，并没有依赖任何扩展C++代码。
+</p><p>因此，您可以对Starling做出原来不可能在原生显示列表中做到的扩展。本节将介绍完成这一任务的最有力办法：它将向您展示如何构建一个自定义显示对象。即，一个包含自己特有的渲染方法的、直接继承DisplayObject的子类。
+</p><p>注意：本教程需要Starling1.1或者从Git上得到的最新修订版本！
+</p><p>当您直接使用Stage3D时，请使能Starling中的错误检测功能：
+</p><p>starling.enableErrorChecking = true;
+</p><p>当您使能这项功能后，每当您的程序失控的时候，会自动跑出一个异常，这可以大大方便您的调试。当您确保您的程序没有问题后，您需要重新将错误检测功能禁止，因为此功能将对性能产生负面影响。
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>目录</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.E5.A4.9A.E8.BE.B9.E5.BD.A2.E7.B1.BB"><span class="tocnumber">1</span> <span class="toctext">多边形类</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#.E7.B1.BB.E6.A6.82.E8.BF.B0"><span class="tocnumber">2</span> <span class="toctext">类概述</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#.E9.A1.B6.E7.82.B9.E6.95.B0.E6.8D.AE"><span class="tocnumber">3</span> <span class="toctext">顶点数据</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#.E5.AF.B9.E8.B1.A1.E7.9A.84.E8.BE.B9.E7.95.8C"><span class="tocnumber">4</span> <span class="toctext">对象的边界</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#.E9.A1.B6.E7.82.B9.E5.92.8C.E7.B4.A2.E5.BC.95.E7.BC.93.E5.86.B2.E5.8C.BA"><span class="tocnumber">5</span> <span class="toctext">顶点和索引缓冲区</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#.E6.B8.B2.E6.9F.93"><span class="tocnumber">6</span> <span class="toctext">渲染</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#AGAL"><span class="tocnumber">7</span> <span class="toctext">AGAL</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#.E5.A4.84.E7.90.86.E4.B8.A2.E5.A4.B1.E7.9A.84.E6.83.85.E5.86.B5"><span class="tocnumber">8</span> <span class="toctext">处理丢失的情况</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#.E7.BB.93.E8.AE.BA"><span class="tocnumber">9</span> <span class="toctext">结论</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Where_to_go_from_here"><span class="tocnumber">10</span> <span class="toctext">Where to go from here</span></a></li>
+</ul>
+</td></tr></table>
+<h3> <span class="mw-headline" id=".E5.A4.9A.E8.BE.B9.E5.BD.A2.E7.B1.BB">多边形类</span></h3>
+<p>首先，我们会通过写一个简单的多边形类来学习如何达到我们的目的。这个类的功能为：渲染规则的、任意边数的、并且能够自定义颜色的多边形。下面是应该输出的图形：
+</p><p><a href="%e6%96%87%e4%bb%b6_Polygons.html" class="image"><img alt="Polygons.png" src="../images/9/93/Polygons.png" width="591" height="164" /></a>
+</p><p>写出来的类应该可以按照下面的例子运行，就像其他显示对象一样！
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw2">var</span> polygon:Polygon = <span class="kw2">new</span> Polygon<span class="br0">&#40;</span><span class="nu0">50</span>, <span class="nu0">6</span>, <span class="kw3">Color</span>.<span class="me1">RED</span><span class="br0">&#41;</span>; <span class="co1">// radius, edges, color</span>
+polygon.<span class="me1">x</span> = <span class="nu0">60</span>;
+polygon.<span class="me1">y</span> = <span class="nu0">60</span>;
+addChild<span class="br0">&#40;</span>polygon<span class="br0">&#41;</span>;</pre></div></div>
+<h3> <span class="mw-headline" id=".E7.B1.BB.E6.A6.82.E8.BF.B0">类概述</span></h3>
+<p>我们先来看看这个多边形类的架构!下面是您必须实现的最少的方法：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw3">public</span> <span class="kw2">class</span> Polygon <span class="kw3">extends</span> DisplayObject
+<span class="br0">&#123;</span>
+    <span class="kw3">public</span> Polygon<span class="br0">&#40;</span>radius:<span class="kw3">Number</span>, numEdges:<span class="kw3">int</span>=<span class="nu0">6</span>, <span class="kw3">color</span>:uint=0xffffff<span class="br0">&#41;</span>;
+    <span class="kw3">public</span> override <span class="kw2">function</span> dispose<span class="br0">&#40;</span><span class="br0">&#41;</span>:<span class="kw3">void</span>;
+&#160;
+    <span class="kw3">public</span> override <span class="kw2">function</span> <span class="kw3">getBounds</span><span class="br0">&#40;</span>targetSpace:DisplayObject, resultRect:Rectangle=<span class="kw2">null</span><span class="br0">&#41;</span>:Rectangle;
+    <span class="kw3">public</span> override <span class="kw2">function</span> render<span class="br0">&#40;</span>support:RenderSupport, alpha:<span class="kw3">Number</span><span class="br0">&#41;</span>:<span class="kw3">void</span>;
+<span class="br0">&#125;</span></pre></div></div>
+<p>最上面的两个方法实现了对象的生成和销毁（谨记：在Stage3D里面，当该资源不再需要使用时必须将其清理！）
+</p><p>剩下的就是定义我们多边形类的功能行为：
+</p>
+<ul><li> ggetBounds：在一个特定的坐标系统中计算多边形的边界。当您实现了这个方法，您可以自由地实现另外许许多多依赖这个方法的方法（例如：宽和高属性、hitTest方法等）。
+</li><li> render：在屏幕上进行渲染。
+</li></ul>
+<p>在这些方法里面，render方法无疑是最难实现的一个环节！它包含了纯粹的、低层次的Stage3D API，这些正是Starling努力向您隐藏的部分（Starling已经将其对外封装好了，对于一般功能，直接使用就OK了~）
+</p><p>但是，这就是为什么我们在这里（我们要实现自定义显示对象啊！），对不对？所以尽管尝试去使用这些底层的接口吧！
+</p><p>在下面的章节中，我们将着眼于Polygon类需要的代码片段。在本节的最后，您将看到完整的源代码。
+</p>
+<h3> <span class="mw-headline" id=".E9.A1.B6.E7.82.B9.E6.95.B0.E6.8D.AE">顶点数据</span></h3>
+<p>当我们在讨论Stage3D的时候，其实我们就是在讨论顶点和三角形！所有使用Stage3D渲染的对象都被建立成三角形的组合，而三角形则由其3个顶点组成！
+</p><p>而每一个正规的多边形，都能分解为一个或多个三角形，大家可以以右边的五边形作为参考例子。
+</p><p>它由六个顶点构成组成五个三角形（六个顶点，因为加上中心点）。我们给每个顶点分配一个标号（0~5），标号5代表其中心。
+</p><p>每一个顶点都有一个确定的位置和颜色（在例子中，每一个顶点的颜色都是相同的）。考虑到顶点在Stage3D的应用中如此重要，所以Starling里面包含一个非常有用的顶点管理类VertexData。
+</p><p>有了这个类，可以相当简单地创建规则多边形的顶点，下面是其代码：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="co1">// member variable:</span>
+<span class="kw3">private</span> <span class="kw2">var</span> mVertexData:VertexData; 
+&#160;
+<span class="co1">// code:</span>
+mVertexData = <span class="kw2">new</span> VertexData<span class="br0">&#40;</span>numEdges+<span class="nu0">1</span><span class="br0">&#41;</span>;
+mVertexData.<span class="me1">setUniformColor</span><span class="br0">&#40;</span><span class="kw3">color</span><span class="br0">&#41;</span>;
+mVertexData.<span class="me1">setPosition</span><span class="br0">&#40;</span>numEdges, <span class="nu0">0.0</span>, <span class="nu0">0.0</span><span class="br0">&#41;</span>; <span class="co1">// center vertex</span>
+&#160;
+<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw2">var</span> i:<span class="kw3">int</span>=<span class="nu0">0</span>; i<span class="sy0">&lt;</span>numEdges; ++i<span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+    <span class="kw2">var</span> edge:Point = Point.<span class="me1">polar</span><span class="br0">&#40;</span>radius, i <span class="sy0">*</span> <span class="nu0">2</span><span class="sy0">*</span><span class="kw3">Math</span>.<span class="kw3">PI</span> <span class="sy0">/</span> numEdges<span class="br0">&#41;</span>;
+    mVertexData.<span class="me1">setPosition</span><span class="br0">&#40;</span>i, edge.<span class="me1">x</span>, edge.<span class="me1">y</span><span class="br0">&#41;</span>;
+<span class="br0">&#125;</span></pre></div></div>
+<p>上面的代码创建了一个顶点数据对象，这个对象包含了多边形边数+1个同一颜色的顶点（+1为中心点）。中心点在（0,0），而其他顶点则位于以该中心点为圆心的一个圆上。
+</p><p>现在，我们需要定义组成这个多边形的三角形。我们通过创建一个Vector，其中包含一个接一个的三角形，其中每个三角形的顶点由引用顶点对象的里面的3个顶点索引值构成。
+</p><p>在我们的多边形例子中（五边形的例子），Vector内的内容应该是这样的：
+</p><p>5, 0, 1,   5, 1, 2,   5, 2, 3,   5, 3, 4,   5, 4, 0
+</p><p>下面是其代码：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="co1">// member variable:</span>
+<span class="kw3">private</span> <span class="kw2">var</span> mIndexData:Vector.<span class="sy0">&lt;</span>uint<span class="sy0">&gt;</span>; 
+&#160;
+<span class="co1">// code:</span>
+mIndexData = <span class="kw2">new</span> <span class="sy0">&lt;</span>uint<span class="sy0">&gt;</span><span class="br0">&#91;</span><span class="br0">&#93;</span>;
+<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw2">var</span> i:<span class="kw3">int</span>=<span class="nu0">0</span>; i<span class="sy0">&lt;</span>numEdges; ++i<span class="br0">&#41;</span>
+    mIndexData.<span class="kw3">push</span><span class="br0">&#40;</span>numEdges, i, <span class="br0">&#40;</span>i+<span class="nu0">1</span><span class="br0">&#41;</span> <span class="sy0">%</span> numEdges<span class="br0">&#41;</span>;</pre></div></div>
+<p>这就是渲染一个对象所用到的所有信息。谨记：在Stage3D里，渲染的步骤永远都是这样！无论您需要渲染的对象时什么，将其分解成由顶点组成的三角形，就是这么多！
+</p>
+<h3> <span class="mw-headline" id=".E5.AF.B9.E8.B1.A1.E7.9A.84.E8.BE.B9.E7.95.8C">对象的边界</span></h3>
+<p>现在我们的VertexData对象里面拥有所有的顶点数据，所以，我们就能够创建我们需要的多边形边界了（矩形）。这就是getBounds方法的功能。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw3">public</span> override <span class="kw2">function</span> <span class="kw3">getBounds</span><span class="br0">&#40;</span>targetSpace:DisplayObject,
+                                   resultRect:Rectangle=<span class="kw2">null</span><span class="br0">&#41;</span>:Rectangle
+<span class="br0">&#123;</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span>resultRect == <span class="kw2">null</span><span class="br0">&#41;</span> resultRect = <span class="kw2">new</span> Rectangle<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+    <span class="kw2">var</span> transformationMatrix:Matrix = getTransformationMatrix<span class="br0">&#40;</span>targetSpace<span class="br0">&#41;</span>;
+    <span class="kw1">return</span> mVertexData.<span class="kw3">getBounds</span><span class="br0">&#40;</span>transformationMatrix, <span class="nu0">0</span>, -<span class="nu0">1</span>, resultRect<span class="br0">&#41;</span>;
+<span class="br0">&#125;</span></pre></div></div>
+<p>就像上面列出的代码，其实没多大的工作量~
+</p><p>第一行创建了一个用于保存结果的Rectangle对象，如果调用者已经提供一个Rectangle对象，则不再新建（减少性能消耗）。
+</p><p>接着，我们创建了一个matrix对象，此matrix对象描述了数学上的两个坐标系统（多边形本身的坐标系统以及传入的坐标系统）是相互关联的。就是说：这个matrix对象可以用于计算我们的顶点位于目标空间的位置。
+</p><p>实际上，计算边界范围的是顶点数据对象。我们需要预先把numVetices参数设置为-1，使得边界检测用上所有的顶点。
+</p><p>这个方法的优点在于，我们可以利用它得到一系列的新功能。例如，width、height和hitTest方法，都是默认使用这个边界方法的。
+</p>
+<h3> <span class="mw-headline" id=".E9.A1.B6.E7.82.B9.E5.92.8C.E7.B4.A2.E5.BC.95.E7.BC.93.E5.86.B2.E5.8C.BA">顶点和索引缓冲区</span></h3>
+<p>尽管，我们创建了上面那么多的数据（mVertexData 和 mIndexData）均需要上传到GPU。在Stage3D中，还需要创建VertexBuffer 和IndexBuffer对象！想像一下，那些对象只是简单的Vector/Arrays，不同在于，它们并非储存在常规的内存中（常规内存即，像其他flash对象一样工作），而是储存在图像储存器中（即显存）。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="co1">// member variables:</span>
+<span class="kw3">private</span> <span class="kw2">var</span> mVertexBuffer:VertexBuffer3D;
+<span class="kw3">private</span> <span class="kw2">var</span> mIndexBuffer:IndexBuffer3D;
+&#160;
+<span class="co1">// code:</span>
+<span class="kw3">private</span> <span class="kw2">function</span> createBuffers<span class="br0">&#40;</span><span class="br0">&#41;</span>:<span class="kw3">void</span>
+<span class="br0">&#123;</span>
+    <span class="kw2">var</span> context:Context3D = Starling.<span class="me1">context</span>;
+    <span class="kw1">if</span> <span class="br0">&#40;</span>context == <span class="kw2">null</span><span class="br0">&#41;</span> <span class="kw3">throw</span> <span class="kw2">new</span> MissingContextError<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+&#160;
+    <span class="kw1">if</span> <span class="br0">&#40;</span>mVertexBuffer<span class="br0">&#41;</span> mVertexBuffer.<span class="me1">dispose</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+    <span class="kw1">if</span> <span class="br0">&#40;</span>mIndexBuffer<span class="br0">&#41;</span>  mIndexBuffer.<span class="me1">dispose</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+&#160;
+    mVertexBuffer = context.<span class="me1">createVertexBuffer</span><span class="br0">&#40;</span>mVertexData.<span class="me1">numVertices</span>,
+                                               VertexData.<span class="me1">ELEMENTS_PER_VERTEX</span><span class="br0">&#41;</span>;
+    mVertexBuffer.<span class="me1">uploadFromVector</span><span class="br0">&#40;</span>mVertexData.<span class="me1">rawData</span>, <span class="nu0">0</span>, mVertexData.<span class="me1">numVertices</span><span class="br0">&#41;</span>;
+&#160;
+    mIndexBuffer = context.<span class="me1">createIndexBuffer</span><span class="br0">&#40;</span>mIndexData.<span class="kw3">length</span><span class="br0">&#41;</span>;
+    mIndexBuffer.<span class="me1">uploadFromVector</span><span class="br0">&#40;</span>mIndexData, <span class="nu0">0</span>, mIndexData.<span class="kw3">length</span><span class="br0">&#41;</span>;
+<span class="br0">&#125;</span></pre></div></div>
+<p>现在GPU知道所有的顶点以及三角形的位置和颜色，但还不知道怎样去渲染它们。
+</p>
+<h3> <span class="mw-headline" id=".E6.B8.B2.E6.9F.93">渲染</span></h3>
+<p>Render方法实际上就是绘制一个对象！每个显示对象每一帧频执行一次！这个方法对性能无疑是至关重要的！
+</p><p>在内部其运行机制是，每个render方法都必须依赖Stage3D，这意味这flash将访问GPU（具体需要看各个不同的平台，Stage3D可能使用OpenGL或者DirextX）。
+</p><p>注意，您可能会有点不知所措，因为不知不觉我们已经到达GPU层级了！
+</p><p>在这里，我会告诉您一些基础知识，但可以这么说，在这里彻底解释Stage3D的原理是不可能的，也不是这篇文章的意旨！如果您想知道更多关于Stage3D的知识，我推荐您看一下这篇文章：How Stage3D works, Introduction to AGAL
+</p><p>正如我们上面所提及的，GPU需要的是任何由顶点构成的三角形。而，我们已经把这些数据上传到GPU了（通过Vertex-和Index-Buffer）！
+</p><p>为了指定这些三角形如何被渲染，您需要些特定的直接由GPU处理的程序：着色器。它们有两种类型：
+</p>
+<ul><li> 顶点着色器，为每个顶点处理一次。它们的输入是顶点的所有属性（我们上面为顶点定义的信息）；而输出则是最终每个顶点的颜色以及在屏幕上的坐标点。
+</li><li> 片段着色器（小弟不专业，不知道是不是叫这个名字=.=）针对每个像素（片段）执行一次。它们的输入是由三角形的三个顶点的插值属性组成的；而输出就是每一个像素的颜色。
+</li><li> 一个片段着色器和一个顶点着色器构成着色器程序。
+</li></ul>
+<p>在运行这些着色器前，我们先来设置它们的相关信息！
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw3">public</span> override <span class="kw2">function</span> render<span class="br0">&#40;</span>support:RenderSupport, alpha:<span class="kw3">Number</span><span class="br0">&#41;</span>:<span class="kw3">void</span>
+<span class="br0">&#123;</span>
+    <span class="co1">// always call this method when you write custom rendering code!</span>
+    <span class="co1">// it causes all previously batched quads/images to render.</span>
+    support.<span class="me1">finishQuadBatch</span><span class="br0">&#40;</span><span class="br0">&#41;</span>; <span class="co1">// (1)</span>
+&#160;
+    <span class="kw2">var</span> alphaVector:Vector.<span class="sy0">&lt;</span>Number<span class="sy0">&gt;</span> = <span class="kw2">new</span> <span class="sy0">&lt;</span>Number<span class="sy0">&gt;</span><span class="br0">&#91;</span><span class="nu0">1.0</span>, <span class="nu0">1.0</span>, <span class="nu0">1.0</span>, alpha <span class="sy0">*</span> <span class="kw3">this</span>.<span class="me1">alpha</span><span class="br0">&#93;</span>;
+&#160;
+    <span class="kw2">var</span> context:Context3D = Starling.<span class="me1">context</span>; <span class="co1">// (2)</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span>context == <span class="kw2">null</span><span class="br0">&#41;</span> <span class="kw3">throw</span> <span class="kw2">new</span> MissingContextError<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+&#160;
+    <span class="co1">// apply the current blendmode (3)</span>
+    support.<span class="me1">applyBlendMode</span><span class="br0">&#40;</span><span class="kw2">false</span><span class="br0">&#41;</span>;
+&#160;
+    <span class="co1">// activate program (shader) and set the required attributes / constants (4)</span>
+    context.<span class="me1">setProgram</span><span class="br0">&#40;</span>Starling.<span class="me1">current</span>.<span class="me1">getProgram</span><span class="br0">&#40;</span>PROGRAM_NAME<span class="br0">&#41;</span><span class="br0">&#41;</span>;
+            context.<span class="me1">setVertexBufferAt</span><span class="br0">&#40;</span><span class="nu0">0</span>, mVertexBuffer, VertexData.<span class="me1">POSITION_OFFSET</span>, Context3DVertexBufferFormat.<span class="me1">FLOAT_3</span><span class="br0">&#41;</span>; 
+            context.<span class="me1">setVertexBufferAt</span><span class="br0">&#40;</span><span class="nu0">1</span>, mVertexBuffer, VertexData.<span class="me1">COLOR_OFFSET</span>,    Context3DVertexBufferFormat.<span class="me1">FLOAT_4</span><span class="br0">&#41;</span>;
+            context.<span class="me1">setProgramConstantsFromMatrix</span><span class="br0">&#40;</span>Context3DProgramType.<span class="me1">VERTEX</span>, <span class="nu0">0</span>, support.<span class="me1">mvpMatrix</span>, <span class="kw2">true</span><span class="br0">&#41;</span>;            
+            context.<span class="me1">setProgramConstantsFromVector</span><span class="br0">&#40;</span>Context3DProgramType.<span class="me1">VERTEX</span>, <span class="nu0">4</span>, sRenderAlpha, <span class="nu0">1</span><span class="br0">&#41;</span>;
+&#160;
+    <span class="co1">// finally: draw the object! (5)</span>
+    context.<span class="me1">drawTriangles</span><span class="br0">&#40;</span>mIndexBuffer, <span class="nu0">0</span>, mNumEdges<span class="br0">&#41;</span>;
+&#160;
+    <span class="co1">// reset buffers (6)</span>
+    context.<span class="me1">setVertexBufferAt</span><span class="br0">&#40;</span><span class="nu0">0</span>, <span class="kw2">null</span><span class="br0">&#41;</span>;
+    context.<span class="me1">setVertexBufferAt</span><span class="br0">&#40;</span><span class="nu0">1</span>, <span class="kw2">null</span><span class="br0">&#41;</span>;
+<span class="br0">&#125;</span></pre></div></div>
+<p>注意下面部分需要对照上面的程序才容易看明白！
+</p><p>(1) 因为所有在Starling中的显示对象都是规则的四边形，它包含了一种性能优化的方法——将尽量多的四边形一起渲染（造成一个批处理，一次调用，渲染尽可能多的四边形）。我们的多边形并非一个四边形，而且我们需要告诉Starling在我们接管之前它必须完成之前的批次。在自定义渲染方法中您必须这么做。
+</p><p>(2) 然后我们需要从Starling中获得Context3D对象。这是Stage3D的核心：所有渲染都是通过context完成的！
+</p><p>(3) 显示对象支持不同的混合模式。这个方法激活需要的一个。
+</p><p>(4) 我们激活程序执行实际的绘图。这个程序需要输入参数。输入提供两种方法：
+</p>
+<ul><li>  通过一个Vertex Buffer：这个缓存器我们已经在上面设定好了，里面包含所有的顶点数据。GPU会将该数据一个接一个放进该程序。
+<ul><li>     存储在索引0的是位置向量（大小为3个float）
+</li><li>     存储在索引1的是颜色向量（大小为4个float）
+</li></ul>
+</li><li>  通过程序常量，这些常量对于每个程序处理都是相同的。
+<ul><li>     顶点着色器接收转换矩阵(索引0)
+</li><li>     还有透明度向量(索引0)
+</li></ul>
+</li></ul>
+<p>(5) 就是这么多了，现在我们就可以绘制对象了。
+</p><p>(6) 最后我们需要做得是重置存储器~ 使得Stage3D重新变得干净、舒适。
+</p>
+<h3> <span class="mw-headline" id="AGAL">AGAL</span></h3>
+<p>现在这个部分就相对有点棘手了：我们需要着手写着色器程序！
+</p><p>其实它本身并没有那么复杂。您在游戏开发中做的可能比这更复杂！让您觉得它复杂的一点可能是，它并不是使用ActionScript，而是使用AGAL——Adobe开发的一种汇编语言！
+</p><p>我们先来看看代码：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw3">private</span> <span class="kw3">static</span> <span class="kw2">var</span> PROGRAM_NAME:<span class="kw3">String</span> = <span class="st0">&quot;polygon&quot;</span>;
+&#160;
+<span class="kw3">private</span> <span class="kw3">static</span> <span class="kw2">function</span> registerPrograms<span class="br0">&#40;</span><span class="br0">&#41;</span>:<span class="kw3">void</span>
+<span class="br0">&#123;</span>
+    <span class="kw2">var</span> <span class="kw3">target</span>:Starling = Starling.<span class="me1">current</span>;
+    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw3">target</span>.<span class="me1">hasProgram</span><span class="br0">&#40;</span>PROGRAM_NAME<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="kw1">return</span>; <span class="co1">// already registered</span>
+&#160;
+    <span class="kw2">var</span> vertexProgramCode:<span class="kw3">String</span> =
+        <span class="st0">&quot;m44 op, va0, vc0 <span class="es0">\n</span>&quot;</span> + <span class="co1">// 4x4 matrix transform to output space</span>
+        <span class="st0">&quot;mul v0, va1, vc4 <span class="es0">\n</span>&quot;</span>;  <span class="co1">// multiply color with alpha and pass it to fragment shader</span>
+&#160;
+    <span class="kw2">var</span> fragmentProgramCode:<span class="kw3">String</span> =
+        <span class="st0">&quot;mov oc, v0&quot;</span>;           <span class="co1">// just forward incoming color</span>
+&#160;
+    <span class="kw2">var</span> vertexProgramAssembler:AGALMiniAssembler = <span class="kw2">new</span> AGALMiniAssembler<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+    vertexProgramAssembler.<span class="me1">assemble</span><span class="br0">&#40;</span>Context3DProgramType.<span class="me1">VERTEX</span>, vertexProgramCode<span class="br0">&#41;</span>;
+&#160;
+    <span class="kw2">var</span> fragmentProgramAssembler:AGALMiniAssembler = <span class="kw2">new</span> AGALMiniAssembler<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+    fragmentProgramAssembler.<span class="me1">assemble</span><span class="br0">&#40;</span>Context3DProgramType.<span class="me1">FRAGMENT</span>, fragmentProgramCode<span class="br0">&#41;</span>;
+&#160;
+    <span class="kw3">target</span>.<span class="me1">registerProgram</span><span class="br0">&#40;</span>PROGRAM_NAME, vertexProgramAssembler.<span class="me1">agalcode</span>,
+                                       fragmentProgramAssembler.<span class="me1">agalcode</span><span class="br0">&#41;</span>;
+<span class="br0">&#125;</span></pre></div></div>
+<p>首先我们定义了一个属于我们程序的名字，使得在渲染的过程中我们能够再次访问它。然后，就开始AGAL编程了~！
+</p><p>在AGAL里面，每一行都包含一个简单的方法调用。
+</p><p>[opcode] [destination], [argument1], ([argument2])
+</p>
+<ul><li>  前三个字母是操作数的名称(m44, mov)。
+</li><li>  第一个参数定义了方法的运行结果存储到哪里。
+</li><li>  其他的参数实际上就是该方法的参数。
+</li><li>  所有数据都保存在预定义的寄存器，就像变量。
+</li></ul>
+<p>其中一些寄存器中已经包含了数据，就是我们的渲染设定（上一节写到的）。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">va0, va1, ... -<span class="sy0">&gt;</span> Vertex <span class="kw3">Attributes</span>,  <span class="kw3">set</span> <span class="kw3">up</span> <span class="kw3">with</span> <span class="st0">'setVertexBufferAt'</span> 
+vc0, vc1, ... -<span class="sy0">&gt;</span> Vertex Constants,   <span class="kw3">set</span> <span class="kw3">up</span> <span class="kw3">with</span> <span class="st0">'setProgramConstants'</span>
+fc0, fc1, ... -<span class="sy0">&gt;</span> Fragment Constants, <span class="kw3">set</span> <span class="kw3">up</span> <span class="kw3">with</span> <span class="st0">'setProgramConstants'</span></pre></div></div>
+<p>这是其他类型的寄存器。例如，输出或者临时数据寄存器。您可以通过任何一个AGAL文档学习他们。
+</p><p>下面是我们的顶点着色器代码：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">m44 op, va0, vc0   <span class="co1">// -&gt; read: op = va0 * vc0</span>
+mul v0, va1, vc4   <span class="co1">// -&gt; read: v0 = va1 * vc4</span></pre></div></div>
+<p>第一行是，顶点位置与一个转换矩阵相乘。其中矩阵是由Starling提供的。而其结果是“剪辑空间”中顶点的位置（例如屏幕上的坐标）。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">    m44: <span class="nu0">4</span>×<span class="nu0">4</span> matrix multiplication
+    op: output point
+    va0: vertex attribute <span class="nu0">0</span> <span class="br0">&#40;</span>contains the vertex <span class="kw3">position</span><span class="br0">&#41;</span>
+    vc0: vertex constant <span class="nu0">0</span> <span class="br0">&#40;</span>contains the transformation matrix<span class="br0">&#41;</span></pre></div></div>
+<p>第二行则是，顶点透明度与顶点颜色相乘的值。结果则保存在v0中（这是一个会被注入片段着色器的寄存器varying register 0）。
+</p><p>然后就是将v0移动到片段着色器中：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">mov oc, v0   <span class="co1">// -&gt; read: oc = v0</span></pre></div></div>
+<p>在这里，其实我们并不需要做太多的东西！因为顶点着色器已经保存了所有的颜色信息在v0寄存器了。我们只需要将v0寄存器中的值复制到输出寄存器中。
+</p>
+<ul><li>  mov:移动(复制)操作数
+</li><li>  oc:输出颜色
+</li><li>  v0:顶点常量0（我们需要将其在顶点着色器中准备它们）
+</li></ul>
+<p>如果我们需要在多边形上面显示一个纹理，我们需要在这里访问纹理，然后将纹理的颜色（和透明度）与多边形的顶点的颜色（和透明度）相乘。
+</p><p>其余的函数则是编译代码和注册程序到正在使用的Starling实例。
+</p><p>好的，我们搞掂了~现在我们能绘制多边形了！
+</p>
+<h3> <span class="mw-headline" id=".E5.A4.84.E7.90.86.E4.B8.A2.E5.A4.B1.E7.9A.84.E6.83.85.E5.86.B5">处理丢失的情况</span></h3>
+<p>对了！还有一件事需要去做。在部分平台上面（Andoroid，Windows），Starling的渲染context可能会在一些特定的情况下丢失！在Android平台下，这通常会发生在设备旋转的时候；而在Windows平台上，锁定屏幕会触发设备丢失。
+</p><p>为了使Starling处理设备丢失的情况，用户可以在生成Starling实例前调用下面的方法。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">Starling.<span class="me1">handleLostContext</span> = <span class="kw2">true</span>;</pre></div></div>
+<p>我们自定义的类能够处理这种情况了~ 还真得谢谢Starling，使这一切变得容易~只需要简单的在您得构造函数中加入下面的事件处理：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">Starling.<span class="me1">current</span>.<span class="me1">addEventListener</span><span class="br0">&#40;</span>Event.<span class="me1">CONTEXT3D_CREATE</span>, onContextCreated<span class="br0">&#41;</span>;</pre></div></div>
+<p>在对应的事件侦听器，我们重新创建顶点缓冲器和重新注册我们的程序，在完整的程序中，这两个部分已经被写成方法，所以我们只需要简单地调用它们即可。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw3">private</span> <span class="kw2">function</span> onContextCreated<span class="br0">&#40;</span>event:Event<span class="br0">&#41;</span>:<span class="kw3">void</span>
+<span class="br0">&#123;</span>
+    createBuffers<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+    registerPrograms<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+<span class="br0">&#125;</span></pre></div></div>
+<p>不要忘记去除侦听器哦~
+</p>
+<h3> <span class="mw-headline" id=".E7.BB.93.E8.AE.BA">结论</span></h3>
+<p>恭喜您，我们已经成功创建了一个自定义显示对象。您可以使用该类作为框架继续写属于您自己的对象。
+</p><p>该类完整的源代码可以在GitHub上找到！里面还包含了一些小的优化（这些部分我在上面的阐述中跳过了），例如：它使用几个静态辅助变量，以避免在渲染过程中创建的临时对象，保持最低限度的调用GC。
+</p><p>在此能找打完整的类: GitHub: <a rel="nofollow" class="external text" href="https://gist.github.com/2352107">Polygon.as</a>
+</p>
+<h3> <span class="mw-headline" id="Where_to_go_from_here">Where to go from here</span></h3>
+<p>这仅仅是一个开始，当然，这里还有一些可以升级的空间。
+</p>
+<ul><li>  为每个顶点设置不同的颜色。这将产生很酷的颜色渐变效果！
+</li><li>  在多边形上面增加纹理。
+</li><li>  重写hitTest方法，使其只在碰撞到真实的三角形时才会返回碰撞信息（上面写得hitTest方法只是单纯的矩形碰撞检测，并不精确）。
+</li></ul>
+<p>如果您成功完成上面的任务，不要忘记分享您的成功经验哦~（只需要简单的上传您得代码就可以了，谢谢！）
+</p><p>Good luck!
+</p><p>顺便说一句，这里有非常好的 <a rel="nofollow" class="external text" href="http://www.saltgames.com/2011/stage-3d-shader-cheatsheet/">Stage3D Shader Cheat Sheet</a> 总结，所有的AGAL信息都在里面。
+</p><p>翻译:<a rel="nofollow" class="external text" href="http://weibo.com/u/1923775120">梁建锋(ljfdestiny)</a>
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 174/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key app_starlinglib-wiki:pcache:idhash:44-0!*!*!!zh-cn!2!* and timestamp 20140628161801 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				来自“<a href="http://www.starlinglib.com/index.php?title=StarlingManual:%E8%87%AA%E5%AE%9A%E4%B9%89%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1&amp;oldid=45">http://www.starlinglib.com/index.php?title=StarlingManual:%E8%87%AA%E5%AE%9A%E4%B9%89%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1&amp;oldid=45</a>”				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>个人工具</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="%e7%94%a8%e6%88%b7_101.23.136.html" class="new" title="您编辑本站所用IP的对应用户页 [.]" accesskey=".">101.23.136.29</a></li>
+		<li id="pt-anontalk"><a href="%e7%94%a8%e6%88%b7%e8%ae%a8%e8%ae%ba_101.23.136.html" class="new" title="对于来自此IP地址的编辑的对话 [n]" accesskey="n">该IP地址的讨论</a></li>
+		<li id="pt-anonlogin"><a href="http://www.starlinglib.com/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&amp;returnto=StarlingManual%3A%E8%87%AA%E5%AE%9A%E4%B9%89%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1" title="我们鼓励您登录，但这并不是必须的 [o]" accesskey="o">登录</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>名字空间</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="StarlingManual_diy_DisplayObject.html"  title="查看内容页面 [c]" accesskey="c">页面</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://www.starlinglib.com/index.php?title=%E8%AE%A8%E8%AE%BA:StarlingManual:%E8%87%AA%E5%AE%9A%E4%B9%89%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1&amp;action=edit&amp;redlink=1"  title="关于内容页面的讨论 [t]" accesskey="t">讨论</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>变换</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>查看</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="StarlingManual_diy_DisplayObject.html" >阅读</a></span></li>
+					<li id="ca-viewsource"><span><a href="http://www.starlinglib.com/index.php?title=StarlingManual:%E8%87%AA%E5%AE%9A%E4%B9%89%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1&amp;action=edit"  title="本页面已被保护。你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://www.starlinglib.com/index.php?title=StarlingManual:%E8%87%AA%E5%AE%9A%E4%B9%89%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1&amp;action=history"  title="本页面的早前修订版本 [h]" accesskey="h">查看历史</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>操作</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">搜索</label></h5>
+	<form action="http://www.starlinglib.com/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="在Starling中文站中搜索 [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="提交" title="如果相同的标题存在的话便直接前往该页面" id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="搜索" title="搜索含这些文字的页面" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="特殊:搜索"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../skins/common/images/wiki.png);" href="index.html"  title="访问首页"></a></div>
+				<!-- /logo -->
+				
+<!-- navigation -->
+<div class="portal" id='p-navigation'>
+	<h5>导航</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="index.html" title="访问首页 [z]" accesskey="z">首页</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /navigation -->
+
+<!-- Starling中文资料 -->
+<div class="portal" id='p-Starling.E4.B8.AD.E6.96.87.E8.B5.84.E6.96.99'>
+	<h5>Starling中文资料</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E6.9C.80.E6.96.B0.E5.8A.A8.E6.80.81"><a href="News.html">Starling最新动态</a></li>
+			<li id="n-.E4.B8.8B.E8.BD.BD"><a href="download.html">下载</a></li>
+			<li id="n-.E5.85.A5.E9.97.A8.E7.AC.AC.E4.B8.80.E6.AD.A5"><a href="FristStep.html">入门第一步</a></li>
+			<li id="n-API.E6.8E.A5.E5.8F.A3.E6.96.87.E6.A1.A3"><a href="APIReference.html">API接口文档</a></li>
+			<li id="n-Starling.E8.AF.B4.E6.98.8E.E4.B9.A6"><a href="StarlingManual.html">Starling说明书</a></li>
+			<li id="n-FeathersUI.E6.96.87.E6.A1.A3"><a href="FeathersUI.html">FeathersUI文档</a></li>
+			<li id="n-.E6.95.99.E7.A8.8B.E5.92.8C.E4.BB.A3.E7.A0.81"><a href="Tutorials.html">教程和代码</a></li>
+			<li id="n-Starling.E6.89.A9.E5.B1.95"><a href="Extensions.html">Starling扩展</a></li>
+			<li id="n-.E6.88.90.E5.8A.9F.E6.A1.88.E4.BE.8B"><a href="GamesPowered.html">成功案例</a></li>
+			<li id="n-.E7.AB.99.E5.A4.96.E8.B5.84.E6.96.99"><a href="OutsideDocs.html">站外资料</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Starling中文资料 -->
+
+<!-- Starling原创教程 -->
+<div class="portal" id='p-Starling.E5.8E.9F.E5.88.9B.E6.95.99.E7.A8.8B'>
+	<h5>Starling原创教程</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E7.A7.BB.E5.8A.A8.E5.BC.80.E5.8F.91.E6.95.99.E7.A8.8B"><a href="StarlingMobile.html">Starling移动开发教程</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Starling原创教程 -->
+
+<!-- 微信-Flash微报 -->
+
+
+<!-- /微信-Flash微报 -->
+
+<!-- 论坛 -->
+<div class="portal" id='p-.E8.AE.BA.E5.9D.9B'>
+	<h5>论坛</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E4.B8.AD.E6.96.87.E8.AE.BA.E5.9D.9B"><a href="http://bbs.egret-labs.org/?fromuid=62" rel="nofollow">Egret开发者论坛</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /论坛 -->
+
+<!-- 友链 -->
+<div class="portal" id='p-.E5.8F.8B.E9.93.BE'>
+	<h5>友链</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Sirius2d.E5.BC.95.E6.93.8E"><a href="http://www.sirius2d.com/" rel="nofollow">Sirius2d引擎</a></li>
+			<li id="n-A.E9.97.AA.E7.BD.91"><a href="http://www.ashan.org/" rel="nofollow">A闪网</a></li>
+			<li id="n-Y.Boy"><a href="http://www.riaoo.com/" rel="nofollow">Y.Boy</a></li>
+			<li id="n-Cenfee"><a href="http://cenfee.com/" rel="nofollow">Cenfee</a></li>
+			<li id="n-.E5.B0.8F.E5.A4.9C-Clifford"><a href="http://www.cnblogs.com/flash3d/" rel="nofollow">小夜 Clifford</a></li>
+			<li id="n-.E6.9D.9C.E5.A2.9E.E5.BC.BA.28DzQ.29"><a href="http://www.duzengqiang.com/" rel="nofollow">杜增强(DzQ)</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /友链 -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>工具箱</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="%e7%89%b9%e6%ae%8a_%e9%93%be%e5%85%a5%e9%a1%b5%e9%9d%a2/StarlingManual_diy_DisplayObject.html" title="所有链入本页的wiki页面列表 [j]" accesskey="j">链入页面</a></li>
+			<li id="t-recentchangeslinked"><a href="%e7%89%b9%e6%ae%8a_%e9%93%be%e5%87%ba%e6%9b%b4%e6%94%b9/StarlingManual_diy_DisplayObject.html" title="本页链入的页面的最近更改 [k]" accesskey="k">链出更改</a></li>
+			<li id="t-specialpages"><a href="%e7%89%b9%e6%ae%8a_%e7%89%b9%e6%ae%8a%e9%a1%b5%e9%9d%a2.html" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+			<li><a href="http://www.starlinglib.com/index.php?title=StarlingManual:%E8%87%AA%E5%AE%9A%E4%B9%89%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1&amp;printable=yes" rel="alternate">可打印版</a></li>
+			<li id="t-permalink"><a href="http://www.starlinglib.com/index.php?title=StarlingManual:%E8%87%AA%E5%AE%9A%E4%B9%89%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1&amp;oldid=45" title="本页面该修订版本的永久链接">永久链接</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> 本页面最后修订于2012年5月8日 (星期二) 11:49。</li>
+											<li id="footer-info-viewcount">此页面已被浏览过3,609次。</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="Starling_yinsi.html" title="Starling中文站:隐私权政策">隐私权政策</a></li>
+											<li id="footer-places-about"><a href="StarlingCnAbout.html" title="Starling中文站:关于">关于Starling中文站</a></li>
+											<li id="footer-places-disclaimer"><a href="StarlingCNCopyRight.html" title="Starling中文站:免责声明">免责声明</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31520647-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+		<!-- /footer -->
+		
+<!-- Served in 0.522 secs. -->
+	</body>
+
+<!-- Mirrored from www.starlinglib.com/wiki/StarlingManual:自定义显示对象 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jun 2014 07:22:34 GMT -->
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><title>starling.display Summary</title></head><body><script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'starling.display package - Starling API 1.3 | Starling中文站';
+				var baseRef = '../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">Starling API 1.3 | Starling中文站</td><td class="titleTableTopNav" align="right"><a href="../../package-summary.html" onclick="loadClassListFrame('../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../class-summary.html" onclick="loadClassListFrame('../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../all-index-A.html" onclick="loadClassListFrame('../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../index.html?starling/display/package-detail.html&amp;starling/display/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">starling.display</td><td class="titleTableSubNav" id="subNav" align="right"><a href="package-detail.html#classSummary">Classes</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("starling.display"); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false	,false,false,false,true,false);}	
+				-->
+			</script><div class="MainContent"><br><br><hr><a name="classSummary"></a><div class="summaryTableTitle">Classes</div><table cellpadding="3" cellspacing="0" class="summaryTable"><tr><th>&nbsp;</th><th width="30%">Class</th><th width="70%">Description</th></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="BlendMode.html">BlendMode</a></td><td class="summaryTableLastCol"> BlendMode类提供了混合模式视觉效果的常量。
+	   
+	  一个混合模式，总是由两个'Context3DBlendFactor'值来定义。一个混合因素代表一个特定的四个数值的数组。
+	 这个数组是根据源颜色和目标颜色用混合公式计算的，公式如下：
+	 
+	  result = source × sourceFactor + destination × destinationFactor
+	 
+	  在这个公式里，源颜色是像素着色器的输出颜色，目标颜色是在上一次清除和绘制操作以后，颜色缓冲区中当前存在的颜色。
+	  
+	  要注意的是，由于纹理类型的不同，混合因素产生产生的输出也不同。
+	 纹理可能包含'预乘透明度'(pma)，意思就是它们的RGB色值是根据它们的颜色值分别相乘得到的（目的是节省计算时间）。
+	 基于'BitmapData'的纹理，会含有预乘透明度值，ATF纹理没有这个值。
+	 因此，一个混合模式可能会根据pma的值而拥有不同的混合因素。
+	  
+	  </td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="Button.html">Button</a></td><td class="summaryTableLastCol"> 一个简单的按钮由一张图片和一个可选的文本组成。
+	  
+	  你可以分别为按钮构造函数传递up和down两种状态的纹理。
+	 如果你没有指定一个down状态的纹理，按钮会采用默认的办法：被触碰的时候缩小一点。
+	 此外，你可以在按钮上覆盖一个文本，要自定义这个文本，只需要提供和原来的基本相同的文本框即可。
+	 你可以使用textBounds属性，将文本移动到一个指定的位置。
+	  
+	  判断按钮是否被触碰，请使用triggered事件类型，
+	 用这个事件来代替普通的触碰事件。也就是说，用户只要在松开手指或者鼠标之前，移动手指/鼠标离开按钮区域，就可以取消对该按钮的点击操作。 
+	 </td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="DisplayObject.html">DisplayObject</a></td><td class="summaryTableLastCol">
+	  DisplayObject 类是所有可放在显示列表中，在屏幕上可以被渲染的对象的基类。
+	  
+	  显示列表树 
+	  
+	  在Starling中，所有可显示对象都处于显示列表树中，只有属于显示列表树的成员才可以在屏幕上显示和渲染。 
+	   
+	  显示列表树由可以直接渲染到屏幕的叶子节点（Image, Quad）和容器节点（DisplayObjectContainer的子类，比如 Sprite）组成。
+	 	   容器是一个包含子节点（子节点可以是叶子节点或者其他容器）的显示对象。 
+	  
+	  Stage处于显示列表树的顶级节点，同样也是一个容器。
+	  要创建一个Starling应用，你需要创建一个自定义的Sprite的子类，Starling会添加一个该子类的实例对象到stage上。
+	  
+	  一个显示对象有定义它自身相对于它的父级的位置的属性（x，y），有旋转和缩放参数（scaleX，scaleY），
+	 可以使用alpha 和 visible属性分别控制显示对象的透明度和可见性。
+	  
+	  每个显示对象都有可能是触碰事件的目标，你可以设置"touchable"属性来禁止对象被触碰。
+	 当它被设置为禁止触碰，对象本身和它的子对象都不会再响应触碰事件。
+	    
+	  坐标转换
+	  
+	  在显示坐标树里，每个对象都有自己的局部坐标系统，如果你旋转一个容器，意味着你旋转了整个容器的坐标
+	 系统，并且影响到了容器的所有子对象。
+	  
+	  有时候你需要知道某个点相对于其他坐标系的坐标，getTransformationMatrix函数实现了这个功能。
+	 它将创建一个矩阵，该矩阵表示从一个局部坐标系到另一个坐标系的转换。 
+	  
+	  子类
+	  
+	  由于DisplayObject是抽象类,所以你不能直接实例化它，只能用某个它的子类。目前已经有很多这样的子类了，
+	 大部分情况下它们应该能够满足你的需要了。 
+	  
+	  然而，你也可以自定义你自己的子类，要实现自定义的子类，你需要实现自定义的渲染方法，在你自定义的子类中
+	 需要实现下面的方法：
+	  
+	  
+	    function render(support:RenderSupport, parentAlpha:Number):void
+	    function getBounds(targetSpace:DisplayObject, 
+	                                 resultRect:Rectangle=null):Rectangle
+	  
+	  
+	  请参阅Quad类，它对于"getBounds"方法有一个简单的实现。
+	 一个简单的例子阐述如何创建自定义的渲染方法，你可以参考这个在Starling Wiki上的自定义显示对象 
+	 
+	  当你重载render方法时，请注意调用辅助对象(一个RenderSupport对象)的'finishQuadBatch'方法。
+	 这将促使Starling使用不同的渲染方法来渲染之前累计的所有四边形（鉴于性能考虑），否则，z-ordering将会出错。 
+	 
+	  </td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="DisplayObjectContainer.html">DisplayObjectContainer</a></td><td class="summaryTableLastCol">
+	 一个显示对象容器是一个包含了各种显示对象的集合。
+	 这是所有容器类（包含其他显示对象的容器）的基类。它拥有一个有序列表来管理子级对象，并在显示对象树立定义了
+	 所有子级的显示顺序。
+	  
+	  一个容器本身是没有尺寸的，它的宽度和高度代表了子级的范围，改变这些属性会缩放它的所有子级。
+	  
+	  由于DisplayObjectContainer是一个抽象类，你不能直接实例化它，而是应该使用它的子类。
+	 其中最轻量级的容器子类是"Sprite"。
+	  
+	  添加和删除子级
+	  
+	  这个类包含了一些允许你添加和删除子级的方法。
+	 当你添加一个子级，它会被添加到列表的最顶层，有可能会遮挡住前一个添加的子级。
+	 你可以通过索引访问子级，第一个子级索引为0，第二个子级索引为1，以此类推。 
+	  
+	 向容器添加或者删对象会派发一些不冒泡的事件。
+	  
+	  
+	   Event.ADDED: 对象被添加到了它的父级。
+	   Event.ADDED_TO_STAGE: 对象被添加到了它的父级，并且父级已经被添加
+	 到stage上，因此对象立即显示。
+	   Event.REMOVED: 从对象的父级删除该对象。
+	   Event.REMOVED_FROM_STAGE: 从对象的父级删除该对象，并且父级已经被添加
+	 到stage上，因此对象立即不显示。
+	  
+	 
+	  
+	 尤其是ADDED_TO_STAGE事件是非常有用的，因为它可以让你在一个对象第一次被渲染时自动执行一些逻辑（比如开始播放一段动画）。
+	  
+	  </td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="Image.html">Image</a></td><td class="summaryTableLastCol">
+	 一个图片是一个映射了纹理的四边形。
+	  
+	  Image类相当于Flash的Bitmap类的Starling版本，不过Starling是用纹理来代替BitmapData来提供图像的像素资源。
+	 要显示一个纹理，你需要把它映射到一个四边形上--这就是Image类的功能。
+	  
+	  因为"Image"是继承自"Quad",所以你可以给它设置颜色。
+	 每个像素的颜色是根据纹理的颜色和四边形的颜色相乘得来的，这样，你就可以很容易的根据一个颜色改变纹理的色调。
+	 此外，Image允许你对纹理坐标进行操作，你可以在不改变四边形任何顶点坐标的情况下，在图片的内部移动纹理。
+	 你还可以使用这种功能以一个非常高效的方式创建一个矩形遮罩。 
+	  
+	  </td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="MovieClip.html">MovieClip</a></td><td class="summaryTableLastCol"> 一个影片剪辑(MovieClip)根据一个纹理集合来显示动画。
+	  
+	  传入包含纹理的集合给MovieClip的构造函数作为影片剪辑的帧。影片剪辑会根据第一帧的纹理来确定影片的宽度和高度。
+	 如果你使用纹理图集TextureAtlas（推荐使用此方法）来组织你的帧，请使用纹理图集的getTextures方法
+	 获取正确(按字母次序的)的纹理顺序。 
+	  
+	  你可以在构造函数中指定一个特定的帧频，如果需要，你还可以设置每一帧的执行时间，或者在某一帧执行时播放一个声音。
+	  
+	  play 和 pause 方法可以控制影片的播放，当影片播放完毕时，你会接收到一个Event.MovieCompleted
+	 事件。如果影片是循环播放的，这个事件会在每一次循环都派发。
+	  
+	  同其他动画对象一样，一个影片剪辑必须添加到一个juggler（或者是一个拥有自己的定时执行的advanceTime方法的对象）里来运行。
+	 当影片剪辑播放完最后一帧时，会派发"Event.COMPLETE"事件。
+	  
+	  </td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="Quad.html">Quad</a></td><td class="summaryTableLastCol"> 一个四边形代表了由单一颜色或者渐变颜色填充的矩形。
+	  
+	  你可以设置每一个顶点的颜色。不同顶点的颜色会在颜色交汇的地方平滑的过度。
+	 要让四边形显示一个线性的渐变颜色，需要给顶点0,1设置一个颜色，然后给顶点2,3设置另一个颜色。  
+	 
+	  四边形的四个顶点的位置是这样排列的:
+	  
+	  
+	  0 - 1
+	  | / |
+	  2 - 3
+	  
+	 
+	  </td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="QuadBatch.html">QuadBatch</a></td><td class="summaryTableLastCol"> 
+	 QuadBatch类用于优化渲染大量具备相同状态的四边形(Quad类).</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="Sprite.html">Sprite</a></td><td class="summaryTableLastCol"> Sprite是一个极其轻量，非抽象的容器类。
+	 
+	  通常把Sprite作为一种把一组显示对象集中到一个坐标系内的简单手段，也可以把它用做自定义显示对象的基类。
+	 
+	  "平面化" Sprite对象
+	 
+	  flatten方法允许你在渲染时优化显示列表中的静态部分。
+	 
+	  flatten 分析了添加到这个Sprite的显示列表的子对象，优化了渲染调用，极大的提高了渲染速度。
+	 但是速度的大幅提升是要付出代价的：你将再也看不见子对象属性的任何变化（位置，旋转，透明等等）。
+	 要更新这个sprite对象的显示，只需再一次调用flatten，或者unflatten这个对象。
+	 
+	  </td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="Stage.html">Stage</a></td><td class="summaryTableLastCol"> Stage是显示列表树的根节点，只有直接或者间接放置到stage上的显示对象才会被渲染。
+	 
+	  这个类相当于Starling版本的Stage，注意不要和传统的Flash里的Stage混淆。
+	  传统的Flash里的Stage只能包含类型为flash.display.DisplayObject的对象，
+	  而Starling里的Stage只能包含类型为starling.display.DisplayObject的对象，
+	  由于Starling显示列表并不等同于传统Flash显示列表，所以这些类并不兼容，不能混用，也不能互相代替。
+	  
+	 
+	  stage对象是被Starling类自动创建的，请不要手动创建一个stage对象。
+	 
+	  键盘事件
+	 
+	  在Starling中，键盘事件只能够在stage派发，所以，如果想捕获到派发的键盘事件，只能给stage添加键盘事件监听。
+	 
+	  尺寸变化事件
+	 
+	  当Flash player 尺寸变化时，stage会派发一个ResizeEvent事件。
+	  这个事件的属性包含更新后的Flash player的宽度和高度。
+	 
+	  </td></tr></table><p></p><div><p></p><center class="copyright"><footer>Starling中文站 翻译整理</footer><br/>Sat Jan 19 2013, 02:47 PM +08:00  </center></div></div></body></html><!--Starling中文站 翻译整理<br/>Sat Jan 19 2013, 02:47 PM +08:00  -->

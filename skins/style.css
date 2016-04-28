@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+body {margin:0;padding:0;border-top:3px solid #1f71aa;}
+h1 {border-bottom:3px solid #CCC;color:#333;padding:4px;}
+a {text-decoration:none;color:#1f71aa;}
+a:hover {color:#0045bf}
+#mw-head {display:none;}
+li {line-height:160%;}
+#content {border-left:#444 solid 220px;padding:20px;line-height:160%;}
+#content h2,#content h3,#content h4,#content h5 {border-bottom:1px solid #CCC;}
+#mw-panel {width:200px;position:absolute;top:0;left:0;background:#444;color:#FFF;padding:10px;}
+#mw-panel a {color:#FFF;}
+#footer,#siteSub,#jump-to-nav {display:none;}
+.printfooter {display:none;}
+.mw-geshi {border:1px dotted #CCC;background:#FF9;}

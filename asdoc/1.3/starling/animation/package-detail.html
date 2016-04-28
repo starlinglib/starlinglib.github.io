@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><title>starling.animation Summary</title></head><body><script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'starling.animation package - Starling API 1.3 | Starling中文站';
+				var baseRef = '../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">Starling API 1.3 | Starling中文站</td><td class="titleTableTopNav" align="right"><a href="../../package-summary.html" onclick="loadClassListFrame('../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../class-summary.html" onclick="loadClassListFrame('../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../all-index-A.html" onclick="loadClassListFrame('../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../index.html?starling/animation/package-detail.html&amp;starling/animation/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">starling.animation</td><td class="titleTableSubNav" id="subNav" align="right"><a href="package-detail.html#interfaceSummary"> Interfaces </a>&nbsp;| <a href="package-detail.html#classSummary">Classes</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("starling.animation"); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false	,false,false,true,true,false);}	
+				-->
+			</script><div class="MainContent"><br><br><hr><a name="interfaceSummary"></a><div class="summaryTableTitle">Interfaces</div><table cellpadding="3" cellspacing="0" class="summaryTable"><tr><th>&nbsp;</th><th width="30%">Interface</th><th width="70%">Description</th></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><i><a href="IAnimatable.html">IAnimatable</a></i></td><td class="summaryTableLastCol">  IAnimatable接口定义了这样的一些对象：基于一个时间范围实现动画过程。任何实现了这个接口的类的实例，都可以被添加到juggler。
+	   当一个对象不再需要运动的时候，你应当将它从juggler删除。要实现这一点，你可以手动执行这个方法：juggler.remove(object) 来删除它，
+	   或者让这个对象派发一个事件来请求juggler删除自己，事件类型是Event.REMOVE_FROM_JUGGLER.</td></tr></table><a name="classSummary"></a><div class="summaryTableTitle">Classes</div><table cellpadding="3" cellspacing="0" class="summaryTable"><tr><th>&nbsp;</th><th width="30%">Class</th><th width="70%">Description</th></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="DelayedCall.html">DelayedCall</a></td><td class="summaryTableLastCol"> DelayedCall类允许你在一定的时间间隔之后去执行某个方法(和setTimeout有些类似)。由于这个类实现了IAnimatable接口，你可以把一个DelayedCall实例添加到juggler中。
+	  在大部分情况下，你不需要直接使用这个类；Juggler类包含了一个方法来直接实现延迟调用这个功能。
+	  当方法调用完毕之后，DelayedCall对象会派发一个类型是“Event.REMOVE_FROM_JUGGLER”的事件，然后如果不再需要它了，Juggler会自动将它删除。
+	  </td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="Juggler.html">Juggler</a></td><td class="summaryTableLastCol"> Juggler管理那些实现了IAnimatable接口的对象（比如Tweens）并执行它们。
+	 
+	  一个juggler实例是一个非常简单的对象。它只是持有一个列表，列表里面是那些实现了IAnimatable接口的对象，并管理它们的执行时间（通过对象自己的advanceTime方法）。当动画播放完毕，就把这个对象抛出。
+	  
+	  在Starling类中有一个默认的juggler变量:
+	  
+	  
+	  var juggler:Juggler = Starling.juggler;
+	  
+	  
+	  你可以创建你自己的juggler对象，如果需要的话。这样，你就可以组合你的游戏到一些逻辑组件，并独立控制他们的动画。 你需要做的就是，在每一帧都调用你自定义的juggler的advanceTime方法。
+	  
+	  juggler另一个很强的特性就是"delayCall"方法。使用它可以延迟执行某个方法。但是和传统的延迟调用(比如setTimeout)不同, 这个方法只有在juggler被时间推送器驱动的时候才会起作用，这可以让你更加完美的控制呼叫的逻辑。
+	  下面是delayCall的一些示例：
+	  
+	  juggler.delayCall(object.removeFromParent, 1.0);
+	  juggler.delayCall(object.addChild, 2.0, theChild);
+	  juggler.delayCall(function():void { doSomethingFunny(); }, 3.0);
+	  
+	 
+	  </td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="Transitions.html">Transitions</a></td><td class="summaryTableLastCol"> Transitions(过渡)类包含了一些静态方法，来定义缓动相关的函数。这些函数被用在Tween类执行动画的时候。
+	 
+	  关于transitions这里有一张很直观的图片描述： 
+	  
+	  
+	  你可以使用"registerTransition" 方法来自定义过渡方式.</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="Tween.html">Tween</a></td><td class="summaryTableLastCol"> 一个Tween实例，将使用补间动画的方式，"运动"某个对象的属性(比如改变x坐标值，从1,2,3...一直到N，从而形成视觉上的动画效果)。 它可以使用不同的过渡方法，来实现不同的动画方式。
+	  
+	  这个类的主要用途是实现标准的动画，比如移动，透明度渐变，旋转等等。但是"动画"的范围远远不止于此。只要你想"运动"的对象的属性值是数字 (int, uint, Number), Tween就能搞定它。
+	  要了解Tween可以使用的过渡方法的列表，请参阅"Transitions"类。 
+	  
+	  下面是一个实例，展示了tween移动一个对象到右侧，旋转它，然后让它透明度逐渐降低而消失:
+	  
+	  
+	  var tween:Tween = new Tween(object, 2.0, Transitions.EASE_IN_OUT);
+	  tween.animate("x", object.x + 50);
+	  tween.animate("rotation", deg2rad(45));
+	  tween.fadeTo(0);    // 你也可以使用'animate("alpha", 0)'来代替
+	  Starling.juggler.add(tween); 
+	   
+	  
+	  注意在上面的代码的最后，tween的实例被添加到了juggler。这是因为，只有tween自己的"advanceTime"方法被实际执行的时候，tween才会起作用。
+	  这个工作juggler会帮你做的，而且它会自动在tween执行完毕的时候删除它。
+	  
+	  </td></tr></table><p></p><div><p></p><center class="copyright"><footer>Starling中文站 翻译整理</footer><br/>Sat Jan 19 2013, 02:47 PM +08:00  </center></div></div></body></html><!--Starling中文站 翻译整理<br/>Sat Jan 19 2013, 02:47 PM +08:00  -->

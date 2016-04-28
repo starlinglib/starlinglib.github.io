@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from www.starlinglib.com/wiki/Feathers:component-properties-methods by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jun 2014 07:23:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Feathers:component-properties-methods - Starling中文站</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.0" />
+<link rel="shortcut icon" href="http://www.starlinglib.com/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.starlinglib.com/opensearch_desc.php" title="Starling中文站 (zh-cn)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://www.starlinglib.com/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="Starling中文站的Atom" href="http://www.starlinglib.com/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&amp;feed=atom" />
+<link rel="stylesheet" href="../skins/style.css" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: app_starlinglib-wiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Feathers:component-properties-methods","wgTitle":"Feathers:component-properties-methods","wgCurRevisionId":1308,"wgArticleId":201,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"zh-cn","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Feathers:component-properties-methods","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false}});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"zh-cn","language":"zh-cn","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;},{},{});mw.loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: app_starlinglib-wiki:resourceloader:filter:minify-js:7:64bb9911c781603a64782510a7dfd931 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-actionscript {line-height: normal;}
+.source-actionscript li, .source-actionscript pre {
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for actionscript
+ * CSS class: source-actionscript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.actionscript.source-actionscript .de1, .actionscript.source-actionscript .de2 {font: normal normal 1em/1.2em monospace; margin:10px 0; padding:10px; background:none; vertical-align:top;}
+.actionscript.source-actionscript  {font-family:monospace;}
+.actionscript.source-actionscript .imp {font-weight: bold; color: red;}
+.actionscript.source-actionscript li, .actionscript.source-actionscript .li1 {font-weight: normal; vertical-align:top;}
+.actionscript.source-actionscript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.actionscript.source-actionscript .li2 {font-weight: bold; vertical-align:top;}
+.actionscript.source-actionscript .kw1 {color: #b1b100;}
+.actionscript.source-actionscript .kw2 {color: #000000; font-weight: bold;}
+.actionscript.source-actionscript .kw3 {color: #0066CC;}
+.actionscript.source-actionscript .co1 {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .co2 {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .coMULTI {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .es0 {color: #000099; font-weight: bold;}
+.actionscript.source-actionscript .br0 {color: #66cc66;}
+.actionscript.source-actionscript .sy0 {color: #66cc66;}
+.actionscript.source-actionscript .st0 {color: #ff0000;}
+.actionscript.source-actionscript .nu0 {color: #cc66cc;}
+.actionscript.source-actionscript .me1 {color: #006600;}
+.actionscript.source-actionscript .ln-xtra, .actionscript.source-actionscript li.ln-xtra, .actionscript.source-actionscript div.ln-xtra {background-color: #ffc;}
+.actionscript.source-actionscript span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "http://www.starlinglib.com/index.php?title=MediaWiki:Geshi.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+/*]]>*/
+</style><!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Feathers_component-properties-methods skin-vector action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Feathers:component-properties-methods</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">来自Starling中文站</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					跳转到： <a href="#mw-head">导航</a>,
+					<a href="#p-search">搜索</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="zh-CN" dir="ltr" class="mw-content-ltr"><p>原文地址：<a rel="nofollow" class="external free" href="http://wiki.starling-framework.org/feathers/component-properties-methods">http://wiki.starling-framework.org/feathers/component-properties-methods</a>
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>目录</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.3D_.E5.89.96.E6.9E.90_Feathers_.E7.BB.84.E4.BB.B6_Anatomy_of_a_Feathers_Component"><span class="tocnumber">1</span> <span class="toctext">= 剖析 Feathers 组件 Anatomy of a Feathers Component</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#.E6.9E.84.E9.80.A0.E5.87.BD.E6.95.B0_The_Constructor"><span class="tocnumber">2</span> <span class="toctext">构造函数 The Constructor</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#.E5.88.9D.E5.A7.8B.E5.8C.96.E5.87.BD.E6.95.B0_initialize.28.29"><span class="tocnumber">3</span> <span class="toctext">初始化函数 initialize()</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#.E5.A4.B1.E6.95.88.E5.87.BD.E6.95.B0_invalidate.28.29"><span class="tocnumber">4</span> <span class="toctext">失效函数 invalidate()</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#.E7.BB.98.E5.88.B6.E5.87.BD.E6.95.B0_draw.28.29"><span class="tocnumber">5</span> <span class="toctext">绘制函数 draw()</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#isInvalid.28.29_.E5.87.BD.E6.95.B0_isInvalid.28.29"><span class="tocnumber">6</span> <span class="toctext">isInvalid() 函数 isInvalid()</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#setSizeInternal.28.29_.E5.87.BD.E6.95.B0"><span class="tocnumber">7</span> <span class="toctext">setSizeInternal() 函数</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#isQuickHitAreaEnabled"><span class="tocnumber">8</span> <span class="toctext">isQuickHitAreaEnabled</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#name_and_nameList_.E5.90.8D.E7.A7.B0.E5.92.8C.E5.90.8D.E7.A7.B0.E5.88.97.E8.A1.A8"><span class="tocnumber">9</span> <span class="toctext">name and nameList 名称和名称列表</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#width_and_height_.E5.AE.BD.E5.92.8C.E9.AB.98"><span class="tocnumber">10</span> <span class="toctext">width and height 宽和高</span></a></li>
+</ul>
+</td></tr></table>
+<h5> <span class="mw-headline" id=".3D_.E5.89.96.E6.9E.90_Feathers_.E7.BB.84.E4.BB.B6_Anatomy_of_a_Feathers_Component">= 剖析 Feathers 组件 Anatomy of a Feathers Component </span></h5>
+<p>下面提到的属性和方法是 <i>FeathersControl</i>的核心部分，所有组件开发者都应对其烂熟于心。更多相关信息，请阅读  <a href="Feathers_component-lifecycle.html" title="Feathers:component-lifecycle">Feathers Component Lifecycle</a>。
+</p>
+<h5> <span class="mw-headline" id=".E6.9E.84.E9.80.A0.E5.87.BD.E6.95.B0_The_Constructor"> 构造函数 The Constructor </span></h5>
+<ul><li><ul><li>构造函数** 中的代码应尽量精简。 通常大部分的初始化代码应放入 <i>initialize()</i> 函数。
+</li></ul>
+</li></ul>
+<h5> <span class="mw-headline" id=".E5.88.9D.E5.A7.8B.E5.8C.96.E5.87.BD.E6.95.B0_initialize.28.29"> 初始化函数 initialize() </span></h5>
+<p>初始化函数 <i>initialize()</i> 在组件首次加入显示列表时被调用。在组件生命周期中，它只会被调用一次。 您可以重载此方法来创建子组件或进行其他适于在首次初始化中进行的任务。
+</p><p><br />
+</p>
+<h5> <span class="mw-headline" id=".E5.A4.B1.E6.95.88.E5.87.BD.E6.95.B0_invalidate.28.29"> 失效函数 invalidate() </span></h5>
+<p>失效函数 <i>invalidate()</i> 用于通知组件它的某个属性被改变并需要重绘。通常在setter函数中调用次方法。参数中带有一个或多个标志告知组件什么被改变了。如果组件的某些部分没有被改变，组件可利用这些标志进行局部重绘。
+</p><p><br />
+</p>
+<h5> <span class="mw-headline" id=".E7.BB.98.E5.88.B6.E5.87.BD.E6.95.B0_draw.28.29"> 绘制函数 draw() </span></h5>
+<p>绘制函数 <i>draw()</i> 在Starling渲染组件之前调用。您应当重载这个函数来响应属性的改变，计算理想大小，放置子组件。
+</p><p>关于 <i>draw()</i> 函数的详细信息，请阅读 <a href="Feathers_component-validation.html" title="Feathers:component-validation">Component Validation with draw()</a>。
+</p>
+<h5> <span class="mw-headline" id="isInvalid.28.29_.E5.87.BD.E6.95.B0_isInvalid.28.29"> isInvalid() 函数 isInvalid() </span></h5>
+<p><i>isInvalid()</i> 函数用于判断是否特定的标志在 <i>invalidate()</i> 函数中被设置。在 <i>draw()</i>调用这个函数可以判断组件的那些部分需要重绘。当 <i>invalidate()</i>被调用后，无论带不带标志位，无参数调用 <i>isInvalid()</i> 函数都将返回 <i>true</i>。
+</p>
+<h5> <span class="mw-headline" id="setSizeInternal.28.29_.E5.87.BD.E6.95.B0"> setSizeInternal() 函数</span></h5>
+<p><i>setSizeInternal()</i> 函数用于指定组件的理想尺寸，它将从显式指定值和理想值之间计算用于布局的最终大小。 
+</p><p>该函数的最后一个参数控制组件是否在调整尺寸后失效。如果在生效阶段调用（即在<i>draw()</i>函数中），应该传入<i>false</i>。否则组件会在每一个渲染周期重绘。
+</p><p>下文中有更多关于组件尺寸的内容。
+</p><p><br />
+</p><p><br />
+</p>
+<h5> <span class="mw-headline" id="isQuickHitAreaEnabled"> isQuickHitAreaEnabled </span></h5>
+<p><i>isQuickHitAreaEnabled</i>属性与传统显示列表中的<i>mouseChildren</i>属性类似。更进一步的是它将组件的点击区域限制与一个矩形框内，因此能大幅提高点击检测算法的效率。矩形点击区域的大小由组件的实际尺寸中计算得出（参考下文）。这对于按钮组件来说非常有效，对于大部分其他不需要子组件响应点击事件的组件都有好处。
+</p>
+<h5> <span class="mw-headline" id="name_and_nameList_.E5.90.8D.E7.A7.B0.E5.92.8C.E5.90.8D.E7.A7.B0.E5.88.97.E8.A1.A8"> name and nameList 名称和名称列表</span></h5>
+<p>组件的 <i>nameList</i> （名称列表）<a href="Feathers_custom-themes.html" title="Feathers:custom-themes">Feathers themes</a> 用于对同一组件的不同类型提供不同的模板，一般用于子组件需要不同皮肤的组件中。比如<i>Slider</i>（滚动条）组件中的两类按钮子组件：滑块和滚动按钮。
+</p><p>关于组件名称的更多信息，请阅读 <a href="Feathers_custom-themes.html" title="Feathers:custom-themes">Creating Custom Feathers Themes</a>
+</p>
+<h5> <span class="mw-headline" id="width_and_height_.E5.AE.BD.E5.92.8C.E9.AB.98"> width and height 宽和高</span></h5>
+<p><i>FeathersControl</i> 提供几个有用的宽高值，理解它们的不同对于提高效率和充分利用 Feathers 的威力都很重要。
+</p><p><i>width</i> 和 <i>height</i> 的getter和setter将组建的宽和高属性暴露给外界。getter所返回的值由一系列因素决定。它们可能是从setter显式赋值的尺寸，也可能与显式赋值毫无关系，而是内部计算的理想值。
+</p><p><i>explicitWidth</i> 和<i>explicitHeight</i> 变量保存<i>width</i> 和 <i>height</i>的显式赋值。下例中， <i>Button</i> （按钮）组件创建后，它的<i>width</i>被设为 <i>150</i> 像素。在按钮组件内部，值被保存在<i>explicitWidth</i>变量中。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw2">var</span> <span class="kw3">button</span>:<span class="kw3">Button</span> = <span class="kw2">new</span> <span class="kw3">Button</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+<span class="kw3">button</span>.<span class="kw3">width</span> = <span class="nu0">150</span>;</pre></div></div>
+<p><i>actualWidth</i> 和 <i>actualHeight</i> 分别是 <i>width</i> 和 <i>height</i> 的 getter 函数的返回值。 这些值也是绘制组件的实际值。实际值通常就是显式赋值 <i>explicitWidth</i> 和 <i>explicitHeight</i>。但如果<i>explicitWidth</i> 和 <i>explicitHeight</i>没有赋值，组件会尝试计算理想尺寸。不同组件的尺寸理想值计算方法都彼此不同，可能是固定的像素值、可能跟皮肤尺寸相关也可能由子组件决定。 
+</p><p>在组件最终布局前，自定义组件应将其计算的尺寸理想值传入 <i>setSizeInternal()</i> 函数。 此函数将判定尺寸是否被显式指定，如果被指定，理性值将被显式赋值覆盖，反之将使用理想值。
+</p><p>如果组件尺寸已被显式赋值但你还想使用组建内部计算的理想值，只需要将<i>NaN</i>赋予 <i>width</i> 和<i>height</i>。
+</p><p><i>minWidth</i> 和 <i>minHeight</i>属性也用于<i>setSizeInternal()</i>函数中用于指定理想尺寸的最小值。这两个属性也不影响显式赋值。
+</p><p>更多教程，请回到 <a href="http://www.starlinglib.com/index.php?title=Feathers:start&amp;action=edit&amp;redlink=1" class="new" title="Feathers:start（尚未撰写）">Feathers Documentation</a>.
+</p>
+<hr />
+<p>翻译者：<a rel="nofollow" class="external text" href="http://weibo.com/yuanyiliu">袁立川</a>
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 42/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key app_starlinglib-wiki:pcache:idhash:201-0!*!0!!zh-cn!*!* and timestamp 20140628214239 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				来自“<a href="http://www.starlinglib.com/index.php?title=Feathers:component-properties-methods&amp;oldid=1308">http://www.starlinglib.com/index.php?title=Feathers:component-properties-methods&amp;oldid=1308</a>”				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>个人工具</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="%e7%94%a8%e6%88%b7_101.23.136.html" class="new" title="您编辑本站所用IP的对应用户页 [.]" accesskey=".">101.23.136.29</a></li>
+		<li id="pt-anontalk"><a href="%e7%94%a8%e6%88%b7%e8%ae%a8%e8%ae%ba_101.23.136.html" class="new" title="对于来自此IP地址的编辑的对话 [n]" accesskey="n">该IP地址的讨论</a></li>
+		<li id="pt-anonlogin"><a href="http://www.starlinglib.com/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&amp;returnto=Feathers%3Acomponent-properties-methods" title="我们鼓励您登录，但这并不是必须的 [o]" accesskey="o">登录</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>名字空间</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Feathers_component-properties-methods.html"  title="查看内容页面 [c]" accesskey="c">页面</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://www.starlinglib.com/index.php?title=%E8%AE%A8%E8%AE%BA:Feathers:component-properties-methods&amp;action=edit&amp;redlink=1"  title="关于内容页面的讨论 [t]" accesskey="t">讨论</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>变换</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>查看</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Feathers_component-properties-methods.html" >阅读</a></span></li>
+					<li id="ca-viewsource"><span><a href="http://www.starlinglib.com/index.php?title=Feathers:component-properties-methods&amp;action=edit"  title="本页面已被保护。你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://www.starlinglib.com/index.php?title=Feathers:component-properties-methods&amp;action=history"  title="本页面的早前修订版本 [h]" accesskey="h">查看历史</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>操作</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">搜索</label></h5>
+	<form action="http://www.starlinglib.com/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="在Starling中文站中搜索 [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="提交" title="如果相同的标题存在的话便直接前往该页面" id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="搜索" title="搜索含这些文字的页面" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="特殊:搜索"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../skins/common/images/wiki.png);" href="index.html"  title="访问首页"></a></div>
+				<!-- /logo -->
+				
+<!-- navigation -->
+<div class="portal" id='p-navigation'>
+	<h5>导航</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="index.html" title="访问首页 [z]" accesskey="z">首页</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /navigation -->
+
+<!-- Starling中文资料 -->
+<div class="portal" id='p-Starling.E4.B8.AD.E6.96.87.E8.B5.84.E6.96.99'>
+	<h5>Starling中文资料</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E6.9C.80.E6.96.B0.E5.8A.A8.E6.80.81"><a href="News.html">Starling最新动态</a></li>
+			<li id="n-.E4.B8.8B.E8.BD.BD"><a href="download.html">下载</a></li>
+			<li id="n-.E5.85.A5.E9.97.A8.E7.AC.AC.E4.B8.80.E6.AD.A5"><a href="FristStep.html">入门第一步</a></li>
+			<li id="n-API.E6.8E.A5.E5.8F.A3.E6.96.87.E6.A1.A3"><a href="APIReference.html">API接口文档</a></li>
+			<li id="n-Starling.E8.AF.B4.E6.98.8E.E4.B9.A6"><a href="StarlingManual.html">Starling说明书</a></li>
+			<li id="n-FeathersUI.E6.96.87.E6.A1.A3"><a href="FeathersUI.html">FeathersUI文档</a></li>
+			<li id="n-.E6.95.99.E7.A8.8B.E5.92.8C.E4.BB.A3.E7.A0.81"><a href="Tutorials.html">教程和代码</a></li>
+			<li id="n-Starling.E6.89.A9.E5.B1.95"><a href="Extensions.html">Starling扩展</a></li>
+			<li id="n-.E6.88.90.E5.8A.9F.E6.A1.88.E4.BE.8B"><a href="GamesPowered.html">成功案例</a></li>
+			<li id="n-.E7.AB.99.E5.A4.96.E8.B5.84.E6.96.99"><a href="OutsideDocs.html">站外资料</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Starling中文资料 -->
+
+<!-- Starling原创教程 -->
+<div class="portal" id='p-Starling.E5.8E.9F.E5.88.9B.E6.95.99.E7.A8.8B'>
+	<h5>Starling原创教程</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E7.A7.BB.E5.8A.A8.E5.BC.80.E5.8F.91.E6.95.99.E7.A8.8B"><a href="StarlingMobile.html">Starling移动开发教程</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Starling原创教程 -->
+
+<!-- 微信-Flash微报 -->
+
+
+<!-- /微信-Flash微报 -->
+
+<!-- 论坛 -->
+<div class="portal" id='p-.E8.AE.BA.E5.9D.9B'>
+	<h5>论坛</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E4.B8.AD.E6.96.87.E8.AE.BA.E5.9D.9B"><a href="http://bbs.egret-labs.org/?fromuid=62" rel="nofollow">Egret开发者论坛</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /论坛 -->
+
+<!-- 友链 -->
+<div class="portal" id='p-.E5.8F.8B.E9.93.BE'>
+	<h5>友链</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Sirius2d.E5.BC.95.E6.93.8E"><a href="http://www.sirius2d.com/" rel="nofollow">Sirius2d引擎</a></li>
+			<li id="n-A.E9.97.AA.E7.BD.91"><a href="http://www.ashan.org/" rel="nofollow">A闪网</a></li>
+			<li id="n-Y.Boy"><a href="http://www.riaoo.com/" rel="nofollow">Y.Boy</a></li>
+			<li id="n-Cenfee"><a href="http://cenfee.com/" rel="nofollow">Cenfee</a></li>
+			<li id="n-.E5.B0.8F.E5.A4.9C-Clifford"><a href="http://www.cnblogs.com/flash3d/" rel="nofollow">小夜 Clifford</a></li>
+			<li id="n-.E6.9D.9C.E5.A2.9E.E5.BC.BA.28DzQ.29"><a href="http://www.duzengqiang.com/" rel="nofollow">杜增强(DzQ)</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /友链 -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>工具箱</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="%e7%89%b9%e6%ae%8a_%e9%93%be%e5%85%a5%e9%a1%b5%e9%9d%a2/Feathers_component-properties-methods.html" title="所有链入本页的wiki页面列表 [j]" accesskey="j">链入页面</a></li>
+			<li id="t-recentchangeslinked"><a href="%e7%89%b9%e6%ae%8a_%e9%93%be%e5%87%ba%e6%9b%b4%e6%94%b9/Feathers_component-properties-methods.html" title="本页链入的页面的最近更改 [k]" accesskey="k">链出更改</a></li>
+			<li id="t-specialpages"><a href="%e7%89%b9%e6%ae%8a_%e7%89%b9%e6%ae%8a%e9%a1%b5%e9%9d%a2.html" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+			<li><a href="http://www.starlinglib.com/index.php?title=Feathers:component-properties-methods&amp;printable=yes" rel="alternate">可打印版</a></li>
+			<li id="t-permalink"><a href="http://www.starlinglib.com/index.php?title=Feathers:component-properties-methods&amp;oldid=1308" title="本页面该修订版本的永久链接">永久链接</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> 本页面最后修订于2013年2月1日 (星期五) 15:34。</li>
+											<li id="footer-info-viewcount">此页面已被浏览过2,352次。</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="Starling_yinsi.html" title="Starling中文站:隐私权政策">隐私权政策</a></li>
+											<li id="footer-places-about"><a href="StarlingCnAbout.html" title="Starling中文站:关于">关于Starling中文站</a></li>
+											<li id="footer-places-disclaimer"><a href="StarlingCNCopyRight.html" title="Starling中文站:免责声明">免责声明</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31520647-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+		<!-- /footer -->
+		
+<!-- Served in 0.503 secs. -->
+	</body>
+
+<!-- Mirrored from www.starlinglib.com/wiki/Feathers:component-properties-methods by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jun 2014 07:23:33 GMT -->
+</html>

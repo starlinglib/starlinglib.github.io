@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from www.starlinglib.com/wiki/Core:StarlingCode by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jun 2014 07:16:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Core:StarlingCode - Starling中文站</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.0" />
+<link rel="shortcut icon" href="http://www.starlinglib.com/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.starlinglib.com/opensearch_desc.php" title="Starling中文站 (zh-cn)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://www.starlinglib.com/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="Starling中文站的Atom" href="http://www.starlinglib.com/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&amp;feed=atom" />
+<link rel="stylesheet" href="../skins/style.css" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: app_starlinglib-wiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Core:StarlingCode","wgTitle":"Core:StarlingCode","wgCurRevisionId":666,"wgArticleId":145,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"zh-cn","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Core:StarlingCode","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false}});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"zh-cn","language":"zh-cn","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;},{},{});mw.loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: app_starlinglib-wiki:resourceloader:filter:minify-js:7:64bb9911c781603a64782510a7dfd931 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-actionscript {line-height: normal;}
+.source-actionscript li, .source-actionscript pre {
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for actionscript
+ * CSS class: source-actionscript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.actionscript.source-actionscript .de1, .actionscript.source-actionscript .de2 {font: normal normal 1em/1.2em monospace; margin:10px 0; padding:10px; background:none; vertical-align:top;}
+.actionscript.source-actionscript  {font-family:monospace;}
+.actionscript.source-actionscript .imp {font-weight: bold; color: red;}
+.actionscript.source-actionscript li, .actionscript.source-actionscript .li1 {font-weight: normal; vertical-align:top;}
+.actionscript.source-actionscript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.actionscript.source-actionscript .li2 {font-weight: bold; vertical-align:top;}
+.actionscript.source-actionscript .kw1 {color: #b1b100;}
+.actionscript.source-actionscript .kw2 {color: #000000; font-weight: bold;}
+.actionscript.source-actionscript .kw3 {color: #0066CC;}
+.actionscript.source-actionscript .co1 {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .co2 {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .coMULTI {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .es0 {color: #000099; font-weight: bold;}
+.actionscript.source-actionscript .br0 {color: #66cc66;}
+.actionscript.source-actionscript .sy0 {color: #66cc66;}
+.actionscript.source-actionscript .st0 {color: #ff0000;}
+.actionscript.source-actionscript .nu0 {color: #cc66cc;}
+.actionscript.source-actionscript .me1 {color: #006600;}
+.actionscript.source-actionscript .ln-xtra, .actionscript.source-actionscript li.ln-xtra, .actionscript.source-actionscript div.ln-xtra {background-color: #ffc;}
+.actionscript.source-actionscript span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "http://www.starlinglib.com/index.php?title=MediaWiki:Geshi.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-c {line-height: normal;}
+.source-c li, .source-c pre {
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for c
+ * CSS class: source-c, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.c.source-c .de1, .c.source-c .de2 {font: normal normal 1em/1.2em monospace; margin:10px 0; padding:10px; background:none; vertical-align:top;}
+.c.source-c  {font-family:monospace;}
+.c.source-c .imp {font-weight: bold; color: red;}
+.c.source-c li, .c.source-c .li1 {font-weight: normal; vertical-align:top;}
+.c.source-c .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.c.source-c .li2 {font-weight: bold; vertical-align:top;}
+.c.source-c .kw1 {color: #b1b100;}
+.c.source-c .kw2 {color: #000000; font-weight: bold;}
+.c.source-c .kw3 {color: #000066;}
+.c.source-c .kw4 {color: #993333;}
+.c.source-c .co1 {color: #666666; font-style: italic;}
+.c.source-c .co2 {color: #339933;}
+.c.source-c .coMULTI {color: #808080; font-style: italic;}
+.c.source-c .es0 {color: #000099; font-weight: bold;}
+.c.source-c .es1 {color: #000099; font-weight: bold;}
+.c.source-c .es2 {color: #660099; font-weight: bold;}
+.c.source-c .es3 {color: #660099; font-weight: bold;}
+.c.source-c .es4 {color: #660099; font-weight: bold;}
+.c.source-c .es5 {color: #006699; font-weight: bold;}
+.c.source-c .br0 {color: #009900;}
+.c.source-c .sy0 {color: #339933;}
+.c.source-c .st0 {color: #ff0000;}
+.c.source-c .nu0 {color: #0000dd;}
+.c.source-c .nu6 {color: #208080;}
+.c.source-c .nu8 {color: #208080;}
+.c.source-c .nu12 {color: #208080;}
+.c.source-c .nu16 {color:#800080;}
+.c.source-c .nu17 {color:#800080;}
+.c.source-c .nu18 {color:#800080;}
+.c.source-c .nu19 {color:#800080;}
+.c.source-c .me1 {color: #202020;}
+.c.source-c .me2 {color: #202020;}
+.c.source-c .ln-xtra, .c.source-c li.ln-xtra, .c.source-c div.ln-xtra {background-color: #ffc;}
+.c.source-c span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "http://www.starlinglib.com/index.php?title=MediaWiki:Geshi.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+/*]]>*/
+</style><!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Core_StarlingCode skin-vector action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Core:StarlingCode</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">来自Starling中文站</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					跳转到： <a href="#mw-head">导航</a>,
+					<a href="#p-search">搜索</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="zh-CN" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>目录</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Starling.E6.BA.90.E7.A0.81.E5.88.86.E6.9E.90"><span class="tocnumber">1</span> <span class="toctext">Starling源码分析</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#.E5.85.B3.E4.BA.8EStarling.E7.B1.BB"><span class="tocnumber">1.1</span> <span class="toctext">关于Starling类</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="#.E4.BA.8B.E4.BB.B6"><span class="tocnumber">1.1.1</span> <span class="toctext">事件</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="#Starling.E7.9A.84.27.E8.B7.91.E9.81.93.E6.9C.BA.E5.88.B6.27"><span class="tocnumber">1.1.2</span> <span class="toctext">Starling的'跑道机制'</span></a>
+<ul>
+<li class="toclevel-4 tocsection-5"><a href="#.E5.86.85.E9.83.A8.E5.A4.84.E7.90.86.E4.BA.8B.E4.BB.B6"><span class="tocnumber">1.1.2.1</span> <span class="toctext">内部处理事件</span></a></li>
+<li class="toclevel-4 tocsection-6"><a href="#.E9.80.92.E5.BD.92.E6.98.BE.E7.A4.BA.E5.AF.B9.E8.B1.A1"><span class="tocnumber">1.1.2.2</span> <span class="toctext">递归显示对象</span></a></li>
+<li class="toclevel-4 tocsection-7"><a href="#.E5.A4.84.E7.90.86.E5.8A.A8.E7.94.BB"><span class="tocnumber">1.1.2.3</span> <span class="toctext">处理动画</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-8"><a href="#.E6.B8.B2.E6.9F.93"><span class="tocnumber">1.2</span> <span class="toctext">渲染</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#.E6.98.BE.E7.A4.BA.E5.AF.B9.E8.B1.A1"><span class="tocnumber">1.3</span> <span class="toctext">显示对象</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="#Quad.E7.B1.BB"><span class="tocnumber">1.3.1</span> <span class="toctext">Quad类</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#QuadBatch.E7.B1.BB"><span class="tocnumber">1.3.2</span> <span class="toctext">QuadBatch类</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Image.E7.B1.BB"><span class="tocnumber">1.3.3</span> <span class="toctext">Image类</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#MovieClip.E7.B1.BB"><span class="tocnumber">1.3.4</span> <span class="toctext">MovieClip类</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Sprite.E7.B1.BB"><span class="tocnumber">1.3.5</span> <span class="toctext">Sprite类</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#TextField.E7.B1.BB"><span class="tocnumber">1.3.6</span> <span class="toctext">TextField类</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#.E8.87.AA.E5.AE.9A.E4.B9.89.E6.98.BE.E7.A4.BA.E5.AF.B9.E8.B1.A1"><span class="tocnumber">1.3.7</span> <span class="toctext">自定义显示对象</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#.E8.87.AA.E5.AE.9A.E4.B9.89.E5.8A.A8.E7.94.BB.E7.B1.BB"><span class="tocnumber">1.3.8</span> <span class="toctext">自定义动画类</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-18"><a href="#.E5.8A.A8.E7.94.BB.E5.A4.84.E7.90.86"><span class="tocnumber">1.4</span> <span class="toctext">动画处理</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Starling.E6.BA.90.E7.A0.81.E5.88.86.E6.9E.90">Starling源码分析</span></h1>
+<p>通过阅读<a rel="nofollow" class="external text" href="http://www.starlinglib.com/asdoc/1.2/">Starling</a>的源码，可以让您更深入的了解Starling的运行和扩展机制。
+</p><p>为了避免歧义，在下午中涉及类名的描述中，会用括号标注是普通Flash包下的那个类，还是Starling的类。因为Starling的显示对象命名和传统Flash的几乎一致，需要大家多多注意。
+</p><p>Starling中文站原创文章，转载请注明出处和原链接。
+</p><p><a href="%e6%96%87%e4%bb%b6_Product-feature-rocket-starling.html" class="image"><img alt="Product-feature-rocket-starling.png" src="../images/8/8f/Product-feature-rocket-starling.png" width="300" height="200" /></a>
+</p>
+<h2> <span class="mw-headline" id=".E5.85.B3.E4.BA.8EStarling.E7.B1.BB">关于Starling类</span></h2>
+<p>首先看看<a rel="nofollow" class="external text" href="http://www.starlinglib.com/asdoc/1.2/starling/core/Starling.html">starling.core.Starling</a>的构造方法:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw3">public</span> <span class="kw2">function</span> Starling<span class="br0">&#40;</span>rootClass:<span class="kw2">Class</span>, <span class="kw3">stage</span>:flash.<span class="me1">display</span>.<span class="kw3">Stage</span>, 
+                                 viewPort:Rectangle=<span class="kw2">null</span>, stage3D:Stage3D=<span class="kw2">null</span>,
+                                 renderMode:<span class="kw3">String</span>=<span class="st0">&quot;auto&quot;</span>, profile:<span class="kw3">String</span>=<span class="st0">&quot;baselineConstrained&quot;</span><span class="br0">&#41;</span></pre></div></div>
+<p>在构造方法中，前两个参数就不解释了，后面几个参数的意义和默认值是：
+</p>
+<ul><li> viewPort 体现了视口的概念，所谓视口，就是类似遮罩，给Starling的场景定义一个矩形的可见区域。默认情况下，Starling会根据普通Flash层的stage.stageWidth, stage.stageHeight这两个参数，确定Starling的场景大小和视口大小。
+</li><li> stage3D 默认取的是stage.stage3Ds[0]，大多数情况下我们用的都是0这个位置的Stage3D实例
+</li><li> renderMode和profile则其实是mStage3D.requestContext3D方法所需的两个参数，第一个确定渲染方式（默认值为Context3DRenderMode.AUTO，可选值为Context3DRenderMode.SOFTWARE，后面这个值可以开启软件渲染，方便测试），第二个确定驱动模式，默认值为Context3DProfile.BASELINE_CONSTRAINED，即默认处于“约束模式”之下，约束模式可以更好的兼容老旧设备，但对场景的渲染尺寸和屏幕分辨率有要求，如果您的代码无法正常工作，可以切换回Context3DProfile.BASELINE试一下。
+</li></ul>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="c source-c"><pre class="de1">TIP<span class="sy0">:</span> 和传统Flash类似，您可以设置stage.<span class="me1">color</span><span class="br0">&#40;</span>注意是Starling的Stage<span class="br0">&#41;</span>来改变场景的默认底色。</pre></div></div>
+<p>在构造方法中，Starling还创建了一个名为mNativeOverlay的Sprite实例（是Flash的Sprite），并把它添加到Flash的Stage中。并且当视口被改变的时候，这个mNativeOverlay的位置也会被改变（x,y始终处于视口的左上角的位置），并且一旦视口的尺寸和Starling的Stage尺寸不一致的时候，mNativeOverlay会被缩放(改变scaleX和scaleY)。它的用途是，如果您创建了一个传统Flash显示对象，显然无法添加到Starling的显示列表中，但您可以通过Starling.nativeOverlay属性获取这个处于传统显示层面的Sprite引用，然后把显示对象添加进去。
+</p><p>但是需要注意，在3D加速内容之上的原生Flash内容在某些（移动）平台上会有性能上的问题。因为这个原因，请注意删除这一层中所有不需要和不再使用的对象。当这一层被置空后Starling会从显示列表中删除原生Flash叠加层。
+</p>
+<h3> <span class="mw-headline" id=".E4.BA.8B.E4.BB.B6">事件</span></h3>
+<p>如果您创建了Starling实例，可以得到两个事件：context3DCreate和rootCreated，前者代表context3D实例被创建，后者代表RootClass的实例被创建。
+</p><p>另外就是交互事件。和传统Flash显示对象不同，Stage3D最终处理的是一堆三角形，这些东西可没有传统Flash显示对象那样的交互响应能力。那么Starling是如何处理交互事件的呢？它是在传统Flash的Stage层进行侦听的，然后通过点击的那个点的坐标，并通过显示区域和遮挡关系判断，来确定点击的是哪个“显示对象”。看一下touchEventTypes这个方法，您就会知道，它同时处理MouseEvent和TouchEvent，这样可以兼顾PC平台和移动平台。
+</p><p>捕获到的交互事件，会统一交给onTouch这个方法进行处理。在这个方法里，会区分事件是Mouse事件还是Touch事件，并分别进行处理。注意在Starling的显示对象中，没有Mouse事件，只有Touch事件，PC上也是如此。所以Starling实际上是将捕获到的传统事件，进行处理和封装之后，统一给我们提供一套Starling自身的事件机制。这一点上，不要和Flash自身的事件机制发生混淆。
+</p><p>还需要注意的一点是，交互事件会有"延迟"，因为Starling捕获到原生Flash层的事件之后，不会马上派发给侦听Starling事件的对象，而是先发送内部的“队列”里面，然后根据帧频，进行集中处理。不过一般我们的帧频不会设置的太小，这个延迟对用户基本没有影响。
+</p>
+<h3> <span class="mw-headline" id="Starling.E7.9A.84.27.E8.B7.91.E9.81.93.E6.9C.BA.E5.88.B6.27">Starling的'跑道机制'</span></h3>
+<p>如果您了解Flash动画的渲染机制，就一定会知道Flash Player有一个“跑道机制”，根据设定的帧频，Flash可以在每一秒执行若干次的渲染，来保持画面的更新。而每一帧Flash都会派发EnterFrame事件，很多时候我们也会侦听EnterFrame事件，来实现代码层面的动画控制。
+</p><p>Starling也在侦听Flash的EnterFrame事件，然后在每一帧调用nextFrame方法。这个方法其实就是取一下当前时间（用getTimer），并存储在mLastFrameTimestamp（换算为秒）上，将当前时间和上一帧的时间做减法，计算出时间差，然后将时间差作为参数传递给advanceTime方法。
+</p><p>advanceTime这个方法在Starling的类中很常见，通常情况下这个方法的调用是和EnterFrame事件绑定的，也就是说，根据帧频，不同对象的advanceTime方法，每间隔一个很短的周期，就会被调用一次。而且这个方法会收到一个参数，就是时间差（秒）。
+</p><p>在Starling类中，当前处于活动状态的Starling实例，会不断调用自身的advanceTime方法，在这个方法中，我们可以看到，又调用了3个主要对象的advanceTime方法:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="co1">//Starling内部处理事件用</span>
+mTouchProcessor.<span class="me1">advanceTime</span><span class="br0">&#40;</span>passedTime<span class="br0">&#41;</span>;
+<span class="co1">//从Stage开始，处理所有的显示对象</span>
+mStage.<span class="me1">advanceTime</span><span class="br0">&#40;</span>passedTime<span class="br0">&#41;</span>;
+<span class="co1">//处理注册到juggler的动画</span>
+mJuggler.<span class="me1">advanceTime</span><span class="br0">&#40;</span>passedTime<span class="br0">&#41;</span>;</pre></div></div>
+<p>下面我们就分析一下这3个主要的调用，看他们完成了哪些工作：
+</p>
+<h4> <span class="mw-headline" id=".E5.86.85.E9.83.A8.E5.A4.84.E7.90.86.E4.BA.8B.E4.BB.B6">内部处理事件</span></h4>
+<p>这个工作是由TouchProcessor类完成的，它的重要方法包括两个：
+</p>
+<ul><li> enqueue方法 - 这个方法接受Starling当前活动对象产生的事件（由原生Flash层的事件转换而来），然后将事件的参数（id,位置等等），加入到mQueue这个数组中，排队等候处理。
+</li><li> advanceTime方法 - 这个方法完成的操作包括：清理旧的Tap标记（因为Tap操作需要较长的生命周期，所以额外处理），更新已有的Touch对象；将mQueue排队的事件参数进行处理，产生新的Touch对象，并且如果需要的话，让这个Touch事件所对应的对象来派发这个事件。
+</li></ul>
+<h4> <span class="mw-headline" id=".E9.80.92.E5.BD.92.E6.98.BE.E7.A4.BA.E5.AF.B9.E8.B1.A1">递归显示对象</span></h4>
+<p>在1.2的Starling中针对事件系统做了优化，对<a rel="nofollow" class="external text" href="http://www.starlinglib.com/asdoc/1.2/starling/display/Stage.html">Stage</a>类来说也是如此。阅读<a rel="nofollow" class="external text" href="http://www.starlinglib.com/asdoc/1.2/starling/display/Stage.html">Stage</a>的源码，您可以看到一个名为mEnterFrameEvent的成员变量。也就是说，Starling在每帧派发EnterFrame事件，会共用一个事件对象，这可以改善性能。然后通过递归，向所有的子级派发这个事件。
+</p>
+<h4> <span class="mw-headline" id=".E5.A4.84.E7.90.86.E5.8A.A8.E7.94.BB">处理动画</span></h4>
+<p>Starling中的动画由<a rel="nofollow" class="external text" href="http://www.starlinglib.com/asdoc/1.2/starling/animation/Juggler.html">Juggler</a>类来处理。Juggler管理那些实现了IAnimatable接口的对象（比如Tweens和MovieClip）并执行它们。
+</p><p>Juggler.advanceTime方法，负责调用由这个Juggler管理的所有实现IAnimatable接口的对象自身的advanceTime方法，并传递时间差。另外这个方法还负责一些清理工作，清除掉已经为空或失效的对象。
+</p>
+<h2> <span class="mw-headline" id=".E6.B8.B2.E6.9F.93">渲染</span></h2>
+<p>对于Starling当前活动实例(即Starling.current)来说，执行完advanceTime()方法后，接着就会执行render()这个方法。可以这样理解：advanceTime()改变的是数据和属性，但是只有这个方法执行的话，我们是什么也看不到的。必须调用Stage3D的底层API，把数据映射为画面，我们才能看的到。这就是render()方法的作用。
+</p><p>和advanceTime()方法类似，render()方法也会在Starling体系的很多类中出现，很快您就会对这两个方法印象深刻。
+</p><p>Starling.render()方法的执行过程如下：
+</p><p>首先，更新上文提到过的那个添加到传统Flash显示列表里的Sprite对象
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">updateNativeOverlay<span class="br0">&#40;</span><span class="br0">&#41;</span>;</pre></div></div>
+<p>下面的代码中涉及到mSupport。mSupport是RenderSupport类的实例。RenderSupport类在Starling体系中也非常重要（尽管我们在外部很少直接调用它）。
+Starling的API设计是模仿传统显示列表的，而实际渲染需要的是Stage3D，三角形，纹理等，跟显示列表完全不是一个机制。
+那么在Starling中这两套机制是如何结合起来的呢？就是这两个很重要的类：RenderSupport和<a rel="nofollow" class="external text" href="http://www.starlinglib.com/asdoc/1.2/">QuadBatch</a>。
+RenderSupport的主要作用是处理矩阵（在2D屏幕渲染需要很多矩阵运算）和维护QuadBatch堆栈，每当状态变更，新建一个QuadBatch。
+QuadBatch负责批量处理具备相同状态的四边形，这样可以尽量减少绘制调用次数，提升运行效率。
+</p><p>nextFrame()这个方法的作用就是重置mSupport的数据状态为初始状态
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">mSupport.<span class="kw3">nextFrame</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;</pre></div></div>
+<p>根据Stage尺寸，设置正面二维渲染的矩阵映射，在后面的运算中相当于一个常量矩阵
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">mSupport.<span class="me1">setOrthographicProjection</span><span class="br0">&#40;</span>mStage.<span class="me1">stageWidth</span>, mStage.<span class="me1">stageHeight</span><span class="br0">&#41;</span>;</pre></div></div>
+<p>在进入下面的代码之前，我们先了解一下mSupport.drawCount这个属性。如果打开Starling.showStats属性，您会在Starling的左上角区域看到实时的帧频和绘制次数显示。那个绘制次数，实际上就是mSupport.drawCount的值（如果开启Starling.showStats，显示的值是mSupport.drawCount-2，以减去这个状态组件本身占用的绘制次数）。这个绘制次数，直接体现了应用的性能好坏，当绘制次数越少，性能越好，反之性能越差。如何尽量减少绘制次数，是我们在开发中重点考虑的优化方向，而这也是Starling中QuadBatch这个类的存在意义。
+</p><p>当进入下一帧时，随着数据被重置，这个绘制次数也会被清零。然后随着QuadBatch堆栈的长度增长，这个值也在递增。而且您会发现，这个值的递增和mSupport.finishQuadBatch()方法的调用是有关联的，而这个方法的调用又和状态的变更是有关联的。Starling按照画家算法，递归处理显示对象，每当发生一次状态变更（不同的纹理，不同的渲染模式等等），就会调用一次mSupport.finishQuadBatch()方法，而mSupport.drawCount的值也会相应的累加一次。
+</p><p>举个例子，假如我们的应用中，有两个显示对象（类型是Image，而且是不同的纹理）。那么在下面这一行代码执行之前，您如果观察mSupport.drawCount属性，会发现到这里，它的值还是为0. 然后让程序执行这一步代码，这行代码的作用就是调用Starling的Stage的render方法，而Stage是从DisplayObjectContainer继承而来的，它会递归处理所有的子级，调用子级的render方法。而在Image的render方法中，它会调用mSupport.batchQuad()方法，向当前批次中添加一个四边形（很好理解，图片就是一个四边形+纹理）。如果循环添加的过程中，出现了状态变更，则调用mSupport.finishQuadBatch()方法，新建一个QuadBatch继续处理。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">mStage.<span class="me1">render</span><span class="br0">&#40;</span>mSupport, <span class="nu0">1.0</span><span class="br0">&#41;</span>;</pre></div></div>
+<p>当上面这行代码执行完毕，您再观察一下mSupport.drawCount这个值。mStage已经递归处理了两个Image对象，那现在这个值，它应该是多少？如果您觉得是2，那就错了。实际上它的值是1。因为遍历到第一个Image的时候，因为当前批次中还没有内容，所以不会触发状态变更；当遍历到第二个Image的时候，因为是不同的纹理，所以会触发一次状态变更，将mSupport.drawCount的值累加。所以是1。
+</p><p>紧接着，会执行下面这一行代码，强制闭合当前的QuadBatch。因为对于最后一个批次来说，当所有的对象处理完毕，就意味着最后一个批次也完成了。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">mSupport.<span class="me1">finishQuadBatch</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;</pre></div></div>
+<p>这个时候，mSupport.drawCount的值就等于2了。这会最终反映到显示的界面上。最后两行代码也很好理解：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="co1">//如果开启了状态显示，更新绘制次数</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span>mStatsDisplay<span class="br0">&#41;</span>
+    mStatsDisplay.<span class="me1">drawCount</span> = mSupport.<span class="me1">drawCount</span>;
+<span class="co1">//将批次中的数据渲染到屏幕</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span>mShareContext<span class="br0">&#41;</span>
+    mContext.<span class="me1">present</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;</pre></div></div>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="c source-c"><pre class="de1">TIP<span class="sy0">:</span> Starling中两个三角形组成一个四边形，而四边形的<span class="nu0">4</span>个顶点的索引以及其位置是：
+<span class="nu0">0</span> <span class="nu0">1</span>
+<span class="nu0">2</span> <span class="nu0">3</span></pre></div></div>
+<h2> <span class="mw-headline" id=".E6.98.BE.E7.A4.BA.E5.AF.B9.E8.B1.A1">显示对象</span></h2>
+<p>显示对象大都集中在starling.display这个包下，所以我们现在开始分析这个包下的内容：
+</p><p>这个包的核心是抽象类<a rel="nofollow" class="external text" href="http://www.starlinglib.com/asdoc/1.2/starling/display/DisplayObject.html">DisplayObject</a>。您不能直接使用这个类，而应该使用它的子类（或创建自定义的子类）。这个抽象类，模仿传统Flash的显示对象，定义了诸如坐标，长度，宽度，旋转角度，透明度等属性，为了使用方便，还增加了一些有特色的方法，比如removeFromParent()。
+</p><p>和传统Flash类似，这里也定义了一些常用的事件，这些事件会被DisplayObject派发。这里看名字大家基本就明白了十有八九了，不再细述。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">    <span class="coMULTI">/** 当一个显示对象被添加到父级的时候派发。 */</span>
+    <span class="br0">&#91;</span>Event<span class="br0">&#40;</span><span class="kw3">name</span>=<span class="st0">&quot;added&quot;</span>, <span class="kw3">type</span>=<span class="st0">&quot;starling.events.Event&quot;</span><span class="br0">&#41;</span><span class="br0">&#93;</span>
+    <span class="coMULTI">/** 当一个显示对象被添加到stage(直接的或者间接的)的时候派发。 */</span>
+    <span class="br0">&#91;</span>Event<span class="br0">&#40;</span><span class="kw3">name</span>=<span class="st0">&quot;addedToStage&quot;</span>, <span class="kw3">type</span>=<span class="st0">&quot;starling.events.Event&quot;</span><span class="br0">&#41;</span><span class="br0">&#93;</span>
+    <span class="coMULTI">/** 当一个显示对象从父级删除的时候派发。 */</span>
+    <span class="br0">&#91;</span>Event<span class="br0">&#40;</span><span class="kw3">name</span>=<span class="st0">&quot;removed&quot;</span>, <span class="kw3">type</span>=<span class="st0">&quot;starling.events.Event&quot;</span><span class="br0">&#41;</span><span class="br0">&#93;</span>
+    <span class="coMULTI">/** 当一个显示对象从stage删除(直接的或者间接的)的时候派发，此对象不再会被渲染。 */</span> 
+    <span class="br0">&#91;</span>Event<span class="br0">&#40;</span><span class="kw3">name</span>=<span class="st0">&quot;removedFromStage&quot;</span>, <span class="kw3">type</span>=<span class="st0">&quot;starling.events.Event&quot;</span><span class="br0">&#41;</span><span class="br0">&#93;</span>
+    <span class="coMULTI">/** 在每一帧派发给stage上的所有显示对象。 */</span> 
+    <span class="br0">&#91;</span>Event<span class="br0">&#40;</span><span class="kw3">name</span>=<span class="st0">&quot;enterFrame&quot;</span>, <span class="kw3">type</span>=<span class="st0">&quot;starling.events.EnterFrameEvent&quot;</span><span class="br0">&#41;</span><span class="br0">&#93;</span>
+    <span class="coMULTI">/** 当显示对象被触碰时派发，冒泡事件。 */</span>
+    <span class="br0">&#91;</span>Event<span class="br0">&#40;</span><span class="kw3">name</span>=<span class="st0">&quot;touch&quot;</span>, <span class="kw3">type</span>=<span class="st0">&quot;starling.events.TouchEvent&quot;</span><span class="br0">&#41;</span><span class="br0">&#93;</span></pre></div></div>
+<p>注意它定义的render()方法，会被它的子类去具体实现。<b>对于每一个显示对象类，render()方法都非常重要</b>，这个方法决定了显示对象会被如何渲染。如果您自定义子类，也需要实现这个方法。
+</p><p>还需要注意getBounds()这个方法，这个方法也需要它的子类去实现。<b>对于每一个显示对象类，getBounds()同样重要</b>，因为很多运算（比如判断事件的目标对象），都需要知道显示对象的可见范围，基于一切皆四边形的设计，这个区域显然也是一个矩形。
+</p><p>然后看看<a rel="nofollow" class="external text" href="http://www.starlinglib.com/asdoc/1.2/starling/display/DisplayObjectContainer.html">DisplayObjectContainer</a>，这个类定义了一个容器所应该具备的基本特征，包括对子级管理的各种方法。注意DisplayObjectContainer已经覆盖并实现了render()方法，在这个方法里面，容器用递归的方式，处理它的所有子级，调用子级的render方法。
+</p><p>注意其中的width和height，都是getter方式获取，而且是需要实时计算显示区域来获取。这个对性能会有影响，所以尽量不要频繁调用width和height属性，在循环中可以用变量先存储下来。
+</p><p>DisplayObjectContainer还定义了两个很有用的方法：broadcastEvent和broadcastEventWith，通过这两个方法，可以向所有的子级派发事件。
+</p>
+<h3> <span class="mw-headline" id="Quad.E7.B1.BB">Quad类</span></h3>
+<p>然后来看Starling中最简单的一个显示对象类：<a rel="nofollow" class="external text" href="http://www.starlinglib.com/asdoc/1.2/starling/display/Quad.html">Quad</a>。Quad的直译就是四边形，这也体现了Starling的设计思路，即认为一切显示对象都是四边形，其它的显示对象都可以由四边形扩展而来。四边形的组成是什么呢？就是4个顶点，加每个顶点的位置，还有顶点的颜色。顶点的颜色决定了四边形最后的显示颜色。Starling中专门用一个类来存储和处理顶点数据，就是<a rel="nofollow" class="external text" href="http://www.starlinglib.com/asdoc/1.2/starling/utils/VertexData.html">VertexData</a>。在Quad这个类中，成员变量mVertexData负责存储这个四边形的顶点。当您创建一个Quad实例的时候，必须通过构造方法，设置四边形的宽高。顶点颜色您可以使用默认，默认4个顶点的颜色都是白色。
+</p><p>Quad实现了getBounds方法，当然里面的区域计算，就是根据顶点的位置来计算的（其实就是最后一个索引是3的顶点的位置）。
+</p><p>Quad对于Render方法的实现也很简单，只是调用support.batchQuad()方法，把自己添加到批次里面。
+</p>
+<h3> <span class="mw-headline" id="QuadBatch.E7.B1.BB">QuadBatch类</span></h3>
+<p>上面说到了Quad，如果我们把所有显示对象都视为Quad，那么Starling应该如何渲染他们呢？
+</p><p>最普通的思路应该是，用循环遍历所有的Quad，对于每一个Quad，取它的顶点数据，纹理，着色器等等，然后调用context3D.setProgram(), context3D.setVertexBufferAt(),context3D.setTextureAt()等方法进行初始化，然后调用context3D.drawTriangles()方法完成这个四边形的绘制。以此类推，完成所有的循环后，Starling会调用一次context3D. present()方法，绘制到屏幕，我们可以看到最终的渲染界面。
+</p><p>这个思路得到的渲染界面应该是没有问题的，但在性能方面却着实堪忧。假如我们有上千个相同状态的四边形，按照这个思路，上述的那些对显卡提交的方法，就要执行上千次。注意是每帧执行上千次。这会带来性能上的巨大浪费。所以Starling引入了“批处理”这个机制，这个机制的实现者就是QuadBatch类。
+</p><p>来看看QuadBatch是如何运作的：
+</p><p>QuadBatch定义了两个方法：addQuad()，和addImage()。注意addImage()内部还是调用了addQuad()。所以其实都是指向了addQuad()方法。它的作用就是，如何把当前QuadBatch看做一个数组的话，将一个新的四边形加入到数组，等候处理。在之前的介绍中我们提到了，在Starling内部，RenderSupport类负责管理和维护QuadBatch。当遍历显示列表的时候，RenderSupport就会将所有的四边形，划分到若干个批次里面（即添加到若干个QuadBatch里面），这样渲染的时候，每个QuadBatch内部的四边形会被集中处理，提交一次。这样您就可以想象，会节省多少提交次数。
+</p><p>这样说可能很枯燥，我来举个例子：假如我的显示列表是一个文本框(TextField)和1000个电影剪辑(MovieClip)，电影剪辑用了同一个纹理，那么有多少个显示对象？1001个，没错。
+</p><p>然后看看Starling是如何渲染的。首先，假如文本框是第一个显示对象，那么进入帧循环的时候，Stage调用render()方法，首先处理的就是这个文本框，而且是由RenderSupport来处理它。RenderSupport会先创建一个QuadBatch实例，把文本框（视为四边形）加入到QuadBatch里面（通过RenderSupport.batchQuad()方法）。那么现在当前这个QuadBatch有了第一个四边形了，注意第一个加入的对象，决定了这个QuadBatch的状态。后面每次加入一个新的四边形，都要判断是不是符合这个状态，不符合的是不能加入的，必须新建另一个QuadBatch来处理。
+</p><p>目前我们已经有了1个QuadBatch，这个QuadBatch里面有了一个四边形（文本框的）。然后继续：
+</p><p>循环处理下一个对象是第一个MovieClip，通过RenderSupport.batchQuad()方法，首先进行状态判断，得到的结果是，假如加入这个对象，会触发状态变更。所以RenderSupport立刻执行当前QuadBatch（调用它的renderCustom()方法），然后新建另一个QuadBatch，添加第一个MovieClip对象。
+</p><p>这时我们已经有了两个QuadBatch，第一个QuadBatch已被执行然后重置，第二个QuadBatch有了一个MovieClip，并等待继续添加其它的显示对象。
+</p><p>之后以此类推，因为电影剪辑用了同一个纹理，所以不会触发状态变更，剩下所有的MovieClip都会被添加到第二个QuadBatch里面。循环结束，第二个QuadBatch就会被执行。这样直到最后，我们实际上只用到了两个QuadBatch，这就是为什么可以获得性能提升的原因。
+</p><p>QuadBatch是用什么方法实现渲染的呢？是renderCustom()方法。在这个方面里面，QuadBatch将包含的四边形，调用context3D的底层方法集中渲染。
+</p><p>QuadBatch还包含了一个静态方法：compile()。这个方式是为了和容器的flatten()方法配合使用的。如果一个容器调用了flatten()方法，就会将这个容器内部的显示对象数据，处理为一个元素类型是QuadBatch的矢量数组，然后在显示的时候直接调用，这样可以有很高的渲染效率。当然代价是，动画还有事件等等都会被忽略，看起来您的容器就像被冰冻了一样。所以比较适合“静态”的容器。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="c source-c"><pre class="de1">TIP<span class="sy0">:</span> RenderSupport对于QuadBatch的创建和维护是基于画家算法来进行的，所以我们显示层级的结构和顺序会影响这个过程。
+在上面的例子中，用到了两个QuadBatch，假如我们改变一下显示结构，先放<span class="nu0">500</span>个电影剪辑，再放一个文本框，
+然后再放剩下的<span class="nu0">500</span>个电影剪辑。那么循环的过程中，会触发两次状态变更，最终就要多使用一个QuadBatch来渲染。这是性能优化方面需要考虑的元素。</pre></div></div>
+<h3> <span class="mw-headline" id="Image.E7.B1.BB">Image类</span></h3>
+<p>Image类是继承Quad类的，当你创建一个Image，就需要把纹理设置给他，对于Image来说，纹理的尺寸决定了Image的尺寸（如果你修改了纹理，就要调用readjustSize()方法重置尺寸）。默认情况，Image对纹理的UV设定是(0,0),(1,0),(0,1),(1,1)，也就是说显示这个纹理的全部。但是您可以通过调用setTexCoords()方法，改变四边形顶点对于的纹理的UV坐标（取值范围0-1），这样可以实现对纹理的一个矩形区域的裁切。比如我们只需要显示纹理右下方1/4的区域，可以这样设置：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">img.<span class="me1">setTexCoords</span><span class="br0">&#40;</span><span class="nu0">0</span>,<span class="kw2">new</span> Point<span class="br0">&#40;</span><span class="nu0">0.5</span>,<span class="nu0">0.5</span><span class="br0">&#41;</span><span class="br0">&#41;</span>;
+img.<span class="me1">setTexCoords</span><span class="br0">&#40;</span><span class="nu0">1</span>,<span class="kw2">new</span> Point<span class="br0">&#40;</span><span class="nu0">1</span>,<span class="nu0">0.5</span><span class="br0">&#41;</span><span class="br0">&#41;</span>;
+img.<span class="me1">setTexCoords</span><span class="br0">&#40;</span><span class="nu0">2</span>,<span class="kw2">new</span> Point<span class="br0">&#40;</span><span class="nu0">0.5</span>,<span class="nu0">1</span><span class="br0">&#41;</span><span class="br0">&#41;</span>;
+img.<span class="me1">setTexCoords</span><span class="br0">&#40;</span><span class="nu0">3</span>,<span class="kw2">new</span> Point<span class="br0">&#40;</span><span class="nu0">1</span>,<span class="nu0">1</span><span class="br0">&#41;</span><span class="br0">&#41;</span>;
+&#160;
+<span class="co1">//TIPS: Starling中两个三角形组成一个四边形，而四边形的4个顶点的索引以及其位置是：</span>
+<span class="nu0">0</span> <span class="nu0">1</span>
+<span class="nu0">2</span> <span class="nu0">3</span></pre></div></div>
+<p>这个原理也体现在其它方面，比如纹理图集。当您把所有的素材集中到一张大图上，Starling只需提交一次纹理，而不同的显示对象，可以通过UV坐标控制，取得纹理的某一个区域作为自己的纹理。所以Starling优化的一个重要原则就是：尽量使用纹理图集和子纹理。
+</p>
+<h3> <span class="mw-headline" id="MovieClip.E7.B1.BB">MovieClip类</span></h3>
+<p>MovieClip类是从Image类继承而来。您可以认为，MovieClip就是具备多个纹理的Image。当Image根据帧频不断改变自己的纹理显示，就形成了动画。这些纹理是存储在一个数组中，根据数组的长度，和设定的FPS（Starling的MovieClip可以有自己的FPS，默认是12），MovieClip会计算总共有多少帧，播放总时长，每一帧的播放时长和起始时间。
+</p><p>您可以通过addFrame()和addFrameAt()两个方法来动态的添加帧（其实就是在数组中再添加一个纹理）。Starling还增加了一个易用的参数：sound，这样如果在某一帧需要一个声音，就可以指定这个参数。
+</p><p>和传统Flash的电影剪辑类似，Starling的MovieClip也提供了控制方式：play(), pause() , stop()。但注意这些方法，只是标记一下内部变量，MovieClip是由Juggler来驱动的，您必须把它添加到Juggler里面它才能播放。注意MovieClip也定义了advanceTime()方法，这个方法会被谁调用？没错，Juggler会调用它。在这个方法里面，MovieClip根据传入的时间差，和当前的播放帧，找到离预定时间最近的那个帧（因为允许自定义FPS，也就可能会跳帧播放），标记好当前帧mCurrentFrame，并根据当前帧设定好当前纹理之后，就等待render()方法被调用了。渲染的过程同Image一致。
+</p><p>注意，和Flash传统的电影剪辑不同，Starling的MovieClip不是容器，所以不能添加和管理子级显示对象。
+</p>
+<h3> <span class="mw-headline" id="Sprite.E7.B1.BB">Sprite类</span></h3>
+<p>同传统Flash的Sprite类似，在Starling体系中，Sprite也是一个轻量级的容器。用法也很类似，不再多说，您要注意的是Sprite定义了flatten()和unflatten()这两个方法，对于显示列表关系复杂，但是不需要一直更新的容器，这两个方法可以帮助您降低性能消耗。
+</p>
+<h3> <span class="mw-headline" id="TextField.E7.B1.BB">TextField类</span></h3>
+<p>TextField是Starling中处理文本显示的类。虽然这个类也是显示对象，不过被放置在了starling.text包下。为了内部使用方便，Starling的TextField继承了DisplayObjectContainer，而不是DisplayObject。但建议您还是把它当做DisplayObject来用，不要用它来做容器哦。
+</p><p>因为Stage3D还不具备处理矢量文本的能力，所以Starling采取了“曲线救国”的策略，用一个传统Flash的TextField来渲染文本，但显示的不是传统Flash文本，而是由截取的图片获取而来的纹理，再用Image显示纹理。下面的代码展示了这个过程：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw2">var</span> bitmapData:BitmapData = <span class="kw2">new</span> BitmapData<span class="br0">&#40;</span><span class="kw3">width</span>, <span class="kw3">height</span>, <span class="kw2">true</span>, 0x0<span class="br0">&#41;</span>;
+bitmapData.<span class="me1">draw</span><span class="br0">&#40;</span>sNativeTextField, <span class="kw2">new</span> Matrix<span class="br0">&#40;</span><span class="nu0">1</span>, <span class="nu0">0</span>, <span class="nu0">0</span>, <span class="nu0">1</span>, <span class="nu0">0</span>, <span class="kw3">int</span><span class="br0">&#40;</span>yOffset<span class="br0">&#41;</span>-<span class="nu0">2</span><span class="br0">&#41;</span><span class="br0">&#41;</span>;
+sNativeTextField.<span class="kw3">text</span> = <span class="st0">&quot;&quot;</span>;
+<span class="kw2">var</span> texture:Texture = Texture.<span class="me1">fromBitmapData</span><span class="br0">&#40;</span>bitmapData, <span class="kw2">false</span>, <span class="kw2">false</span>, scale<span class="br0">&#41;</span>;
+<span class="co1">//</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span>mImage == <span class="kw2">null</span><span class="br0">&#41;</span> 
+ <span class="br0">&#123;</span>
+       mImage = <span class="kw2">new</span> Image<span class="br0">&#40;</span>texture<span class="br0">&#41;</span>;
+       mImage.<span class="me1">touchable</span> = <span class="kw2">false</span>;
+       addChild<span class="br0">&#40;</span>mImage<span class="br0">&#41;</span>;
+<span class="br0">&#125;</span></pre></div></div>
+<p>因为使用Flash本身的文本，所以传统TextField所具备的特性，在这里都可以支持。使用位图字体的情况，参见Starling中文站的资料，这里不再探讨。
+</p>
+<h3> <span class="mw-headline" id=".E8.87.AA.E5.AE.9A.E4.B9.89.E6.98.BE.E7.A4.BA.E5.AF.B9.E8.B1.A1">自定义显示对象</span></h3>
+<p>了解Starling显示对象的基本结构后，如果需要，您就可以创建自己的显示对象类。还记得getBounds()和render()这两个方法吧，没错，您基本需要做的就是实现这两个方法。
+</p><p>在Starling WIKI中有一个例子，我添加一些注释，展示在这里，您可以拷贝代码查看运行的效果：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">package test
+<span class="br0">&#123;</span>
+	<span class="kw3">import</span> com.<span class="me1">adobe</span>.<span class="me1">utils</span>.<span class="me1">AGALMiniAssembler</span>;
+&#160;
+	<span class="kw3">import</span> flash.<span class="me1">display3D</span>.<span class="sy0">*</span>;
+	<span class="kw3">import</span> flash.<span class="me1">geom</span>.<span class="sy0">*</span>;
+&#160;
+	<span class="kw3">import</span> starling.<span class="me1">core</span>.<span class="me1">RenderSupport</span>;
+	<span class="kw3">import</span> starling.<span class="me1">core</span>.<span class="me1">Starling</span>;
+	<span class="kw3">import</span> starling.<span class="me1">display</span>.<span class="me1">DisplayObject</span>;
+	<span class="kw3">import</span> starling.<span class="me1">errors</span>.<span class="me1">MissingContextError</span>;
+	<span class="kw3">import</span> starling.<span class="me1">events</span>.<span class="me1">Event</span>;
+	<span class="kw3">import</span> starling.<span class="me1">utils</span>.<span class="me1">VertexData</span>;
+&#160;
+	<span class="coMULTI">/** 这个一个自定义的显示对象类，效果是多边形，您可以指定边数 */</span>
+	<span class="kw3">public</span> <span class="kw2">class</span> Polygon <span class="kw3">extends</span> DisplayObject
+	<span class="br0">&#123;</span>
+		<span class="co1">//注册到Starling的渲染这种图形所需的Program3D实例名称</span>
+		<span class="kw3">private</span> <span class="kw3">static</span> <span class="kw2">var</span> PROGRAM_NAME:<span class="kw3">String</span> = <span class="st0">&quot;polygon&quot;</span>;
+&#160;
+		<span class="coMULTI">/**半径*/</span>
+		<span class="kw3">private</span> <span class="kw2">var</span> mRadius:<span class="kw3">Number</span>;
+		<span class="coMULTI">/**边数*/</span>
+		<span class="kw3">private</span> <span class="kw2">var</span> mNumEdges:<span class="kw3">int</span>;
+		<span class="coMULTI">/**图形颜色*/</span>
+		<span class="kw3">private</span> <span class="kw2">var</span> mColor:uint;
+&#160;
+		<span class="coMULTI">/**顶点数据*/</span>
+		<span class="kw3">private</span> <span class="kw2">var</span> mVertexData:VertexData;
+		<span class="kw3">private</span> <span class="kw2">var</span> mVertexBuffer:VertexBuffer3D;
+&#160;
+		<span class="coMULTI">/**索引数据*/</span>
+		<span class="kw3">private</span> <span class="kw2">var</span> mIndexData:Vector.<span class="sy0">&lt;</span>uint<span class="sy0">&gt;</span>;
+		<span class="kw3">private</span> <span class="kw2">var</span> mIndexBuffer:IndexBuffer3D;
+&#160;
+		<span class="co1">//下面这两个最终传入AGAL由显卡运算，相当于常量</span>
+		<span class="coMULTI">/**用于坐标系转换的矩阵*/</span>
+		<span class="kw3">private</span> <span class="kw3">static</span> <span class="kw2">var</span> sHelperMatrix:Matrix = <span class="kw2">new</span> Matrix<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+		<span class="coMULTI">/**存储透明度的矢量数组*/</span>
+		<span class="kw3">private</span> <span class="kw3">static</span> <span class="kw2">var</span> sRenderAlpha:Vector.<span class="sy0">&lt;</span>Number<span class="sy0">&gt;</span> = <span class="kw2">new</span> <span class="sy0">&lt;</span>Number<span class="sy0">&gt;</span><span class="br0">&#91;</span><span class="nu0">1.0</span>, <span class="nu0">1.0</span>, <span class="nu0">1.0</span>, <span class="nu0">1.0</span><span class="br0">&#93;</span>;
+&#160;
+		<span class="coMULTI">/**构造方法，传入半径，边数，和颜色 */</span>
+		<span class="kw3">public</span> <span class="kw2">function</span> Polygon<span class="br0">&#40;</span>radius:<span class="kw3">Number</span>, numEdges:<span class="kw3">int</span>=<span class="nu0">6</span>, <span class="kw3">color</span>:uint=0xffffff<span class="br0">&#41;</span>
+		<span class="br0">&#123;</span>
+			<span class="co1">//至少是三角形</span>
+			<span class="kw1">if</span> <span class="br0">&#40;</span>numEdges <span class="sy0">&lt;</span> <span class="nu0">3</span><span class="br0">&#41;</span> <span class="kw3">throw</span> <span class="kw2">new</span> ArgumentError<span class="br0">&#40;</span><span class="st0">&quot;Invalid number of edges&quot;</span><span class="br0">&#41;</span>;
+			reset<span class="br0">&#40;</span>radius,numEdges,<span class="kw3">color</span><span class="br0">&#41;</span>;
+			<span class="co1">//防止设备丢失</span>
+			Starling.<span class="me1">current</span>.<span class="me1">addEventListener</span><span class="br0">&#40;</span>Event.<span class="me1">CONTEXT3D_CREATE</span>, onContextCreated<span class="br0">&#41;</span>;
+		<span class="br0">&#125;</span>
+		<span class="coMULTI">/**重置*/</span>
+		<span class="kw3">public</span> <span class="kw2">function</span> reset<span class="br0">&#40;</span>radius:<span class="kw3">Number</span>, numEdges:<span class="kw3">int</span>=<span class="nu0">6</span>, <span class="kw3">color</span>:uint=0xffffff<span class="br0">&#41;</span>:<span class="kw3">void</span>
+		<span class="br0">&#123;</span>
+			mRadius = radius;
+			mNumEdges = numEdges;
+			mColor = <span class="kw3">color</span>;
+			<span class="co1">//设置顶点和着色器</span>
+			setupVertices<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+			createBuffers<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+			registerPrograms<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+		<span class="br0">&#125;</span>
+		<span class="coMULTI">/**销毁自己*/</span>
+		<span class="kw3">public</span> override <span class="kw2">function</span> dispose<span class="br0">&#40;</span><span class="br0">&#41;</span>:<span class="kw3">void</span>
+		<span class="br0">&#123;</span>
+			Starling.<span class="me1">current</span>.<span class="me1">removeEventListener</span><span class="br0">&#40;</span>Event.<span class="me1">CONTEXT3D_CREATE</span>, onContextCreated<span class="br0">&#41;</span>;
+			<span class="kw1">if</span> <span class="br0">&#40;</span>mVertexBuffer<span class="br0">&#41;</span> mVertexBuffer.<span class="me1">dispose</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+			<span class="kw1">if</span> <span class="br0">&#40;</span>mIndexBuffer<span class="br0">&#41;</span>  mIndexBuffer.<span class="me1">dispose</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+			<span class="kw3">super</span>.<span class="me1">dispose</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+		<span class="br0">&#125;</span>
+		<span class="coMULTI">/**设备丢失后的重建*/</span>
+		<span class="kw3">private</span> <span class="kw2">function</span> onContextCreated<span class="br0">&#40;</span>event:Event<span class="br0">&#41;</span>:<span class="kw3">void</span>
+		<span class="br0">&#123;</span>
+			<span class="co1">// 设备丢失后，我们必须创建新的缓冲区和着色器</span>
+			createBuffers<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+			registerPrograms<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+		<span class="br0">&#125;</span>
+&#160;
+		<span class="coMULTI">/** 返回一个矩形，代表显示区域 */</span>
+		<span class="kw3">public</span> override <span class="kw2">function</span> <span class="kw3">getBounds</span><span class="br0">&#40;</span>targetSpace:DisplayObject, resultRect:Rectangle=<span class="kw2">null</span><span class="br0">&#41;</span>:Rectangle
+		<span class="br0">&#123;</span>
+			<span class="kw1">if</span> <span class="br0">&#40;</span>resultRect == <span class="kw2">null</span><span class="br0">&#41;</span> resultRect = <span class="kw2">new</span> Rectangle<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+			<span class="kw2">var</span> transformationMatrix:Matrix = targetSpace == <span class="kw3">this</span>&#160;? 
+				<span class="kw2">null</span>&#160;: getTransformationMatrix<span class="br0">&#40;</span>targetSpace, sHelperMatrix<span class="br0">&#41;</span>;
+			<span class="kw1">return</span> mVertexData.<span class="kw3">getBounds</span><span class="br0">&#40;</span>transformationMatrix, <span class="nu0">0</span>, -<span class="nu0">1</span>, resultRect<span class="br0">&#41;</span>;
+		<span class="br0">&#125;</span>
+&#160;
+		<span class="coMULTI">/**创建必须的顶点和索引数据，上传给GPU. */</span> 
+		<span class="kw3">private</span> <span class="kw2">function</span> setupVertices<span class="br0">&#40;</span><span class="br0">&#41;</span>:<span class="kw3">void</span>
+		<span class="br0">&#123;</span>
+			<span class="kw2">var</span> i:<span class="kw3">int</span>;
+			<span class="co1">// 创建顶点</span>
+			mVertexData = <span class="kw2">new</span> VertexData<span class="br0">&#40;</span>mNumEdges+<span class="nu0">1</span><span class="br0">&#41;</span>;
+			mVertexData.<span class="me1">setUniformColor</span><span class="br0">&#40;</span>mColor<span class="br0">&#41;</span>;
+			<span class="kw1">for</span> <span class="br0">&#40;</span>i=<span class="nu0">0</span>; i<span class="sy0">&lt;</span>mNumEdges; ++i<span class="br0">&#41;</span>
+			<span class="br0">&#123;</span>
+				<span class="co1">//通过笛卡尔坐标系，得到多边形所需的顶点</span>
+				<span class="kw2">var</span> edge:Point = Point.<span class="me1">polar</span><span class="br0">&#40;</span>mRadius, i<span class="sy0">*</span><span class="nu0">2</span><span class="sy0">*</span><span class="kw3">Math</span>.<span class="kw3">PI</span> <span class="sy0">/</span> mNumEdges<span class="br0">&#41;</span>;
+				mVertexData.<span class="me1">setPosition</span><span class="br0">&#40;</span>i, edge.<span class="me1">x</span>, edge.<span class="me1">y</span><span class="br0">&#41;</span>;
+			<span class="br0">&#125;</span>
+			mVertexData.<span class="me1">setPosition</span><span class="br0">&#40;</span>mNumEdges, <span class="nu0">0.0</span>, <span class="nu0">0.0</span><span class="br0">&#41;</span>; <span class="co1">// 中心顶点</span>
+			<span class="co1">//创建索引来定义三角形</span>
+			mIndexData = <span class="kw2">new</span> <span class="sy0">&lt;</span>uint<span class="sy0">&gt;</span><span class="br0">&#91;</span><span class="br0">&#93;</span>;
+			<span class="kw1">for</span> <span class="br0">&#40;</span>i=<span class="nu0">0</span>; i<span class="sy0">&lt;</span>mNumEdges; ++i<span class="br0">&#41;</span>
+				mIndexData.<span class="kw3">push</span><span class="br0">&#40;</span>mNumEdges, i, <span class="br0">&#40;</span>i+<span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">%</span>mNumEdges<span class="br0">&#41;</span>;
+		<span class="br0">&#125;</span>
+&#160;
+		<span class="coMULTI">/**创建新的顶点和索引缓冲区，并且上传我们的顶点和索引数据到这些缓冲区*/</span>
+		<span class="kw3">private</span> <span class="kw2">function</span> createBuffers<span class="br0">&#40;</span><span class="br0">&#41;</span>:<span class="kw3">void</span>
+		<span class="br0">&#123;</span>
+			<span class="kw2">var</span> context:Context3D = Starling.<span class="me1">context</span>;
+			<span class="kw1">if</span> <span class="br0">&#40;</span>context == <span class="kw2">null</span><span class="br0">&#41;</span> <span class="kw3">throw</span> <span class="kw2">new</span> MissingContextError<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+			<span class="kw1">if</span> <span class="br0">&#40;</span>mVertexBuffer<span class="br0">&#41;</span> mVertexBuffer.<span class="me1">dispose</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+			<span class="kw1">if</span> <span class="br0">&#40;</span>mIndexBuffer<span class="br0">&#41;</span>  mIndexBuffer.<span class="me1">dispose</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+			<span class="co1">//创建顶点缓冲区</span>
+			mVertexBuffer = context.<span class="me1">createVertexBuffer</span><span class="br0">&#40;</span>mVertexData.<span class="me1">numVertices</span>, VertexData.<span class="me1">ELEMENTS_PER_VERTEX</span><span class="br0">&#41;</span>;
+			mVertexBuffer.<span class="me1">uploadFromVector</span><span class="br0">&#40;</span>mVertexData.<span class="me1">rawData</span>, <span class="nu0">0</span>, mVertexData.<span class="me1">numVertices</span><span class="br0">&#41;</span>;
+			<span class="co1">//创建索引缓冲区</span>
+			mIndexBuffer = context.<span class="me1">createIndexBuffer</span><span class="br0">&#40;</span>mIndexData.<span class="kw3">length</span><span class="br0">&#41;</span>;
+			mIndexBuffer.<span class="me1">uploadFromVector</span><span class="br0">&#40;</span>mIndexData, <span class="nu0">0</span>, mIndexData.<span class="kw3">length</span><span class="br0">&#41;</span>;
+		<span class="br0">&#125;</span>
+&#160;
+		<span class="coMULTI">/** 渲染过程 */</span>
+		<span class="kw3">public</span> override <span class="kw2">function</span> render<span class="br0">&#40;</span>support:RenderSupport, alpha:<span class="kw3">Number</span><span class="br0">&#41;</span>:<span class="kw3">void</span>
+		<span class="br0">&#123;</span>
+			<span class="co1">//自定义的显示对象，因为具备不同的状态，所以需要单独建立一个批次来处理</span>
+			support.<span class="me1">finishQuadBatch</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+			<span class="co1">//最后一项决定图形的透明度</span>
+			sRenderAlpha<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span> = sRenderAlpha<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span> = sRenderAlpha<span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span> = <span class="nu0">1.0</span>;
+			sRenderAlpha<span class="br0">&#91;</span><span class="nu0">3</span><span class="br0">&#93;</span> = alpha <span class="sy0">*</span> <span class="kw3">this</span>.<span class="me1">alpha</span>;
+			<span class="co1">//判断上下文是否存在</span>
+			<span class="kw2">var</span> context:Context3D = Starling.<span class="me1">context</span>;
+			<span class="kw1">if</span> <span class="br0">&#40;</span>context == <span class="kw2">null</span><span class="br0">&#41;</span> <span class="kw3">throw</span> <span class="kw2">new</span> MissingContextError<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+			<span class="co1">//应用当前混合模式</span>
+			support.<span class="me1">applyBlendMode</span><span class="br0">&#40;</span><span class="kw2">false</span><span class="br0">&#41;</span>;
+			<span class="co1">//激活着色器，设置所需的缓冲区和常量</span>
+			context.<span class="me1">setProgram</span><span class="br0">&#40;</span>Starling.<span class="me1">current</span>.<span class="me1">getProgram</span><span class="br0">&#40;</span>PROGRAM_NAME<span class="br0">&#41;</span><span class="br0">&#41;</span>;
+			context.<span class="me1">setVertexBufferAt</span><span class="br0">&#40;</span><span class="nu0">0</span>, mVertexBuffer, VertexData.<span class="me1">POSITION_OFFSET</span>, Context3DVertexBufferFormat.<span class="me1">FLOAT_2</span><span class="br0">&#41;</span>; 
+			context.<span class="me1">setVertexBufferAt</span><span class="br0">&#40;</span><span class="nu0">1</span>, mVertexBuffer, VertexData.<span class="me1">COLOR_OFFSET</span>,    Context3DVertexBufferFormat.<span class="me1">FLOAT_4</span><span class="br0">&#41;</span>;
+			context.<span class="me1">setProgramConstantsFromMatrix</span><span class="br0">&#40;</span>Context3DProgramType.<span class="me1">VERTEX</span>, <span class="nu0">0</span>, support.<span class="me1">mvpMatrix3D</span>, <span class="kw2">true</span><span class="br0">&#41;</span>;            
+			context.<span class="me1">setProgramConstantsFromVector</span><span class="br0">&#40;</span>Context3DProgramType.<span class="me1">VERTEX</span>, <span class="nu0">4</span>, sRenderAlpha, <span class="nu0">1</span><span class="br0">&#41;</span>;
+			<span class="co1">//绘制三角形</span>
+			context.<span class="me1">drawTriangles</span><span class="br0">&#40;</span>mIndexBuffer, <span class="nu0">0</span>, mNumEdges<span class="br0">&#41;</span>;
+			<span class="co1">//重置缓冲区</span>
+			context.<span class="me1">setVertexBufferAt</span><span class="br0">&#40;</span><span class="nu0">0</span>, <span class="kw2">null</span><span class="br0">&#41;</span>;
+			context.<span class="me1">setVertexBufferAt</span><span class="br0">&#40;</span><span class="nu0">1</span>, <span class="kw2">null</span><span class="br0">&#41;</span>;
+		<span class="br0">&#125;</span>
+&#160;
+		<span class="coMULTI">/** 用AGAL创建顶点着色器和片段着色器 */</span>
+		<span class="kw3">private</span> <span class="kw3">static</span> <span class="kw2">function</span> registerPrograms<span class="br0">&#40;</span><span class="br0">&#41;</span>:<span class="kw3">void</span>
+		<span class="br0">&#123;</span>
+			<span class="kw2">var</span> <span class="kw3">target</span>:Starling = Starling.<span class="me1">current</span>;
+			<span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw3">target</span>.<span class="me1">hasProgram</span><span class="br0">&#40;</span>PROGRAM_NAME<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="kw1">return</span>; <span class="co1">//着色器如果已经有了就不需要再注册了，防止浪费</span>
+			<span class="co1">// va0 -&gt; 顶点的位置</span>
+			<span class="co1">// va1 -&gt; 顶点颜色</span>
+			<span class="co1">// vc0 -&gt; mvpMatrix (4 vectors, vc0 - vc3)</span>
+			<span class="co1">// vc4 -&gt; 透明度</span>
+			<span class="kw2">var</span> vertexProgramCode:<span class="kw3">String</span> =
+				<span class="st0">&quot;m44 op, va0, vc0 <span class="es0">\n</span>&quot;</span> + <span class="co1">// 4x4的矩阵运算，结果存储到op中</span>
+				<span class="st0">&quot;mul v0, va1, vc4 <span class="es0">\n</span>&quot;</span>;  <span class="co1">// 将颜色和透明度相乘，传递给片段着色器</span>
+			<span class="kw2">var</span> fragmentProgramCode:<span class="kw3">String</span> =
+				<span class="st0">&quot;mov oc, v0&quot;</span>;           <span class="co1">// v0移动到片段着色器中</span>
+			<span class="co1">//顶点着色器</span>
+			<span class="kw2">var</span> vertexProgramAssembler:AGALMiniAssembler = <span class="kw2">new</span> AGALMiniAssembler<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+			vertexProgramAssembler.<span class="me1">assemble</span><span class="br0">&#40;</span>Context3DProgramType.<span class="me1">VERTEX</span>, vertexProgramCode<span class="br0">&#41;</span>;
+			<span class="co1">//片段着色器</span>
+			<span class="kw2">var</span> fragmentProgramAssembler:AGALMiniAssembler = <span class="kw2">new</span> AGALMiniAssembler<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+			fragmentProgramAssembler.<span class="me1">assemble</span><span class="br0">&#40;</span>Context3DProgramType.<span class="me1">FRAGMENT</span>, fragmentProgramCode<span class="br0">&#41;</span>;
+			<span class="co1">//注册这个着色器</span>
+			<span class="kw3">target</span>.<span class="me1">registerProgram</span><span class="br0">&#40;</span>PROGRAM_NAME, vertexProgramAssembler.<span class="me1">agalcode</span>,
+				fragmentProgramAssembler.<span class="me1">agalcode</span><span class="br0">&#41;</span>;
+		<span class="br0">&#125;</span>
+&#160;
+		<span class="coMULTI">/** 半径 */</span>
+		<span class="kw3">public</span> <span class="kw2">function</span> <span class="kw3">get</span> radius<span class="br0">&#40;</span><span class="br0">&#41;</span>:<span class="kw3">Number</span> <span class="br0">&#123;</span> <span class="kw1">return</span> mRadius; <span class="br0">&#125;</span>
+		<span class="kw3">public</span> <span class="kw2">function</span> <span class="kw3">set</span> radius<span class="br0">&#40;</span>value:<span class="kw3">Number</span><span class="br0">&#41;</span>:<span class="kw3">void</span> <span class="br0">&#123;</span> mRadius = value; setupVertices<span class="br0">&#40;</span><span class="br0">&#41;</span>; <span class="br0">&#125;</span>
+&#160;
+		<span class="coMULTI">/** 边数 */</span>
+		<span class="kw3">public</span> <span class="kw2">function</span> <span class="kw3">get</span> numEdges<span class="br0">&#40;</span><span class="br0">&#41;</span>:<span class="kw3">int</span> <span class="br0">&#123;</span> <span class="kw1">return</span> mNumEdges; <span class="br0">&#125;</span>
+		<span class="kw3">public</span> <span class="kw2">function</span> <span class="kw3">set</span> numEdges<span class="br0">&#40;</span>value:<span class="kw3">int</span><span class="br0">&#41;</span>:<span class="kw3">void</span> <span class="br0">&#123;</span> mNumEdges = value; setupVertices<span class="br0">&#40;</span><span class="br0">&#41;</span>; <span class="br0">&#125;</span>
+&#160;
+		<span class="coMULTI">/** 颜色 */</span>
+		<span class="kw3">public</span> <span class="kw2">function</span> <span class="kw3">get</span> <span class="kw3">color</span><span class="br0">&#40;</span><span class="br0">&#41;</span>:uint <span class="br0">&#123;</span> <span class="kw1">return</span> mColor; <span class="br0">&#125;</span>
+		<span class="kw3">public</span> <span class="kw2">function</span> <span class="kw3">set</span> <span class="kw3">color</span><span class="br0">&#40;</span>value:uint<span class="br0">&#41;</span>:<span class="kw3">void</span> <span class="br0">&#123;</span> mColor = value; setupVertices<span class="br0">&#40;</span><span class="br0">&#41;</span>; <span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div>
+<h3> <span class="mw-headline" id=".E8.87.AA.E5.AE.9A.E4.B9.89.E5.8A.A8.E7.94.BB.E7.B1.BB">自定义动画类</span></h3>
+<p>您可以像MovieClip那样，自己创建一个实现IAnimation接口的动画类，然后交给Juggler来驱动。我在上面那个多边形类的基础上稍加改进，加入动画功能：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">package test
+<span class="br0">&#123;</span>
+	<span class="kw3">import</span> starling.<span class="me1">animation</span>.<span class="me1">IAnimatable</span>;
+&#160;
+	<span class="coMULTI">/**简单动画类的例子，实现多边形动画切换*/</span>
+	<span class="kw3">public</span> <span class="kw2">class</span> PolygonMovie <span class="kw3">extends</span> Polygon <span class="kw3">implements</span> IAnimatable
+	<span class="br0">&#123;</span>
+		<span class="kw3">public</span> <span class="kw2">function</span> PolygonMovie<span class="br0">&#40;</span>radius:<span class="kw3">Number</span>, numEdges:<span class="kw3">int</span>=<span class="nu0">6</span>, <span class="kw3">color</span>:uint=0xffffff<span class="br0">&#41;</span>
+		<span class="br0">&#123;</span>
+			<span class="kw3">super</span><span class="br0">&#40;</span>radius, numEdges, <span class="kw3">color</span><span class="br0">&#41;</span>;
+		<span class="br0">&#125;</span>
+		<span class="coMULTI">/**时间驱动*/</span>
+		<span class="kw3">public</span> <span class="kw2">function</span> advanceTime<span class="br0">&#40;</span><span class="kw3">time</span>:<span class="kw3">Number</span><span class="br0">&#41;</span>:<span class="kw3">void</span>
+		<span class="br0">&#123;</span>
+			reset<span class="br0">&#40;</span>radius+<span class="nu0">1</span>,numEdges+<span class="nu0">1</span>,<span class="kw3">color</span><span class="br0">&#41;</span>;
+			<span class="kw1">if</span><span class="br0">&#40;</span>numEdges<span class="sy0">&gt;</span><span class="nu0">100</span><span class="br0">&#41;</span>
+			<span class="br0">&#123;</span>
+				numEdges = <span class="nu0">3</span>;
+				radius = <span class="nu0">60</span>;
+			<span class="br0">&#125;</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div>
+<p>用法，别忘了添加到Juggler里面：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw2">var</span> polygon:PolygonMovie = <span class="kw2">new</span> PolygonMovie<span class="br0">&#40;</span><span class="nu0">50</span>, <span class="nu0">6</span>, <span class="kw3">Color</span>.<span class="me1">RED</span><span class="br0">&#41;</span>;
+polygon.<span class="me1">x</span> = <span class="nu0">300</span>;
+polygon.<span class="me1">y</span> = <span class="nu0">300</span>;
+addChild<span class="br0">&#40;</span>polygon<span class="br0">&#41;</span>;
+Starling.<span class="me1">juggler</span>.<span class="kw3">add</span><span class="br0">&#40;</span>polygon<span class="br0">&#41;</span>;</pre></div></div>
+<p>运行这段代码，您会看到边数越来越多，半径越来越大的图形，逐渐变成了圆，然后回归。
+</p>
+<hr />
+<h2> <span class="mw-headline" id=".E5.8A.A8.E7.94.BB.E5.A4.84.E7.90.86">动画处理</span></h2>
+<p>coming soon...
+</p>
+<hr />
+<p>作者: <a rel="nofollow" class="external text" href="http://www.weibo.com/guoshaorui">郭少瑞</a>
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 223/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key app_starlinglib-wiki:pcache:idhash:145-0!*!*!!zh-cn!2!* and timestamp 20140629050655 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				来自“<a href="http://www.starlinglib.com/index.php?title=Core:StarlingCode&amp;oldid=666">http://www.starlinglib.com/index.php?title=Core:StarlingCode&amp;oldid=666</a>”				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>个人工具</h5>
+	<ul>
+		<li id="pt-login"><a href="http://www.starlinglib.com/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&amp;returnto=Core%3AStarlingCode" title="我们希望您可以登入，但不强求 [o]" accesskey="o">登录</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>名字空间</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Core_StarlingCode.html"  title="查看内容页面 [c]" accesskey="c">页面</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://www.starlinglib.com/index.php?title=%E8%AE%A8%E8%AE%BA:Core:StarlingCode&amp;action=edit&amp;redlink=1"  title="关于内容页面的讨论 [t]" accesskey="t">讨论</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>变换</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>查看</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Core_StarlingCode.html" >阅读</a></span></li>
+					<li id="ca-viewsource"><span><a href="http://www.starlinglib.com/index.php?title=Core:StarlingCode&amp;action=edit"  title="本页面已被保护。你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://www.starlinglib.com/index.php?title=Core:StarlingCode&amp;action=history"  title="本页面的早前修订版本 [h]" accesskey="h">查看历史</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>操作</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">搜索</label></h5>
+	<form action="http://www.starlinglib.com/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="在Starling中文站中搜索 [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="提交" title="如果相同的标题存在的话便直接前往该页面" id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="搜索" title="搜索含这些文字的页面" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="特殊:搜索"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../skins/common/images/wiki.png);" href="index.html"  title="访问首页"></a></div>
+				<!-- /logo -->
+				
+<!-- navigation -->
+<div class="portal" id='p-navigation'>
+	<h5>导航</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="index.html" title="访问首页 [z]" accesskey="z">首页</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /navigation -->
+
+<!-- Starling中文资料 -->
+<div class="portal" id='p-Starling.E4.B8.AD.E6.96.87.E8.B5.84.E6.96.99'>
+	<h5>Starling中文资料</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E6.9C.80.E6.96.B0.E5.8A.A8.E6.80.81"><a href="News.html">Starling最新动态</a></li>
+			<li id="n-.E4.B8.8B.E8.BD.BD"><a href="download.html">下载</a></li>
+			<li id="n-.E5.85.A5.E9.97.A8.E7.AC.AC.E4.B8.80.E6.AD.A5"><a href="FristStep.html">入门第一步</a></li>
+			<li id="n-API.E6.8E.A5.E5.8F.A3.E6.96.87.E6.A1.A3"><a href="APIReference.html">API接口文档</a></li>
+			<li id="n-Starling.E8.AF.B4.E6.98.8E.E4.B9.A6"><a href="StarlingManual.html">Starling说明书</a></li>
+			<li id="n-FeathersUI.E6.96.87.E6.A1.A3"><a href="FeathersUI.html">FeathersUI文档</a></li>
+			<li id="n-.E6.95.99.E7.A8.8B.E5.92.8C.E4.BB.A3.E7.A0.81"><a href="Tutorials.html">教程和代码</a></li>
+			<li id="n-Starling.E6.89.A9.E5.B1.95"><a href="Extensions.html">Starling扩展</a></li>
+			<li id="n-.E6.88.90.E5.8A.9F.E6.A1.88.E4.BE.8B"><a href="GamesPowered.html">成功案例</a></li>
+			<li id="n-.E7.AB.99.E5.A4.96.E8.B5.84.E6.96.99"><a href="OutsideDocs.html">站外资料</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Starling中文资料 -->
+
+<!-- Starling原创教程 -->
+<div class="portal" id='p-Starling.E5.8E.9F.E5.88.9B.E6.95.99.E7.A8.8B'>
+	<h5>Starling原创教程</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E7.A7.BB.E5.8A.A8.E5.BC.80.E5.8F.91.E6.95.99.E7.A8.8B"><a href="StarlingMobile.html">Starling移动开发教程</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Starling原创教程 -->
+
+<!-- 微信-Flash微报 -->
+
+
+<!-- /微信-Flash微报 -->
+
+<!-- 论坛 -->
+<div class="portal" id='p-.E8.AE.BA.E5.9D.9B'>
+	<h5>论坛</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E4.B8.AD.E6.96.87.E8.AE.BA.E5.9D.9B"><a href="http://bbs.egret-labs.org/?fromuid=62" rel="nofollow">Egret开发者论坛</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /论坛 -->
+
+<!-- 友链 -->
+<div class="portal" id='p-.E5.8F.8B.E9.93.BE'>
+	<h5>友链</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Sirius2d.E5.BC.95.E6.93.8E"><a href="http://www.sirius2d.com/" rel="nofollow">Sirius2d引擎</a></li>
+			<li id="n-A.E9.97.AA.E7.BD.91"><a href="http://www.ashan.org/" rel="nofollow">A闪网</a></li>
+			<li id="n-Y.Boy"><a href="http://www.riaoo.com/" rel="nofollow">Y.Boy</a></li>
+			<li id="n-Cenfee"><a href="http://cenfee.com/" rel="nofollow">Cenfee</a></li>
+			<li id="n-.E5.B0.8F.E5.A4.9C-Clifford"><a href="http://www.cnblogs.com/flash3d/" rel="nofollow">小夜 Clifford</a></li>
+			<li id="n-.E6.9D.9C.E5.A2.9E.E5.BC.BA.28DzQ.29"><a href="http://www.duzengqiang.com/" rel="nofollow">杜增强(DzQ)</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /友链 -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>工具箱</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="%e7%89%b9%e6%ae%8a_%e9%93%be%e5%85%a5%e9%a1%b5%e9%9d%a2/Core_StarlingCode.html" title="所有链入本页的wiki页面列表 [j]" accesskey="j">链入页面</a></li>
+			<li id="t-recentchangeslinked"><a href="%e7%89%b9%e6%ae%8a_%e9%93%be%e5%87%ba%e6%9b%b4%e6%94%b9/Core_StarlingCode.html" title="本页链入的页面的最近更改 [k]" accesskey="k">链出更改</a></li>
+			<li id="t-specialpages"><a href="%e7%89%b9%e6%ae%8a_%e7%89%b9%e6%ae%8a%e9%a1%b5%e9%9d%a2.html" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+			<li><a href="http://www.starlinglib.com/index.php?title=Core:StarlingCode&amp;printable=yes" rel="alternate">可打印版</a></li>
+			<li id="t-permalink"><a href="http://www.starlinglib.com/index.php?title=Core:StarlingCode&amp;oldid=666" title="本页面该修订版本的永久链接">永久链接</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> 本页面最后修订于2012年11月9日 (星期五) 09:42。</li>
+											<li id="footer-info-viewcount">此页面已被浏览过19,976次。</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="Starling_yinsi.html" title="Starling中文站:隐私权政策">隐私权政策</a></li>
+											<li id="footer-places-about"><a href="StarlingCnAbout.html" title="Starling中文站:关于">关于Starling中文站</a></li>
+											<li id="footer-places-disclaimer"><a href="StarlingCNCopyRight.html" title="Starling中文站:免责声明">免责声明</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31520647-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+		<!-- /footer -->
+		
+<!-- Served in 0.772 secs. -->
+	</body>
+
+<!-- Mirrored from www.starlinglib.com/wiki/Core:StarlingCode by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jun 2014 07:16:36 GMT -->
+</html>

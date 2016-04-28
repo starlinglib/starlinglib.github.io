@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from www.starlinglib.com/wiki/Tutorials:基本碰撞检测 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jun 2014 07:24:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Tutorials:基本碰撞检测 - Starling中文站</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.0" />
+<link rel="shortcut icon" href="http://www.starlinglib.com/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.starlinglib.com/opensearch_desc.php" title="Starling中文站 (zh-cn)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://www.starlinglib.com/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="Starling中文站的Atom" href="http://www.starlinglib.com/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&amp;feed=atom" />
+<link rel="stylesheet" href="../skins/style.css" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: app_starlinglib-wiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Tutorials:基本碰撞检测","wgTitle":"Tutorials:基本碰撞检测","wgCurRevisionId":59,"wgArticleId":54,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"zh-cn","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Tutorials:基本碰撞检测","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false}});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"zh-cn","language":"zh-cn","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;},{},{});mw.loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: app_starlinglib-wiki:resourceloader:filter:minify-js:7:64bb9911c781603a64782510a7dfd931 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-actionscript {line-height: normal;}
+.source-actionscript li, .source-actionscript pre {
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for actionscript
+ * CSS class: source-actionscript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.actionscript.source-actionscript .de1, .actionscript.source-actionscript .de2 {font: normal normal 1em/1.2em monospace; margin:10px 0; padding:10px; background:none; vertical-align:top;}
+.actionscript.source-actionscript  {font-family:monospace;}
+.actionscript.source-actionscript .imp {font-weight: bold; color: red;}
+.actionscript.source-actionscript li, .actionscript.source-actionscript .li1 {font-weight: normal; vertical-align:top;}
+.actionscript.source-actionscript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.actionscript.source-actionscript .li2 {font-weight: bold; vertical-align:top;}
+.actionscript.source-actionscript .kw1 {color: #b1b100;}
+.actionscript.source-actionscript .kw2 {color: #000000; font-weight: bold;}
+.actionscript.source-actionscript .kw3 {color: #0066CC;}
+.actionscript.source-actionscript .co1 {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .co2 {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .coMULTI {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .es0 {color: #000099; font-weight: bold;}
+.actionscript.source-actionscript .br0 {color: #66cc66;}
+.actionscript.source-actionscript .sy0 {color: #66cc66;}
+.actionscript.source-actionscript .st0 {color: #ff0000;}
+.actionscript.source-actionscript .nu0 {color: #cc66cc;}
+.actionscript.source-actionscript .me1 {color: #006600;}
+.actionscript.source-actionscript .ln-xtra, .actionscript.source-actionscript li.ln-xtra, .actionscript.source-actionscript div.ln-xtra {background-color: #ffc;}
+.actionscript.source-actionscript span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "http://www.starlinglib.com/index.php?title=MediaWiki:Geshi.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+/*]]>*/
+</style><!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Tutorials_基本碰撞检测 skin-vector action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Tutorials:基本碰撞检测</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">来自Starling中文站</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					跳转到： <a href="#mw-head">导航</a>,
+					<a href="#p-search">搜索</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="zh-CN" dir="ltr" class="mw-content-ltr"><p><a rel="nofollow" class="external free" href="http://wiki.starling-framework.org/tutorials/basic_collision_detection">http://wiki.starling-framework.org/tutorials/basic_collision_detection</a>
+</p><p>碰撞检测几乎是所有游戏中的一个基本的部分。遗憾的是，它也耗费大量CUP资源，从而导致游戏不稳定以及减短电池寿命。为
+</p><p>了降低计算量，它更趋向于尽可能的回避碰撞检测编码。慢慢地，精炼复杂检测有助于做这些。用Starling，我们推荐一种3步
+</p><p>式方法来实现碰撞检测。
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>目录</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.E7.90.83.E4.BD.93.E8.BE.B9.E7.BC.98.E6.A3.80.E6.B5.8B"><span class="tocnumber">1</span> <span class="toctext">球体边缘检测</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#.E8.BE.B9.E7.BC.98.E7.9B.92.E6.A3.80.E6.B5.8B"><span class="tocnumber">2</span> <span class="toctext">边缘盒检测</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#.E8.87.AA.E5.AE.9A.E4.B9.89.E7.82.B9.E6.A3.80.E6.B5.8B"><span class="tocnumber">3</span> <span class="toctext">自定义点检测</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#.E7.BB.93.E5.B0.BE"><span class="tocnumber">4</span> <span class="toctext">结尾</span></a></li>
+</ul>
+</td></tr></table>
+<h3> <span class="mw-headline" id=".E7.90.83.E4.BD.93.E8.BE.B9.E7.BC.98.E6.A3.80.E6.B5.8B">球体边缘检测</span></h3>
+<p>从物件的边缘球体的碰撞检测开始吧。（那就是另一种要讲的方法：检测物件间的距离。）如果你设定的物件的起点大致在中心
+</p><p>上，那么这种方法对你来说是有帮助的。让我们来举个例子：你想检测2个太空飞船图像的物件。你可以建立一个“Ship”类：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw3">public</span> <span class="kw2">class</span> Ship <span class="kw3">extends</span> Sprite
+<span class="br0">&#123;</span>
+    <span class="kw3">public</span> <span class="kw2">function</span> Ship<span class="br0">&#40;</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="kw2">var</span> img:Image = <span class="kw2">new</span> Image<span class="br0">&#40;</span>Assets.<span class="me1">getTexture</span><span class="br0">&#40;</span><span class="st0">&quot;spaceship&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>;
+        img.<span class="me1">x</span> = -img.<span class="kw3">width</span>  <span class="sy0">/</span> <span class="nu0">2</span>;
+        img.<span class="me1">y</span> = -img.<span class="kw3">height</span> <span class="sy0">/</span> <span class="nu0">2</span>;
+        addChild<span class="br0">&#40;</span>img<span class="br0">&#41;</span>;
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div>
+<p>这最重要的是，我们得把图像移动到Sprite的中心。如果你现在旋转太空飞船，那么它就会以它的中心旋转-或许，不管怎么说
+</p><p>，那就是你想要的。
+</p><p><a href="%e6%96%87%e4%bb%b6_Collision-bounding-circle-check.html" class="image"><img alt="Collision-bounding-circle-check.png" src="../images/6/6a/Collision-bounding-circle-check.png" width="228" height="206" /></a>
+</p><p>图像显示红色边缘球体和2个太空飞船的中心距离。现在，如果要检测他们是否碰撞，我们需要检测他们离的有多远：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw2">var</span> p1:Point = <span class="kw2">new</span> Point<span class="br0">&#40;</span>ship1.<span class="me1">x</span>, ship1.<span class="me1">y</span><span class="br0">&#41;</span>;
+<span class="kw2">var</span> p2:Point = <span class="kw2">new</span> Point<span class="br0">&#40;</span>ship2.<span class="me1">x</span>, ship2.<span class="me1">y</span><span class="br0">&#41;</span>;
+&#160;
+<span class="kw2">var</span> distance:<span class="kw3">Number</span> = Point.<span class="me1">distance</span><span class="br0">&#40;</span>p1, p2<span class="br0">&#41;</span>;
+<span class="kw2">var</span> radius1:<span class="kw3">Number</span> = ship1.<span class="kw3">width</span> <span class="sy0">/</span> <span class="nu0">2</span>;
+<span class="kw2">var</span> radius2:<span class="kw3">Number</span> = ship2.<span class="kw3">width</span> <span class="sy0">/</span> <span class="nu0">2</span>;
+&#160;
+<span class="kw1">if</span> <span class="br0">&#40;</span>distance <span class="sy0">&lt;</span> radius1 + radius2<span class="br0">&#41;</span>
+  <span class="kw3">trace</span><span class="br0">&#40;</span><span class="st0">&quot;Collision!&quot;</span><span class="br0">&#41;</span></pre></div></div>
+<p>那就是边缘球体测试-是不是很容易呢？在图像中，你可以看到边缘球体略大于太空飞船，所以这个检测还不够精确。假如边缘
+</p><p>球体测试导致了一个碰撞，我们可以精简这个检测并移到下一个更为精确的检测。
+</p>
+<h3> <span class="mw-headline" id=".E8.BE.B9.E7.BC.98.E7.9B.92.E6.A3.80.E6.B5.8B">边缘盒检测</span></h3>
+<p>为了测试，你画一个环绕你的物件的矩形图像（而不是圆）：一个足够大的所有内容都定位进去的矩形。
+</p><p><br />
+再者，我们看看我们的太空飞船：如果他们都是相同坐标系的部分，边框盒检测就超级容易：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw2">var</span> bounds1:Rectangle = image1.<span class="me1">bounds</span>;
+<span class="kw2">var</span> bounds2:Rectangle = image2.<span class="me1">bounds</span>;
+&#160;
+<span class="kw1">if</span> <span class="br0">&#40;</span>bounds1.<span class="me1">intersects</span><span class="br0">&#40;</span>bounds2<span class="br0">&#41;</span><span class="br0">&#41;</span>
+   <span class="kw3">trace</span><span class="br0">&#40;</span><span class="sy0">@</span><span class="st0">&quot;Collision!&quot;</span><span class="br0">&#41;</span>;</pre></div></div>
+<p>bounds属性支持所有显示对象-包括Sprites。它计算一个包含所有子元素的边框。同时，物件并非在同一个坐标系下（可能他们
+</p><p>是不同的sprites）。幸运地是，你可以根据需要在这个坐标系中获取这个边框盒：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw2">var</span> bounds:Rectangle = someObject.<span class="kw3">getBounds</span><span class="br0">&#40;</span><span class="kw3">this</span><span class="br0">&#41;</span>;</pre></div></div>
+<p>记住，所有的边框盒都是直立的矩形。一个矩形对象并无旋转属性！因此，如果你有一个旋转的图像，这个边缘矩形会在旋转期
+</p><p>间发生改变如此以致这个图像适应进去。
+因此，这个方法可能仍然无法足够精确；但是它可以满足很多需要。并且如果它没有足够精确，你可以推进到一个更精确的碰撞
+</p><p>检测。
+</p>
+<h3> <span class="mw-headline" id=".E8.87.AA.E5.AE.9A.E4.B9.89.E7.82.B9.E6.A3.80.E6.B5.8B">自定义点检测</span></h3>
+<p>为了检测不同形状的物件，你可以对一个物件特定点的碰撞测试（例如在矩形中的拐角）。Rectangle类有这个containsPoint方
+</p><p>法就是这个精确的原因
+</p><p><a href="%e6%96%87%e4%bb%b6_Collision-point-check.html" class="image"><img alt="Collision-point-check.png" src="../images/a/aa/Collision-point-check.png" width="187" height="158" /></a>
+自定义点检测可以使它尽可能用很不规则的形状来测试。然而，这个测试也是CPU最敏感的一个方法，所以尽可能回避这个方法
+</p><p>。
+</p><p><br />
+</p>
+<h3> <span class="mw-headline" id=".E7.BB.93.E5.B0.BE">结尾</span></h3>
+<p>最后，这些是以粗略开始，然后循序渐进。尽早退出碰撞检测，以保持你远离CPU非必须的任务烦恼。这不仅仅每帧节约大量时
+</p><p>间，而且还节约了宝贵的电池寿命。Happy 碰撞!
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 51/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key app_starlinglib-wiki:pcache:idhash:54-0!*!*!!zh-cn!2!* and timestamp 20140628111719 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				来自“<a href="http://www.starlinglib.com/index.php?title=Tutorials:%E5%9F%BA%E6%9C%AC%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B&amp;oldid=59">http://www.starlinglib.com/index.php?title=Tutorials:%E5%9F%BA%E6%9C%AC%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B&amp;oldid=59</a>”				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>个人工具</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="%e7%94%a8%e6%88%b7_101.23.136.html" class="new" title="您编辑本站所用IP的对应用户页 [.]" accesskey=".">101.23.136.29</a></li>
+		<li id="pt-anontalk"><a href="%e7%94%a8%e6%88%b7%e8%ae%a8%e8%ae%ba_101.23.136.html" class="new" title="对于来自此IP地址的编辑的对话 [n]" accesskey="n">该IP地址的讨论</a></li>
+		<li id="pt-anonlogin"><a href="http://www.starlinglib.com/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&amp;returnto=Tutorials%3A%E5%9F%BA%E6%9C%AC%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B" title="我们鼓励您登录，但这并不是必须的 [o]" accesskey="o">登录</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>名字空间</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Tutorials_hit_test.html"  title="查看内容页面 [c]" accesskey="c">页面</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://www.starlinglib.com/index.php?title=%E8%AE%A8%E8%AE%BA:Tutorials:%E5%9F%BA%E6%9C%AC%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B&amp;action=edit&amp;redlink=1"  title="关于内容页面的讨论 [t]" accesskey="t">讨论</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>变换</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>查看</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Tutorials_hit_test.html" >阅读</a></span></li>
+					<li id="ca-viewsource"><span><a href="http://www.starlinglib.com/index.php?title=Tutorials:%E5%9F%BA%E6%9C%AC%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B&amp;action=edit"  title="本页面已被保护。你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://www.starlinglib.com/index.php?title=Tutorials:%E5%9F%BA%E6%9C%AC%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B&amp;action=history"  title="本页面的早前修订版本 [h]" accesskey="h">查看历史</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>操作</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">搜索</label></h5>
+	<form action="http://www.starlinglib.com/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="在Starling中文站中搜索 [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="提交" title="如果相同的标题存在的话便直接前往该页面" id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="搜索" title="搜索含这些文字的页面" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="特殊:搜索"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../skins/common/images/wiki.png);" href="index.html"  title="访问首页"></a></div>
+				<!-- /logo -->
+				
+<!-- navigation -->
+<div class="portal" id='p-navigation'>
+	<h5>导航</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="index.html" title="访问首页 [z]" accesskey="z">首页</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /navigation -->
+
+<!-- Starling中文资料 -->
+<div class="portal" id='p-Starling.E4.B8.AD.E6.96.87.E8.B5.84.E6.96.99'>
+	<h5>Starling中文资料</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E6.9C.80.E6.96.B0.E5.8A.A8.E6.80.81"><a href="News.html">Starling最新动态</a></li>
+			<li id="n-.E4.B8.8B.E8.BD.BD"><a href="download.html">下载</a></li>
+			<li id="n-.E5.85.A5.E9.97.A8.E7.AC.AC.E4.B8.80.E6.AD.A5"><a href="FristStep.html">入门第一步</a></li>
+			<li id="n-API.E6.8E.A5.E5.8F.A3.E6.96.87.E6.A1.A3"><a href="APIReference.html">API接口文档</a></li>
+			<li id="n-Starling.E8.AF.B4.E6.98.8E.E4.B9.A6"><a href="StarlingManual.html">Starling说明书</a></li>
+			<li id="n-FeathersUI.E6.96.87.E6.A1.A3"><a href="FeathersUI.html">FeathersUI文档</a></li>
+			<li id="n-.E6.95.99.E7.A8.8B.E5.92.8C.E4.BB.A3.E7.A0.81"><a href="Tutorials.html">教程和代码</a></li>
+			<li id="n-Starling.E6.89.A9.E5.B1.95"><a href="Extensions.html">Starling扩展</a></li>
+			<li id="n-.E6.88.90.E5.8A.9F.E6.A1.88.E4.BE.8B"><a href="GamesPowered.html">成功案例</a></li>
+			<li id="n-.E7.AB.99.E5.A4.96.E8.B5.84.E6.96.99"><a href="OutsideDocs.html">站外资料</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Starling中文资料 -->
+
+<!-- Starling原创教程 -->
+<div class="portal" id='p-Starling.E5.8E.9F.E5.88.9B.E6.95.99.E7.A8.8B'>
+	<h5>Starling原创教程</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E7.A7.BB.E5.8A.A8.E5.BC.80.E5.8F.91.E6.95.99.E7.A8.8B"><a href="StarlingMobile.html">Starling移动开发教程</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Starling原创教程 -->
+
+<!-- 微信-Flash微报 -->
+
+
+<!-- /微信-Flash微报 -->
+
+<!-- 论坛 -->
+<div class="portal" id='p-.E8.AE.BA.E5.9D.9B'>
+	<h5>论坛</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E4.B8.AD.E6.96.87.E8.AE.BA.E5.9D.9B"><a href="http://bbs.egret-labs.org/?fromuid=62" rel="nofollow">Egret开发者论坛</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /论坛 -->
+
+<!-- 友链 -->
+<div class="portal" id='p-.E5.8F.8B.E9.93.BE'>
+	<h5>友链</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Sirius2d.E5.BC.95.E6.93.8E"><a href="http://www.sirius2d.com/" rel="nofollow">Sirius2d引擎</a></li>
+			<li id="n-A.E9.97.AA.E7.BD.91"><a href="http://www.ashan.org/" rel="nofollow">A闪网</a></li>
+			<li id="n-Y.Boy"><a href="http://www.riaoo.com/" rel="nofollow">Y.Boy</a></li>
+			<li id="n-Cenfee"><a href="http://cenfee.com/" rel="nofollow">Cenfee</a></li>
+			<li id="n-.E5.B0.8F.E5.A4.9C-Clifford"><a href="http://www.cnblogs.com/flash3d/" rel="nofollow">小夜 Clifford</a></li>
+			<li id="n-.E6.9D.9C.E5.A2.9E.E5.BC.BA.28DzQ.29"><a href="http://www.duzengqiang.com/" rel="nofollow">杜增强(DzQ)</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /友链 -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>工具箱</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="%e7%89%b9%e6%ae%8a_%e9%93%be%e5%85%a5%e9%a1%b5%e9%9d%a2/Tutorials_hit_test.html" title="所有链入本页的wiki页面列表 [j]" accesskey="j">链入页面</a></li>
+			<li id="t-recentchangeslinked"><a href="%e7%89%b9%e6%ae%8a_%e9%93%be%e5%87%ba%e6%9b%b4%e6%94%b9/Tutorials_hit_test.html" title="本页链入的页面的最近更改 [k]" accesskey="k">链出更改</a></li>
+			<li id="t-specialpages"><a href="%e7%89%b9%e6%ae%8a_%e7%89%b9%e6%ae%8a%e9%a1%b5%e9%9d%a2.html" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+			<li><a href="http://www.starlinglib.com/index.php?title=Tutorials:%E5%9F%BA%E6%9C%AC%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B&amp;printable=yes" rel="alternate">可打印版</a></li>
+			<li id="t-permalink"><a href="http://www.starlinglib.com/index.php?title=Tutorials:%E5%9F%BA%E6%9C%AC%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B&amp;oldid=59" title="本页面该修订版本的永久链接">永久链接</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> 本页面最后修订于2012年5月8日 (星期二) 11:58。</li>
+											<li id="footer-info-viewcount">此页面已被浏览过3,775次。</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="Starling_yinsi.html" title="Starling中文站:隐私权政策">隐私权政策</a></li>
+											<li id="footer-places-about"><a href="StarlingCnAbout.html" title="Starling中文站:关于">关于Starling中文站</a></li>
+											<li id="footer-places-disclaimer"><a href="StarlingCNCopyRight.html" title="Starling中文站:免责声明">免责声明</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31520647-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+		<!-- /footer -->
+		
+<!-- Served in 0.763 secs. -->
+	</body>
+
+<!-- Mirrored from www.starlinglib.com/wiki/Tutorials:基本碰撞检测 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jun 2014 07:24:06 GMT -->
+</html>

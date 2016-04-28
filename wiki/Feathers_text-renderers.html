@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from www.starlinglib.com/wiki/Feathers:text-renderers by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jun 2014 07:22:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Feathers:text-renderers - Starling中文站</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.0" />
+<link rel="shortcut icon" href="http://www.starlinglib.com/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.starlinglib.com/opensearch_desc.php" title="Starling中文站 (zh-cn)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://www.starlinglib.com/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="Starling中文站的Atom" href="http://www.starlinglib.com/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&amp;feed=atom" />
+<link rel="stylesheet" href="../skins/style.css" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: app_starlinglib-wiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Feathers:text-renderers","wgTitle":"Feathers:text-renderers","wgCurRevisionId":1217,"wgArticleId":170,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"zh-cn","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Feathers:text-renderers","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false}});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"zh-cn","language":"zh-cn","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;},{},{});mw.loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: app_starlinglib-wiki:resourceloader:filter:minify-js:7:64bb9911c781603a64782510a7dfd931 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-actionscript {line-height: normal;}
+.source-actionscript li, .source-actionscript pre {
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for actionscript
+ * CSS class: source-actionscript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.actionscript.source-actionscript .de1, .actionscript.source-actionscript .de2 {font: normal normal 1em/1.2em monospace; margin:10px 0; padding:10px; background:none; vertical-align:top;}
+.actionscript.source-actionscript  {font-family:monospace;}
+.actionscript.source-actionscript .imp {font-weight: bold; color: red;}
+.actionscript.source-actionscript li, .actionscript.source-actionscript .li1 {font-weight: normal; vertical-align:top;}
+.actionscript.source-actionscript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.actionscript.source-actionscript .li2 {font-weight: bold; vertical-align:top;}
+.actionscript.source-actionscript .kw1 {color: #b1b100;}
+.actionscript.source-actionscript .kw2 {color: #000000; font-weight: bold;}
+.actionscript.source-actionscript .kw3 {color: #0066CC;}
+.actionscript.source-actionscript .co1 {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .co2 {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .coMULTI {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .es0 {color: #000099; font-weight: bold;}
+.actionscript.source-actionscript .br0 {color: #66cc66;}
+.actionscript.source-actionscript .sy0 {color: #66cc66;}
+.actionscript.source-actionscript .st0 {color: #ff0000;}
+.actionscript.source-actionscript .nu0 {color: #cc66cc;}
+.actionscript.source-actionscript .me1 {color: #006600;}
+.actionscript.source-actionscript .ln-xtra, .actionscript.source-actionscript li.ln-xtra, .actionscript.source-actionscript div.ln-xtra {background-color: #ffc;}
+.actionscript.source-actionscript span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "http://www.starlinglib.com/index.php?title=MediaWiki:Geshi.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+/*]]>*/
+</style><!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Feathers_text-renderers skin-vector action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Feathers:text-renderers</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">来自Starling中文站</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					跳转到： <a href="#mw-head">导航</a>,
+					<a href="#p-search">搜索</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="zh-CN" dir="ltr" class="mw-content-ltr"><p>原文地址：<a rel="nofollow" class="external free" href="http://wiki.starling-framework.org/feathers/text-renderers">http://wiki.starling-framework.org/feathers/text-renderers</a>
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>目录</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Feathers.E6.96.87.E6.9C.AC.E6.B8.B2.E6.9F.93.E5.99.A8.E7.AE.80.E4.BB.8B"><span class="tocnumber">1</span> <span class="toctext">Feathers文本渲染器简介</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#.E9.BB.98.E8.AE.A4.E7.9A.84.E6.96.87.E6.9C.AC.E6.B8.B2.E6.9F.93.E5.99.A8"><span class="tocnumber">2</span> <span class="toctext">默认的文本渲染器</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Label.EF.BC.88.E6.A0.87.E7.AD.BE.EF.BC.89.E7.BB.84.E4.BB.B6"><span class="tocnumber">3</span> <span class="toctext">Label（标签）组件</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#.E6.A0.B7.E5.BC.8F.E6.96.87.E6.9C.AC.EF.BC.9A.E4.BD.8D.E5.9B.BE.E5.AD.97.E4.BD.93"><span class="tocnumber">4</span> <span class="toctext">样式文本：位图字体</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#.E6.A0.B7.E5.BC.8F.E6.96.87.E6.9C.AC.EF.BC.9A.E8.AE.BE.E5.A4.87.E5.92.8C.E5.B5.8C.E5.85.A5.E5.AD.97.E4.BD.93"><span class="tocnumber">5</span> <span class="toctext">样式文本：设备和嵌入字体</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#.E5.8F.A6.E4.B8.80.E7.A7.8D.E9.80.89.E6.8B.A9.EF.BC.9A.E6.BB.9A.E5.8A.A8.E6.96.87.E5.AD.97"><span class="tocnumber">6</span> <span class="toctext">另一种选择：滚动文字</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#.E8.87.AA.E5.AE.9A.E4.B9.89.E6.96.87.E6.9C.AC.E6.B8.B2.E6.9F.93.E5.99.A8"><span class="tocnumber">7</span> <span class="toctext">自定义文本渲染器</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#.E7.9B.B8.E5.85.B3.E9.93.BE.E6.8E.A5"><span class="tocnumber">8</span> <span class="toctext">相关链接</span></a></li>
+</ul>
+</td></tr></table>
+<h6> <span class="mw-headline" id="Feathers.E6.96.87.E6.9C.AC.E6.B8.B2.E6.9F.93.E5.99.A8.E7.AE.80.E4.BB.8B"> Feathers文本渲染器简介 </span></h6>
+<p>默认情况下，Feathers的文本是使用 <a href="http://www.starlinglib.com/index.php?title=Feathers:manual:displaying_text&amp;action=edit&amp;redlink=1" class="new" title="Feathers:manual:displaying text（尚未撰写）">bitmap fonts</a> 呈现的。位图字体非常适合用于游戏中字数较少的文字展示，如经常出现在游戏屏幕边缘的数值（如得分，弹药，生命值等）或按钮上的短标签和其它UI控件。它们没有大量的文字或大量的语言字符需求。位图文本可以缩放，但因为它是基于位图，建议只缩小不放大（避免模糊）。常见的做法是不同大小的字体使用不同大小的纹理，但会多占用很多空间。
+</p><p>Feathers还支持基于矢量设备字体和嵌入字体的显示。这种类型的文本是使用FlashPlayer的内置 <i><a rel="nofollow" class="external text" href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/text/TextField.html">flash.text.TextField</a></i> 类，它被转换成一个Starling显示列表中的图像纹理。转换这种字体文字是比较慢的，因为需要先上传一个新的纹理到GPU，然后每个字符才可以简单地重用现有的子位图字体纹理。此外，每个独立的GPU渲染都需要有自己独立的纹理，这意味着更多的 <a href="http://www.starlinglib.com/index.php?title=Manual:performance_optimization&amp;action=edit&amp;redlink=1" class="new" title="Manual:performance optimization（尚未撰写）">state changes</a> （状态变化）。然而，矢量字体提供了最大的灵活性，如涉及到显示多种字体大小且字体质量不会随字体大小的改变而变差，并且它们对文件系统的空间需求较少。最后补充，如果某些语言有太多的字符，设备字体是唯一可能的选择。
+</p>
+<h5> <span class="mw-headline" id=".E9.BB.98.E8.AE.A4.E7.9A.84.E6.96.87.E6.9C.AC.E6.B8.B2.E6.9F.93.E5.99.A8"> 默认的文本渲染器 </span></h5>
+<p>有两种方法可以选择Feathers的文本渲染器。默认情况下，所有的文本渲染器是通过调用该函数创建的 <i><a rel="nofollow" class="external text" href="http://feathersui.com/documentation/feathers/core/FeathersControl.html#defaultTextRendererFactory">FeathersControl.defaultTextRendererFactory()</a></i> 。  <a href="Feathers_button.html" title="Feathers:button">button's</a> 按钮的文本,  <a href="Feathers_header.html" title="Feathers:header">header's</a> 标题的文本, 和 <a href="Feathers_toggle-switch.html" title="Feathers:toggle-switch">toggle switch's</a> 切换开关上的 on 和 off 的文本等这些地方，如果不指定一个自定义的文本渲染器，都会使用默认的文本渲染器。
+默认的实现 <i>FeathersControl.defaultTextRendererFactory()</i> 创建一个 <i><a rel="nofollow" class="external text" href="http://feathersui.com/documentation/feathers/controls/text/BitmapFontTextRenderer.html">BitmapFontTextRenderer</a></i>, 它看起来像这样：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw2">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span>:ITextRenderer
+<span class="br0">&#123;</span>
+    <span class="kw1">return</span> <span class="kw2">new</span> BitmapFontTextRenderer<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+<span class="br0">&#125;</span></pre></div></div>
+<p>如果您希望使用设备字体或嵌入的字体，你可能要将此代码添加到您的应用程序，而不是使用 <i><a rel="nofollow" class="external text" href="http://feathersui.com/documentation/feathers/controls/text/TextFieldTextRenderer.html">TextFieldTextRenderer</a></i> ：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">FeathersControl.<span class="me1">defaultTextRendererFactory</span> = <span class="kw2">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span>:ITextRenderer
+<span class="br0">&#123;</span>
+    <span class="kw1">return</span> <span class="kw2">new</span> TextFieldTextRenderer<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+<span class="br0">&#125;</span>;</pre></div></div>
+<h5> <span class="mw-headline" id="Label.EF.BC.88.E6.A0.87.E7.AD.BE.EF.BC.89.E7.BB.84.E4.BB.B6"> Label（标签）组件 </span></h5>
+<pre><a href="Feathers_label.html" title="Feathers:label">Label</a>（标签）组件始终使用默认的文本渲染。主题将为<i>Label</i>（标签）匹配相应的文本格式，但如果你直接将它实例化，你需要手动的设定<i>TextFieldTextRenderer</i>或<i>BitmapFontTextRenderer</i>在一般情况下，如果你需要一个组件来显示文字，你应该选择<i>Label</i>（标签）。
+</pre>
+<p><i>Label</i>（标签）类对外公开一个属性称为 <i>textRendererProperties</i> 。您可以用它来给文本渲染器传递属性，例如启用自动换行或其他功能。有关<i>Label</i>（标签）的完整详细信息，请参阅 <a href="http://www.starlinglib.com/index.php?title=Label&amp;action=edit&amp;redlink=1" class="new" title="Label（尚未撰写）">How to use the Feathers Label component</a> 。
+</p>
+<h5> <span class="mw-headline" id=".E6.A0.B7.E5.BC.8F.E6.96.87.E6.9C.AC.EF.BC.9A.E4.BD.8D.E5.9B.BE.E5.AD.97.E4.BD.93"> 样式文本：位图字体 </span></h5>
+<p><i>BitmapFontTextRenderer</i> 通过调用一个类 <i>[<a rel="nofollow" class="external autonumber" href="http://feathersui.com/documentation/feathers/text/BitmapFontTextFormat.html%7CBitmapFontTextFormat">[1]</a>]</i> 来设置文本样式，包括注册的 <i>BitmapFont</i> 的字体名称(或任何 <i>BitmapFont</i> 的实例，不管它是否已被注册），字体的大小，文本的颜色（使用starling的着色功能），还有文本的对齐方式。您还可以禁用默认的字距调整，如果你想要调整字母间距。
+</p><p>要使用<i>wordWrap</i>（自动换行），将wordWrap设置为 <i>true</i> 并且给 <i>BitmapFontTextRenderer</i>（或者<i>Label</i>）设置一个<i>width</i>或<i>maxWidth</i>值。您还可以添加使用手动换行符<i>\n</i>。
+</p>
+<h5> <span class="mw-headline" id=".E6.A0.B7.E5.BC.8F.E6.96.87.E6.9C.AC.EF.BC.9A.E8.AE.BE.E5.A4.87.E5.92.8C.E5.B5.8C.E5.85.A5.E5.AD.97.E4.BD.93"> 样式文本：设备和嵌入字体 </span></h5>
+<p>由于 <i>TextFieldTextRenderer</i> 使用本地 <i>flash.text.TextField</i> ，它将使用本机 <i><a rel="nofollow" class="external text" href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/text/TextFormat.html">flash.text.TextFormat</a></i> 用于文本的样式。
+</p><p>默认情况下，<i>TextFieldTextRenderer</i> 将用 <i>TextFieldAutoSize.LEFT</i> 来确定其默认尺寸。要启用自动换行，需设置一个 <i>width</i> 值并且设置 <i>wordWrap</i> 为 <i>true</i> 。
+</p><p>要使用嵌入字体，不要忘了把 <i>embedFonts</i> 设置为 <i>true</i> 。
+</p>
+<h5> <span class="mw-headline" id=".E5.8F.A6.E4.B8.80.E7.A7.8D.E9.80.89.E6.8B.A9.EF.BC.9A.E6.BB.9A.E5.8A.A8.E6.96.87.E5.AD.97"> 另一种选择：滚动文字 </span></h5>
+<p>有时候，很长的文本可能太大，因为 <i>TextFieldTextRenderer</i> 显示的总宽度或高度大于2048x2048的纹理尺寸。在这种情况下，您可能会考虑使用 <i><a href="Feathers_scroll-text.html" title="Feathers:scroll-text">ScrollText</a></i>（滚动文字），这是一个组件，在Starling层之上显示本机的 <i>flash.text.TextField</i> 。此组件不像 <i>TextFieldTextRenderer</i> 那样通过Starling显示列表呈现，但它可以被限制在一个区域里滚动文字。如果其上没有可显示的文字，您不会在应用程序或游戏中看到它。
+</p>
+<h5> <span class="mw-headline" id=".E8.87.AA.E5.AE.9A.E4.B9.89.E6.96.87.E6.9C.AC.E6.B8.B2.E6.9F.93.E5.99.A8"> 自定义文本渲染器 </span></h5>
+<p>如果您想使用Flash文本引擎（FTE），文本布局框架（TLF），或任何其它渲染文本的形式，您可以实现 <i><a rel="nofollow" class="external text" href="http://feathersui.com/documentation/feathers/core/ITextRenderer.html">ITextRenderer</a></i> 接口。除非你自定义的渲染器能够直接绘制GPU ，很有可能你将需要实现某种形式的纹理快照，类似 <i>TextFieldTextRenderer</i> 。由于Starling是开源的，这个类可能是一个全新的文本渲染器的良好起点。
+</p>
+<h5> <span class="mw-headline" id=".E7.9B.B8.E5.85.B3.E9.93.BE.E6.8E.A5"> 相关链接 </span></h5>
+<ul><li> <a rel="nofollow" class="external text" href="http://feathersui.com/documentation/feathers/core/text/ITextRenderer.html">ITextRenderer API Documentation</a>
+</li><li> <a rel="nofollow" class="external text" href="http://feathersui.com/documentation/feathers/controls/text/BitmapFontTextRenderer.html">BitmapFontTextRenderer API Documentation</a>
+</li><li> <a rel="nofollow" class="external text" href="http://feathersui.com/documentation/feathers/controls/text/TextFieldTextRenderer.html">TextFieldTextRenderer API Documentation</a>
+</li><li> <a href="Feathers_label.html" title="Feathers:label">How to use the Feathers Label component</a>
+</li><li> <a href="Feathers_text-editors.html" title="Feathers:text-editors">Introduction to Feathers Text Editors</a>
+</li></ul>
+<p>相关详细的教程，返回<a href="http://www.starlinglib.com/index.php?title=Feathers:start&amp;action=edit&amp;redlink=1" class="new" title="Feathers:start（尚未撰写）">Feathers Documentation</a>。
+</p>
+<hr />
+<p>翻译者：<a rel="nofollow" class="external text" href="http://weibo.com/u/3213558735">周祺浩</a>
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 49/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key app_starlinglib-wiki:pcache:idhash:170-0!*!0!!zh-cn!*!* and timestamp 20140628221257 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				来自“<a href="http://www.starlinglib.com/index.php?title=Feathers:text-renderers&amp;oldid=1217">http://www.starlinglib.com/index.php?title=Feathers:text-renderers&amp;oldid=1217</a>”				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>个人工具</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="%e7%94%a8%e6%88%b7_101.23.136.html" class="new" title="您编辑本站所用IP的对应用户页 [.]" accesskey=".">101.23.136.29</a></li>
+		<li id="pt-anontalk"><a href="%e7%94%a8%e6%88%b7%e8%ae%a8%e8%ae%ba_101.23.136.html" class="new" title="对于来自此IP地址的编辑的对话 [n]" accesskey="n">该IP地址的讨论</a></li>
+		<li id="pt-anonlogin"><a href="http://www.starlinglib.com/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&amp;returnto=Feathers%3Atext-renderers" title="我们鼓励您登录，但这并不是必须的 [o]" accesskey="o">登录</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>名字空间</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Feathers_text-renderers.html"  title="查看内容页面 [c]" accesskey="c">页面</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://www.starlinglib.com/index.php?title=%E8%AE%A8%E8%AE%BA:Feathers:text-renderers&amp;action=edit&amp;redlink=1"  title="关于内容页面的讨论 [t]" accesskey="t">讨论</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>变换</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>查看</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Feathers_text-renderers.html" >阅读</a></span></li>
+					<li id="ca-viewsource"><span><a href="http://www.starlinglib.com/index.php?title=Feathers:text-renderers&amp;action=edit"  title="本页面已被保护。你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://www.starlinglib.com/index.php?title=Feathers:text-renderers&amp;action=history"  title="本页面的早前修订版本 [h]" accesskey="h">查看历史</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>操作</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">搜索</label></h5>
+	<form action="http://www.starlinglib.com/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="在Starling中文站中搜索 [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="提交" title="如果相同的标题存在的话便直接前往该页面" id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="搜索" title="搜索含这些文字的页面" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="特殊:搜索"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../skins/common/images/wiki.png);" href="index.html"  title="访问首页"></a></div>
+				<!-- /logo -->
+				
+<!-- navigation -->
+<div class="portal" id='p-navigation'>
+	<h5>导航</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="index.html" title="访问首页 [z]" accesskey="z">首页</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /navigation -->
+
+<!-- Starling中文资料 -->
+<div class="portal" id='p-Starling.E4.B8.AD.E6.96.87.E8.B5.84.E6.96.99'>
+	<h5>Starling中文资料</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E6.9C.80.E6.96.B0.E5.8A.A8.E6.80.81"><a href="News.html">Starling最新动态</a></li>
+			<li id="n-.E4.B8.8B.E8.BD.BD"><a href="download.html">下载</a></li>
+			<li id="n-.E5.85.A5.E9.97.A8.E7.AC.AC.E4.B8.80.E6.AD.A5"><a href="FristStep.html">入门第一步</a></li>
+			<li id="n-API.E6.8E.A5.E5.8F.A3.E6.96.87.E6.A1.A3"><a href="APIReference.html">API接口文档</a></li>
+			<li id="n-Starling.E8.AF.B4.E6.98.8E.E4.B9.A6"><a href="StarlingManual.html">Starling说明书</a></li>
+			<li id="n-FeathersUI.E6.96.87.E6.A1.A3"><a href="FeathersUI.html">FeathersUI文档</a></li>
+			<li id="n-.E6.95.99.E7.A8.8B.E5.92.8C.E4.BB.A3.E7.A0.81"><a href="Tutorials.html">教程和代码</a></li>
+			<li id="n-Starling.E6.89.A9.E5.B1.95"><a href="Extensions.html">Starling扩展</a></li>
+			<li id="n-.E6.88.90.E5.8A.9F.E6.A1.88.E4.BE.8B"><a href="GamesPowered.html">成功案例</a></li>
+			<li id="n-.E7.AB.99.E5.A4.96.E8.B5.84.E6.96.99"><a href="OutsideDocs.html">站外资料</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Starling中文资料 -->
+
+<!-- Starling原创教程 -->
+<div class="portal" id='p-Starling.E5.8E.9F.E5.88.9B.E6.95.99.E7.A8.8B'>
+	<h5>Starling原创教程</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E7.A7.BB.E5.8A.A8.E5.BC.80.E5.8F.91.E6.95.99.E7.A8.8B"><a href="StarlingMobile.html">Starling移动开发教程</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Starling原创教程 -->
+
+<!-- 微信-Flash微报 -->
+
+
+<!-- /微信-Flash微报 -->
+
+<!-- 论坛 -->
+<div class="portal" id='p-.E8.AE.BA.E5.9D.9B'>
+	<h5>论坛</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E4.B8.AD.E6.96.87.E8.AE.BA.E5.9D.9B"><a href="http://bbs.egret-labs.org/?fromuid=62" rel="nofollow">Egret开发者论坛</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /论坛 -->
+
+<!-- 友链 -->
+<div class="portal" id='p-.E5.8F.8B.E9.93.BE'>
+	<h5>友链</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Sirius2d.E5.BC.95.E6.93.8E"><a href="http://www.sirius2d.com/" rel="nofollow">Sirius2d引擎</a></li>
+			<li id="n-A.E9.97.AA.E7.BD.91"><a href="http://www.ashan.org/" rel="nofollow">A闪网</a></li>
+			<li id="n-Y.Boy"><a href="http://www.riaoo.com/" rel="nofollow">Y.Boy</a></li>
+			<li id="n-Cenfee"><a href="http://cenfee.com/" rel="nofollow">Cenfee</a></li>
+			<li id="n-.E5.B0.8F.E5.A4.9C-Clifford"><a href="http://www.cnblogs.com/flash3d/" rel="nofollow">小夜 Clifford</a></li>
+			<li id="n-.E6.9D.9C.E5.A2.9E.E5.BC.BA.28DzQ.29"><a href="http://www.duzengqiang.com/" rel="nofollow">杜增强(DzQ)</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /友链 -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>工具箱</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="%e7%89%b9%e6%ae%8a_%e9%93%be%e5%85%a5%e9%a1%b5%e9%9d%a2/Feathers_text-renderers.html" title="所有链入本页的wiki页面列表 [j]" accesskey="j">链入页面</a></li>
+			<li id="t-recentchangeslinked"><a href="%e7%89%b9%e6%ae%8a_%e9%93%be%e5%87%ba%e6%9b%b4%e6%94%b9/Feathers_text-renderers.html" title="本页链入的页面的最近更改 [k]" accesskey="k">链出更改</a></li>
+			<li id="t-specialpages"><a href="%e7%89%b9%e6%ae%8a_%e7%89%b9%e6%ae%8a%e9%a1%b5%e9%9d%a2.html" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+			<li><a href="http://www.starlinglib.com/index.php?title=Feathers:text-renderers&amp;printable=yes" rel="alternate">可打印版</a></li>
+			<li id="t-permalink"><a href="http://www.starlinglib.com/index.php?title=Feathers:text-renderers&amp;oldid=1217" title="本页面该修订版本的永久链接">永久链接</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> 本页面最后修订于2013年1月23日 (星期三) 15:36。</li>
+											<li id="footer-info-viewcount">此页面已被浏览过3,762次。</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="Starling_yinsi.html" title="Starling中文站:隐私权政策">隐私权政策</a></li>
+											<li id="footer-places-about"><a href="StarlingCnAbout.html" title="Starling中文站:关于">关于Starling中文站</a></li>
+											<li id="footer-places-disclaimer"><a href="StarlingCNCopyRight.html" title="Starling中文站:免责声明">免责声明</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31520647-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+		<!-- /footer -->
+		
+<!-- Served in 0.680 secs. -->
+	</body>
+
+<!-- Mirrored from www.starlinglib.com/wiki/Feathers:text-renderers by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jun 2014 07:22:50 GMT -->
+</html>

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from www.starlinglib.com/wiki/StarlingManual:多屏幕分辨率的开发 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jun 2014 07:20:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>StarlingManual:多屏幕分辨率的开发 - Starling中文站</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.0" />
+<link rel="shortcut icon" href="http://www.starlinglib.com/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.starlinglib.com/opensearch_desc.php" title="Starling中文站 (zh-cn)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://www.starlinglib.com/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="Starling中文站的Atom" href="http://www.starlinglib.com/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&amp;feed=atom" />
+<link rel="stylesheet" href="../skins/style.css" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: app_starlinglib-wiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"StarlingManual:多屏幕分辨率的开发","wgTitle":"StarlingManual:多屏幕分辨率的开发","wgCurRevisionId":130,"wgArticleId":11,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"zh-cn","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgRelevantPageName":"StarlingManual:多屏幕分辨率的开发","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false}});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"zh-cn","language":"zh-cn","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;},{},{});mw.loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: app_starlinglib-wiki:resourceloader:filter:minify-js:7:64bb9911c781603a64782510a7dfd931 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-actionscript {line-height: normal;}
+.source-actionscript li, .source-actionscript pre {
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for actionscript
+ * CSS class: source-actionscript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.actionscript.source-actionscript .de1, .actionscript.source-actionscript .de2 {font: normal normal 1em/1.2em monospace; margin:10px 0; padding:10px; background:none; vertical-align:top;}
+.actionscript.source-actionscript  {font-family:monospace;}
+.actionscript.source-actionscript .imp {font-weight: bold; color: red;}
+.actionscript.source-actionscript li, .actionscript.source-actionscript .li1 {font-weight: normal; vertical-align:top;}
+.actionscript.source-actionscript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.actionscript.source-actionscript .li2 {font-weight: bold; vertical-align:top;}
+.actionscript.source-actionscript .kw1 {color: #b1b100;}
+.actionscript.source-actionscript .kw2 {color: #000000; font-weight: bold;}
+.actionscript.source-actionscript .kw3 {color: #0066CC;}
+.actionscript.source-actionscript .co1 {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .co2 {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .coMULTI {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .es0 {color: #000099; font-weight: bold;}
+.actionscript.source-actionscript .br0 {color: #66cc66;}
+.actionscript.source-actionscript .sy0 {color: #66cc66;}
+.actionscript.source-actionscript .st0 {color: #ff0000;}
+.actionscript.source-actionscript .nu0 {color: #cc66cc;}
+.actionscript.source-actionscript .me1 {color: #006600;}
+.actionscript.source-actionscript .ln-xtra, .actionscript.source-actionscript li.ln-xtra, .actionscript.source-actionscript div.ln-xtra {background-color: #ffc;}
+.actionscript.source-actionscript span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "http://www.starlinglib.com/index.php?title=MediaWiki:Geshi.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+/*]]>*/
+</style><!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-StarlingManual_多屏幕分辨率的开发 skin-vector action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">StarlingManual:多屏幕分辨率的开发</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">来自Starling中文站</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					跳转到： <a href="#mw-head">导航</a>,
+					<a href="#p-search">搜索</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="zh-CN" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>目录</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.E5.A4.9A.E5.88.86.E8.BE.A8.E7.8E.87.E5.BC.80.E5.8F.91"><span class="tocnumber">1</span> <span class="toctext">多分辨率开发</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#iphone"><span class="tocnumber">2</span> <span class="toctext">iphone</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#iphone_.E8.A7.86.E7.BD.91.E8.86.9C"><span class="tocnumber">3</span> <span class="toctext">iphone 视网膜</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#.E6.94.BE.E5.A4.A7"><span class="tocnumber">3.1</span> <span class="toctext">放大</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#.E9.AB.98.E6.B8.85.E7.BA.B9.E7.90.86"><span class="tocnumber">3.2</span> <span class="toctext">高清纹理</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#.E5.85.B6.E5.AE.83.E6.96.B9.E6.B3.95"><span class="tocnumber">4</span> <span class="toctext">其它方法</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#.E6.96.B9.E6.B3.951_.EF.BC.9A.E6.8B.89.E4.BC.B8.E8.88.9E.E5.8F.B0"><span class="tocnumber">4.1</span> <span class="toctext">方法1 ：拉伸舞台</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#.E6.96.B9.E6.B3.952_.EF.BC.9A.E4.BF.A1.E7.AE.B1"><span class="tocnumber">4.2</span> <span class="toctext">方法2 ：信箱</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#.E6.96.B9.E6.B3.953.EF.BC.9A.E6.99.BA.E8.83.BD.E5.AF.B9.E8.B1.A1.E6.94.BE.E7.BD.AE"><span class="tocnumber">4.3</span> <span class="toctext">方法3：智能对象放置</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="#IOS"><span class="tocnumber">4.3.1</span> <span class="toctext">IOS</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Android"><span class="tocnumber">4.3.2</span> <span class="toctext">Android</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h3> <span class="mw-headline" id=".E5.A4.9A.E5.88.86.E8.BE.A8.E7.8E.87.E5.BC.80.E5.8F.91">多分辨率开发</span></h3>
+<p>当您为浏览器创建一个游戏时，它通常显示为一个更大的网页的一部分，所以您可以以一个固定的分辨率创建它。但是在大多数移动设备上，这么做是不可能的：游戏在移动设备上可能会遇到各种不同的屏幕分辨率，而且还得自适应填满整个屏幕。我们该怎么用Starling创建这样一个游戏呢？
+</p><p>注意：Starling下载包中包含一个用于移动设备的scaffold project(脚手架项目)。它针对Iphone屏幕的分辨率进行了优化（因为这是最流行的游戏平台）（ps：原作者想表达虽然是针对Iphone屏幕进行的优化，但在Ipad和Android上也运行的非常完美。） 
+下面的文章中解释了这个scaffold背后的原理，以及可以使用的替代方法。
+</p>
+<h3> <span class="mw-headline" id="iphone">iphone</span></h3>
+<p>当下iPhone仍然是最流行的休闲游戏移动平台，由于经典版本和视网膜版本的分辨率非常相似，而且它也是最简单的平台开发，所以我们以这个移动平台为起点。
+</p><p>iPhone机型可能有两个显示分辨率：旧型号（截止3GS）使用320×480像素的屏幕，新的“视网膜”显示屏采用640 ×960像素的屏幕，这是旧型号分辨率的两倍。
+</p><p>我们从分辨率低的设备开始下手，您的舞台大小和Starling视口大小相同：320×480。这没什么特别的：其工作原理就如同您给一个预留了固定尺寸游戏窗口的网页制作一个大小相同的游戏一样。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">starling = <span class="kw2">new</span> Starling<span class="br0">&#40;</span>Game, <span class="kw3">stage</span>, <span class="kw2">new</span> Rectangle<span class="br0">&#40;</span><span class="nu0">0</span>, <span class="nu0">0</span>, <span class="nu0">320</span>, <span class="nu0">480</span><span class="br0">&#41;</span><span class="br0">&#41;</span>;</pre></div></div>
+<p>到目前为止一切还很轻松，让我们继续对视网膜屏幕下手。
+</p>
+<h3> <span class="mw-headline" id="iphone_.E8.A7.86.E7.BD.91.E8.86.9C">iphone 视网膜</span></h3>
+<h4> <span class="mw-headline" id=".E6.94.BE.E5.A4.A7">放大</span></h4>
+<p>最简单的解决方案是将游戏调节至全分辨率。这非常简单，只要您记住分别设置Starling的viewPort属性和stageWidth/stageHeight属性。
+</p>
+<ul><li> 视口显示在屏幕的哪个位置，是以像素为单位指定。
+</li></ul>
+<ul><li> 舞台（starling的stage）的大小决定了在该视口中显示的坐标系统的大小。（举个栗子：我用小米，屏幕分辨率是854*480.我设定statling的stage为400*400，那么手机屏幕上显示出来的其实是400*400像素的图像，只不过放大拉伸了，同理我设定starling的stage为1000*1000，虽然小米屏幕只有854*480像素，但它显示的是1000*1000的图像，图像被缩小了。）
+</li></ul>
+<p>了解了这些知识，解决当前“放大”问题是小case：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw2">var</span> screenWidth:<span class="kw3">int</span>  = <span class="kw3">stage</span>.<span class="me1">fullScreenWidth</span>;
+<span class="kw2">var</span> screenHeight:<span class="kw3">int</span> = <span class="kw3">stage</span>.<span class="me1">fullScreenHeight</span>;
+<span class="kw2">var</span> viewPort:Rectangle = <span class="kw2">new</span> Rectangle<span class="br0">&#40;</span><span class="nu0">0</span>, <span class="nu0">0</span>, screenWidth, screenHeight<span class="br0">&#41;</span>
+&#160;
+starling = <span class="kw2">new</span> Starling<span class="br0">&#40;</span>Game, <span class="kw3">stage</span>, viewPort<span class="br0">&#41;</span>;
+starling.<span class="kw3">stage</span>.<span class="me1">stageWidth</span>  = <span class="nu0">320</span>;
+starling.<span class="kw3">stage</span>.<span class="me1">stageHeight</span> = <span class="nu0">480</span>;</pre></div></div>
+<p>请注意，视口是动态的，它的大小始终匹配当前机型屏幕大小，而舞台的大小是硬编码为320×480 。如果您启动您的游戏，现在它看起来就像这样：
+</p><p><a href="%e6%96%87%e4%bb%b6_Penguflip_scale_up.html" class="image"><img alt="Penguflip scale up.png" src="../images/9/93/Penguflip_scale_up.png" width="291" height="272" /></a>
+</p><p>有一点模糊对吧？这是因为我们使用的纹理是低分辨率的。
+</p>
+<h4> <span class="mw-headline" id=".E9.AB.98.E6.B8.85.E7.BA.B9.E7.90.86">高清纹理</span></h4>
+<p>为解决这一问题我们需要提供高分辨率的特殊纹理。根据屏幕的大小，我们将使用低或高清晰度的纹理集。
+</p><p>这里只有一个问题，想想看：更大的纹理，将返回更大的宽度和高度数值。记住，您的舞台宽度只有320（像素点）。 
+</p><p>在这样一个舞台，一个宽度160像素的纹理会填充屏幕的一半。一个相应的高清纹理应该有一个320像素宽度，而高分辨纹理会超出整个舞台。但我们希望高分辨率纹理与低分辨率纹理一样占用相同的空间。
+</p><p>这就是Starling的contentScaleFactor能派上用处的地方。如上所示的设置，trace出Starling的contentScaleFactor 。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw3">trace</span><span class="br0">&#40;</span>starling.<span class="me1">contentScaleFactor</span><span class="br0">&#41;</span>; <span class="co1">// -&gt; 2</span></pre></div></div>
+<p>contentScaleFactor返回视口的宽度除以舞台的宽度。视网膜上的设备它将返回2，非视网膜设备将返回1。
+</p><p>为了使contentScaleFactor真的有用，纹理也应该有一个比例参数，事实上纹理的确有这个参数。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw2">var</span> scale:<span class="kw3">Number</span> = starling.<span class="me1">contentScaleFactor</span>;
+<span class="kw2">var</span> texture:Texture = Texture.<span class="me1">fromBitmap</span><span class="br0">&#40;</span>bmp, <span class="kw2">true</span>, <span class="kw2">false</span>, scale<span class="br0">&#41;</span>;</pre></div></div>
+<p>如果您创建一个像这样带有比例参数的纹理，当您获取宽度或高度时会用到这个参数。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">SD Texture <span class="br0">&#40;</span><span class="kw3">width</span> ⇒ <span class="nu0">320</span> pixels, scale factor ⇒ <span class="nu0">1</span><span class="br0">&#41;</span>: texture.<span class="kw3">width</span> == <span class="nu0">320</span> <span class="br0">&#40;</span><span class="nu0">320</span> <span class="sy0">/</span> <span class="nu0">1</span><span class="br0">&#41;</span>
+HD Texture <span class="br0">&#40;</span><span class="kw3">width</span> ⇒ <span class="nu0">640</span> pixels, scale factor ⇒ <span class="nu0">2</span><span class="br0">&#41;</span>: texture.<span class="kw3">width</span> == <span class="nu0">320</span> <span class="br0">&#40;</span><span class="nu0">640</span> <span class="sy0">/</span> <span class="nu0">2</span><span class="br0">&#41;</span></pre></div></div>
+<p>现在，我们有了我们所需要的所有工具！
+</p>
+<ol><li>使用如上所示的视口和舞台尺寸建立您的游戏。
+</li><li>根据屏幕尺寸加载高分辨率或低分辨率纹理。
+</li><li>给Starling的contentScaleFactor设置纹理的比例参数。
+</li></ol>
+<p>我建议您单独创建一个类来处理您的游戏的素材资源。这个类将记录比例参数，并在您需要的时候返回相应的纹理。（参照scaffold project中的相应类）
+</p><p>就是这样：现在我们有了一个清晰的针对视网膜屏幕的游戏。
+</p><p><a href="%e6%96%87%e4%bb%b6_Penguflip_hd.html" class="image"><img alt="Penguflip hd.png" src="../images/d/da/Penguflip_hd.png" width="291" height="272" /></a>
+</p>
+<h3> <span class="mw-headline" id=".E5.85.B6.E5.AE.83.E6.96.B9.E6.B3.95">其它方法</span></h3>
+<p>总的来说，上述任务很简单是不是？它之所以那么容易，是因为iPhone的视网膜屏幕正好是旧版屏幕分辨率的两倍。（毕竟苹果并不是偶然的选择了这两种分辨率）这似乎开始变得有些麻烦了，当我们试图匹配一个高分辨率设备，但这个设备的分辨率与我们低分辨率版本相除并不是整数。Ipad就是这样一个例子，还有各式各样的android设备。
+</p><p>这里有一些方法可以使用，当您想支持各式各样显示分辨率的时候。此处我们拿ipad来举例，其它设备也同理。
+</p>
+<h4> <span class="mw-headline" id=".E6.96.B9.E6.B3.951_.EF.BC.9A.E6.8B.89.E4.BC.B8.E8.88.9E.E5.8F.B0">方法1 ：拉伸舞台</span></h4>
+<p>事实上，这不是一个方法—其实是个反面教材，请不要用这个方法：它会让您的游戏丑陋不堪。
+</p><p><a href="%e6%96%87%e4%bb%b6_Penguflip_scale_up_ipad_distort.html" class="image"><img alt="Penguflip scale up ipad distort.png" src="../images/d/de/Penguflip_scale_up_ipad_distort.png" width="326" height="288" /></a>
+</p><p>上图展示了如果只是简单的放大游戏而不考虑屏幕尺寸所产生的后果。在iPad上可以明显看到失真，在其他设备上它可以变得更糟。这绝对不是我们想要的！
+</p>
+<h4> <span class="mw-headline" id=".E6.96.B9.E6.B3.952_.EF.BC.9A.E4.BF.A1.E7.AE.B1">方法2 ：信箱</span></h4>
+<p>还有一个简单的解决方案看起来要好得多：把游戏固定在屏幕中心，在游戏的周围添加一个黑框。您需要做的只是修改视口：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">starling = <span class="kw2">new</span> Starling<span class="br0">&#40;</span>Game, <span class="kw3">stage</span>, <span class="kw2">new</span> Rectangle<span class="br0">&#40;</span><span class="nu0">64</span>, <span class="nu0">32</span>, <span class="nu0">640</span>, <span class="nu0">960</span><span class="br0">&#41;</span><span class="br0">&#41;</span>;</pre></div></div>
+<p>这样可以使视口位于iPad屏幕的中心，并赋予它与视网膜iPhone上完全相同的尺寸（像素） 。这就是我们所需要做的，其余的代码保持不变
+使用这个方法，游戏在ipad上的显示如同在iphone上一样清晰和锐利，而且，您将避免任何锯齿问题。但缺点是：您无法使用全屏。
+</p><p><a href="%e6%96%87%e4%bb%b6_Penguflip_scale_up_ipad_bars.html" class="image"><img alt="Penguflip scale up ipad bars.png" src="../images/b/b4/Penguflip_scale_up_ipad_bars.png" width="326" height="288" /></a>
+</p><p>这个方法的另一种解决方案是在避免画面超出屏幕的情况下最大限度扩大视口。
+</p><p>游戏画面稍稍有些模糊，但这是可以接受的。它也可能会造成一些锯齿问题。尽管如此：这可能是最实用的解决方法，它可以让您的游戏以一个可接受的画面质量运行在各种各样显示分辨率的屏幕上。而且除了设置合适的视口大小以外您不必做任何额外的设置。
+</p><p>因此，Starling下载包中的这部分scaffold project使用这种方法。当您以这个project作为游戏的基础，那么您不必做任何特殊改动就能使游戏运行在任何可用平台。
+</p>
+<h4> <span class="mw-headline" id=".E6.96.B9.E6.B3.953.EF.BC.9A.E6.99.BA.E8.83.BD.E5.AF.B9.E8.B1.A1.E6.94.BE.E7.BD.AE">方法3：智能对象放置</span></h4>
+<p>另一方面，如果我们真的能用额外的空间那会非常给力。在很多游戏中，这个方法并不难：
+我们只需要根据游戏边界调整我们的用户界面（例如两侧对齐），而不是使用硬编码，在320 ×480范围内指定游戏元素的位置。
+</p><p>换句话说：您必须支持不同的舞台大小:
+</p>
+<h5> <span class="mw-headline" id="IOS">IOS</span></h5>
+<p>比方说，您要支持所有iOS设备，那么您有以下的舞台大小:
+</p>
+<ul><li>320× 480 iPhone设备
+</li><li>384× 512 iPad设备
+</li></ul>
+<p>这个奇怪的iPad分辨率从何而来？难道不应该是768 ×1024吗？
+</p><p>请记住，我们希望 contentScaleFactor的值是2。因为我们需要显示高清纹理，就像视网膜iPhone一样。这就是为什么我们的舞台像素是iPad的分辨率的一半。另一方面，视口仍然是768 ×1024。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">starling = <span class="kw2">new</span> Starling<span class="br0">&#40;</span>Game, <span class="kw3">stage</span>, <span class="kw2">new</span> Rectangle<span class="br0">&#40;</span><span class="nu0">0</span>, <span class="nu0">0</span>, screenWidth, screenHeight<span class="br0">&#41;</span><span class="br0">&#41;</span>;
+&#160;
+<span class="kw2">var</span> isPad:<span class="kw3">Boolean</span> = <span class="br0">&#40;</span>screenWidth == <span class="nu0">768</span> <span class="sy0">||</span> screenWidth == <span class="nu0">1536</span><span class="br0">&#41;</span>;
+starling.<span class="kw3">stage</span>.<span class="me1">stageWidth</span>  = isPad&#160;? <span class="nu0">384</span>&#160;: <span class="nu0">320</span>;
+starling.<span class="kw3">stage</span>.<span class="me1">stageHeight</span> = isPad&#160;? <span class="nu0">512</span>&#160;: <span class="nu0">480</span>;</pre></div></div>
+<p>经过这些准备，现在所需要做的只剩下根据舞台大小设置您的游戏元素位置。例如：在两侧对齐，而不是硬编码他们的位置。根据不同的游戏，这些设置位置工作或多或少。不过最终结果是，游戏在所有IOS设备上都显示完美。
+</p>
+<h5> <span class="mw-headline" id="Android">Android</span></h5>
+<p>相较IOS设备，Android设备的多分辨率开发更难处理。因为Android手机有很多不同的屏幕分辨率。但是大体上解决方法同前文所述。
+</p><p>这意味着一个多平台开发的方法要素如下：
+</p>
+<ul><li>以两种或三种分辨率创建您的素材资源，而且较高的分辨率是最低分辨率的整数倍。
+</li><li>例如: 240×320 (LD), 480×640 (SD), 720×960 (HD)
+</li><li>视口大小将始终是屏幕的全分辨率尺寸
+</li><li>对于一个给定的分辨率选择一组相应的素材资源，根据舞台大小设置您的游戏元素位置——正如之前IOS设备的设置方法。
+</li></ul>
+<p>困难的部分是选择合适的舞台尺寸和素材资源。之前提过的三种分辨率，它可以这样设置：
+</p><p><a href="%e6%96%87%e4%bb%b6_Screensizetable.html" class="image"><img alt="Screensizetable.png" src="../images/6/63/Screensizetable.png" width="327" height="197" /></a>
+</p><p>正如您所看到的，这些设置将会为不同的屏幕尺寸给出舞台尺寸：在240× 320和320×480之间。这是能让您在不同设备上合理布置游戏外观和感觉的最合理的差值。 
+</p><p>要小心近两年上市的屏幕分辨率。不过这些分辨率除以3不是整数。我建议您的视口分别设置为720 × 1278和 768× 1023。这只会在边上留下一个很难被察觉的细小黑色边框。
+</p><p>当然，这种做法是相当繁重。它的优点是，所有的图形在任何设备上看起来都十分尖锐，只会有很小的锯齿问题。
+</p><p>这个小问题留给您解决，如果它真值得付出努力。
+</p>
+<hr />
+<p>翻译：<a rel="nofollow" class="external text" href="http://www.baidu.com/">周祺浩(zoomer)</a>
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 105/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key app_starlinglib-wiki:pcache:idhash:11-0!*!*!!zh-cn!2!* and timestamp 20140629063515 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				来自“<a href="http://www.starlinglib.com/index.php?title=StarlingManual:%E5%A4%9A%E5%B1%8F%E5%B9%95%E5%88%86%E8%BE%A8%E7%8E%87%E7%9A%84%E5%BC%80%E5%8F%91&amp;oldid=130">http://www.starlinglib.com/index.php?title=StarlingManual:%E5%A4%9A%E5%B1%8F%E5%B9%95%E5%88%86%E8%BE%A8%E7%8E%87%E7%9A%84%E5%BC%80%E5%8F%91&amp;oldid=130</a>”				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>个人工具</h5>
+	<ul>
+		<li id="pt-login"><a href="http://www.starlinglib.com/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&amp;returnto=StarlingManual%3A%E5%A4%9A%E5%B1%8F%E5%B9%95%E5%88%86%E8%BE%A8%E7%8E%87%E7%9A%84%E5%BC%80%E5%8F%91" title="我们希望您可以登入，但不强求 [o]" accesskey="o">登录</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>名字空间</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="StarlingManual_Screen_Adapter.html"  title="查看内容页面 [c]" accesskey="c">页面</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://www.starlinglib.com/index.php?title=%E8%AE%A8%E8%AE%BA:StarlingManual:%E5%A4%9A%E5%B1%8F%E5%B9%95%E5%88%86%E8%BE%A8%E7%8E%87%E7%9A%84%E5%BC%80%E5%8F%91&amp;action=edit&amp;redlink=1"  title="关于内容页面的讨论 [t]" accesskey="t">讨论</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>变换</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>查看</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="StarlingManual_Screen_Adapter.html" >阅读</a></span></li>
+					<li id="ca-viewsource"><span><a href="http://www.starlinglib.com/index.php?title=StarlingManual:%E5%A4%9A%E5%B1%8F%E5%B9%95%E5%88%86%E8%BE%A8%E7%8E%87%E7%9A%84%E5%BC%80%E5%8F%91&amp;action=edit"  title="本页面已被保护。你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://www.starlinglib.com/index.php?title=StarlingManual:%E5%A4%9A%E5%B1%8F%E5%B9%95%E5%88%86%E8%BE%A8%E7%8E%87%E7%9A%84%E5%BC%80%E5%8F%91&amp;action=history"  title="本页面的早前修订版本 [h]" accesskey="h">查看历史</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>操作</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">搜索</label></h5>
+	<form action="http://www.starlinglib.com/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="在Starling中文站中搜索 [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="提交" title="如果相同的标题存在的话便直接前往该页面" id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="搜索" title="搜索含这些文字的页面" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="特殊:搜索"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../skins/common/images/wiki.png);" href="index.html"  title="访问首页"></a></div>
+				<!-- /logo -->
+				
+<!-- navigation -->
+<div class="portal" id='p-navigation'>
+	<h5>导航</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="index.html" title="访问首页 [z]" accesskey="z">首页</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /navigation -->
+
+<!-- Starling中文资料 -->
+<div class="portal" id='p-Starling.E4.B8.AD.E6.96.87.E8.B5.84.E6.96.99'>
+	<h5>Starling中文资料</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E6.9C.80.E6.96.B0.E5.8A.A8.E6.80.81"><a href="News.html">Starling最新动态</a></li>
+			<li id="n-.E4.B8.8B.E8.BD.BD"><a href="download.html">下载</a></li>
+			<li id="n-.E5.85.A5.E9.97.A8.E7.AC.AC.E4.B8.80.E6.AD.A5"><a href="FristStep.html">入门第一步</a></li>
+			<li id="n-API.E6.8E.A5.E5.8F.A3.E6.96.87.E6.A1.A3"><a href="APIReference.html">API接口文档</a></li>
+			<li id="n-Starling.E8.AF.B4.E6.98.8E.E4.B9.A6"><a href="StarlingManual.html">Starling说明书</a></li>
+			<li id="n-FeathersUI.E6.96.87.E6.A1.A3"><a href="FeathersUI.html">FeathersUI文档</a></li>
+			<li id="n-.E6.95.99.E7.A8.8B.E5.92.8C.E4.BB.A3.E7.A0.81"><a href="Tutorials.html">教程和代码</a></li>
+			<li id="n-Starling.E6.89.A9.E5.B1.95"><a href="Extensions.html">Starling扩展</a></li>
+			<li id="n-.E6.88.90.E5.8A.9F.E6.A1.88.E4.BE.8B"><a href="GamesPowered.html">成功案例</a></li>
+			<li id="n-.E7.AB.99.E5.A4.96.E8.B5.84.E6.96.99"><a href="OutsideDocs.html">站外资料</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Starling中文资料 -->
+
+<!-- Starling原创教程 -->
+<div class="portal" id='p-Starling.E5.8E.9F.E5.88.9B.E6.95.99.E7.A8.8B'>
+	<h5>Starling原创教程</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E7.A7.BB.E5.8A.A8.E5.BC.80.E5.8F.91.E6.95.99.E7.A8.8B"><a href="StarlingMobile.html">Starling移动开发教程</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Starling原创教程 -->
+
+<!-- 微信-Flash微报 -->
+
+
+<!-- /微信-Flash微报 -->
+
+<!-- 论坛 -->
+<div class="portal" id='p-.E8.AE.BA.E5.9D.9B'>
+	<h5>论坛</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E4.B8.AD.E6.96.87.E8.AE.BA.E5.9D.9B"><a href="http://bbs.egret-labs.org/?fromuid=62" rel="nofollow">Egret开发者论坛</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /论坛 -->
+
+<!-- 友链 -->
+<div class="portal" id='p-.E5.8F.8B.E9.93.BE'>
+	<h5>友链</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Sirius2d.E5.BC.95.E6.93.8E"><a href="http://www.sirius2d.com/" rel="nofollow">Sirius2d引擎</a></li>
+			<li id="n-A.E9.97.AA.E7.BD.91"><a href="http://www.ashan.org/" rel="nofollow">A闪网</a></li>
+			<li id="n-Y.Boy"><a href="http://www.riaoo.com/" rel="nofollow">Y.Boy</a></li>
+			<li id="n-Cenfee"><a href="http://cenfee.com/" rel="nofollow">Cenfee</a></li>
+			<li id="n-.E5.B0.8F.E5.A4.9C-Clifford"><a href="http://www.cnblogs.com/flash3d/" rel="nofollow">小夜 Clifford</a></li>
+			<li id="n-.E6.9D.9C.E5.A2.9E.E5.BC.BA.28DzQ.29"><a href="http://www.duzengqiang.com/" rel="nofollow">杜增强(DzQ)</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /友链 -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>工具箱</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="%e7%89%b9%e6%ae%8a_%e9%93%be%e5%85%a5%e9%a1%b5%e9%9d%a2/StarlingManual_Screen_Adapter.html" title="所有链入本页的wiki页面列表 [j]" accesskey="j">链入页面</a></li>
+			<li id="t-recentchangeslinked"><a href="%e7%89%b9%e6%ae%8a_%e9%93%be%e5%87%ba%e6%9b%b4%e6%94%b9/StarlingManual_Screen_Adapter.html" title="本页链入的页面的最近更改 [k]" accesskey="k">链出更改</a></li>
+			<li id="t-specialpages"><a href="%e7%89%b9%e6%ae%8a_%e7%89%b9%e6%ae%8a%e9%a1%b5%e9%9d%a2.html" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+			<li><a href="http://www.starlinglib.com/index.php?title=StarlingManual:%E5%A4%9A%E5%B1%8F%E5%B9%95%E5%88%86%E8%BE%A8%E7%8E%87%E7%9A%84%E5%BC%80%E5%8F%91&amp;printable=yes" rel="alternate">可打印版</a></li>
+			<li id="t-permalink"><a href="http://www.starlinglib.com/index.php?title=StarlingManual:%E5%A4%9A%E5%B1%8F%E5%B9%95%E5%88%86%E8%BE%A8%E7%8E%87%E7%9A%84%E5%BC%80%E5%8F%91&amp;oldid=130" title="本页面该修订版本的永久链接">永久链接</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> 本页面最后修订于2012年5月11日 (星期五) 16:20。</li>
+											<li id="footer-info-viewcount">此页面已被浏览过7,160次。</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="Starling_yinsi.html" title="Starling中文站:隐私权政策">隐私权政策</a></li>
+											<li id="footer-places-about"><a href="StarlingCnAbout.html" title="Starling中文站:关于">关于Starling中文站</a></li>
+											<li id="footer-places-disclaimer"><a href="StarlingCNCopyRight.html" title="Starling中文站:免责声明">免责声明</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31520647-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+		<!-- /footer -->
+		
+<!-- Served in 0.399 secs. -->
+	</body>
+
+<!-- Mirrored from www.starlinglib.com/wiki/StarlingManual:多屏幕分辨率的开发 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jun 2014 07:21:14 GMT -->
+</html>

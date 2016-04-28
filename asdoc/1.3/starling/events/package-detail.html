@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><title>starling.events Summary</title></head><body><script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'starling.events package - Starling API 1.3 | Starling中文站';
+				var baseRef = '../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">Starling API 1.3 | Starling中文站</td><td class="titleTableTopNav" align="right"><a href="../../package-summary.html" onclick="loadClassListFrame('../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../class-summary.html" onclick="loadClassListFrame('../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../all-index-A.html" onclick="loadClassListFrame('../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../index.html?starling/events/package-detail.html&amp;starling/events/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">starling.events</td><td class="titleTableSubNav" id="subNav" align="right"><a href="package-detail.html#classSummary">Classes</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("starling.events"); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false	,false,false,false,true,false);}	
+				-->
+			</script><div class="MainContent"><br><br><hr><a name="classSummary"></a><div class="summaryTableTitle">Classes</div><table cellpadding="3" cellspacing="0" class="summaryTable"><tr><th>&nbsp;</th><th width="30%">Class</th><th width="70%">Description</th></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="EnterFrameEvent.html">EnterFrameEvent</a></td><td class="summaryTableLastCol"> 
+	  处于显示列表树中的所有显示对象，在每一帧都会派发一个EnterFrameEvent事件。 
+	  它包含了从上一帧到现在所经过的时间的信息。这样，您就可以轻松的通过帧频创建动画，传递经过的时间给它。
+	 </td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="Event.html">Event</a></td><td class="summaryTableLastCol"> 当事件派发时，事件对象会作为参数传递给事件侦听器。这是Flash Event类的Starling版本。
+	 
+	  EventDispatcher对象会创建这个类的实例并将它派发到一个已注册的事件侦听器。 
+	  一个事件对象包含了作为这个事件特征的信息，其中非常重要的是事件类型，如果事件冒泡的话。
+	  事件的目标(target)是派发这个事件的对象。
+	 
+	  对于某些类型的事件，这些信息就足够了，其他事件可能需要更多的信息来传递给侦听器。 
+	  在这种情况下，您可以创建“事件”的子类，并添加您所需要的所有信息作为事件的属性。 
+	  “EnterFrameEvent”是这种做法的一个例子，它增加了一个属性用来表示已经执行的时间值。
+	 
+	  此外，事件类包含的方法可以中断事件的派发，阻止事件被其它的侦听器接受。（ 包括完全阻止
+	  或只是阻止进入下一个冒泡阶段）
+	 
+	  </td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="EventDispatcher.html">EventDispatcher</a></td><td class="summaryTableLastCol"> EventDispatcher类是所有具备调度事件能力的类的基类。这是传统Flash里的EventDispatcher在Starling中的对应实现。
+	  
+	  事件机制也是Starling架构的一个关键特性。通过事件对象可以互相通信。相比传统Flash的事件系统，Starling的事件
+	  系统是经过简化的。 主要区别在于，Starling事件没有“捕捉”的阶段。这些事件只是简单的被一个对象派发，并可以选择
+	  冒泡。他们不能向相反的方向传递。  
+	  就像传统的Flash类那样，显示对象只要继承EventDispatcher就可以派发事件。但要小心， 
+	  Starling中的事件不能和传统Flash的事件混用。  Starling的显示对象会派发Starling事件，冒泡也是在Starling
+	  显示对象中进行-但是他们不能派发或冒泡传统Flash显示对象的事件。
+	  
+	  </td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="KeyboardEvent.html">KeyboardEvent</a></td><td class="summaryTableLastCol"> 一个键盘事件的派发，是对用户使用键盘输入的回应。
+	 
+	  这个类是Flash的键盘事件的Starling版本。它包含了和Flash的键盘事件相同的属性。 
+	 
+	  要捕获键盘事件，需要在Starling的stage上添加事件侦听。stage的子节点是不能获取到键盘事件的。 
+	  Starling并没有像传统Flash那样的“焦点”的概念。
+	  
+	  </td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="ResizeEvent.html">ResizeEvent</a></td><td class="summaryTableLastCol"> 当Flash容器的尺寸改变后，stage会派发一个ResizeEvent。用这个值可以更新Starling的视口和stage的尺寸。
+	  
+	  事件的属性包含了更新后的Flash Player的宽度和高度。如果您希望缩放stage上的内容来充满屏幕， 请更新 
+	  Starling.current.viewPort 矩形区域。如果您希望使用额外的屏幕区域，
+	  请更新 stage.stageWidth 和 stage.stageHeight
+	 
+	  </td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="Touch.html">Touch</a></td><td class="summaryTableLastCol"> 一个Touch对象包含了在屏幕上的一个手指或鼠标的相关信息（出现或移动）。
+	  
+	  您将从TouchEvent中获取这个对象。当这样的事件被触发，您可以查询目前呈现在屏幕上的所有触碰。
+	  一个Touch对象，包含了一个单指触碰的信息。一个Touch对象总是会通过TouchPhases的集合移动。请参阅TouchPhase类来获取更多信息。
+	  
+	  触碰的位置
+	  
+	  您可以用相应的属性，获取坐标系上的当前的和上一个位置。当然，在大部分情况下您希望能获取在一个不同的坐标系上的位置。 
+	  基于这个原因，这里有一些方法可以转换当前的和上一个位置到任何对象的局部坐标系。
+	 
+	  </td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="TouchEvent.html">TouchEvent</a></td><td class="summaryTableLastCol"> 一个TouchEvent是被手指触碰或鼠标输入来触发的。  
+	  
+	  在Starling中，无论是触碰事件还是鼠标事件，都统一封装为一个类：TouchEvent。
+	  要处理用户在一个可触碰的屏幕或使用鼠标完成的输入， 您需要注册一个事件侦听器，来侦听类型是TouchEvent.TOUCH的事件。
+	  这是唯一的您需要捕获的事件类型； 原有Flash里面的那个很长的事件类型列表，全都被映射到一个"TouchPhases"里面。 
+	 
+	  鼠标输入和触摸屏输入的区别是：
+	  
+	  
+	    在某一时刻只有一个鼠标光标可以呈现
+	    只有鼠标才可以"hover",即在没有按下按键的情况下滑过一个对象。
+	   
+	  
+	  哪些对象能够接收触碰事件？
+	 
+	  在Starling中，任何一个显示对象都可以接受触碰事件，只要它的 
+	  touchable 属性，以及它的父级都是可用状态(true)。 在Starling中是没有"InteractiveObject"这个类的。
+	  
+	  如何使用单个触碰对象
+	  
+	  T事件包含了一个包括所有的触碰对象的列表。每一个独立的触碰都被保存在一个类型是"Touch"的对象里。
+	  既然您通常只对在特定对象上发生的触碰感兴趣，您可以查询事件，传入一个具体的目标：
+	 
+	  var touches:Vector.&lt;Touch&gt; = touchEvent.getTouches(this);
+	  
+	  这会返回附加在"this"或 它的子级上的所有触碰对象。如果您没有使用多点触碰，您也可以直接访问触碰对象，就像这样：
+	 
+	  var touch:Touch = touchEvent.getTouch(this);
+	  
+	  </td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="TouchPhase.html">TouchPhase</a></td><td class="summaryTableLastCol"> 这个类提供了描述触碰的各个阶段的常量值。
+	  
+	  一个触碰，在它的生命周期内会遵循下面的过程：
+	  
+	  BEGAN(开始) -> MOVED(移动) -> ENDED(结束)
+	  
+	  此外，一个触碰可能进入一个称之为STATIONARY(静止)的阶段。这一阶段本身不会触发触碰事件，并且它只能发生在多点触控环境。
+	  在某些场合下需要一个解决方案，比如一个手指移动，另一个静止。这个时候，一个触碰事件必须由正在移动的手指下方的对象来派发。
+	  在这个事件的触碰对象列表中，您将会找到第二个处于静止状态的触碰对象。
+	  
+	  最后，还有一个称之为HOVER(悬停)的状态，这种情况只会发生在使用鼠标的情况下。
+	  它是由Flash的MouseOver事件触发的，并且这个时候鼠标按键没有被按下。 
+	 </td></tr></table><p></p><div><p></p><center class="copyright"><footer>Starling中文站 翻译整理</footer><br/>Sat Jan 19 2013, 02:47 PM +08:00  </center></div></div></body></html><!--Starling中文站 翻译整理<br/>Sat Jan 19 2013, 02:47 PM +08:00  -->

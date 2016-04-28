@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from www.starlinglib.com/wiki/Feathers:getting-started by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jun 2014 07:22:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Feathers:getting-started - Starling中文站</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.0" />
+<link rel="shortcut icon" href="http://www.starlinglib.com/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.starlinglib.com/opensearch_desc.php" title="Starling中文站 (zh-cn)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://www.starlinglib.com/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="Starling中文站的Atom" href="http://www.starlinglib.com/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&amp;feed=atom" />
+<link rel="stylesheet" href="../skins/style.css" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: app_starlinglib-wiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Feathers:getting-started","wgTitle":"Feathers:getting-started","wgCurRevisionId":1383,"wgArticleId":165,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"zh-cn","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Feathers:getting-started","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false}});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"zh-cn","language":"zh-cn","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;},{},{});mw.loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: app_starlinglib-wiki:resourceloader:filter:minify-js:7:64bb9911c781603a64782510a7dfd931 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-actionscript {line-height: normal;}
+.source-actionscript li, .source-actionscript pre {
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for actionscript
+ * CSS class: source-actionscript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.actionscript.source-actionscript .de1, .actionscript.source-actionscript .de2 {font: normal normal 1em/1.2em monospace; margin:10px 0; padding:10px; background:none; vertical-align:top;}
+.actionscript.source-actionscript  {font-family:monospace;}
+.actionscript.source-actionscript .imp {font-weight: bold; color: red;}
+.actionscript.source-actionscript li, .actionscript.source-actionscript .li1 {font-weight: normal; vertical-align:top;}
+.actionscript.source-actionscript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.actionscript.source-actionscript .li2 {font-weight: bold; vertical-align:top;}
+.actionscript.source-actionscript .kw1 {color: #b1b100;}
+.actionscript.source-actionscript .kw2 {color: #000000; font-weight: bold;}
+.actionscript.source-actionscript .kw3 {color: #0066CC;}
+.actionscript.source-actionscript .co1 {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .co2 {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .coMULTI {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .es0 {color: #000099; font-weight: bold;}
+.actionscript.source-actionscript .br0 {color: #66cc66;}
+.actionscript.source-actionscript .sy0 {color: #66cc66;}
+.actionscript.source-actionscript .st0 {color: #ff0000;}
+.actionscript.source-actionscript .nu0 {color: #cc66cc;}
+.actionscript.source-actionscript .me1 {color: #006600;}
+.actionscript.source-actionscript .ln-xtra, .actionscript.source-actionscript li.ln-xtra, .actionscript.source-actionscript div.ln-xtra {background-color: #ffc;}
+.actionscript.source-actionscript span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "http://www.starlinglib.com/index.php?title=MediaWiki:Geshi.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+/*]]>*/
+</style><!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Feathers_getting-started skin-vector action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Feathers:getting-started</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">来自Starling中文站</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					跳转到： <a href="#mw-head">导航</a>,
+					<a href="#p-search">搜索</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="zh-CN" dir="ltr" class="mw-content-ltr"><p>原文地址：<a rel="nofollow" class="external free" href="http://wiki.starling-framework.org/feathers/getting-started">http://wiki.starling-framework.org/feathers/getting-started</a>
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>目录</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.E5.BC.80.E5.A7.8B_Feathers_.E6.8E.A2.E7.B4.A2.E4.B9.8B.E6.97.85"><span class="tocnumber">1</span> <span class="toctext">开始 Feathers 探索之旅</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#.E9.A2.84.E5.A4.87.E7.9F.A5.E8.AF.86"><span class="tocnumber">2</span> <span class="toctext">预备知识</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#.E6.9C.80.E7.BB.88.E7.BB.93.E6.9E.9C"><span class="tocnumber">3</span> <span class="toctext">最终结果</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#.E7.BC.96.E5.86.99.E4.BB.A3.E7.A0.81.E5.89.8D.E7.9A.84.E5.87.86.E5.A4.87"><span class="tocnumber">4</span> <span class="toctext">编写代码前的准备</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#.E5.A4.8D.E5.88.B6.E4.B8.BB.E9.A2.98.E8.B5.84.E6.BA.90"><span class="tocnumber">5</span> <span class="toctext">复制主题资源</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#.E5.AE.8C.E6.88.90.E4.BD.A0.E7.9A.84_Feathers_.E7.89.88.E2.80.9CHello_World.E2.80.9D.EF.BC.81"><span class="tocnumber">6</span> <span class="toctext">完成你的 Feathers 版“Hello World”！</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#.E5.AE.8C.E6.95.B4.E6.BA.90.E7.A0.81_.28Starling_1.3.2C_Feathers_1.0.29"><span class="tocnumber">7</span> <span class="toctext">完整源码 (Starling 1.3, Feathers 1.0)</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#.E6.80.BB.E7.BB.93"><span class="tocnumber">8</span> <span class="toctext">总结</span></a></li>
+</ul>
+</td></tr></table>
+<h5> <span class="mw-headline" id=".E5.BC.80.E5.A7.8B_Feathers_.E6.8E.A2.E7.B4.A2.E4.B9.8B.E6.97.85"> 开始 Feathers 探索之旅 </span></h5>
+<p>在下面的入门级的教程中，我们将创建我们的第一个<a href="http://www.starlinglib.com/index.php?title=%E6%8C%89%E9%92%AE&amp;action=edit&amp;redlink=1" class="new" title="按钮（尚未撰写）">Feathers按钮控件</a>。这是一个非常简单的演示，设置一个标签，添加一个事件监听器，并创建一个应用了皮肤的主题。
+</p>
+<h5> <span class="mw-headline" id=".E9.A2.84.E5.A4.87.E7.9F.A5.E8.AF.86"> 预备知识 </span></h5>
+<ul><li> 首先您应该知道怎样建立一个标准的Starling项目。如果Starling对你来说还很陌生，那建议您先从<a rel="nofollow" class="external text" href="http://gamua.com/starling/help/">Starling指南和教程</a>开始。
+</li><li> 完整的Hello World教学案例已经包含在Feathers发布包中，你可以从这里踏出你的Feathers第一步。您可以从 <a rel="nofollow" class="external text" href="https://github.com/joshtynjala/feathers-examples/tree/master/HelloWorld">Github源码库</a>获得其最新版.
+</li></ul>
+<h5> <span class="mw-headline" id=".E6.9C.80.E7.BB.88.E7.BB.93.E6.9E.9C"> 最终结果 </span></h5>
+<p><a href="%e6%96%87%e4%bb%b6_Feathers-hello-world.html" class="image"><img alt="Feathers-hello-world.jpg" src="../images/8/8e/Feathers-hello-world.jpg" width="350" height="200" /></a>
+</p><p>打开 <a rel="nofollow" class="external text" href="http://feathersui.com/examples/hello-world/">Hello World 教学案例</a> 在你的浏览器中运行. 必备<a rel="nofollow" class="external text" href="http://get.adobe.com/flash">Adobe Flash Player</a>.
+</p>
+<h5> <span class="mw-headline" id=".E7.BC.96.E5.86.99.E4.BB.A3.E7.A0.81.E5.89.8D.E7.9A.84.E5.87.86.E5.A4.87"> 编写代码前的准备 </span></h5>
+<p>从这里下载 feathers&#160;: <a rel="nofollow" class="external free" href="http://feathersui.com/download/">http://feathersui.com/download/</a> (文章写到这里时，最新的版本是“1.0”). 解压，找到“/feathers-1.0.0/swc/feathers.swc”并复制到你的专门用来保存swc的文件夹中。现在我们应该告诉IDE如何找到feathers了。在Flash Professional CS6:
+</p>
+<ul><li> 打开“编辑 -&gt; 参数选择 -&gt; (弹出参数选择对话框)
+</li><li> 分类: ActionScript -&gt; 点击“ActionScript 3.0 设置”
+</li><li> 在“库路径”点击“+” -&gt; 点击“浏览SWC”
+</li><li> 找到feathers.swc并选中之
+</li><li> 点击“确定”，点击“确定”。
+</li></ul>
+<p>现在你可以使用Feathers， 犹如其内建在ActionScript中。
+</p><p>如果没有Starling库，进行类似的步骤即可。从这里下载: <a rel="nofollow" class="external text" href="https://github.com/PrimaryFeather/Starling-Framework">Starling框架</a>。找到“ZIP”按钮下载包含源码的Starling包。而实际上我们只需要“/starling/bin/starling.swc”就够了。用同样方式将其加到“库路径”中。
+现在你可以使用Starling， 犹如其内建在ActionScript中~
+</p><p>文章写到这里时，“Feathers 1.0”在“Starling 1.3”基础上完美运行。也许在以后的版本，有些不匹配的情况，这时你可以直接下载最新的Starling源码。因此你应当从GitHub.com下载Starling，而不是gamua.com。
+</p><p>假如你编译代码遇到这样的异常:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="st0">&quot;ArgumentError: Error #1063: Argument count mismatch on starling.events::TouchEvent/getTouches(). Expected 1 argument, got 3.
+	at feathers.controls::Button/touchHandler()
+	at starling.events::EventDispatcher/invoke()
+	at starling.events::EventDispatcher/bubble()
+	at starling.events::EventDispatcher/dispatchEvent()
+	at starling.display::DisplayObject/dispatchEvent()
+	at TouchProcessor/advanceTime()
+	at starling.core::Starling/advanceTime()
+	at starling.core::Starling/nextFrame()
+	at starling.core::Starling/onEnterFrame()&quot;</span></pre></div></div>
+<p>确保从GitHub.com获得最新版的Starling (文章写到这里时 - 1.3)
+</p>
+<h5> <span class="mw-headline" id=".E5.A4.8D.E5.88.B6.E4.B8.BB.E9.A2.98.E8.B5.84.E6.BA.90"> 复制主题资源 </span></h5>
+<p>现在将主题文件加入项目中，从“/feathers-1.0.0/themes/MetalWorksMobileTheme”复制“assets”和“source”文件夹到你的项目文件夹。并设置“source”文件夹作为项目的源文件夹：
+</p>
+<ul><li> 选择你的“.fla”文件
+</li><li> 打开“ActionScript 3.0 设置”
+</li><li> 选择“源路径”选项卡(如果没选中的话)
+</li><li> 双击仅有的一行
+</li><li> 替换“./”(缺省值)为“./source”
+</li><li> 点击确定
+</li></ul>
+<p>现在记得保存你“/source”文件夹下所有的“.as”文件。
+</p>
+<h5> <span class="mw-headline" id=".E5.AE.8C.E6.88.90.E4.BD.A0.E7.9A.84_Feathers_.E7.89.88.E2.80.9CHello_World.E2.80.9D.EF.BC.81"> 完成你的 Feathers 版“Hello World”！</span></h5>
+<p>下边的类是作为Starling初始的根显示对象存在的。这是类基础结构。后续将要加入的大部分代码将会放进“addedToStageHandler()”函数中。
+</p><p>新建“/source/HelloFeathers.as”文件，并导入必要的类：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw3">import</span> starling.<span class="me1">display</span>.<span class="me1">Sprite</span>;
+<span class="kw3">import</span> feathers.<span class="me1">themes</span>.<span class="me1">MetalWorksMobileTheme</span>;
+<span class="kw3">import</span> feathers.<span class="me1">controls</span>.<span class="kw3">Button</span>;
+<span class="kw3">import</span> feathers.<span class="me1">controls</span>.<span class="me1">Label</span>;
+<span class="kw3">import</span> feathers.<span class="me1">controls</span>.<span class="me1">Callout</span>;
+<span class="kw3">import</span> starling.<span class="me1">events</span>.<span class="me1">Event</span>;</pre></div></div>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw3">public</span> <span class="kw2">class</span> HelloFeathers <span class="kw3">extends</span> Sprite
+<span class="br0">&#123;</span>
+	<span class="kw3">public</span> <span class="kw2">function</span> HelloFeathers<span class="br0">&#40;</span><span class="br0">&#41;</span>
+	<span class="br0">&#123;</span>
+		<span class="kw3">this</span>.<span class="me1">addEventListener</span><span class="br0">&#40;</span> Event.<span class="me1">ADDED_TO_STAGE</span>, addedToStageHandler <span class="br0">&#41;</span>;
+	<span class="br0">&#125;</span>
+&#160;
+	protected <span class="kw2">var</span> theme:MetalWorksMobileTheme;
+	protected <span class="kw2">var</span> <span class="kw3">button</span>:<span class="kw3">Button</span>;
+&#160;
+	protected <span class="kw2">function</span> addedToStageHandler<span class="br0">&#40;</span> event:Event <span class="br0">&#41;</span>:<span class="kw3">void</span>
+	<span class="br0">&#123;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div>
+<p>让我们从初始化<a href="Feathers_themes.html" title="Feathers:themes">主题</a>开始。默认情况下，Feathers组件不具有主题。然而，初始化主题仅需要一行代码！并且这将会给添加到stage上的所有Feathers组件提供皮肤~
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw3">this</span>.<span class="me1">theme</span> = <span class="kw2">new</span> MetalWorksMobileTheme<span class="br0">&#40;</span> <span class="kw3">this</span>.<span class="kw3">stage</span> <span class="br0">&#41;</span>;</pre></div></div>
+<p>我们在主题构造函数中传入了stage的引用。主题类侦听特定的事件来侦测新的Feathers组件添加到stage。当一个新的组件加入，主题将会建立相应的皮肤，包括背景，图标，文本格式以及子组件所需要的皮肤，并自动推送进组件的显示逻辑。
+</p><p>大部分Feathers教学案例，包含本案例，都使用“<a rel="nofollow" class="external text" href="https://github.com/joshtynjala/feathers-examples/tree/master/MetalWorksMobileTheme">MetalWorksMobileTheme主题</a>”。Feathers官方库附带了几种主题，可以根据你的喜好自由选择。当然你还可以<a href="Feathers_custom-themes.html" title="Feathers:custom-themes">建立你自己的主题</a>！
+</p><p><br />
+主题确定后，接下来我们建立按钮并设置标签：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw3">this</span>.<span class="kw3">button</span> = <span class="kw2">new</span> <span class="kw3">Button</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+<span class="kw3">this</span>.<span class="kw3">button</span>.<span class="me1">label</span> = <span class="st0">&quot;Click Me&quot;</span>;
+<span class="kw3">this</span>.<span class="me1">addChild</span><span class="br0">&#40;</span> <span class="kw3">button</span> <span class="br0">&#41;</span>;</pre></div></div>
+<p>当按钮被触碰或点击后你想做点什么的话，那就侦听“Event.TRIGGERED”事件。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw3">this</span>.<span class="kw3">button</span>.<span class="me1">addEventListener</span><span class="br0">&#40;</span> Event.<span class="me1">TRIGGERED</span>, button_triggeredHandler <span class="br0">&#41;</span>;</pre></div></div>
+<p>其侦听处理函数应当如此：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">protected <span class="kw2">function</span> button_triggeredHandler<span class="br0">&#40;</span> event:Event <span class="br0">&#41;</span>:<span class="kw3">void</span>
+<span class="br0">&#123;</span>
+	const label:Label = <span class="kw2">new</span> Label<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+	label.<span class="kw3">text</span> = <span class="st0">&quot;Hi, I'm Feathers!<span class="es0">\n</span>Have a nice day.&quot;</span>;
+	Callout.<span class="kw3">show</span><span class="br0">&#40;</span>label, <span class="kw3">this</span>.<span class="kw3">button</span><span class="br0">&#41;</span>;
+<span class="br0">&#125;</span></pre></div></div>
+<p>这里在“<a href="Feathers_callout.html" title="Feathers:callout">Callout</a>”组件中显示了一个“<a href="Feathers_label.html" title="Feathers:label">Label</a>”组件。就像我们之前创建的按钮一样，这两个组件自动被主题植入皮肤。
+</p><p>最后，我们将按钮定位在舞台的中心。首先, though, 我们需要注意Feathers控件是怎样工作的。Feathers使用一个//invalidation//系统延迟重绘，直到Starling渲染到屏幕时才会显示。这样的机制使得当你需要突然改变若干属性时，避免每一次改变都需要重绘，从而使Feathers消耗大量不必要的CPU资源。
+</p><p>到此为止，我们的按钮宽度和高度值仍然都为零，因为它还没有被绘制出来。Feathers控件各自在重绘时自动调整自身大小到理想的值 (除非你精确设置宽度和高度值)。自动度量通常基于皮肤和其他子级显示对象原始的大小。
+</p><p>但是通常我们希望在代码中立即定位按钮，而不是等待确认机制绘制后再度量。Feathers当然考虑到这种需求，因此提供了“validate()”函数：
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw3">this</span>.<span class="kw3">button</span>.<span class="me1">validate</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;</pre></div></div>
+<p>这样，我们就可以正确地置中按钮了，因为执行validate()后按钮已经有了基于皮肤和标签的有效尺寸:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw3">this</span>.<span class="kw3">button</span>.<span class="me1">x</span> = <span class="br0">&#40;</span><span class="kw3">this</span>.<span class="kw3">stage</span>.<span class="me1">stageWidth</span> - <span class="kw3">this</span>.<span class="kw3">button</span>.<span class="kw3">width</span><span class="br0">&#41;</span> <span class="sy0">/</span> <span class="nu0">2</span>;
+<span class="kw3">this</span>.<span class="kw3">button</span>.<span class="me1">y</span> = <span class="br0">&#40;</span><span class="kw3">this</span>.<span class="kw3">stage</span>.<span class="me1">stageHeight</span> - <span class="kw3">this</span>.<span class="kw3">button</span>.<span class="kw3">height</span><span class="br0">&#41;</span> <span class="sy0">/</span> <span class="nu0">2</span>;</pre></div></div>
+<h5> <span class="mw-headline" id=".E5.AE.8C.E6.95.B4.E6.BA.90.E7.A0.81_.28Starling_1.3.2C_Feathers_1.0.29"> 完整源码 (Starling 1.3, Feathers 1.0) </span></h5>
+<p>现在，你的代码应当是这样：
+</p>
+<ul><li> /HelloFeathers.fla (if in Flash Professional CS6)
+</li><li> /assets/...
+</li><li> /source/feathers/...
+</li></ul>
+<ul><li> /source/HelloFeathersStartup.as:
+</li></ul>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">package 
+<span class="br0">&#123;</span>
+	<span class="kw3">import</span> flash.<span class="me1">display</span>.<span class="kw3">MovieClip</span>;
+	<span class="kw3">import</span> starling.<span class="me1">core</span>.<span class="sy0">*</span>;
+&#160;
+	<span class="kw3">public</span> <span class="kw2">class</span> HelloFeathersStartup <span class="kw3">extends</span> <span class="kw3">MovieClip</span>
+	<span class="br0">&#123;</span>
+		<span class="kw3">public</span> <span class="kw2">function</span> HelloFeathersStartup<span class="br0">&#40;</span><span class="br0">&#41;</span>
+		<span class="br0">&#123;</span>
+			<span class="kw2">var</span> st:Starling = <span class="kw2">new</span> Starling<span class="br0">&#40;</span>HelloFeathers, <span class="kw3">this</span>.<span class="kw3">stage</span><span class="br0">&#41;</span>;
+			st.<span class="me1">showStats</span> = <span class="kw2">true</span>;
+			st.<span class="kw3">start</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div>
+<ul><li>/source/HelloFeathers.as
+</li></ul>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">package
+<span class="br0">&#123;</span>
+	<span class="kw3">import</span> starling.<span class="me1">display</span>.<span class="me1">Sprite</span>;
+	<span class="kw3">import</span> feathers.<span class="me1">themes</span>.<span class="me1">MetalWorksMobileTheme</span>;
+	<span class="kw3">import</span> feathers.<span class="me1">controls</span>.<span class="kw3">Button</span>;
+	<span class="kw3">import</span> feathers.<span class="me1">controls</span>.<span class="me1">Label</span>;
+	<span class="kw3">import</span> feathers.<span class="me1">controls</span>.<span class="me1">Callout</span>;
+	<span class="kw3">import</span> starling.<span class="me1">events</span>.<span class="me1">Event</span>;
+&#160;
+	<span class="kw2">class</span> HelloFeathers <span class="kw3">extends</span> Sprite
+	<span class="br0">&#123;</span>
+		<span class="kw3">public</span> <span class="kw2">function</span> HelloFeathers<span class="br0">&#40;</span><span class="br0">&#41;</span>
+		<span class="br0">&#123;</span>
+			<span class="kw3">this</span>.<span class="me1">addEventListener</span><span class="br0">&#40;</span> Event.<span class="me1">ADDED_TO_STAGE</span>, addedToStageHandler <span class="br0">&#41;</span>;
+		<span class="br0">&#125;</span>
+&#160;
+		protected <span class="kw2">var</span> theme:MetalWorksMobileTheme
+		protected <span class="kw2">var</span> <span class="kw3">button</span>:<span class="kw3">Button</span>;
+&#160;
+		protected <span class="kw2">function</span> addedToStageHandler<span class="br0">&#40;</span> event:Event <span class="br0">&#41;</span>:<span class="kw3">void</span>
+		<span class="br0">&#123;</span>
+			<span class="kw3">this</span>.<span class="me1">theme</span> = <span class="kw2">new</span> MetalWorksMobileTheme<span class="br0">&#40;</span><span class="kw3">this</span>.<span class="kw3">stage</span><span class="br0">&#41;</span>;
+&#160;
+			<span class="kw3">this</span>.<span class="kw3">button</span> = <span class="kw2">new</span> <span class="kw3">Button</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+			<span class="kw3">this</span>.<span class="kw3">button</span>.<span class="me1">label</span> = <span class="st0">&quot;Click Me&quot;</span>;
+			<span class="kw3">this</span>.<span class="me1">addChild</span><span class="br0">&#40;</span><span class="kw3">button</span><span class="br0">&#41;</span>;
+&#160;
+			<span class="kw3">this</span>.<span class="kw3">button</span>.<span class="me1">addEventListener</span><span class="br0">&#40;</span>Event.<span class="me1">TRIGGERED</span>, bt<span class="br0">&#41;</span>;
+&#160;
+			<span class="kw3">this</span>.<span class="kw3">button</span>.<span class="me1">validate</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+			<span class="kw3">this</span>.<span class="kw3">button</span>.<span class="me1">x</span> = <span class="br0">&#40;</span><span class="kw3">this</span>.<span class="kw3">stage</span>.<span class="me1">stageWidth</span> - <span class="kw3">this</span>.<span class="kw3">button</span>.<span class="kw3">width</span><span class="br0">&#41;</span> <span class="sy0">/</span> <span class="nu0">2</span>;
+			<span class="kw3">this</span>.<span class="kw3">button</span>.<span class="me1">y</span> = <span class="br0">&#40;</span><span class="kw3">this</span>.<span class="kw3">stage</span>.<span class="me1">stageHeight</span> - <span class="kw3">this</span>.<span class="kw3">button</span>.<span class="kw3">height</span><span class="br0">&#41;</span> <span class="sy0">/</span> <span class="nu0">2</span>;
+		<span class="br0">&#125;</span>
+&#160;
+		<span class="kw3">private</span> <span class="kw2">function</span> bt<span class="br0">&#40;</span><span class="kw3">e</span>:Event<span class="br0">&#41;</span>:<span class="kw3">void</span>
+		<span class="br0">&#123;</span>
+			const label:Label = <span class="kw2">new</span> Label<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+			label.<span class="kw3">text</span> = <span class="st0">&quot;Hi, I'm Feathers!<span class="es0">\n</span>Have a nice day.&quot;</span>;
+			Callout.<span class="kw3">show</span><span class="br0">&#40;</span>label, <span class="kw3">this</span>.<span class="kw3">button</span><span class="br0">&#41;</span>;
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>	
+<span class="br0">&#125;</span></pre></div></div>
+<h5> <span class="mw-headline" id=".E6.80.BB.E7.BB.93"> 总结 </span></h5>
+<p>到此，你应当有了一个掌握Feathers的非常基础的开始。如希望了解更多“Button”类的用法或功能，请进入<a href="http://www.starlinglib.com/index.php?title=Button&amp;action=edit&amp;redlink=1" class="new" title="Button（尚未撰写）">Feathers Button 组件使用方法</a>。学习“Callout”类，请进入<a href="http://www.starlinglib.com/index.php?title=Callout&amp;action=edit&amp;redlink=1" class="new" title="Callout（尚未撰写）">Feathers Callout组件使用方法</a>。
+</p><p>请检出<a rel="nofollow" class="external text" href="http://feathersui.com/examples/">Feathers学习案例</a> (以及<a rel="nofollow" class="external text" href="https://github.com/joshtynjala/feathers">Github上的源代码</a>)获得更多的学习案例。
+</p><p>请回归<a href="http://www.starlinglib.com/index.php?title=Feathers:start&amp;action=edit&amp;redlink=1" class="new" title="Feathers:start（尚未撰写）">Feathers 详细文档</a>得到更多的学习指南。
+</p>
+<hr />
+<p>翻译者：<a rel="nofollow" class="external text" href="http://hi.baidu.com/wibrst">王建文</a>
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 130/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key app_starlinglib-wiki:pcache:idhash:165-0!*!0!!zh-cn!2!* and timestamp 20140629065012 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				来自“<a href="http://www.starlinglib.com/index.php?title=Feathers:getting-started&amp;oldid=1383">http://www.starlinglib.com/index.php?title=Feathers:getting-started&amp;oldid=1383</a>”				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>个人工具</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="%e7%94%a8%e6%88%b7_101.23.136.html" class="new" title="您编辑本站所用IP的对应用户页 [.]" accesskey=".">101.23.136.29</a></li>
+		<li id="pt-anontalk"><a href="%e7%94%a8%e6%88%b7%e8%ae%a8%e8%ae%ba_101.23.136.html" class="new" title="对于来自此IP地址的编辑的对话 [n]" accesskey="n">该IP地址的讨论</a></li>
+		<li id="pt-anonlogin"><a href="http://www.starlinglib.com/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&amp;returnto=Feathers%3Agetting-started" title="我们鼓励您登录，但这并不是必须的 [o]" accesskey="o">登录</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>名字空间</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Feathers_getting-started.html"  title="查看内容页面 [c]" accesskey="c">页面</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://www.starlinglib.com/index.php?title=%E8%AE%A8%E8%AE%BA:Feathers:getting-started&amp;action=edit&amp;redlink=1"  title="关于内容页面的讨论 [t]" accesskey="t">讨论</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>变换</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>查看</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Feathers_getting-started.html" >阅读</a></span></li>
+					<li id="ca-viewsource"><span><a href="http://www.starlinglib.com/index.php?title=Feathers:getting-started&amp;action=edit"  title="本页面已被保护。你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://www.starlinglib.com/index.php?title=Feathers:getting-started&amp;action=history"  title="本页面的早前修订版本 [h]" accesskey="h">查看历史</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>操作</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">搜索</label></h5>
+	<form action="http://www.starlinglib.com/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="在Starling中文站中搜索 [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="提交" title="如果相同的标题存在的话便直接前往该页面" id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="搜索" title="搜索含这些文字的页面" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="特殊:搜索"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../skins/common/images/wiki.png);" href="index.html"  title="访问首页"></a></div>
+				<!-- /logo -->
+				
+<!-- navigation -->
+<div class="portal" id='p-navigation'>
+	<h5>导航</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="index.html" title="访问首页 [z]" accesskey="z">首页</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /navigation -->
+
+<!-- Starling中文资料 -->
+<div class="portal" id='p-Starling.E4.B8.AD.E6.96.87.E8.B5.84.E6.96.99'>
+	<h5>Starling中文资料</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E6.9C.80.E6.96.B0.E5.8A.A8.E6.80.81"><a href="News.html">Starling最新动态</a></li>
+			<li id="n-.E4.B8.8B.E8.BD.BD"><a href="download.html">下载</a></li>
+			<li id="n-.E5.85.A5.E9.97.A8.E7.AC.AC.E4.B8.80.E6.AD.A5"><a href="FristStep.html">入门第一步</a></li>
+			<li id="n-API.E6.8E.A5.E5.8F.A3.E6.96.87.E6.A1.A3"><a href="APIReference.html">API接口文档</a></li>
+			<li id="n-Starling.E8.AF.B4.E6.98.8E.E4.B9.A6"><a href="StarlingManual.html">Starling说明书</a></li>
+			<li id="n-FeathersUI.E6.96.87.E6.A1.A3"><a href="FeathersUI.html">FeathersUI文档</a></li>
+			<li id="n-.E6.95.99.E7.A8.8B.E5.92.8C.E4.BB.A3.E7.A0.81"><a href="Tutorials.html">教程和代码</a></li>
+			<li id="n-Starling.E6.89.A9.E5.B1.95"><a href="Extensions.html">Starling扩展</a></li>
+			<li id="n-.E6.88.90.E5.8A.9F.E6.A1.88.E4.BE.8B"><a href="GamesPowered.html">成功案例</a></li>
+			<li id="n-.E7.AB.99.E5.A4.96.E8.B5.84.E6.96.99"><a href="OutsideDocs.html">站外资料</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Starling中文资料 -->
+
+<!-- Starling原创教程 -->
+<div class="portal" id='p-Starling.E5.8E.9F.E5.88.9B.E6.95.99.E7.A8.8B'>
+	<h5>Starling原创教程</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E7.A7.BB.E5.8A.A8.E5.BC.80.E5.8F.91.E6.95.99.E7.A8.8B"><a href="StarlingMobile.html">Starling移动开发教程</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Starling原创教程 -->
+
+<!-- 微信-Flash微报 -->
+
+
+<!-- /微信-Flash微报 -->
+
+<!-- 论坛 -->
+<div class="portal" id='p-.E8.AE.BA.E5.9D.9B'>
+	<h5>论坛</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E4.B8.AD.E6.96.87.E8.AE.BA.E5.9D.9B"><a href="http://bbs.egret-labs.org/?fromuid=62" rel="nofollow">Egret开发者论坛</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /论坛 -->
+
+<!-- 友链 -->
+<div class="portal" id='p-.E5.8F.8B.E9.93.BE'>
+	<h5>友链</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Sirius2d.E5.BC.95.E6.93.8E"><a href="http://www.sirius2d.com/" rel="nofollow">Sirius2d引擎</a></li>
+			<li id="n-A.E9.97.AA.E7.BD.91"><a href="http://www.ashan.org/" rel="nofollow">A闪网</a></li>
+			<li id="n-Y.Boy"><a href="http://www.riaoo.com/" rel="nofollow">Y.Boy</a></li>
+			<li id="n-Cenfee"><a href="http://cenfee.com/" rel="nofollow">Cenfee</a></li>
+			<li id="n-.E5.B0.8F.E5.A4.9C-Clifford"><a href="http://www.cnblogs.com/flash3d/" rel="nofollow">小夜 Clifford</a></li>
+			<li id="n-.E6.9D.9C.E5.A2.9E.E5.BC.BA.28DzQ.29"><a href="http://www.duzengqiang.com/" rel="nofollow">杜增强(DzQ)</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /友链 -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>工具箱</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="%e7%89%b9%e6%ae%8a_%e9%93%be%e5%85%a5%e9%a1%b5%e9%9d%a2/Feathers_getting-started.html" title="所有链入本页的wiki页面列表 [j]" accesskey="j">链入页面</a></li>
+			<li id="t-recentchangeslinked"><a href="%e7%89%b9%e6%ae%8a_%e9%93%be%e5%87%ba%e6%9b%b4%e6%94%b9/Feathers_getting-started.html" title="本页链入的页面的最近更改 [k]" accesskey="k">链出更改</a></li>
+			<li id="t-specialpages"><a href="%e7%89%b9%e6%ae%8a_%e7%89%b9%e6%ae%8a%e9%a1%b5%e9%9d%a2.html" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+			<li><a href="http://www.starlinglib.com/index.php?title=Feathers:getting-started&amp;printable=yes" rel="alternate">可打印版</a></li>
+			<li id="t-permalink"><a href="http://www.starlinglib.com/index.php?title=Feathers:getting-started&amp;oldid=1383" title="本页面该修订版本的永久链接">永久链接</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> 本页面最后修订于2014年2月18日 (星期二) 11:20。</li>
+											<li id="footer-info-viewcount">此页面已被浏览过7,672次。</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="Starling_yinsi.html" title="Starling中文站:隐私权政策">隐私权政策</a></li>
+											<li id="footer-places-about"><a href="StarlingCnAbout.html" title="Starling中文站:关于">关于Starling中文站</a></li>
+											<li id="footer-places-disclaimer"><a href="StarlingCNCopyRight.html" title="Starling中文站:免责声明">免责声明</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31520647-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+		<!-- /footer -->
+		
+<!-- Served in 0.909 secs. -->
+	</body>
+
+<!-- Mirrored from www.starlinglib.com/wiki/Feathers:getting-started by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jun 2014 07:22:41 GMT -->
+</html>

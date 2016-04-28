@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from www.starlinglib.com/wiki/Feathers:slider by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jun 2014 07:23:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Feathers:slider - Starling中文站</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.0" />
+<link rel="shortcut icon" href="http://www.starlinglib.com/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.starlinglib.com/opensearch_desc.php" title="Starling中文站 (zh-cn)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://www.starlinglib.com/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="Starling中文站的Atom" href="http://www.starlinglib.com/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&amp;feed=atom" />
+<link rel="stylesheet" href="../skins/style.css" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: app_starlinglib-wiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Feathers:slider","wgTitle":"Feathers:slider","wgCurRevisionId":1209,"wgArticleId":193,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"zh-cn","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Feathers:slider","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false}});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"zh-cn","language":"zh-cn","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;},{},{});mw.loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: app_starlinglib-wiki:resourceloader:filter:minify-js:7:64bb9911c781603a64782510a7dfd931 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-actionscript {line-height: normal;}
+.source-actionscript li, .source-actionscript pre {
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for actionscript
+ * CSS class: source-actionscript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.actionscript.source-actionscript .de1, .actionscript.source-actionscript .de2 {font: normal normal 1em/1.2em monospace; margin:10px 0; padding:10px; background:none; vertical-align:top;}
+.actionscript.source-actionscript  {font-family:monospace;}
+.actionscript.source-actionscript .imp {font-weight: bold; color: red;}
+.actionscript.source-actionscript li, .actionscript.source-actionscript .li1 {font-weight: normal; vertical-align:top;}
+.actionscript.source-actionscript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.actionscript.source-actionscript .li2 {font-weight: bold; vertical-align:top;}
+.actionscript.source-actionscript .kw1 {color: #b1b100;}
+.actionscript.source-actionscript .kw2 {color: #000000; font-weight: bold;}
+.actionscript.source-actionscript .kw3 {color: #0066CC;}
+.actionscript.source-actionscript .co1 {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .co2 {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .coMULTI {color: #808080; font-style: italic;}
+.actionscript.source-actionscript .es0 {color: #000099; font-weight: bold;}
+.actionscript.source-actionscript .br0 {color: #66cc66;}
+.actionscript.source-actionscript .sy0 {color: #66cc66;}
+.actionscript.source-actionscript .st0 {color: #ff0000;}
+.actionscript.source-actionscript .nu0 {color: #cc66cc;}
+.actionscript.source-actionscript .me1 {color: #006600;}
+.actionscript.source-actionscript .ln-xtra, .actionscript.source-actionscript li.ln-xtra, .actionscript.source-actionscript div.ln-xtra {background-color: #ffc;}
+.actionscript.source-actionscript span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "http://www.starlinglib.com/index.php?title=MediaWiki:Geshi.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+/*]]>*/
+</style><!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Feathers_slider skin-vector action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Feathers:slider</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">来自Starling中文站</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					跳转到： <a href="#mw-head">导航</a>,
+					<a href="#p-search">搜索</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="zh-CN" dir="ltr" class="mw-content-ltr"><p>原文地址：<a rel="nofollow" class="external free" href="http://wiki.starling-framework.org/feathers/slider">http://wiki.starling-framework.org/feathers/slider</a>
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>目录</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.E5.A6.82.E4.BD.95.E4.BD.BF.E7.94.A8Feathers_Slider.E7.BB.84.E4.BB.B6"><span class="tocnumber">1</span> <span class="toctext">如何使用Feathers Slider组件</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#.E5.9F.BA.E7.A1.80.E9.83.A8.E5.88.86"><span class="tocnumber">2</span> <span class="toctext">基础部分</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#.E5.AF.B9Thumb.E7.9D.80.E8.82.A4"><span class="tocnumber">3</span> <span class="toctext">对Thumb着肤</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#.E5.AF.B9Track.28s.29.E7.9D.80.E8.82.A4"><span class="tocnumber">4</span> <span class="toctext">对Track(s)着肤</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#.E6.97.A0Thumb"><span class="tocnumber">5</span> <span class="toctext">无Thumb</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#.E7.9B.B8.E5.85.B3.E9.93.BE.E6.8E.A5"><span class="tocnumber">5.1</span> <span class="toctext">相关链接</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h6> <span class="mw-headline" id=".E5.A6.82.E4.BD.95.E4.BD.BF.E7.94.A8Feathers_Slider.E7.BB.84.E4.BB.B6"> 如何使用Feathers Slider组件 </span></h6>
+<p><i><a rel="nofollow" class="external text" href="http://feathersui.com/documentation/feathers/controls/Slider.html">Slider组件</a></i> 组件用来设定并显示最大与最小值区间中的一个值。这个值可以通过沿着水平或垂直轨道的滑块的滑动来改变调整。
+</p>
+<h5> <span class="mw-headline" id=".E5.9F.BA.E7.A1.80.E9.83.A8.E5.88.86"> 基础部分 </span></h5>
+<p>让我们开始来创建一个Slider。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw2">var</span> slider:Slider = <span class="kw2">new</span> Slider<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+slider.<span class="me1">minimum</span> = <span class="nu0">0</span>;
+slider.<span class="me1">maximum</span> = <span class="nu0">100</span>;
+slider.<span class="me1">value</span> = <span class="nu0">50</span>;
+<span class="kw3">this</span>.<span class="me1">addChild</span><span class="br0">&#40;</span> slider <span class="br0">&#41;</span>;</pre></div></div>
+<pre><i>value</i> 属性表示slider当前的值，而 <i>minimum</i> 和 <i>maximum</i> 属性是建立一个范围区间。我们也可以用一对更有用的属性来进一步控制该slider的行为:
+</pre>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">slider.<span class="me1">step</span> = <span class="nu0">1</span>;
+slider.<span class="me1">page</span> = <span class="nu0">10</span>;</pre></div></div>
+<p>step属性是控制当slider被拖拽时，其值以什么样的步长变化。如果我们设定step为1，往上拖动时其值就会以整数形式变化，而不可能出现4.5这样的值。当你触摸slider轨迹时，会让page属性起作用。此值会反复地增长或减少直到触到轨迹的末端。一般来说，page是大于step的。
+</p><p>监听Event.CHANGE事件来判断该属性发生了变化:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">slider.<span class="me1">addEventListener</span><span class="br0">&#40;</span> Event.<span class="me1">CHANGE</span>, slider_changeHandler <span class="br0">&#41;</span>;</pre></div></div>
+<p>监听器可能像这样:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1"><span class="kw2">function</span> slider_changeHandler<span class="br0">&#40;</span> event:Event <span class="br0">&#41;</span>:<span class="kw3">void</span>
+<span class="br0">&#123;</span>
+    <span class="kw2">var</span> slider:Slider = Slider<span class="br0">&#40;</span> event.<span class="me1">currentTarget</span> <span class="br0">&#41;</span>;
+    <span class="kw3">trace</span><span class="br0">&#40;</span> <span class="st0">&quot;slider.value changed:&quot;</span>, slider.<span class="me1">value</span><span class="br0">&#41;</span>;
+<span class="br0">&#125;</span></pre></div></div>
+<p>===== 对一个Slider着肤
+</p><p>Slider皮肤控件分成2或3部分。
+</p>
+<h4> <span class="mw-headline" id=".E5.AF.B9Thumb.E7.9D.80.E8.82.A4"> 对Thumb着肤 </span></h4>
+<p>一个slider的thumb其实是一个简单的 <i><a href="http://www.starlinglib.com/index.php?title=Button&amp;action=edit&amp;redlink=1" class="new" title="Button（尚未撰写）">Button</a></i>控件，而且你可以像其他任何按钮一样着肤。如果你创建了一个主题，你可以指定<i>[<a rel="nofollow" class="external autonumber" href="http://feathersui.com/documentation/feathers/controls/Slider.html#DEFAULT_CHILD_NAME_THUMB%7CSlider.DEFAULT_CHILD_NAME_THUMB">[1]</a>]</i>名称。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">setInitializerForClass<span class="br0">&#40;</span> <span class="kw3">Button</span>, sliderThumbInitializer, Slider.<span class="me1">DEFAULT_CHILD_NAME_THUMB</span> <span class="br0">&#41;</span>;</pre></div></div>
+<p>或者可以这样，你可以传thumb的属性到Slider的thumbProperties属性中。下面，我们会传Starling <i><a rel="nofollow" class="external text" href="http://doc.starling-framework.org/core/starling/display/Image.html">Image</a></i> 显示对象给thumb的每个皮肤状态。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">slider.<span class="me1">thumbProperties</span>.<span class="me1">defaultSkin</span> = <span class="kw2">new</span> Image<span class="br0">&#40;</span> upTexture <span class="br0">&#41;</span>;
+slider.<span class="me1">thumbProperties</span>.<span class="me1">downSkin</span> = <span class="kw2">new</span> Image<span class="br0">&#40;</span> downTexture <span class="br0">&#41;</span>;
+slider.<span class="me1">thumbProperties</span>.<span class="me1">hoverSkin</span> = <span class="kw2">new</span> Image<span class="br0">&#40;</span> hoverTexture <span class="br0">&#41;</span>;</pre></div></div>
+<h4> <span class="mw-headline" id=".E5.AF.B9Track.28s.29.E7.9D.80.E8.82.A4"> 对Track(s)着肤 </span></h4>
+<p>slider的track由一两个按钮组成，其依赖于trackLayoutMode的属性值。默认情况下，其为一个单一的填充于这个slider的整个宽高的轨迹。如果你想把按钮分开在track的两边（一边是minimum，另一边是maximum），那么我们可以设定trackLayoutMode到
+Slider.TRACK_LAYOUT_MODE_MIN_MAX。这种方式中，每个track的宽度都会随着thumb移动而调整，以确保两个track永远重合在thumb的中心。
+</p><p>如果我们创建了一个theme，那么我们就可以创建一个用名为Slider.DEFAULT_CHILD_NAME_MINIMUM_TRACK的Button类设定的initializer，来设
+定"minimum"轨迹到thumb的左边或底部。如果我们使用Slider.TRACK_LAYOUT_MODE_SINGLE，就是设定单一的track。同样，我们根据slider的方向，可以创建一个用名为Slider.DEFAULT_CHILD_NAME_MAXIMUM_TRACK的Button类设定的initializer，来设定"minimum"轨迹到thumb的右边或顶部。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">setInitializerForClass<span class="br0">&#40;</span> <span class="kw3">Button</span>, sliderMinimumTrackInitializer, Slider.<span class="me1">DEFAULT_CHILD_NAME_MINIMUM_TRACK</span> <span class="br0">&#41;</span>;
+setInitializerForClass<span class="br0">&#40;</span> <span class="kw3">Button</span>, sliderMaximumTrackInitializer, Slider.<span class="me1">DEFAULT_CHILD_NAME_MAXIMUM_TRACK</span> <span class="br0">&#41;</span>;</pre></div></div>
+<p>除此之外，我们可以使用minimumTrackProperties和maximumTrackProperties来传递按钮皮肤。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">slider.<span class="me1">minimumTrackProperties</span>.<span class="me1">defaultSkin</span> = <span class="kw2">new</span> Scale9Image<span class="br0">&#40;</span> onTrackUpTextures <span class="br0">&#41;</span>;
+slider.<span class="me1">minimumTrackProperties</span>.<span class="me1">downSkin</span> = <span class="kw2">new</span> Scale9Image<span class="br0">&#40;</span> onTrackDownTextures <span class="br0">&#41;</span>;
+slider.<span class="me1">maximumTrackProperties</span>.<span class="me1">defaultSkin</span> = <span class="kw2">new</span> Scale9Image<span class="br0">&#40;</span> offTrackUpTextures <span class="br0">&#41;</span>;
+slider.<span class="me1">maximumTrackProperties</span>.<span class="me1">downSkin</span> = <span class="kw2">new</span> Scale9Image<span class="br0">&#40;</span> offTrackDownTextures <span class="br0">&#41;</span>;</pre></div></div>
+<p>另一方面，如果我们想一个总是填充包括slider边缘的整长的track，那么我们可以设置trackLayoutMode给lider.TRACK_LAYOUT_MODE_SINGLE。既然如此，我们还可以只通过minimumTrackProperties设置单一的track属性。那么maximumTrackProperties 就会被忽略。
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="actionscript source-actionscript"><pre class="de1">slider.<span class="me1">minimumTrackProperties</span>.<span class="me1">defaultSkin</span> = <span class="kw2">new</span> Scale9Image<span class="br0">&#40;</span> trackTextures <span class="br0">&#41;</span>;</pre></div></div>
+<p>Slider.TRACK_LAYOUT_MODE_SINGLE通常是track处于静态出现情况下的最佳情况。当你想track处于按下或悬停状，Slider.TRACK_LAYOUT_MODE_MIN_MAX会运转的更佳，因为此状态只在thumb的一边改变。
+</p>
+<h4> <span class="mw-headline" id=".E6.97.A0Thumb"> 无Thumb </span></h4>
+<p>一个slider也提供一个<i>[<a rel="nofollow" class="external autonumber" href="http://feathersui.com/documentation/feathers/controls/Slider.html#showThumb%7CshowThumb">[2]</a>]</i>属性。如果设置false，thumb就隐藏了，同时track变成可拖动状态。联合minimum和maximum的track来生成一个增长的颜色值填充的slider。
+</p>
+<h5> <span class="mw-headline" id=".E7.9B.B8.E5.85.B3.E9.93.BE.E6.8E.A5"> 相关链接 </span></h5>
+<ul><li> <a rel="nofollow" class="external text" href="http://feathersui.com/documentation/feathers/controls/Slider.html">Slider API Documentation</a>
+</li></ul>
+<p>For more tutorials, return to the <a href="http://www.starlinglib.com/index.php?title=Feathers:start&amp;action=edit&amp;redlink=1" class="new" title="Feathers:start（尚未撰写）">Feathers Documentation</a>.
+</p>
+<hr />
+<p>翻译者：<a rel="nofollow" class="external text" href="http://t.qq.com/longSeeing">郭必江</a>
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 104/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key app_starlinglib-wiki:pcache:idhash:193-0!*!0!!zh-cn!*!* and timestamp 20140628120317 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				来自“<a href="http://www.starlinglib.com/index.php?title=Feathers:slider&amp;oldid=1209">http://www.starlinglib.com/index.php?title=Feathers:slider&amp;oldid=1209</a>”				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>个人工具</h5>
+	<ul>
+		<li id="pt-anonuserpage"><a href="%e7%94%a8%e6%88%b7_101.23.136.html" class="new" title="您编辑本站所用IP的对应用户页 [.]" accesskey=".">101.23.136.29</a></li>
+		<li id="pt-anontalk"><a href="%e7%94%a8%e6%88%b7%e8%ae%a8%e8%ae%ba_101.23.136.html" class="new" title="对于来自此IP地址的编辑的对话 [n]" accesskey="n">该IP地址的讨论</a></li>
+		<li id="pt-anonlogin"><a href="http://www.starlinglib.com/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&amp;returnto=Feathers%3Aslider" title="我们鼓励您登录，但这并不是必须的 [o]" accesskey="o">登录</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>名字空间</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Feathers_slider.html"  title="查看内容页面 [c]" accesskey="c">页面</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://www.starlinglib.com/index.php?title=%E8%AE%A8%E8%AE%BA:Feathers:slider&amp;action=edit&amp;redlink=1"  title="关于内容页面的讨论 [t]" accesskey="t">讨论</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>变换</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>查看</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Feathers_slider.html" >阅读</a></span></li>
+					<li id="ca-viewsource"><span><a href="http://www.starlinglib.com/index.php?title=Feathers:slider&amp;action=edit"  title="本页面已被保护。你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://www.starlinglib.com/index.php?title=Feathers:slider&amp;action=history"  title="本页面的早前修订版本 [h]" accesskey="h">查看历史</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>操作</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">搜索</label></h5>
+	<form action="http://www.starlinglib.com/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="在Starling中文站中搜索 [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="提交" title="如果相同的标题存在的话便直接前往该页面" id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="搜索" title="搜索含这些文字的页面" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="特殊:搜索"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(../skins/common/images/wiki.png);" href="index.html"  title="访问首页"></a></div>
+				<!-- /logo -->
+				
+<!-- navigation -->
+<div class="portal" id='p-navigation'>
+	<h5>导航</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="index.html" title="访问首页 [z]" accesskey="z">首页</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /navigation -->
+
+<!-- Starling中文资料 -->
+<div class="portal" id='p-Starling.E4.B8.AD.E6.96.87.E8.B5.84.E6.96.99'>
+	<h5>Starling中文资料</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E6.9C.80.E6.96.B0.E5.8A.A8.E6.80.81"><a href="News.html">Starling最新动态</a></li>
+			<li id="n-.E4.B8.8B.E8.BD.BD"><a href="download.html">下载</a></li>
+			<li id="n-.E5.85.A5.E9.97.A8.E7.AC.AC.E4.B8.80.E6.AD.A5"><a href="FristStep.html">入门第一步</a></li>
+			<li id="n-API.E6.8E.A5.E5.8F.A3.E6.96.87.E6.A1.A3"><a href="APIReference.html">API接口文档</a></li>
+			<li id="n-Starling.E8.AF.B4.E6.98.8E.E4.B9.A6"><a href="StarlingManual.html">Starling说明书</a></li>
+			<li id="n-FeathersUI.E6.96.87.E6.A1.A3"><a href="FeathersUI.html">FeathersUI文档</a></li>
+			<li id="n-.E6.95.99.E7.A8.8B.E5.92.8C.E4.BB.A3.E7.A0.81"><a href="Tutorials.html">教程和代码</a></li>
+			<li id="n-Starling.E6.89.A9.E5.B1.95"><a href="Extensions.html">Starling扩展</a></li>
+			<li id="n-.E6.88.90.E5.8A.9F.E6.A1.88.E4.BE.8B"><a href="GamesPowered.html">成功案例</a></li>
+			<li id="n-.E7.AB.99.E5.A4.96.E8.B5.84.E6.96.99"><a href="OutsideDocs.html">站外资料</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Starling中文资料 -->
+
+<!-- Starling原创教程 -->
+<div class="portal" id='p-Starling.E5.8E.9F.E5.88.9B.E6.95.99.E7.A8.8B'>
+	<h5>Starling原创教程</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E7.A7.BB.E5.8A.A8.E5.BC.80.E5.8F.91.E6.95.99.E7.A8.8B"><a href="StarlingMobile.html">Starling移动开发教程</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Starling原创教程 -->
+
+<!-- 微信-Flash微报 -->
+
+
+<!-- /微信-Flash微报 -->
+
+<!-- 论坛 -->
+<div class="portal" id='p-.E8.AE.BA.E5.9D.9B'>
+	<h5>论坛</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Starling.E4.B8.AD.E6.96.87.E8.AE.BA.E5.9D.9B"><a href="http://bbs.egret-labs.org/?fromuid=62" rel="nofollow">Egret开发者论坛</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /论坛 -->
+
+<!-- 友链 -->
+<div class="portal" id='p-.E5.8F.8B.E9.93.BE'>
+	<h5>友链</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Sirius2d.E5.BC.95.E6.93.8E"><a href="http://www.sirius2d.com/" rel="nofollow">Sirius2d引擎</a></li>
+			<li id="n-A.E9.97.AA.E7.BD.91"><a href="http://www.ashan.org/" rel="nofollow">A闪网</a></li>
+			<li id="n-Y.Boy"><a href="http://www.riaoo.com/" rel="nofollow">Y.Boy</a></li>
+			<li id="n-Cenfee"><a href="http://cenfee.com/" rel="nofollow">Cenfee</a></li>
+			<li id="n-.E5.B0.8F.E5.A4.9C-Clifford"><a href="http://www.cnblogs.com/flash3d/" rel="nofollow">小夜 Clifford</a></li>
+			<li id="n-.E6.9D.9C.E5.A2.9E.E5.BC.BA.28DzQ.29"><a href="http://www.duzengqiang.com/" rel="nofollow">杜增强(DzQ)</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /友链 -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>工具箱</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="%e7%89%b9%e6%ae%8a_%e9%93%be%e5%85%a5%e9%a1%b5%e9%9d%a2/Feathers_slider.html" title="所有链入本页的wiki页面列表 [j]" accesskey="j">链入页面</a></li>
+			<li id="t-recentchangeslinked"><a href="%e7%89%b9%e6%ae%8a_%e9%93%be%e5%87%ba%e6%9b%b4%e6%94%b9/Feathers_slider.html" title="本页链入的页面的最近更改 [k]" accesskey="k">链出更改</a></li>
+			<li id="t-specialpages"><a href="%e7%89%b9%e6%ae%8a_%e7%89%b9%e6%ae%8a%e9%a1%b5%e9%9d%a2.html" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+			<li><a href="http://www.starlinglib.com/index.php?title=Feathers:slider&amp;printable=yes" rel="alternate">可打印版</a></li>
+			<li id="t-permalink"><a href="http://www.starlinglib.com/index.php?title=Feathers:slider&amp;oldid=1209" title="本页面该修订版本的永久链接">永久链接</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> 本页面最后修订于2013年1月23日 (星期三) 10:56。</li>
+											<li id="footer-info-viewcount">此页面已被浏览过2,229次。</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="Starling_yinsi.html" title="Starling中文站:隐私权政策">隐私权政策</a></li>
+											<li id="footer-places-about"><a href="StarlingCnAbout.html" title="Starling中文站:关于">关于Starling中文站</a></li>
+											<li id="footer-places-disclaimer"><a href="StarlingCNCopyRight.html" title="Starling中文站:免责声明">免责声明</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31520647-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+		<!-- /footer -->
+		
+<!-- Served in 0.438 secs. -->
+	</body>
+
+<!-- Mirrored from www.starlinglib.com/wiki/Feathers:slider by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jun 2014 07:23:21 GMT -->
+</html>
